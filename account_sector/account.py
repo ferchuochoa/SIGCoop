@@ -1,3 +1,6 @@
+#-*- coding: utf-8 -*-
+from trytond.model import ModelSQL, ModelView, fields
+
 __all__ = ['Account', 'Sector']
 
 class Account(ModelSQL, ModelView):
