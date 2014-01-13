@@ -3,7 +3,7 @@ from .account import *
 
 def register():
   Pool.register(
-     Account,
      Sector,
+     Account,
      module='account_sector', type_='model'
   )

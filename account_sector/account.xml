@@ -4,8 +4,6 @@
 	<data>
 		<record model="ir.ui.view" id="account_sector_view_form">
             <field name="model">account.account</field>
-            <!--field name="type">form</field>
-            <field name="inherit" eval="None"/-->
             <field name="inherit" ref="account.account_view_form"/>
             <field name="name">account_form</field>
         </record>
