@@ -113,7 +113,7 @@ class WierdXMLGenerator(object):
 
         root = Record('account.account.template', 'root')
         root.add_field(Field('name',
-            value='Plan Contable Argentino para Cooperativas'))
+            value='Plan Contable para SIGCoop'))
         root.add_field(Field('kind', value='view'))
         root.add_field(Field('type', {'ref': 'ar'}))
         self.document.add_record(root)
@@ -148,6 +148,7 @@ class WierdXMLGenerator(object):
         code = row['NUMERO']
         kind = self.types[row['clase']]
         description = row['DESCRIPCION'].decode('utf8')
+        sector = row['sector']
 
         id = sanitize(description)
 
@@ -170,6 +171,9 @@ class WierdXMLGenerator(object):
 
         if row['conciliar']:
             record.add_field(Field('reconcile', {'eval': 'True'}))
+
+        if row['sector']:
+            record.add_field(Field('sector', value=sector))
 
         record.add_field(Field('kind', value=kind))
 
@@ -199,9 +203,9 @@ if __name__ == '__main__':
         return tree.toprettyxml(encoding='utf8')
 
     tipos = 'account_types.csv'
-    cuentas = '/home/dooky/Desarrollo/FEDECOBA/AccountSigCoop.csv'
+    cuentas = 'cuentas.csv'
     g = WierdXMLGenerator(tipos, cuentas)
-    with open('accounts_coop_ar_nuestro.xml', 'w') as fh:
+    with open('accounts_sigcoop_ar.xml', 'w') as fh:
         indent(g.inflate()._root)
         g.document.tree.write(fh, 'utf-8')
         #fh.write(indent(g.inflate()._root).tostring())
