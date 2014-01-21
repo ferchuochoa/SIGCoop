@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<data>
+    <xpath
+        expr="/form/notebook/page[@id='general']/field[@name='reconcile']"
+        position="after">
+        <label name="sector_id"/>
+        <field name="sector_id"/>
+    </xpath>
+</data>
