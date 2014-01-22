@@ -93,8 +93,10 @@ class WierdXMLGenerator(object):
             }
 
     account_types = {}
+    account_sectores = {}
 
-    def __init__(self, types_file, account_file):
+    def __init__(self, sector_file, types_file, account_file):
+        self.sector_file = sector_file
         self.account_file = account_file
         self.types_file = types_file
         self.document = Document()
@@ -105,6 +107,11 @@ class WierdXMLGenerator(object):
     def inflate(self):
         """Make data grow up, because java
         programmers dont worry about storage"""
+
+        with open(self.sector_file, 'r') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                self.process_sector_row(row)
 
         with open(self.types_file, 'r') as csvfile:
             reader = csv.DictReader(csvfile)
@@ -141,6 +148,19 @@ class WierdXMLGenerator(object):
             record.add_field(Field('parent', {'ref': row['parent']}))
 
         self.document.add_record(record)
+
+    def process_sector_row(self, row):
+        """Manages sector rows"""
+        name = row['name'].decode('utf8')
+        id = 'sector_%s' % sanitize(name)
+
+        self.account_sectores[name.lower()] = id
+
+        record = Record('account_sector.sector.template', id)
+        record.add_field(Field('name', value=name))
+
+        self.document.add_record(record)
+        
 
     def process_account_row(self, row):
         #FIXME unicode
@@ -204,7 +224,8 @@ if __name__ == '__main__':
 
     tipos = 'account_types.csv'
     cuentas = 'cuentas.csv'
-    g = WierdXMLGenerator(tipos, cuentas)
+    sectores = 'account_sectores.csv'
+    g = WierdXMLGenerator(sectores, tipos, cuentas)
     with open('accounts_sigcoop_ar.xml', 'w') as fh:
         indent(g.inflate()._root)
         g.document.tree.write(fh, 'utf-8')
