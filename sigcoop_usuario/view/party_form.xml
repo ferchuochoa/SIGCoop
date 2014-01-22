@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<data>
+    <xpath
+        expr="/form/notebook/page[@id='accounting']"
+        position="after">
+        <page string="Datos cliente" id="datos_cliente">
+            <label name="asociado"/>
+            <field name="asociado"/>
+            <label name="dir_entrega_factura"/>
+            <field name="dir_entrega_factura"/>
+            <label name="ruta"/>
+            <field name="ruta"/>
+            <label name="razon_social"/>
+            <field name="razon_social"/>
+            <label name="valor_razon_social"/>
+            <field name="valor_razon_social"/>
+            <label name="numero"/>
+            <field name="numero"/>
+        </page>
+        <page string="Datos asociado" id="datos_asociado" states="{'invisible': Not(Bool(Eval('asociado')))}">
+            <label name="numero_titulo"/>
+            <field name="numero_titulo"/>
+            <label name="fecha_ingreso"/>
+            <field name="fecha_ingreso"/>
+        </page>
+    </xpath>
+</data>
