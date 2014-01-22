@@ -193,7 +193,7 @@ class WierdXMLGenerator(object):
             record.add_field(Field('reconcile', {'eval': 'True'}))
 
         if row['sector']:
-            record.add_field(Field('sector', value=sector))
+            record.add_field(Field('sector', {'ref': sector}))
 
         record.add_field(Field('kind', value=kind))
 
