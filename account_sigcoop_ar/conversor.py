@@ -168,7 +168,7 @@ class WierdXMLGenerator(object):
         code = row['NUMERO']
         kind = self.types[row['clase']]
         description = row['DESCRIPCION'].decode('utf8')
-        sector = row['sector']
+        #sector = row['sector']
 
         id = sanitize(description)
 
@@ -193,6 +193,8 @@ class WierdXMLGenerator(object):
             record.add_field(Field('reconcile', {'eval': 'True'}))
 
         if row['sector']:
+            index_name = row['sector'].decode('utf8').lower()
+            sector = self.account_sectores[index_name]
             record.add_field(Field('sector', {'ref': sector}))
 
         record.add_field(Field('kind', value=kind))
