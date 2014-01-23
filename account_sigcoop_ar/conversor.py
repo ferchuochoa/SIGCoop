@@ -156,7 +156,7 @@ class WierdXMLGenerator(object):
 
         self.account_sectores[name.lower()] = id
 
-        record = Record('account_sector.sector.template', id)
+        record = Record('account.sector.template', id)
         record.add_field(Field('name', value=name))
 
         self.document.add_record(record)
