@@ -8,18 +8,18 @@ class Party(ModelSQL, ModelView):
     "Party"
     __name__ = 'party.party'
     #El field asociado nos da a elegir si es asociado o cliente.
-    #Por defecto, es cliente.
+    #Por defecto, es cliente ya que el campo es false.
     asociado = fields.Boolean('asociado')
-    dir_entrega_factura = fields.Many2One('party.address', 'Direccion entrega factura', required=True)
+    dir_entrega_factura = fields.Many2One('party.address', 'Direccion entrega factura')
     ruta = fields.Integer('Ruta', required=True)
     razon_social = fields.Selection(
-            [
-                ('CUIT', 'CUIT'),
-                ('CUIL', 'CUIL'),
-                ('DNI', 'DNI'),
-            ],
-            'Razon social'
-            )
+        [
+            ('CUIT', 'CUIT'),
+            ('CUIL', 'CUIL'),
+            ('DNI', 'DNI'),
+        ],
+        'Razon social'
+    )
     #Este es el valor de cuil, cuit o dni,
     #segun se seleccione en el selection.
     valor_razon_social = fields.Integer('Valor razon social')
