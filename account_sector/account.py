@@ -28,4 +28,3 @@ class Account(ModelSQL, ModelView):
     "Account"
     __name__ = 'account.account'
     sector_id = fields.Many2One('account_sector.sector', 'Sector', ondelete="RESTRICT", required=False)
-

@@ -1,5 +1,32 @@
 <tryton>
   <data>
+    <record id="sector_energia" model="account_sector.sector.template">
+      <field name="name">Energia</field>
+    </record>
+    <record id="sector_agua_potable" model="account_sector.sector.template">
+      <field name="name">Agua Potable</field>
+    </record>
+    <record id="sector_sepelio" model="account_sector.sector.template">
+      <field name="name">Sepelio</field>
+    </record>
+    <record id="sector_cctv" model="account_sector.sector.template">
+      <field name="name">CCTV</field>
+    </record>
+    <record id="sector_internet" model="account_sector.sector.template">
+      <field name="name">Internet</field>
+    </record>
+    <record id="sector_gas" model="account_sector.sector.template">
+      <field name="name">Gas</field>
+    </record>
+    <record id="sector_administracion" model="account_sector.sector.template">
+      <field name="name">Administracion</field>
+    </record>
+    <record id="sector_comercializacion" model="account_sector.sector.template">
+      <field name="name">Comercializacion</field>
+    </record>
+    <record id="sector_ajenos" model="account_sector.sector.template">
+      <field name="name">Ajenos</field>
+    </record>
     <record id="ar" model="account.account.type.template">
       <field name="name">Tipos de Cuenta Argentinos</field>
       <field eval="10" name="sequence" />
@@ -119,7 +146,7 @@
       <field name="code">1131</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="creditos" />
@@ -156,7 +183,7 @@
       <field name="code">1135</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="creditos" />
@@ -166,7 +193,7 @@
       <field name="code">1136</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="creditos" />
@@ -176,7 +203,7 @@
       <field name="code">1137</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="creditos" />
@@ -186,7 +213,7 @@
       <field name="code">1138</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="creditos" />
@@ -196,7 +223,7 @@
       <field name="code">1139</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="creditos" />
@@ -377,7 +404,7 @@
       <field name="name">Rodados - EE</field>
       <field name="code">12411</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="rodados" />
@@ -386,7 +413,7 @@
       <field name="name">Rodados - AP</field>
       <field name="code">12412</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="rodados" />
@@ -395,7 +422,7 @@
       <field name="name">Rodados - GAS</field>
       <field name="code">12413</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="rodados" />
@@ -404,7 +431,7 @@
       <field name="name">Rodados - CCTV</field>
       <field name="code">12414</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="rodados" />
@@ -413,7 +440,7 @@
       <field name="name">Rodados - INT</field>
       <field name="code">12415</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="rodados" />
@@ -422,7 +449,7 @@
       <field name="name">Rodados - SS</field>
       <field name="code">12416</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="rodados" />
@@ -516,7 +543,7 @@
       <field name="code">2111</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="deudas_comerciales" />
@@ -526,7 +553,7 @@
       <field name="code">2112</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="deudas_comerciales" />
@@ -536,7 +563,7 @@
       <field name="code">2113</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="deudas_comerciales" />
@@ -546,7 +573,7 @@
       <field name="code">2114</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="deudas_comerciales" />
@@ -556,7 +583,7 @@
       <field name="code">2115</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="deudas_comerciales" />
@@ -566,7 +593,7 @@
       <field name="code">2116</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="deudas_comerciales" />
@@ -889,7 +916,7 @@
       <field name="name">Sueldos-ADM-</field>
       <field name="code">411221</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -898,7 +925,7 @@
       <field name="name">Aportes Seg.Social-ADM-</field>
       <field name="code">411222</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -907,7 +934,7 @@
       <field name="name">Bonif. Pers. a Jubilarse-ADM-</field>
       <field name="code">411223</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -916,7 +943,7 @@
       <field name="name">Tickets Canasta-ADM-</field>
       <field name="code">411224</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -925,7 +952,7 @@
       <field name="name">Gtos.p/Medicamentos -ADM-</field>
       <field name="code">411225</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -934,7 +961,7 @@
       <field name="name">Ropa de Trab.-ADM-</field>
       <field name="code">411226</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -943,7 +970,7 @@
       <field name="name">Combustibles y Lub.-ADM-</field>
       <field name="code">411231</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -952,7 +979,7 @@
       <field name="name">Mant.de Redes e Instalac.-ADM-</field>
       <field name="code">411232</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -961,7 +988,7 @@
       <field name="name">Manten.y Rep.Rodados-ADM-</field>
       <field name="code">411241</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -970,7 +997,7 @@
       <field name="name">Publicidad y Propaganda-ADM-</field>
       <field name="code">411242</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -979,7 +1006,7 @@
       <field name="name">Honorarios y Gtos.Legales-ADM-</field>
       <field name="code">411243</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -988,7 +1015,7 @@
       <field name="name">Cuotas Cámaras Empresarias-ADM</field>
       <field name="code">411244</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -997,7 +1024,7 @@
       <field name="name">Franqueo y Teléfono-ADM-</field>
       <field name="code">411245</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -1006,7 +1033,7 @@
       <field name="name">Seguros-ADM-</field>
       <field name="code">411246</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -1015,7 +1042,7 @@
       <field name="name">Matafuegos-ADM-</field>
       <field name="code">411247</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -1024,7 +1051,7 @@
       <field name="name">Serv.de Comput.e Imprenta-ADM-</field>
       <field name="code">411253</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -1033,7 +1060,7 @@
       <field name="name">Diferencias de Caja-ADM-</field>
       <field name="code">411262</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -1042,7 +1069,7 @@
       <field name="name">Movilidad y Vi ticos-ADM-</field>
       <field name="code">411263</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -1051,7 +1078,7 @@
       <field name="name">Depreciaciones-ADM-</field>
       <field name="code">411265</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -1060,7 +1087,7 @@
       <field name="name">Gtos.Reun.Consejo de Adm.-ADM-</field>
       <field name="code">411268</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -1069,7 +1096,7 @@
       <field name="name">Gastos Diversos-ADM-</field>
       <field name="code">411269</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -1078,7 +1105,7 @@
       <field name="name">Cenas, Refrigerios y agasajos-ADM-</field>
       <field name="code">411270</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -1087,7 +1114,7 @@
       <field name="name">Impuestos,Tasas y Cont.-ADM-</field>
       <field name="code">411271</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -1096,7 +1123,7 @@
       <field name="name">Deb y Créd,Ley 25413-ADM-</field>
       <field name="code">411273</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -1105,7 +1132,7 @@
       <field name="name">Papeles e Insumos de Oficina-ADM-</field>
       <field name="code">411282</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="seccadministracion" />
@@ -1121,7 +1148,7 @@
       <field name="name">Sueldos-Com-</field>
       <field name="code">411321</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Comercializacion" />
+      <field name="sector_id" ref="sector_comercializacion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="sec_comercializacion" />
@@ -1130,7 +1157,7 @@
       <field name="name">Aportes Seg.Social-Com-</field>
       <field name="code">411322</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Comercializacion" />
+      <field name="sector_id" ref="sector_comercializacion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="sec_comercializacion" />
@@ -1139,7 +1166,7 @@
       <field name="name">Bonificacione Pers. A Jub-Com-</field>
       <field name="code">411323</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Comercializacion" />
+      <field name="sector_id" ref="sector_comercializacion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="sec_comercializacion" />
@@ -1148,7 +1175,7 @@
       <field name="name">Gastos por Medic.-Com-</field>
       <field name="code">411325</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Comercializacion" />
+      <field name="sector_id" ref="sector_comercializacion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="sec_comercializacion" />
@@ -1157,7 +1184,7 @@
       <field name="name">Ropa de Trab-Com-</field>
       <field name="code">411326</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Comercializacion" />
+      <field name="sector_id" ref="sector_comercializacion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="sec_comercializacion" />
@@ -1166,7 +1193,7 @@
       <field name="name">Seguros-Com</field>
       <field name="code">411346</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Comercializacion" />
+      <field name="sector_id" ref="sector_comercializacion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="sec_comercializacion" />
@@ -1175,7 +1202,7 @@
       <field name="name">Amortiz.Software de Aplicación</field>
       <field name="code">4114</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gastos_indirectos_(adm+com)" />
@@ -1184,7 +1211,7 @@
       <field name="name">Descuentos Obtenidos administración-Adm-</field>
       <field name="code">4115</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gastos_indirectos_(adm+com)" />
@@ -1193,7 +1220,7 @@
       <field name="name">Intereses Moratorios Cobrados-Adm-</field>
       <field name="code">4116</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gastos_indirectos_(adm+com)" />
@@ -1202,7 +1229,7 @@
       <field name="name">Intereses p/Refinanciacion-Adm</field>
       <field name="code">4117</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gastos_indirectos_(adm+com)" />
@@ -1211,7 +1238,7 @@
       <field name="name">Bonificaciones Obtenidas-Adm-</field>
       <field name="code">4118</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Administracion" />
+      <field name="sector_id" ref="sector_administracion" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gastos_indirectos_(adm+com)" />
@@ -1241,7 +1268,7 @@
       <field name="name">Vtas p/Distrib.Energ¡a El‚ct.</field>
       <field name="code">421110</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional" />
@@ -1250,7 +1277,7 @@
       <field name="name">Vtas a Usuarios T1</field>
       <field name="code">421111</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional" />
@@ -1259,7 +1286,7 @@
       <field name="name">Vtas a Usuarios T2</field>
       <field name="code">421112</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional" />
@@ -1268,7 +1295,7 @@
       <field name="name">Vtas a Usuarios T3</field>
       <field name="code">421113</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional" />
@@ -1277,7 +1304,7 @@
       <field name="name">Vtas a Usuarios TIS</field>
       <field name="code">421114</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional" />
@@ -1286,7 +1313,7 @@
       <field name="name">Vtas a Usuarios PIMT</field>
       <field name="code">421115</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional" />
@@ -1295,7 +1322,7 @@
       <field name="name">Fdo.Compensador Tarifario</field>
       <field name="code">42112</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional" />
@@ -1304,7 +1331,7 @@
       <field name="name">Contrib.por Obras Art.12º</field>
       <field name="code">42119</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional" />
@@ -1313,7 +1340,7 @@
       <field name="name">Vtas p/ transf.de serv.a ot/ sec.EE</field>
       <field name="code">421118</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional" />
@@ -1329,7 +1356,7 @@
       <field name="name">Costo de Energ¡a Comprada</field>
       <field name="code">421201</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="costos" />
@@ -1352,7 +1379,7 @@
       <field name="name">Sueldos-EE-</field>
       <field name="code">421311</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones" />
@@ -1361,7 +1388,7 @@
       <field name="name">Aportes Seg.Social-EE-</field>
       <field name="code">421312</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones" />
@@ -1370,7 +1397,7 @@
       <field name="name">Bonif.Personal a Jubilarse-EE</field>
       <field name="code">421313</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones" />
@@ -1379,7 +1406,7 @@
       <field name="name">Tickets Canasta-EE-</field>
       <field name="code">421314</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones" />
@@ -1388,7 +1415,7 @@
       <field name="name">Ropa de Trabajo y Elem. Prot-EE-</field>
       <field name="code">421316</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones" />
@@ -1404,7 +1431,7 @@
       <field name="name">Comb.y Lub.-EE-</field>
       <field name="code">421331</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="mantenimiento" />
@@ -1413,7 +1440,7 @@
       <field name="name">Mant.de Redes e Instalac.-EE-</field>
       <field name="code">421332</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="mantenimiento" />
@@ -1429,7 +1456,7 @@
       <field name="name">Mantenim.y Rep.Rodados-EE-</field>
       <field name="code">421341</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros" />
@@ -1438,7 +1465,7 @@
       <field name="name">Publicidad y Propaganda-EE-</field>
       <field name="code">421342</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros" />
@@ -1447,7 +1474,7 @@
       <field name="name">Honorarios y Gtos.Legales -EE-</field>
       <field name="code">421343</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros" />
@@ -1456,7 +1483,7 @@
       <field name="name">Cuotas C maras Empresarias-EE-</field>
       <field name="code">421344</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros" />
@@ -1465,7 +1492,7 @@
       <field name="name">Franqueo y Tel‚fono-EE-</field>
       <field name="code">421345</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros" />
@@ -1474,7 +1501,7 @@
       <field name="name">Seguros-EE-</field>
       <field name="code">421346</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros" />
@@ -1483,7 +1510,7 @@
       <field name="name">Matafuegos-EE-</field>
       <field name="code">421347</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros" />
@@ -1492,7 +1519,7 @@
       <field name="name">Comisiones-EE-</field>
       <field name="code">421348</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros" />
@@ -1501,7 +1528,7 @@
       <field name="name">Fletes-EE-</field>
       <field name="code">421349</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros" />
@@ -1510,7 +1537,7 @@
       <field name="name">Serv.de Comput.e Imprenta-EE-</field>
       <field name="code">4213410</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros" />
@@ -1519,7 +1546,7 @@
       <field name="name">Expansion de Transporte EE</field>
       <field name="code">4213411</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros" />
@@ -1535,7 +1562,7 @@
       <field name="name">Luz y Gas Jubilados-EE-</field>
       <field name="code">421362</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios" />
@@ -1544,7 +1571,7 @@
       <field name="name">Movilidad y Vi ticos-EE-</field>
       <field name="code">421363</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios" />
@@ -1553,7 +1580,7 @@
       <field name="name">Incobrables-EE-</field>
       <field name="code">421364</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios" />
@@ -1562,7 +1589,7 @@
       <field name="name">Depreciaciones-EE-</field>
       <field name="code">421365</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios" />
@@ -1571,7 +1598,7 @@
       <field name="name">Gastos Diversos-EE-</field>
       <field name="code">421369</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios" />
@@ -1587,7 +1614,7 @@
       <field name="name">Impuestos,Tasas y Cont.-EE-</field>
       <field name="code">421371</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="impuestos" />
@@ -1596,7 +1623,7 @@
       <field name="name">Agregado Tarifario</field>
       <field name="code">421372</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="impuestos" />
@@ -1605,7 +1632,7 @@
       <field name="name">Débitos y Créditos Brios.L.25413</field>
       <field name="code">421373</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="impuestos" />
@@ -1628,7 +1655,7 @@
       <field name="name">Publicidad y Propaganda-EE©</field>
       <field name="code">421442</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_42144" />
@@ -1637,7 +1664,7 @@
       <field name="name">Serv.de Comput.e Imprenta-EE-©</field>
       <field name="code">421443</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_42144" />
@@ -1653,7 +1680,7 @@
       <field name="name">Incobrables-EE (c)</field>
       <field name="code">421464</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_42146" />
@@ -1669,7 +1696,7 @@
       <field name="name">Gtos Indirect. de Com.-EE-</field>
       <field name="code">42171</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gtosde_comercializacion-indirectos-" />
@@ -1685,7 +1712,7 @@
       <field name="name">Gtos Indirect.de Adm.-EE-</field>
       <field name="code">42181</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gtosde_administracion-indirectos-" />
@@ -1701,7 +1728,7 @@
       <field name="name">Prest.del Serv.-EE-</field>
       <field name="code">4221</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-e" />
@@ -1710,7 +1737,7 @@
       <field name="name">Gastos Recuperados-EE-</field>
       <field name="code">4222</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-e" />
@@ -1719,7 +1746,7 @@
       <field name="name">Cargo p/Serv.de Conexion-EE-</field>
       <field name="code">4223</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-e" />
@@ -1728,7 +1755,7 @@
       <field name="name">Vtas.Materiales p/Conexi¢n-EE-</field>
       <field name="code">4224</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-e" />
@@ -1737,7 +1764,7 @@
       <field name="name">Recupero Faltante Caja E.E.</field>
       <field name="code">4225</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-e" />
@@ -1746,7 +1773,7 @@
       <field name="name">Costo de Vta.Lineas Rurales-EE-</field>
       <field name="code">4227</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_ordno_operativos-e" />
@@ -1762,7 +1789,7 @@
       <field name="name">Intereses Morat.Cobrados-EE-</field>
       <field name="code">4231</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-ee-" />
@@ -1771,7 +1798,7 @@
       <field name="name">Int.Finan.Carg.p/Serv.Cone.EE</field>
       <field name="code">4232</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-ee-" />
@@ -1780,7 +1807,7 @@
       <field name="name">Intereses p/Fin.p/contrib.p/obras</field>
       <field name="code">4233</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-ee-" />
@@ -1789,7 +1816,7 @@
       <field name="name">Intereses Ganados-EE-</field>
       <field name="code">4234</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-ee-" />
@@ -1798,7 +1825,7 @@
       <field name="name">Diferencia de Cambio</field>
       <field name="code">4235</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-ee-" />
@@ -1807,7 +1834,7 @@
       <field name="name">Com.,Int.y Gtos Brios-EE-</field>
       <field name="code">4236</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_financieros-ee-" />
@@ -1816,7 +1843,7 @@
       <field name="name">Result.Fin.y p/Ten.(Incluído RECPAM)</field>
       <field name="code">4237</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-ee-" />
@@ -1832,7 +1859,7 @@
       <field name="name">Siniestros B.de Uso-EE-</field>
       <field name="code">4241</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_extraordinarios-ee-" />
@@ -1841,7 +1868,7 @@
       <field name="name">Indemnización p/Daños y Perjuicios-EE-</field>
       <field name="code">4242</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Energia" />
+      <field name="sector_id" ref="sector_energia" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_extraordinarios-ee-" />
@@ -1871,7 +1898,7 @@
       <field name="name">Tasa Operativa-AP-</field>
       <field name="code">43111</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4311" />
@@ -1880,7 +1907,7 @@
       <field name="name">Vtas p/transf.de serv a ot.sec.-AP-</field>
       <field name="code">43112</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4311" />
@@ -1889,7 +1916,7 @@
       <field name="name">Costos</field>
       <field name="code">4312</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordoperativos-ap-" />
@@ -1905,7 +1932,7 @@
       <field name="name">Remuneraciones</field>
       <field name="code">43131</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gastos_de_explotacion-directos-_4313" />
@@ -1914,7 +1941,7 @@
       <field name="name">Sueldos-AP-</field>
       <field name="code">431311</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_43131" />
@@ -1923,7 +1950,7 @@
       <field name="name">Aportes Seg.Social-AP-</field>
       <field name="code">431312</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_43131" />
@@ -1932,7 +1959,7 @@
       <field name="name">Tickets Canasta-AP-</field>
       <field name="code">431314</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_43131" />
@@ -1941,7 +1968,7 @@
       <field name="name">Gtos p/Medicamentos-AP-</field>
       <field name="code">431315</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_43131" />
@@ -1950,7 +1977,7 @@
       <field name="name">Ropa de Trabajo-AP-</field>
       <field name="code">431316</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_43131" />
@@ -1965,7 +1992,7 @@
       <field name="name">Combustibles y Lub.-AP-</field>
       <field name="code">431331</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="mantenimiento_43133" />
@@ -1974,7 +2001,7 @@
       <field name="name">Mant.de Redes e Instalac.-AP-</field>
       <field name="code">431332</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="mantenimiento_43133" />
@@ -1989,7 +2016,7 @@
       <field name="name">Mantenim.y Rep.Rodados-AP</field>
       <field name="code">431341</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_43134" />
@@ -1998,7 +2025,7 @@
       <field name="name">Publicidad y Propaganda-AP-</field>
       <field name="code">431342</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_43134" />
@@ -2007,7 +2034,7 @@
       <field name="name">Honorarios y Gtos.Legales-AP-</field>
       <field name="code">431343</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_43134" />
@@ -2016,7 +2043,7 @@
       <field name="name">Franqueo y Teléfono-AP-</field>
       <field name="code">431345</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_43134" />
@@ -2025,7 +2052,7 @@
       <field name="name">Seguros-AP-</field>
       <field name="code">431346</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_43134" />
@@ -2034,7 +2061,7 @@
       <field name="name">Matafuegos-AP-</field>
       <field name="code">431347</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_43134" />
@@ -2043,7 +2070,7 @@
       <field name="name">Fletes-AP-</field>
       <field name="code">431349</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_43134" />
@@ -2052,7 +2079,7 @@
       <field name="name">Gastos de Laboratorios-AP-</field>
       <field name="code">4313410</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_43134" />
@@ -2067,7 +2094,7 @@
       <field name="name">Movilidad y Viaticos A.P.</field>
       <field name="code">431363</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_43136" />
@@ -2076,7 +2103,7 @@
       <field name="name">Incobrables-AP-</field>
       <field name="code">431364</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_43136" />
@@ -2085,7 +2112,7 @@
       <field name="name">Depreciaciones-AP-</field>
       <field name="code">431365</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_43136" />
@@ -2094,7 +2121,7 @@
       <field name="name">Gtos.Diversos -AP-</field>
       <field name="code">431369</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_43136" />
@@ -2109,7 +2136,7 @@
       <field name="name">Impuestos,Tasas y Cont.-AP-</field>
       <field name="code">431371</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="impuestos_43137" />
@@ -2118,7 +2145,7 @@
       <field name="name">Débitos y Créd. Brios.L.25413-AP-</field>
       <field name="code">431373</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="impuestos_43137" />
@@ -2133,7 +2160,7 @@
       <field name="name">Gtos Energ¡a El‚ct-AP-</field>
       <field name="code">431381</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="insumos" />
@@ -2142,7 +2169,7 @@
       <field name="name">Insumos Varios-AP-</field>
       <field name="code">431383</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="insumos" />
@@ -2163,7 +2190,7 @@
       <field name="name">Incobrables-AP (c)</field>
       <field name="code">431464</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_43146" />
@@ -2178,7 +2205,7 @@
       <field name="name">Gtos Ind.de Com.-AP-</field>
       <field name="code">43171</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gtos_de_comercializacion-indirectos-" />
@@ -2193,7 +2220,7 @@
       <field name="name">Gtos Ind.de Adm.-AP-</field>
       <field name="code">43181</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gtos_de_administracion-indirectos-" />
@@ -2208,7 +2235,7 @@
       <field name="name">Derechos de Conexión-AP-</field>
       <field name="code">4321</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-ap" />
@@ -2217,7 +2244,7 @@
       <field name="name">Gtos.Recuperados -AP-</field>
       <field name="code">4322</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-ap" />
@@ -2232,7 +2259,7 @@
       <field name="name">Intereses Morat.Cobrados-AP-</field>
       <field name="code">4331</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-ap-" />
@@ -2241,7 +2268,7 @@
       <field name="name">Intereses Ganados-AP-</field>
       <field name="code">4332</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-ap-" />
@@ -2250,7 +2277,7 @@
       <field name="name">Com.,Int.y Gtos Brios-AP-</field>
       <field name="code">4333</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_financieros-ap-" />
@@ -2259,7 +2286,7 @@
       <field name="name">Result.Fin.y p/Ten.(Incluído RECPAM)</field>
       <field name="code">4334</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-ap-" />
@@ -2274,7 +2301,7 @@
       <field name="name">Siniestros B.de Uso-AP-</field>
       <field name="code">4341</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_extraordinarios-ap-" />
@@ -2283,7 +2310,7 @@
       <field name="name">Indemnización p/Daños y Perjuicios-AP-</field>
       <field name="code">4342</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Agua Potable" />
+      <field name="sector_id" ref="sector_agua_potable" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_extraordinarios-ap-" />
@@ -2310,7 +2337,7 @@
       <field name="name">Cuotas Serv.Sepelio-Asoc-</field>
       <field name="code">44111</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4411" />
@@ -2319,7 +2346,7 @@
       <field name="name">Serv.Prest.a no Adheridos-SS-</field>
       <field name="code">44112</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4411" />
@@ -2334,7 +2361,7 @@
       <field name="name">Costo de Serv.Sepelios</field>
       <field name="code">44121</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="costos_4412" />
@@ -2355,7 +2382,7 @@
       <field name="name">Sueldos-SS-</field>
       <field name="code">441311</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_44131" />
@@ -2364,7 +2391,7 @@
       <field name="name">Aportes Seg.Social-SS-</field>
       <field name="code">441312</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_44131" />
@@ -2373,7 +2400,7 @@
       <field name="name">Despidos-SS-</field>
       <field name="code">441313</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_44131" />
@@ -2382,7 +2409,7 @@
       <field name="name">Tickets Canasta-SS-</field>
       <field name="code">441314</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_44131" />
@@ -2391,7 +2418,7 @@
       <field name="name">Gtos p/Medicamentos-SS-</field>
       <field name="code">441315</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_44131" />
@@ -2400,7 +2427,7 @@
       <field name="name">Ropa de Trabajo y elem. de Protec. -SS-</field>
       <field name="code">441316</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_44131" />
@@ -2415,7 +2442,7 @@
       <field name="name">Combustibles y Lub.-SS-</field>
       <field name="code">441331</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="mantenimiento_44133" />
@@ -2424,7 +2451,7 @@
       <field name="name">Mant.de Redes e Instalac.-SS-</field>
       <field name="code">441332</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="mantenimiento_44133" />
@@ -2439,7 +2466,7 @@
       <field name="name">Mantenim.y Rep.Rodados-SS-</field>
       <field name="code">441341</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_44134" />
@@ -2448,7 +2475,7 @@
       <field name="name">Publicidad y Propaganda-SS-</field>
       <field name="code">441342</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_44134" />
@@ -2457,7 +2484,7 @@
       <field name="name">Franqueo y Tel‚fono-SS-</field>
       <field name="code">441345</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_44134" />
@@ -2466,7 +2493,7 @@
       <field name="name">Seguros-SS-</field>
       <field name="code">441346</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_44134" />
@@ -2475,7 +2502,7 @@
       <field name="name">Matafuegos-SS-</field>
       <field name="code">441347</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_44134" />
@@ -2484,7 +2511,7 @@
       <field name="name">Fletes-SS-</field>
       <field name="code">441348</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_44134" />
@@ -2493,7 +2520,7 @@
       <field name="name">Gtos por Serv.Prestados-SS-</field>
       <field name="code">441349</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_44134" />
@@ -2508,7 +2535,7 @@
       <field name="name">Movilidad y Viaticos-SS-</field>
       <field name="code">441363</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_44136" />
@@ -2517,7 +2544,7 @@
       <field name="name">Incobrables-SS-</field>
       <field name="code">441364</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_44136" />
@@ -2526,7 +2553,7 @@
       <field name="name">Depreciaciones-SS-</field>
       <field name="code">441365</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_44136" />
@@ -2535,7 +2562,7 @@
       <field name="name">Amortizaci¢n Nichos-SS-</field>
       <field name="code">441366</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_44136" />
@@ -2544,7 +2571,7 @@
       <field name="name">Alquileres-SS-</field>
       <field name="code">441367</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_44136" />
@@ -2553,7 +2580,7 @@
       <field name="name">Gastos Diversos-SS-</field>
       <field name="code">441369</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_44136" />
@@ -2568,7 +2595,7 @@
       <field name="name">Impuestos,Tasas y Cont.-SS-</field>
       <field name="code">441371</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="impuestos_44137" />
@@ -2577,7 +2604,7 @@
       <field name="name">Débitos y Créd. Brios.L.25413-SS-</field>
       <field name="code">441373</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="impuestos_44137" />
@@ -2592,7 +2619,7 @@
       <field name="name">Gtos Energ.Eléctrica-SS-</field>
       <field name="code">441381</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="insumos_44138" />
@@ -2601,7 +2628,7 @@
       <field name="name">Insumos Varios-SS-</field>
       <field name="code">441384</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="insumos_44138" />
@@ -2610,7 +2637,7 @@
       <field name="name">Alquileres p/Concec.Nichos</field>
       <field name="code">4416</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_ordoperativos-ss-" />
@@ -2625,7 +2652,7 @@
       <field name="name">Gtos Ind.de Com.-SS-</field>
       <field name="code">44171</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gtosde_comercializacion-indirectos-_4417" />
@@ -2640,7 +2667,7 @@
       <field name="name">Gtos Ind.de Adm.-SS-</field>
       <field name="code">44181</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gtosde_administracion-indirectos-_4418" />
@@ -2655,7 +2682,7 @@
       <field name="name">Gtos Recuperados-SS-</field>
       <field name="code">4421</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-ss" />
@@ -2664,7 +2691,7 @@
       <field name="name">Vtas.Bs.Uso -SS-</field>
       <field name="code">4422</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-ss" />
@@ -2679,7 +2706,7 @@
       <field name="name">Int.p/Financiaci¢n-SS-</field>
       <field name="code">4431</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_financieros-ss-" />
@@ -2688,7 +2715,7 @@
       <field name="name">Int.p/Financ.Alquil.Nichos-SS-</field>
       <field name="code">4432</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_financieros-ss-" />
@@ -2697,7 +2724,7 @@
       <field name="name">Intereses Morat.Cobrados-SS-</field>
       <field name="code">4433</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-ss-" />
@@ -2706,7 +2733,7 @@
       <field name="name">Intereses Ganados-SS-</field>
       <field name="code">4434</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-ss-" />
@@ -2715,7 +2742,7 @@
       <field name="name">Com.,Int.y Gtos Brios-SS-</field>
       <field name="code">4435</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_financieros-ss-" />
@@ -2724,7 +2751,7 @@
       <field name="name">Result.Fin.y p/Ten.(Incluído RECPAM)</field>
       <field name="code">4436</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Sepelio" />
+      <field name="sector_id" ref="sector_sepelio" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-ss-" />
@@ -2751,7 +2778,7 @@
       <field name="name">Vtas de Cilindros y Garrafas-Asoc-</field>
       <field name="code">45111</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4511" />
@@ -2760,7 +2787,7 @@
       <field name="name">Vtas Gas a Granel-Asoc-</field>
       <field name="code">45112</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4511" />
@@ -2769,7 +2796,7 @@
       <field name="name">Vtas de Cil. y Garr.-No Asoc-</field>
       <field name="code">45113</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4511" />
@@ -2778,7 +2805,7 @@
       <field name="name">Vtas Gas a Granel-No Asoc-</field>
       <field name="code">45114</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4511" />
@@ -2787,7 +2814,7 @@
       <field name="name">Subsidios L.26.020</field>
       <field name="code">45115</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4511" />
@@ -2796,7 +2823,7 @@
       <field name="name">Logistica y servicios Gas-No Asoc-</field>
       <field name="code">45117</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4511" />
@@ -2805,7 +2832,7 @@
       <field name="name">Vtas p/transf.de bs. a ot.sec.-GL-</field>
       <field name="code">45118</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4511" />
@@ -2820,7 +2847,7 @@
       <field name="name">Costo de Vtas Gas</field>
       <field name="code">45121</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="costos_4512" />
@@ -2841,7 +2868,7 @@
       <field name="name">Sueldos-GAS-</field>
       <field name="code">451311</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_45131" />
@@ -2850,7 +2877,7 @@
       <field name="name">Aportes Seg.Social-GAS-</field>
       <field name="code">451312</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_45131" />
@@ -2859,7 +2886,7 @@
       <field name="name">Bonif. Personal a Jub.GL-</field>
       <field name="code">451313</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_45131" />
@@ -2868,7 +2895,7 @@
       <field name="name">Tickets Canasta-GAS-</field>
       <field name="code">451314</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_45131" />
@@ -2877,7 +2904,7 @@
       <field name="name">Gtos p/Medicamentos-GAS-</field>
       <field name="code">451315</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_45131" />
@@ -2886,7 +2913,7 @@
       <field name="name">Ropa de Trabajo-GAS-</field>
       <field name="code">451316</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_45131" />
@@ -2895,7 +2922,7 @@
       <field name="name">Despidos Gas</field>
       <field name="code">451317</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_45131" />
@@ -2910,7 +2937,7 @@
       <field name="name">Combustibles y Lub.-GAS-</field>
       <field name="code">451331</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="mantenimiento_45133" />
@@ -2919,7 +2946,7 @@
       <field name="name">Mant.de Redes e Instalac.-GAS-</field>
       <field name="code">451332</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="mantenimiento_45133" />
@@ -2934,7 +2961,7 @@
       <field name="name">Manten.y Rep.Rodados-GAS-</field>
       <field name="code">451341</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_45134" />
@@ -2943,7 +2970,7 @@
       <field name="name">Honorarios y Gtos.Legales-GAS-</field>
       <field name="code">451343</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_45134" />
@@ -2952,7 +2979,7 @@
       <field name="name">Cuotas C maras Empresarias-GAS</field>
       <field name="code">451344</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_45134" />
@@ -2961,7 +2988,7 @@
       <field name="name">Seguros-Gas-</field>
       <field name="code">451346</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_45134" />
@@ -2970,7 +2997,7 @@
       <field name="name">Matafuegos-GAS-</field>
       <field name="code">451347</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_45134" />
@@ -2979,7 +3006,7 @@
       <field name="name">Fletes-GAS-</field>
       <field name="code">451349</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_45134" />
@@ -2988,7 +3015,7 @@
       <field name="name">Reparación Envases-GAS</field>
       <field name="code">4513410</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_45134" />
@@ -3003,7 +3030,7 @@
       <field name="name">Donaciones Programa solidario-GAS-</field>
       <field name="code">451362</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_45136" />
@@ -3012,7 +3039,7 @@
       <field name="name">Movil. Y Viát.GAS</field>
       <field name="code">451363</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_45136" />
@@ -3021,7 +3048,7 @@
       <field name="name">Depreciaciones-GAS-</field>
       <field name="code">451365</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_45136" />
@@ -3030,7 +3057,7 @@
       <field name="name">Gtos.Diversos -GAS-</field>
       <field name="code">451369</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_45136" />
@@ -3045,7 +3072,7 @@
       <field name="name">Impuestos,Tasas y Contrib-GL</field>
       <field name="code">451371</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="impuestos_45137" />
@@ -3054,7 +3081,7 @@
       <field name="name">Resolución 271/01 Sec.de Energía</field>
       <field name="code">451372</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="impuestos_45137" />
@@ -3063,7 +3090,7 @@
       <field name="name">Débitos y Créd. Brios.L.25413-GAS-</field>
       <field name="code">451373</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="impuestos_45137" />
@@ -3078,7 +3105,7 @@
       <field name="name">Gtos Energ.El‚ctrica-GAS-</field>
       <field name="code">451381</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="insumos_45138" />
@@ -3087,7 +3114,7 @@
       <field name="name">Baberos,Precintos,Tapones y Pintura-GA</field>
       <field name="code">451382</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="insumos_45138" />
@@ -3108,7 +3135,7 @@
       <field name="name">Sueldos-GAS- ( c)</field>
       <field name="code">451411</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_45141" />
@@ -3117,7 +3144,7 @@
       <field name="name">Aportes Seg.Social-GAS- (c )</field>
       <field name="code">451412</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_45141" />
@@ -3126,7 +3153,7 @@
       <field name="name">Bonif. Personal a Jub.GL-( c)</field>
       <field name="code">451413</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_45141" />
@@ -3135,7 +3162,7 @@
       <field name="name">Gtos p/Medicamentos-GAS- (c)</field>
       <field name="code">451415</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_45141" />
@@ -3144,7 +3171,7 @@
       <field name="name">Despidos-GAS- (c )</field>
       <field name="code">451417</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_45141" />
@@ -3159,7 +3186,7 @@
       <field name="name">Combustibles y Lub.-GAS-</field>
       <field name="code">451431</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="mantenimiento_45143" />
@@ -3174,7 +3201,7 @@
       <field name="name">Manten.y Rep.Rodados-GAS-( c)</field>
       <field name="code">451441</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_45144" />
@@ -3183,7 +3210,7 @@
       <field name="name">Publicidad y Propaganda-GAS-( c)</field>
       <field name="code">451442</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_45144" />
@@ -3192,7 +3219,7 @@
       <field name="name">Franqueo y Tel‚fono-GAS- ( c)</field>
       <field name="code">451445</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_45144" />
@@ -3201,7 +3228,7 @@
       <field name="name">Seguros-Gas-( c)</field>
       <field name="code">451446</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_45144" />
@@ -3210,7 +3237,7 @@
       <field name="name">Comisiones-GAS-( c)</field>
       <field name="code">451447</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_45144" />
@@ -3219,7 +3246,7 @@
       <field name="name">Canje Envases-GAS-( c)</field>
       <field name="code">451448</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_45144" />
@@ -3228,7 +3255,7 @@
       <field name="name">Serv.de Comp.e Imprenta-GAS-( c)</field>
       <field name="code">451449</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_45144" />
@@ -3243,7 +3270,7 @@
       <field name="name">Movilidad y Via ticos-GAS-(c)</field>
       <field name="code">451463</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_45146" />
@@ -3252,7 +3279,7 @@
       <field name="name">Incobrables-GAS-(c)</field>
       <field name="code">451464</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_45146" />
@@ -3261,7 +3288,7 @@
       <field name="name">Depreciaciones-GAS- ( c)</field>
       <field name="code">451465</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_45146" />
@@ -3270,7 +3297,7 @@
       <field name="name">Amortización Numerales-GAS-(c)</field>
       <field name="code">451466</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_45146" />
@@ -3279,7 +3306,7 @@
       <field name="name">Gtos Gles Gas a Granel ( c)</field>
       <field name="code">451468</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_45146" />
@@ -3288,7 +3315,7 @@
       <field name="name">Gtos.Diversos -GAS- ( c)</field>
       <field name="code">451469</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_45146" />
@@ -3303,7 +3330,7 @@
       <field name="name">Impuestos,Tasas y Contrib-GL- ( c)</field>
       <field name="code">451471</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="impuestos_45147" />
@@ -3312,7 +3339,7 @@
       <field name="name">Débitos y Créd. Brios.L.25413-GL-( c)</field>
       <field name="code">451473</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="impuestos_45147" />
@@ -3327,7 +3354,7 @@
       <field name="name">Gtos Indirec.de Com.-GAS-</field>
       <field name="code">45171</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gtos_de_comercializacion-indirectos-_4517" />
@@ -3342,7 +3369,7 @@
       <field name="name">Gtos Indirec.de Adm.-GAS-</field>
       <field name="code">45181</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gtosde_administracion-indirectos-_4518" />
@@ -3357,7 +3384,7 @@
       <field name="name">Der.de Conex.Gas a Granel</field>
       <field name="code">4521</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-gl" />
@@ -3366,7 +3393,7 @@
       <field name="name">Gtos Recuperados-GAS-</field>
       <field name="code">4522</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-gl" />
@@ -3375,7 +3402,7 @@
       <field name="name">Fletes Facturados -GL-</field>
       <field name="code">4523</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_ordno_operativos-gl" />
@@ -3384,7 +3411,7 @@
       <field name="name">Vta de Envases-GAS-</field>
       <field name="code">4524</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-gl" />
@@ -3393,7 +3420,7 @@
       <field name="name">Recuperos-GAS-</field>
       <field name="code">4525</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-gl" />
@@ -3402,7 +3429,7 @@
       <field name="name">Vtas.de Bs.de Uso -GAS-</field>
       <field name="code">4526</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-gl" />
@@ -3411,7 +3438,7 @@
       <field name="name">Ventas de Marcas de Fabrica -GL-</field>
       <field name="code">4527</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-gl" />
@@ -3420,7 +3447,7 @@
       <field name="name">Descuentos Obtenidos-GL-</field>
       <field name="code">4528</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-gl" />
@@ -3429,7 +3456,7 @@
       <field name="name">Costo de Vta Bs.de Uso-GAS-</field>
       <field name="code">4529</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_ordno_operativos-gl" />
@@ -3438,7 +3465,7 @@
       <field name="name">Costo de Vta Envases-Gas-</field>
       <field name="code">45210</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_ordno_operativos-gl" />
@@ -3447,7 +3474,7 @@
       <field name="name">Envases Irrecuperables-GAS-</field>
       <field name="code">45211</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_ordno_operativos-gl" />
@@ -3456,7 +3483,7 @@
       <field name="name">Costo de Vta Marcas de Fab-GAS-</field>
       <field name="code">45212</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_ordno_operativos-gl" />
@@ -3471,7 +3498,7 @@
       <field name="name">Intereses Morat.Cobrados-GAS-</field>
       <field name="code">4531</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-gas-" />
@@ -3480,7 +3507,7 @@
       <field name="name">Int.p/Financiaci¢n GAS</field>
       <field name="code">4532</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_financieros-gas-" />
@@ -3489,7 +3516,7 @@
       <field name="name">Intereses Ganados-GAS-</field>
       <field name="code">4534</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-gas-" />
@@ -3498,7 +3525,7 @@
       <field name="name">Com.,Int.y Gtos Brios-GAS-</field>
       <field name="code">4535</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_financieros-gas-" />
@@ -3507,7 +3534,7 @@
       <field name="name">Result.Fin.y p/Ten.(Incluído RECPAM)</field>
       <field name="code">4536</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-gas-" />
@@ -3522,7 +3549,7 @@
       <field name="name">Siniestros B.de Uso-GL-</field>
       <field name="code">4541</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_extraordinarios-gl-" />
@@ -3531,7 +3558,7 @@
       <field name="name">Indemnización p/Daños y Perjuicios-GL</field>
       <field name="code">4542</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Gas" />
+      <field name="sector_id" ref="sector_gas" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_extraordinarios-gl-" />
@@ -3558,7 +3585,7 @@
       <field name="name">Ingresos por Abonos-CCTV-</field>
       <field name="code">46111</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4611" />
@@ -3567,7 +3594,7 @@
       <field name="name">Ingresos por Publicidad-CCTV-</field>
       <field name="code">46112</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4611" />
@@ -3576,7 +3603,7 @@
       <field name="name">Venta Accesorios p/Conexión</field>
       <field name="code">46113</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4611" />
@@ -3585,7 +3612,7 @@
       <field name="name">Vtas p/trasnf.de serv. a ot.sec-CCTV-</field>
       <field name="code">46114</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4611" />
@@ -3600,7 +3627,7 @@
       <field name="name">Costos de Programación</field>
       <field name="code">46121</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="costos" />
@@ -3621,7 +3648,7 @@
       <field name="name">Sueldos-CCTV-</field>
       <field name="code">461311</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_46131" />
@@ -3630,7 +3657,7 @@
       <field name="name">Aportes Seg.Social-CCTV-</field>
       <field name="code">461312</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_46131" />
@@ -3639,7 +3666,7 @@
       <field name="name">Tickets Canasta-CCTV-</field>
       <field name="code">461314</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_46131" />
@@ -3648,7 +3675,7 @@
       <field name="name">Ropa de Trabajo-CCTV-</field>
       <field name="code">461316</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_46131" />
@@ -3657,7 +3684,7 @@
       <field name="name">Despidos-CCTV-</field>
       <field name="code">461317</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_46131" />
@@ -3672,7 +3699,7 @@
       <field name="name">Combustibles y Lub.-CCTV-</field>
       <field name="code">461331</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="mantenimiento_46133" />
@@ -3681,7 +3708,7 @@
       <field name="name">Mantenim.de Redes e Inst.CCTV-</field>
       <field name="code">461332</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="mantenimiento_46133" />
@@ -3696,7 +3723,7 @@
       <field name="name">Mantenim.y Rep.Rodados-CCTV-</field>
       <field name="code">461341</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_46134" />
@@ -3705,7 +3732,7 @@
       <field name="name">Publicidad y Propaganda-CCTV-</field>
       <field name="code">461342</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_46134" />
@@ -3714,7 +3741,7 @@
       <field name="name">Cuotas Cámaras Emp.-CCTV-</field>
       <field name="code">461344</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_46134" />
@@ -3723,7 +3750,7 @@
       <field name="name">Franqueo y Teléfono-CCTV-</field>
       <field name="code">461345</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_46134" />
@@ -3732,7 +3759,7 @@
       <field name="name">Seguros-CCTV-</field>
       <field name="code">461346</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_46134" />
@@ -3741,7 +3768,7 @@
       <field name="name">Comisiones-CCTV-</field>
       <field name="code">461348</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_46134" />
@@ -3750,7 +3777,7 @@
       <field name="name">Fletes -CCTV-</field>
       <field name="code">461349</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_46134" />
@@ -3759,7 +3786,7 @@
       <field name="name">Reparaciones Equipos-CCTV-</field>
       <field name="code">4613410</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="servde_terceros_46134" />
@@ -3774,7 +3801,7 @@
       <field name="name">Incobrables-AH-(c)</field>
       <field name="code">461364</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_46136" />
@@ -3783,7 +3810,7 @@
       <field name="name">Depreciaciones-CCTV-</field>
       <field name="code">461365</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_46136" />
@@ -3792,7 +3819,7 @@
       <field name="name">Gtos.Diversos CCTV</field>
       <field name="code">461369</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_46136" />
@@ -3807,7 +3834,7 @@
       <field name="name">Imp.,Tasas y Cont.-CCTV-</field>
       <field name="code">461371</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="impuestos_46137" />
@@ -3816,7 +3843,7 @@
       <field name="name">Débitos y Créd. Brios.L.25413-CCTV-</field>
       <field name="code">461373</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="impuestos_46137" />
@@ -3825,7 +3852,7 @@
       <field name="name">Insumos</field>
       <field name="code">46138</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gastos_de_explotacion-directos-_4613" />
@@ -3834,7 +3861,7 @@
       <field name="name">Gastos EE-CCTV-</field>
       <field name="code">461381</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="insumos_46138" />
@@ -3855,7 +3882,7 @@
       <field name="name">Publicidad y Prop.-CCTV-©</field>
       <field name="code">461442</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="serv_de_terceros" />
@@ -3870,7 +3897,7 @@
       <field name="name">Gtos Ind.de com-CCTV-</field>
       <field name="code">46171</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gtosde_comercializacion-indirectos-_4617" />
@@ -3885,7 +3912,7 @@
       <field name="name">Gtos Ind.de Adm-CCTV-</field>
       <field name="code">46181</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gtosde_administracion-indirectos" />
@@ -3900,7 +3927,7 @@
       <field name="name">Result.Invers.otras Sociedades</field>
       <field name="code">4621</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-c" />
@@ -3909,7 +3936,7 @@
       <field name="name">Derechos de Reconexión-CCTV-</field>
       <field name="code">4622</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-c" />
@@ -3918,7 +3945,7 @@
       <field name="name">Gtos Recuperados -CCTV-</field>
       <field name="code">4623</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-c" />
@@ -3927,7 +3954,7 @@
       <field name="name">Derechos de Conexión-CCTV-</field>
       <field name="code">4624</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-c" />
@@ -3942,7 +3969,7 @@
       <field name="name">Intereses Morat.Cobrados-CCTV-</field>
       <field name="code">4631</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-cctv-" />
@@ -3951,7 +3978,7 @@
       <field name="name">Intereses Ganados-CCTV-</field>
       <field name="code">4632</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-cctv-" />
@@ -3960,7 +3987,7 @@
       <field name="name">Com.,Int.y Gtos.Brios.-CCTV-</field>
       <field name="code">4633</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_financieros-cctv-" />
@@ -3969,7 +3996,7 @@
       <field name="name">Result.Fin.y p/Ten.(Incluído RECPAM)</field>
       <field name="code">4634</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="CCTV" />
+      <field name="sector_id" ref="sector_cctv" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-cctv-" />
@@ -3996,7 +4023,7 @@
       <field name="name">Ventas Abonos INTERNET-Asoc-</field>
       <field name="code">47111</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4711" />
@@ -4005,7 +4032,7 @@
       <field name="name">Ventas Abonos INTERNET-No Asoc-</field>
       <field name="code">47112</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4711" />
@@ -4014,7 +4041,7 @@
       <field name="name">Vtas p/transf.de serv. a ot.sec.-INT-</field>
       <field name="code">47113</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="ingreso_operativo_seccional_4711" />
@@ -4029,7 +4056,7 @@
       <field name="name">Costo de Vta.Serv.INTERNET</field>
       <field name="code">47121</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="costos_4712" />
@@ -4050,7 +4077,7 @@
       <field name="name">Sueldos-INT-</field>
       <field name="code">471311</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_47131" />
@@ -4059,7 +4086,7 @@
       <field name="name">Aportes Seg.Soc.-INT-</field>
       <field name="code">471312</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_47131" />
@@ -4068,7 +4095,7 @@
       <field name="name">Ticket Canasta-INT</field>
       <field name="code">471314</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_47131" />
@@ -4077,7 +4104,7 @@
       <field name="name">Gtos p/Medicamentos-INT</field>
       <field name="code">471315</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="remuneraciones_47131" />
@@ -4092,7 +4119,7 @@
       <field name="name">Cuotas Cámaras Empresarias-INT-</field>
       <field name="code">471344</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="serv_de_terceros_47134" />
@@ -4101,7 +4128,7 @@
       <field name="name">Seguros-INT-</field>
       <field name="code">471346</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="serv_de_terceros_47134" />
@@ -4116,7 +4143,7 @@
       <field name="name">Incobrales-Internet</field>
       <field name="code">471364</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_47136" />
@@ -4125,7 +4152,7 @@
       <field name="name">Depreciaciones -INT-</field>
       <field name="code">471365</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_47136" />
@@ -4134,7 +4161,7 @@
       <field name="name">Gtos.Diversos INTERNET</field>
       <field name="code">471369</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_47136" />
@@ -4149,7 +4176,7 @@
       <field name="name">Débitos y Créd. Brios.L.25413-INT-</field>
       <field name="code">471373</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="impuestos_47137" />
@@ -4164,7 +4191,7 @@
       <field name="name">Gtos.Energ.Electr.INTERNET</field>
       <field name="code">471381</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="insumos_47138" />
@@ -4185,7 +4212,7 @@
       <field name="name">Combustibles y Lub.-INT-</field>
       <field name="code">471431</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="mantenimiento_47143" />
@@ -4200,7 +4227,7 @@
       <field name="name">Manten.y Rep.Rodados-INT-( c)</field>
       <field name="code">471441</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="serv_de_terceros_47144" />
@@ -4209,7 +4236,7 @@
       <field name="name">Publicidad INTERNET</field>
       <field name="code">471442</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="serv_de_terceros_47144" />
@@ -4218,7 +4245,7 @@
       <field name="name">Franqueo y Tel‚fonos INTERNET</field>
       <field name="code">471445</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="serv_de_terceros_47144" />
@@ -4227,7 +4254,7 @@
       <field name="name">Gtos.de Serv.p/Conex.INTERNET</field>
       <field name="code">471446</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="serv_de_terceros_47144" />
@@ -4236,7 +4263,7 @@
       <field name="name">Serv.de Comp.e Impr.INTERNET</field>
       <field name="code">471447</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="serv_de_terceros_47144" />
@@ -4251,7 +4278,7 @@
       <field name="name">Viaticos y Movilidad INTERNET</field>
       <field name="code">471463</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_47146" />
@@ -4260,7 +4287,7 @@
       <field name="name">Gtos.Diversos INTERNET</field>
       <field name="code">471469</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="varios_47146" />
@@ -4275,7 +4302,7 @@
       <field name="name">Imp.,Tasas y Contrib.INTERNET</field>
       <field name="code">471471</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="impuestos_47147" />
@@ -4284,7 +4311,7 @@
       <field name="name">Débitos y Créd. Brios.L.25413-INT-</field>
       <field name="code">471473</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="impuestos_47147" />
@@ -4299,7 +4326,7 @@
       <field name="name">Gtos Ind.de Com-INT-</field>
       <field name="code">47171</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gtosde_comercializacion-indirectos-_4717" />
@@ -4314,7 +4341,7 @@
       <field name="name">Gtos Ind.de Adm-INT-</field>
       <field name="code">47181</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="gtosde_administracion-indirectos-_4718" />
@@ -4329,7 +4356,7 @@
       <field name="name">Derechos de Conexión-INT-</field>
       <field name="code">4721</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operat-int-" />
@@ -4338,7 +4365,7 @@
       <field name="name">Gtos Recuperados Internet</field>
       <field name="code">4722</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operat-int-" />
@@ -4347,7 +4374,7 @@
       <field name="name">Prestación del Serv.INT-</field>
       <field name="code">4723</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operat-int-" />
@@ -4362,7 +4389,7 @@
       <field name="name">Intereses Morat.Cobr.INT</field>
       <field name="code">4731</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-int-" />
@@ -4371,7 +4398,7 @@
       <field name="name">Com.,Int.y Gtos Brios-INT-</field>
       <field name="code">4732</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_financieros-int-" />
@@ -4380,7 +4407,7 @@
       <field name="name">Result.Fin.y p/Ten.(Incluído RECPAM)</field>
       <field name="code">4733</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Internet" />
+      <field name="sector_id" ref="sector_internet" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-int-" />
@@ -4407,7 +4434,7 @@
       <field name="name">Vtas.Bs.Uso - RA -</field>
       <field name="code">48111</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Ajenos" />
+      <field name="sector_id" ref="sector_ajenos" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-ra-" />
@@ -4416,7 +4443,7 @@
       <field name="name">Costo de Vta.Bs.de Uso-RA-</field>
       <field name="code">48112</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Ajenos" />
+      <field name="sector_id" ref="sector_ajenos" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_ordno_operativos-ra-" />
@@ -4425,7 +4452,7 @@
       <field name="name">Donaciones y subsidios-RA-</field>
       <field name="code">48113</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Ajenos" />
+      <field name="sector_id" ref="sector_ajenos" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_ordno_operativos-ra-" />
@@ -4434,7 +4461,7 @@
       <field name="name">Depreciaciones Bco.Ortopedico-RA-</field>
       <field name="code">48114</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Ajenos" />
+      <field name="sector_id" ref="sector_ajenos" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_ordno_operativos-ra-" />
@@ -4443,7 +4470,7 @@
       <field name="name">Otros Ingresos-RA-</field>
       <field name="code">48115</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Ajenos" />
+      <field name="sector_id" ref="sector_ajenos" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_ordno_operativos-ra-" />
@@ -4458,7 +4485,7 @@
       <field name="name">Intereses Ganados-RA-</field>
       <field name="code">48121</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Ajenos" />
+      <field name="sector_id" ref="sector_ajenos" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-ra-" />
@@ -4467,7 +4494,7 @@
       <field name="name">Diferencias de Cambio-RA-</field>
       <field name="code">48122</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Ajenos" />
+      <field name="sector_id" ref="sector_ajenos" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-ra-" />
@@ -4476,7 +4503,7 @@
       <field name="name">Com.,Int.y Gtos Brios-RA-</field>
       <field name="code">48123</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Ajenos" />
+      <field name="sector_id" ref="sector_ajenos" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="resultados_financieros-ra-" />
@@ -4485,7 +4512,7 @@
       <field name="name">Otros Resultados Financieros</field>
       <field name="code">48124</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Ajenos" />
+      <field name="sector_id" ref="sector_ajenos" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-ra-" />
@@ -4494,7 +4521,7 @@
       <field name="name">Result.Fin.y p/Ten.(Incluído RECPAM)-RA-</field>
       <field name="code">48125</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Ajenos" />
+      <field name="sector_id" ref="sector_ajenos" />
       <field name="kind">revenue</field>
       <field name="type" ref="account_type_ingreso" />
       <field name="parent" ref="resultados_financieros-ra-" />
@@ -4515,7 +4542,7 @@
       <field name="name">Siniestros Bienes de Uso-RA-</field>
       <field name="code">48211</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Ajenos" />
+      <field name="sector_id" ref="sector_ajenos" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="del_ejercicio" />
@@ -4524,7 +4551,7 @@
       <field name="name">Indemnización por Daños y Perjuicios-RA-</field>
       <field name="code">48212</field>
       <field eval="True" name="deferral" />
-      <field name="sector" ref="Ajenos" />
+      <field name="sector_id" ref="sector_ajenos" />
       <field name="kind">expense</field>
       <field name="type" ref="account_type_egreso" />
       <field name="parent" ref="del_ejercicio" />
