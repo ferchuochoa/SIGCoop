@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<form string="Suministro" col="6">
+  <label name="usuario_id"/>
+  <field name="usuario_id"/>
+  <label name="numero_usuario"/>
+  <field name="numero_usuario"/>
+  <label name="numero_suministro"/>
+  <field name="numero_suministro"/>
+  <label name="servicio"/>
+  <field name="servicio"/>
+  <label name="ruta"/>
+  <field name="ruta"/>
+  <label name="calle"/>
+  <field name="calle"/>
+  <label name="calle_numero"/>
+  <field name="calle_numero"/>
+</form>
