@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="Rango" col="4">
+  <label name="minimo"/>
+  <field name="minimo"/>
+  <label name="maximo"/>
+  <field name="maximo"/>
+</form>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="rango_view_form">
+            <field name="model">sigcoop_usuario.rango</field>
+            <field name="type" >form</field>
+            <field name="name">rango_form</field>
+        </record>
+        <record model="ir.ui.view" id="rango_view_tree">
+            <field name="model">sigcoop_usuario.rango</field>
+            <field name="type" >tree</field>
+            <field name="name">rango_tree</field>
+        </record>
+    </data>
+</tryton>
