@@ -4,4 +4,6 @@
   <field name="minimo"/>
   <label name="maximo"/>
   <field name="maximo"/>
+  <label name="asociado"/>
+  <field name="asociado"/>
 </form>
