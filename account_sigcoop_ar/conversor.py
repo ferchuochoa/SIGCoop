@@ -122,6 +122,7 @@ class WierdXMLGenerator(object):
         root.add_field(Field('name',
             value='Plan Contable para SIGCoop'))
         root.add_field(Field('kind', value='view'))
+        root.add_field(Field('sector_id', {'ref': 'sector_sin_sector'}))
         root.add_field(Field('type', {'ref': 'ar'}))
         self.document.add_record(root)
 
@@ -194,6 +195,10 @@ class WierdXMLGenerator(object):
 
         if row['sector']:
             index_name = row['sector'].decode('utf8').lower()
+            sector = self.account_sectores[index_name]
+            record.add_field(Field('sector_id', {'ref': sector}))
+        else:
+            index_name = str('Sin sector').decode('utf8').lower()
             sector = self.account_sectores[index_name]
             record.add_field(Field('sector_id', {'ref': sector}))
 

@@ -5,6 +5,7 @@ from trytond.pool import Pool
 from trytond.transaction import Transaction
 from trytond import backend
 
+
 __all__ = ['SectorTemplate', 'Sector', 'AccountTemplate',  'Account', 'CreateChartAccount', 'CreateChart']
 
 
@@ -21,97 +22,24 @@ class SectorTemplate(ModelSQL, ModelView):
 
 
     def create_sector(self, template2sector=None):
-        '''
-        Create recursively types based on template.
-        template2type is a dictionary with template id as key and type id as
-        value, used to convert template id into type. The dictionary is filled
-        with new types.
-        Return the id of the type created
-        '''
         pool = Pool()
         Sector = pool.get('account.sector')
-        Config = pool.get('ir.configuration')
 
         if template2sector is None:
             template2sector = {}
 
         if self.id not in template2sector:
+            vals = {}
             vals['name'] = self.name
 
             new_sector, = Sector.create([vals])
 
-            prev_lang = self._context.get('language') or Config.get_language()
-            prev_data = {}
-            for field_name, field in self._fields.iteritems():
-                if getattr(field, 'translate', False):
-                    prev_data[field_name] = getattr(self, field_name)
-            for lang in Lang.get_translatable_languages():
-                if lang == prev_lang:
-                    continue
-                with Transaction().set_context(language=lang):
-                    template = self.__class__(self.id)
-                    data = {}
-                    for field_name, field in template._fields.iteritems():
-                        if (getattr(field, 'translate', False)
-                                and (getattr(template, field_name) !=
-                                    prev_data[field_name])):
-                            data[field_name] = getattr(template, field_name)
-                    if data:
-                        Sector.write([new_sector], data)
+
             template2sector[self.id] = new_sector.id
         new_id = template2sector[self.id]
 
-        new_childs = []
-        for child in self.childs:
-            new_childs.append(child.create_sector(template2sector=template2sector))
         return new_id
 
-
-    def create_sector(self, company_id, template2sector=None):
-        '''
-        Create recursively types based on template.
-        template2type is a dictionary with template id as key and type id as
-        value, used to convert template id into type. The dictionary is filled
-        with new types.
-        Return the id of the type created
-        '''
-        pool = Pool()
-        Sector = pool.get('account.sector')
-        Config = pool.get('ir.configuration')
-
-        if template2sector is None:
-            template2sector = {}
-
-        if self.id not in template2sector:
-            vals['name'] = self.name
-
-            new_sector, = Sector.create([vals])
-
-            prev_lang = self._context.get('language') or Config.get_language()
-            prev_data = {}
-            for field_name, field in self._fields.iteritems():
-                if getattr(field, 'translate', False):
-                    prev_data[field_name] = getattr(self, field_name)
-            for lang in Lang.get_translatable_languages():
-                if lang == prev_lang:
-                    continue
-                with Transaction().set_context(language=lang):
-                    template = self.__class__(self.id)
-                    data = {}
-                    for field_name, field in template._fields.iteritems():
-                        if (getattr(field, 'translate', False)
-                                and (getattr(template, field_name) !=
-                                    prev_data[field_name])):
-                            data[field_name] = getattr(template, field_name)
-                    if data:
-                        Sector.write([new_sector], data)
-            template2sector[self.id] = new_sector.id
-        new_id = template2sector[self.id]
-
-        new_childs = []
-        for child in self.childs:
-            new_childs.append(child.create_sector(template2sector=template2sector))
-        return new_id
 
 
 class Sector(ModelSQL, ModelView):
@@ -128,7 +56,10 @@ class AccountTemplate(ModelSQL, ModelView):
 
     sector_id = fields.Many2One('account.sector.template', 'Sector',
             ondelete="RESTRICT")
-    
+ 
+    # @staticmethod
+    # def default_sector_id():
+    #     return 1
 
     def create_account(self, company_id, template2account=None,
             template2type=None, template2sector=None, parent_id=None):
@@ -154,10 +85,11 @@ class AccountTemplate(ModelSQL, ModelView):
 
         if self.id not in template2account:
             vals = self._get_account_value()
-            vals['company'] = company_id + "2"
+            vals['company'] = company_id
             vals['parent'] = parent_id
             vals['type'] = (template2type.get(self.type.id) if self.type
                 else None)
+            self.sector_id.create_sector(template2sector)
             vals['sector_id'] = (template2sector.get(self.sector_id.id))
 
             new_account, = Account.create([vals])
@@ -228,6 +160,12 @@ class CreateChart(Wizard):
         with Transaction().set_context(language=Config.get_language(),
                 company=self.account.company.id):
             account_template = self.account.account_template
+
+            # Create account types
+            template2type = {}
+            account_template.type.create_type(self.account.company.id,
+                template2type=template2type)
+
 
             # Create account sectores
             template2sector = {}
