@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<form string="Aporte" col="6">
+
+  <label name="fecha"/>
+  <field name="fecha"/>
+  <label name="monto"/>
+  <field name="monto"/>
+  <label name="sector"/>
+  <field name="sector"/>
+  <label name="usuario_id"/>
+  <field name="usuario_id"/>
+</form>

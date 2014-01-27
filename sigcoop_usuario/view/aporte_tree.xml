@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Aportes">
+  <field name="fecha"/>
+  <field name="monto"/>
+  <field name="sector"/>
+  <field name="usuario_id"/>
+</tree>
