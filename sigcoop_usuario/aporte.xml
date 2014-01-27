@@ -15,7 +15,7 @@
 
         <!-- act_window --> 
         <record id="act_aporte_form" model="ir.action.act_window">
-            <field name="name">Suministro</field>
+            <field name="name">Aportes</field>
             <field name="res_model">sigcoop_usuario.aporte</field>
             <field name="search_value"/>
         </record>
