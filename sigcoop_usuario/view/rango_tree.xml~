@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form string="Familiar" col="6">
+  <label name="dni"/>
+  <field name="dni"/>
+  <label name="relacion"/>
+  <field name="relacion"/>
+  <label name="nombre"/>
+  <field name="nombre"/>
+  <label name="apellido"/>
+  <field name="apellido"/>
+  <label name="fecha_nacimiento"/>
+  <field name="fecha_nacimiento"/>
+  <label name="usuario_id"/>
+  <field name="usuario_id"/>
+</form>

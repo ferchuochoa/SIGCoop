@@ -3,7 +3,7 @@ from .party import *
 from .familiar import Familiar
 from .suministro import Suministro
 from .aporte import Aporte
-
+from .rango import Rango
 
 def register():
     Pool.register(
@@ -11,5 +11,7 @@ def register():
         Suministro,
         Familiar,
         Aporte,
+	Rango,
         module='sigcoop_usuario', type_='model'
     )
+

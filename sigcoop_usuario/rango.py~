@@ -1,0 +1,15 @@
+#-*- coding: utf-8 -*-
+from trytond.model import ModelSQL, ModelView, fields
+
+__all__ = ['Rango']
+
+
+class Rango(ModelSQL, ModelView):
+    "Rango"
+    __name__ = ''
+    #minimo y maximo de rango de acciones asignadas
+    minimo = fields.Integer('Minimo')
+    maximo = fields.Integer('Maximo')
+    #Referencia asociados
+    asociado = fields.Many2One()
+
