@@ -67,6 +67,53 @@ class SectorTemplate(ModelSQL, ModelView):
         return new_id
 
 
+    def create_sector(self, company_id, template2sector=None):
+        '''
+        Create recursively types based on template.
+        template2type is a dictionary with template id as key and type id as
+        value, used to convert template id into type. The dictionary is filled
+        with new types.
+        Return the id of the type created
+        '''
+        pool = Pool()
+        Sector = pool.get('account.sector')
+        Config = pool.get('ir.configuration')
+
+        if template2sector is None:
+            template2sector = {}
+
+        if self.id not in template2sector:
+            vals['name'] = self.name
+
+            new_sector, = Sector.create([vals])
+
+            prev_lang = self._context.get('language') or Config.get_language()
+            prev_data = {}
+            for field_name, field in self._fields.iteritems():
+                if getattr(field, 'translate', False):
+                    prev_data[field_name] = getattr(self, field_name)
+            for lang in Lang.get_translatable_languages():
+                if lang == prev_lang:
+                    continue
+                with Transaction().set_context(language=lang):
+                    template = self.__class__(self.id)
+                    data = {}
+                    for field_name, field in template._fields.iteritems():
+                        if (getattr(field, 'translate', False)
+                                and (getattr(template, field_name) !=
+                                    prev_data[field_name])):
+                            data[field_name] = getattr(template, field_name)
+                    if data:
+                        Sector.write([new_sector], data)
+            template2sector[self.id] = new_sector.id
+        new_id = template2sector[self.id]
+
+        new_childs = []
+        for child in self.childs:
+            new_childs.append(child.create_sector(template2sector=template2sector))
+        return new_id
+
+
 class Sector(ModelSQL, ModelView):
     "Sector"
     __name__ = 'account.sector'
@@ -111,7 +158,7 @@ class AccountTemplate(ModelSQL, ModelView):
             vals['parent'] = parent_id
             vals['type'] = (template2type.get(self.type.id) if self.type
                 else None)
-         #   vals['sector_id'] = (template2sector.get(self.sector_id.id))
+            vals['sector_id'] = (template2sector.get(self.sector_id.id))
 
             new_account, = Account.create([vals])
 
@@ -186,18 +233,10 @@ class CreateChart(Wizard):
             template2sector = {}
             account_template.sector_id.create_sector(template2sector=template2sector)
 
-
-            # Create account types
-            template2type = {}
-            account_template.type.create_type(self.account.company.id,
-                template2type=template2type)
-
             # Create accounts
             template2account = {}
             account_template.create_account(self.account.company.id,
                 template2account=template2account, template2type=template2type, template2sector=template2sector)
-
-
 
             # Create tax codes
             template2tax_code = {}
