@@ -195,7 +195,7 @@ class WierdXMLGenerator(object):
         if row['sector']:
             index_name = row['sector'].decode('utf8').lower()
             sector = self.account_sectores[index_name]
-            record.add_field(Field('sector', {'ref': sector}))
+            record.add_field(Field('sector_id', {'ref': sector}))
 
         record.add_field(Field('kind', value=kind))
 
