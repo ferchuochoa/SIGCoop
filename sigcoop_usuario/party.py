@@ -30,3 +30,6 @@ class Party(ModelSQL, ModelView):
     fecha_ingreso = fields.Date('Fecha de ingreso')
     #Referencias muchos a uno
     suministros = fields.One2Many('sigcoop_usuario.suministro', 'usuario_id', 'Suministros')
+    rangos = fields.One2Many('sigcoop_usuario.rango', 'asociado', 'Rangos')
+    familiares = fields.One2Many('sigcoop_usuario.familiar', 'usuario_id', 'Familiares')
+    aportes = fields.One2Many('sigcoop_usuario.aporte', 'usuario_id', 'Familiares')

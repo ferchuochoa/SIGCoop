@@ -12,4 +12,3 @@ class Rango(ModelSQL, ModelView):
     maximo = fields.Integer('Maximo', required=True)
     #Referencia asociados
     asociado = fields.Many2One('party.party', 'Asociado', domain=[('asociado', '=', True)])
-
