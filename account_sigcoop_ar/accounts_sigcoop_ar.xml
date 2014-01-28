@@ -1,30 +1,30 @@
 <tryton>
   <data>
-    <record id="sector_energia" model="account_sector.sector.template">
+    <record id="sector_energia" model="account.sector.template">
       <field name="name">Energia</field>
     </record>
-    <record id="sector_agua_potable" model="account_sector.sector.template">
+    <record id="sector_agua_potable" model="account.sector.template">
       <field name="name">Agua Potable</field>
     </record>
-    <record id="sector_sepelio" model="account_sector.sector.template">
+    <record id="sector_sepelio" model="account.sector.template">
       <field name="name">Sepelio</field>
     </record>
-    <record id="sector_cctv" model="account_sector.sector.template">
+    <record id="sector_cctv" model="account.sector.template">
       <field name="name">CCTV</field>
     </record>
-    <record id="sector_internet" model="account_sector.sector.template">
+    <record id="sector_internet" model="account.sector.template">
       <field name="name">Internet</field>
     </record>
-    <record id="sector_gas" model="account_sector.sector.template">
+    <record id="sector_gas" model="account.sector.template">
       <field name="name">Gas</field>
     </record>
-    <record id="sector_administracion" model="account_sector.sector.template">
+    <record id="sector_administracion" model="account.sector.template">
       <field name="name">Administracion</field>
     </record>
-    <record id="sector_comercializacion" model="account_sector.sector.template">
+    <record id="sector_comercializacion" model="account.sector.template">
       <field name="name">Comercializacion</field>
     </record>
-    <record id="sector_ajenos" model="account_sector.sector.template">
+    <record id="sector_ajenos" model="account.sector.template">
       <field name="name">Ajenos</field>
     </record>
     <record id="ar" model="account.account.type.template">
