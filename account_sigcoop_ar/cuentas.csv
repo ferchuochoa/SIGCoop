@@ -1,0 +1,552 @@
+NUMERO,GRUPO,DESCRIPCION,clase,tipo,aplazar,conciliar,sector
+1,001,Activo,vista,,,,
+11,001.001,"Activo Corriente",vista,,,,
+111,001.001.001,"Caja y Bancos",vista,,,,
+1111,001.001.001.001,Caja,existencias,activo,x,x,
+1112,001.001.001.002,"Valores a Depositar",existencias,activo,x,x,
+1113,001.001.001.003,"Caja Moneda Extranjera",existencias,activo,x,x,
+1114,001.001.001.004,Bancos,vista,,,,
+11141,001.001.001.004.001,Banco,existencias,activo,x,x,
+112,001.001.002,Inversiones,vista,,,,
+1122,001.001.002.002,"Plazo Fijo",existencias,activo,x,,
+113,001.001.003,Créditos,vista,,,,
+1131,001.001.003.001,"Deudores por Servicios - EE","a cobrar",activo,x,x,Energia
+1132,001.001.003.002,"Deudores Varios","a cobrar",activo,x,x,
+1133,001.001.003.003,"Deudores por Servicios del Exterior","a cobrar",activo,x,x,
+1134,001.001.003.004,"Deudores por Venta de Equipos","a cobrar",activo,x,x,
+1135,001.001.003.005,"Deudores por Servicios - AP","a cobrar",activo,x,x,"Agua Potable"
+1136,001.001.003.006,"Deudores por Servicios - SS","a cobrar",activo,x,x,Sepelio
+1137,001.001.003.007,"Deudores por Servicios - CCTV","a cobrar",activo,x,x,CCTV
+1138,001.001.003.008,"Deudores por Servicios - INT","a cobrar",activo,x,x,Internet
+1139,001.001.003.009,"Deudores por Servicios - GAS","a cobrar",activo,x,x,Gas
+11310,001.001.003.010,"Otros Créditos",vista,,,,
+113101,001.001.003.010.001,"Gastos a Rendir","a cobrar",activo,x,x,
+113102,001.001.003.010.002,"A.F.I.P. Créditos",vista,,,,
+1131021,001.001.003.010.002.001,"IVA Crédito Fiscal",existencias,activo,x,x,
+1131022,001.001.003.010.002.002,"IVA Retenciones","a cobrar",activo,x,,
+1131023,001.001.003.010.002.003,"IVA Percepciones","a cobrar",activo,x,,
+1131024,001.001.003.010.002.004,"Iva Saldo a Favor","a cobrar",activo,x,,
+1131025,001.001.003.010.002.005,"Computo 34% Ley 25413","a cobrar",activo,x,,
+1131026,001.001.003.010.002.006,"Retención Imp. a las Ganancias","a cobrar",activo,x,,
+1131027,001.001.003.010.002.007,"Saldo a Favor Imp. a las Ganancias","a cobrar",activo,x,,
+1131028,001.001.003.010.002.008,"Anticipo Ley 23427","a cobrar",activo,x,,
+1131029,001.001.003.010.002.009,"Iva pagos a cuenta","a cobrar",activo,x,,
+113103,001.001.003.010.003,D.G.R.,vista,,,,
+1131031,001.001.003.010.003.001,"Retenciones Ingresos Brutos","a cobrar",activo,x,,
+1131032,001.001.003.010.003.002,"Percepciones Ingresos Brutos","a cobrar",activo,x,,
+1131033,001.001.003.010.003.003,"Ingresos Brutos Saldo a Favor","a cobrar",activo,x,,
+113104,001.001.003.010.004,"Gastos a Recuperar","a cobrar",activo,x,,
+113105,001.001.003.010.005,"Anticipo a Proveedores","a cobrar",activo,x,,
+114,001.001.004,"Bienes de Cambio",vista,,,,
+1141,001.001.004.001,Ataudes,existencias,activo,x,,
+12,001.002,"Activo No Corriente",vista,,,,
+124,001.002.004,"Bienes de Uso",vista,,,,
+1241,001.002.004.001,Rodados,vista,,,,
+12411,001.002.004.001.001,"Rodados - EE",otro,activo,x,,Energia
+12412,001.002.004.001.002,"Rodados - AP",otro,activo,x,,"Agua Potable"
+12413,001.002.004.001.003,"Rodados - GAS",otro,activo,x,,Gas
+12414,001.002.004.001.004,"Rodados - CCTV",otro,activo,x,,CCTV
+12415,001.002.004.001.005,"Rodados - INT",otro,activo,x,,Internet
+12416,001.002.004.001.006,"Rodados - SS",otro,activo,x,,Sepelio
+1242,001.002.004.002,"Muebles y Utiles",vista,,,,
+12421,001.002.004.002.001,"Valor Origen Muebles y Utiles",otro,activo,x,,
+12422,001.002.004.002.002,"Amortizaciones Acumuladas Muebles y Utiles",otro,activo,x,,
+1243,001.002.004.003,Instalaciones,vista,,,,
+12431,001.002.004.003.001,"Valor Origen instalaciones",otro,activo,x,,
+12432,001.002.004.003.002,"Amortizaciones Acumuladas instalaciones",otro,activo,x,,
+1244,001.002.004.004,"Equipos de Computación",vista,,,,
+12441,001.002.004.004.001,"Valor Origen Equipos de Computación",otro,activo,x,,
+12442,001.002.004.004.002,"Amortizaciones Acumuladas Eq. de Computación",otro,activo,x,,
+2,002,Pasivo,vista,,,,
+21,002.001,"Pasivo Corriente",vista,,,,
+211,002.001.001,"Deudas Comerciales",vista,,,,
+2111,002.001.001.001,"Proveedores - EE","a pagar",pasivo,x,x,Energia
+2112,002.001.001.002,"Proveedores - AP","a pagar",pasivo,x,x,"Agua Potable"
+2113,002.001.001.003,"Proveedores - SS","a pagar",pasivo,x,x,Sepelio
+2114,002.001.001.004,"Proveedores - GAS","a pagar",pasivo,x,x,Gas
+2115,002.001.001.005,"Proveedores - CCTV","a pagar",pasivo,x,x,CCTV
+2116,002.001.001.006,"Proveedores - INT","a pagar",pasivo,x,x,Internet
+2117,002.001.001.007,"Honorarios a Pagar","a pagar",pasivo,x,x,
+2118,002.001.001.008,"Honorarios Serv.Adm.a Pagar","a pagar",pasivo,x,x,
+212,002.001.002,"Deudas Financieras",vista,,,,
+2121,002.001.002.001,"Tarjeta de Crédito a Pagar","a pagar",pasivo,x,,
+2122,002.001.002.002,"Transf.Bancarias Diferidas","a pagar",pasivo,x,,
+213,002.001.003,"Deudas Sociales",vista,,,,
+2131,002.001.003.001,"Acreedor Servicios","a pagar",pasivo,x,,
+2132,002.001.003.010,"Capital Coop. a Reintegrar","a pagar",pasivo,x,,
+2133,002.001.003.011,"Retornos a Pagar","a pagar",pasivo,x,,
+214,002.001.004,"Deudas Fiscales",vista,,,,
+2141,002.001.004.001,"A.F.I.P. Deuda",vista,,,,
+21411,002.001.004.001.001,"IVA Débito Fiscal",existencias,pasivo,x,,
+21412,002.001.004.001.002,"Iva a Pagar","a pagar",pasivo,x,,
+21413,002.001.004.001.003,"Impuesto a las Ganancias a Pagar","a pagar",pasivo,x,,
+21414,002.001.004.001.004,"Impuesto Ley 23427 a Pagar","a pagar",pasivo,x,,
+21415,002.001.004.001.005,"Plan Facilidades D478079","a pagar",pasivo,x,,
+21416,002.001.004.001.006,"Ret. Ganancias a Depositar","a pagar",pasivo,x,,
+2142,002.001.004.002,D.G.R.,vista,,,,
+21421,002.001.004.002.001,"Impuesto sobre los Ingresos Brutos a Pagar","a pagar",pasivo,x,,
+215,002.001.005,"Otras Deudas",vista,,,,
+2151,002.001.005.001,"Acreedores Varios",vista,,,,
+21511,002.001.005.001.001,"Acreedores Varios","a pagar",pasivo,x,,
+21512,002.001.005.001.002,"Prestamos Asociados","a pagar",pasivo,x,,
+22,002.002,"Pasivo No Corriente",vista,,,,
+221,002.002.001,"Cuentas por Pagar",vista,,,,
+222,002.002.002,Previsiones,vista,,,,
+3,003,"Patrimonio Neto",vista,,,,
+31,003.001,Capital,vista,,,,
+311,003.001.001,"Capital Cooperativo",vista,,,,
+312,003.001.002,"Capital socio",otro,"patrimonio neto",x,,
+32,003.002,"Ajustes al Capital",vista,,,,
+321,003.002.001,"Ajustes al Capital",otro,"patrimonio neto",x,,
+33,003.003,"Ganancias Reservadas",vista,,,,
+331,003.003.001,"Reserva Legal",otro,"patrimonio neto",x,,
+332,003.003.002,"Reserva Especial Art. 42",otro,"patrimonio neto",x,,
+333,003.003.003,"Fondo de Educ. y Prom. Coop.",otro,"patrimonio neto",x,,
+334,003.003.004,"Fondo de Acción Asist.Lab.",otro,"patrimonio neto",x,,
+34,003.004,"Resultados no Asignados",vista,,,,
+341,003.004.001,"Resultados no Asignados",otro,"patrimonio neto",x,,
+342,003.004.002,"Resultado del Ejercicio",otro,"patrimonio neto",x,,
+4,004,RESULTADOS,vista,,,,
+41,004.001,"GASTOS INDIRECTOS",vista,,,,
+411,004.001.001,"GASTOS INDIRECTOS (Adm+Com)",vista,,,,
+4112,004.001.001.002,SECC.ADMINISTRACION,vista,,,,
+411221,004.001.001.002.021,Sueldos-ADM-,gastos,egreso,x,,Administracion
+411222,004.001.001.002.022,"Aportes Seg.Social-ADM-",gastos,egreso,x,,Administracion
+411223,004.001.001.002.023,"Bonif. Pers. a Jubilarse-ADM-",gastos,egreso,x,,Administracion
+411224,004.001.001.002.024,"Tickets Canasta-ADM-",gastos,egreso,x,,Administracion
+411225,004.001.001.002.025,"Gtos.p/Medicamentos -ADM-",gastos,egreso,x,,Administracion
+411226,004.001.001.002.026,"Ropa de Trab.-ADM-",gastos,egreso,x,,Administracion
+411231,004.001.001.002.031,"Combustibles y Lub.-ADM-",gastos,egreso,x,,Administracion
+411232,004.001.001.002.032,"Mant.de Redes e Instalac.-ADM-",gastos,egreso,x,,Administracion
+411241,004.001.001.002.041,"Manten.y Rep.Rodados-ADM-",gastos,egreso,x,,Administracion
+411242,004.001.001.002.042,"Publicidad y Propaganda-ADM-",gastos,egreso,x,,Administracion
+411243,004.001.001.002.043,"Honorarios y Gtos.Legales-ADM-",gastos,egreso,x,,Administracion
+411244,004.001.001.002.044,"Cuotas Cámaras Empresarias-ADM",gastos,egreso,x,,Administracion
+411245,004.001.001.002.045,"Franqueo y Teléfono-ADM-",gastos,egreso,x,,Administracion
+411246,004.001.001.002.046,Seguros-ADM-,gastos,egreso,x,,Administracion
+411247,004.001.001.002.047,Matafuegos-ADM-,gastos,egreso,x,,Administracion
+411253,004.001.001.002.053,"Serv.de Comput.e Imprenta-ADM-",gastos,egreso,x,,Administracion
+411262,004.001.001.002.062,"Diferencias de Caja-ADM-",gastos,egreso,x,,Administracion
+411263,004.001.001.002.063,"Movilidad y Vi ticos-ADM-",gastos,egreso,x,,Administracion
+411265,004.001.001.002.065,Depreciaciones-ADM-,gastos,egreso,x,,Administracion
+411268,004.001.001.002.068,"Gtos.Reun.Consejo de Adm.-ADM-",gastos,egreso,x,,Administracion
+411269,004.001.001.002.069,"Gastos Diversos-ADM-",gastos,egreso,x,,Administracion
+411270,004.001.001.002.070,"Cenas, Refrigerios y agasajos-ADM-",gastos,egreso,x,,Administracion
+411271,004.001.001.002.071,"Impuestos,Tasas y Cont.-ADM-",gastos,egreso,x,,Administracion
+411273,004.001.001.002.073,"Deb y Créd,Ley 25413-ADM-",gastos,egreso,x,,Administracion
+411282,004.001.001.002.082,"Papeles e Insumos de Oficina-ADM-",gastos,egreso,x,,Administracion
+4113,004.001.001.003,"SEC. COMERCIALIZACION",vista,," ",,
+411321,004.001.001.003.021,Sueldos-Com-,gastos,egreso,x,,Comercializacion
+411322,004.001.001.003.022,"Aportes Seg.Social-Com-",gastos,egreso,x,,Comercializacion
+411323,004.001.001.003.023,"Bonificacione Pers. A Jub-Com-",gastos,egreso,x,,Comercializacion
+411325,004.001.001.003.025,"Gastos por Medic.-Com-",gastos,egreso,x,,Comercializacion
+411326,004.001.001.003.026,"Ropa de Trab-Com-",gastos,egreso,x,,Comercializacion
+411346,004.001.001.003.046,Seguros-Com,gastos,egreso,x,,Comercializacion
+4114,004.001.001.004,"Amortiz.Software de Aplicación",gastos,egreso,x,,Administracion
+4115,004.001.001.005,"Descuentos Obtenidos administración-Adm-",gastos,egreso,x,,Administracion
+4116,004.001.001.006,"Intereses Moratorios Cobrados-Adm-",gastos,egreso,x,,Administracion
+4117,004.001.001.007,"Intereses p/Refinanciacion-Adm",gastos,egreso,x,,Administracion
+4118,004.001.001.008,"Bonificaciones Obtenidas-Adm-",gastos,egreso,x,,Administracion
+42,004.002,"SECC.ENERGIA ELECTRICA",vista,," ",,
+421,004.002.001,"RESULTADOS ORD.OPERATIVOS-EE-",vista,," ",,
+4211,004.002.001.001,"Ingreso operativo seccional",vista,," ",,
+421110,004.002.001.001.010,"Vtas p/Distrib.Energ¡a El‚ct.",ingresos,ingreso,x,,Energia
+421111,004.002.001.001.011,"Vtas a Usuarios T1",ingresos,ingreso,x,,Energia
+421112,004.002.001.001.012,"Vtas a Usuarios T2",ingresos,ingreso,x,,Energia
+421113,004.002.001.001.013,"Vtas a Usuarios T3",ingresos,ingreso,x,,Energia
+421114,004.002.001.001.014,"Vtas a Usuarios TIS",ingresos,ingreso,x,,Energia
+421115,004.002.001.001.015,"Vtas a Usuarios PIMT",ingresos,ingreso,x,,Energia
+42112,004.002.001.001.002,"Fdo.Compensador Tarifario",ingresos,ingreso,x,,Energia
+42119,004.002.001.001.009,"Contrib.por Obras Art.12º",ingresos,ingreso,x,,Energia
+421118,004.002.001.001.018,"Vtas p/ transf.de serv.a ot/ sec.EE",ingresos,ingreso,x,,Energia
+4212,004.002.001.002,Costos,vista,," ",,
+421201,004.002.001.002.001,"Costo de Energ¡a Comprada",gastos,egreso,x,,Energia
+4213,004.002.001.003,"Gastos de Explotación-Directos-",vista,," ",,
+42131,004.002.001.003.001,Remuneraciones,vista,," ",,
+421311,004.002.001.003.001.001,Sueldos-EE-,gastos,egreso,x,,Energia
+421312,004.002.001.003.001.002,"Aportes Seg.Social-EE-",gastos,egreso,x,,Energia
+421313,004.002.001.003.001.003,"Bonif.Personal a Jubilarse-EE",gastos,egreso,x,,Energia
+421314,004.002.001.003.001.004,"Tickets Canasta-EE-",gastos,egreso,x,,Energia
+421316,004.002.001.003.001.006,"Ropa de Trabajo y Elem. Prot-EE-",gastos,egreso,x,,Energia
+42133,004.002.001.003.003,Mantenimiento,vista,," ",,
+421331,004.002.001.003.003.001,"Comb.y Lub.-EE-",gastos,egreso,x,,Energia
+421332,004.002.001.003.003.002,"Mant.de Redes e Instalac.-EE-",gastos,egreso,x,,Energia
+42134,004.002.001.003.004,"Serv.de Terceros",vista,," ",,
+421341,004.002.001.003.004.001,"Mantenim.y Rep.Rodados-EE-",gastos,egreso,x,,Energia
+421342,004.002.001.003.004.002,"Publicidad y Propaganda-EE-",gastos,egreso,x,,Energia
+421343,004.002.001.003.004.003,"Honorarios y Gtos.Legales -EE-",gastos,egreso,x,,Energia
+421344,004.002.001.003.004.004,"Cuotas C maras Empresarias-EE-",gastos,egreso,x,,Energia
+421345,004.002.001.003.004.005,"Franqueo y Tel‚fono-EE-",gastos,egreso,x,,Energia
+421346,004.002.001.003.004.006,Seguros-EE-,gastos,egreso,x,,Energia
+421347,004.002.001.003.004.007,Matafuegos-EE-,gastos,egreso,x,,Energia
+421348,004.002.001.003.004.008,Comisiones-EE-,gastos,egreso,x,,Energia
+421349,004.002.001.003.004.009,Fletes-EE-,gastos,egreso,x,,Energia
+4213410,004.002.001.003.004.010,"Serv.de Comput.e Imprenta-EE-",gastos,egreso,x,,Energia
+4213411,004.002.001.003.004.011,"Expansion de Transporte EE",gastos,egreso,x,,Energia
+42136,004.002.001.003.006,Varios,vista,," ",,
+421362,004.002.001.003.006.002,"Luz y Gas Jubilados-EE-",gastos,egreso,x,,Energia
+421363,004.002.001.003.006.003,"Movilidad y Vi ticos-EE-",gastos,egreso,x,,Energia
+421364,004.002.001.003.006.004,Incobrables-EE-,gastos,egreso,x,,Energia
+421365,004.002.001.003.006.005,Depreciaciones-EE-,gastos,egreso,x,,Energia
+421369,004.002.001.003.006.009,"Gastos Diversos-EE-",gastos,egreso,x,,Energia
+42137,004.002.001.003.007,Impuestos,vista,," ",,
+421371,004.002.001.003.007.001,"Impuestos,Tasas y Cont.-EE-",gastos,egreso,x,,Energia
+421372,004.002.001.003.007.002,"Agregado Tarifario",gastos,egreso,x,,Energia
+421373,004.002.001.003.007.003,"Débitos y Créditos Brios.L.25413",gastos,egreso,x,,Energia
+4214,004.002.001.004,"Gtos.de Comercialización-Directos-",vista,," ",,
+42144,004.002.001.004.004,"Serv.de Terceros",vista,," ",,
+421442,004.002.001.004.004.002,"Publicidad y Propaganda-EE©",gastos,egreso,x,,Energia
+421443,004.002.001.004.004.003,"Serv.de Comput.e Imprenta-EE-©",gastos,egreso,x,,Energia
+42146,004.002.001.004.006,Varios,vista,," ",,
+421464,004.002.001.004.006.004,"Incobrables-EE (c)",gastos,egreso,x,,Energia
+4217,004.002.001.007,"Gtos.de Comercialización-Indirectos-",vista,," ",,
+42171,004.002.001.007.001,"Gtos Indirect. de Com.-EE-",gastos,egreso,x,,Energia
+4218,004.002.001.008,"Gtos.de Administracion-Indirectos-",vista,," ",,
+42181,004.002.001.008.001,"Gtos Indirect.de Adm.-EE-",gastos,egreso,x,,Energia
+422,004.002.002,"RESULTADOS ORD.NO OPERATIVOS-E",vista,," ",,
+4221,004.002.002.001,"Prest.del Serv.-EE-",ingresos,ingreso,x,,Energia
+4222,004.002.002.002,"Gastos Recuperados-EE-",ingresos,ingreso,x,,Energia
+4223,004.002.002.003,"Cargo p/Serv.de Conexion-EE-",ingresos,ingreso,x,,Energia
+4224,004.002.002.004,"Vtas.Materiales p/Conexi¢n-EE-",ingresos,ingreso,x,,Energia
+4225,004.002.002.005,"Recupero Faltante Caja E.E.",ingresos,ingreso,x,,Energia
+4227,004.002.002.007,"Costo de Vta.Lineas Rurales-EE-",gastos,egreso,x,,Energia
+423,004.002.003,"RESULTADOS FINANCIEROS-EE-",vista,," ",,
+4231,004.002.003.001,"Intereses Morat.Cobrados-EE-",ingresos,ingreso,x,,Energia
+4232,004.002.003.002,Int.Finan.Carg.p/Serv.Cone.EE,ingresos,ingreso,x,,Energia
+4233,004.002.003.003,"Intereses p/Fin.p/contrib.p/obras",ingresos,ingreso,x,,Energia
+4234,004.002.003.004,"Intereses Ganados-EE-",ingresos,ingreso,x,,Energia
+4235,004.002.003.005,"Diferencia de Cambio",ingresos,ingreso,x,,Energia
+4236,004.002.003.006,"Com.,Int.y Gtos Brios-EE-",gastos,egreso,x,,Energia
+4237,004.002.003.007,"Result.Fin.y p/Ten.(Incluído RECPAM)",ingresos,ingreso,x,,Energia
+424,004.002.004,"RESULTADOS EXTRAORDINARIOS-EE-",vista,," ",,
+4241,004.002.004.001,"Siniestros B.de Uso-EE-",gastos,egreso,x,,Energia
+4242,004.002.004.002,"Indemnización p/Daños y Perjuicios-EE-",gastos,egreso,x,,Energia
+43,004.003,"SECC.AGUA POTABLE",vista,," ",,
+431,004.003.001,"RESULTADOS ORD.OPERATIVOS-AP-",vista,," ",,
+4311,004.003.001.001,"Ingreso operativo seccional",vista,," ",,
+43111,004.003.001.001.001,"Tasa Operativa-AP-",ingresos,ingreso,x,,"Agua Potable"
+43112,004.003.001.001.002,"Vtas p/transf.de serv a ot.sec.-AP-",ingresos,ingreso,x,,"Agua Potable"
+4312,004.003.001.002,Costos,ingresos,ingreso,x,,"Agua Potable"
+4313,004.003.001.003,"Gastos de Explotacion-Directos-",vista,," ",,
+43131,004.003.001.003.001,Remuneraciones,gastos,egreso,x,,"Agua Potable"
+431311,004.003.001.003.001.001,Sueldos-AP-,gastos,egreso,x,,"Agua Potable"
+431312,004.003.001.003.001.002,"Aportes Seg.Social-AP-",gastos,egreso,x,,"Agua Potable"
+431314,004.003.001.003.001.004,"Tickets Canasta-AP-",gastos,egreso,x,,"Agua Potable"
+431315,004.003.001.003.001.005,"Gtos p/Medicamentos-AP-",gastos,egreso,x,,"Agua Potable"
+431316,004.003.001.003.001.006,"Ropa de Trabajo-AP-",gastos,egreso,x,,"Agua Potable"
+43133,004.003.001.003.003,Mantenimiento,vista,,,,
+431331,004.003.001.003.003.001,"Combustibles y Lub.-AP-",gastos,egreso,x,,"Agua Potable"
+431332,004.003.001.003.003.002,"Mant.de Redes e Instalac.-AP-",gastos,egreso,x,,"Agua Potable"
+43134,004.003.001.003.004,"Serv.de Terceros",vista,,,,
+431341,004.003.001.003.004.001,"Mantenim.y Rep.Rodados-AP",gastos,egreso,x,,"Agua Potable"
+431342,004.003.001.003.004.002,"Publicidad y Propaganda-AP-",gastos,egreso,x,,"Agua Potable"
+431343,004.003.001.003.004.003,"Honorarios y Gtos.Legales-AP-",gastos,egreso,x,,"Agua Potable"
+431345,004.003.001.003.004.005,"Franqueo y Teléfono-AP-",gastos,egreso,x,,"Agua Potable"
+431346,004.003.001.003.004.006,Seguros-AP-,gastos,egreso,x,,"Agua Potable"
+431347,004.003.001.003.004.007,Matafuegos-AP-,gastos,egreso,x,,"Agua Potable"
+431349,004.003.001.003.004.009,Fletes-AP-,gastos,egreso,x,,"Agua Potable"
+4313410,004.003.001.003.004.010,"Gastos de Laboratorios-AP-",gastos,egreso,x,,"Agua Potable"
+43136,004.003.001.003.006,Varios,vista,,,,
+431363,004.003.001.003.006.003,"Movilidad y Viaticos A.P.",gastos,egreso,x,,"Agua Potable"
+431364,004.003.001.003.006.004,Incobrables-AP-,gastos,egreso,x,,"Agua Potable"
+431365,004.003.001.003.006.005,Depreciaciones-AP-,gastos,egreso,x,,"Agua Potable"
+431369,004.003.001.003.006.009,"Gtos.Diversos -AP-",gastos,egreso,x,,"Agua Potable"
+43137,004.003.001.003.007,Impuestos,vista,,,,
+431371,004.003.001.003.007.001,"Impuestos,Tasas y Cont.-AP-",gastos,egreso,x,,"Agua Potable"
+431373,004.003.001.003.007.003,"Débitos y Créd. Brios.L.25413-AP-",gastos,egreso,x,,"Agua Potable"
+43138,004.003.001.003.008,Insumos,vista,,,,
+431381,004.003.001.003.008.001,"Gtos Energ¡a El‚ct-AP-",gastos,egreso,x,,"Agua Potable"
+431383,004.003.001.003.008.003,"Insumos Varios-AP-",gastos,egreso,x,,"Agua Potable"
+4314,004.003.001.004,"Gtos.de Comercialización-Directos-",vista,,,,
+43146,004.003.001.004.006,Varios,vista,,,,
+431464,004.003.001.004.006.004,"Incobrables-AP (c)",gastos,egreso,x,,"Agua Potable"
+4317,004.003.001.007,"Gtos de Comercialización-Indirectos-",vista,,,,
+43171,004.003.001.007.001,"Gtos Ind.de Com.-AP-",gastos,egreso,x,,"Agua Potable"
+4318,004.003.001.008,"Gtos de Administracion-Indirectos-",vista,,,,
+43181,004.003.001.008.001,"Gtos Ind.de Adm.-AP-",gastos,egreso,x,,"Agua Potable"
+432,004.003.002,"RESULTADOS ORD.NO OPERATIVOS-Ap",vista,,,,
+4321,004.003.002.001,"Derechos de Conexión-AP-",ingresos,ingreso,x,,"Agua Potable"
+4322,004.003.002.002,"Gtos.Recuperados -AP-",ingresos,ingreso,x,,"Agua Potable"
+433,004.003.003,"RESULTADOS FINANCIEROS-AP-",vista,,,,
+4331,004.003.003.001,"Intereses Morat.Cobrados-AP-",ingresos,ingreso,x,,"Agua Potable"
+4332,004.003.003.002,"Intereses Ganados-AP-",ingresos,ingreso,x,,"Agua Potable"
+4333,004.003.003.003,"Com.,Int.y Gtos Brios-AP-",gastos,egreso,x,,"Agua Potable"
+4334,004.003.003.004,"Result.Fin.y p/Ten.(Incluído RECPAM)",ingresos,ingreso,x,,"Agua Potable"
+434,004.003.004,"RESULTADOS EXTRAORDINARIOS-AP-",vista,,,,
+4341,004.003.004.001,"Siniestros B.de Uso-AP-",gastos,egreso,x,,"Agua Potable"
+4342,004.003.004.002,"Indemnización p/Daños y Perjuicios-AP-",gastos,egreso,x,,"Agua Potable"
+44,004.004,"SECC.SERVICIO SEPELIO",vista,,,,
+441,004.004.001,"RESULTADOS ORD.OPERATIVOS-SS-",vista,,,,
+4411,004.004.001.001,"Ingreso operativo seccional",vista,,,,
+44111,004.004.001.001.001,"Cuotas Serv.Sepelio-Asoc-",ingresos,ingreso,x,,Sepelio
+44112,004.004.001.001.002,"Serv.Prest.a no Adheridos-SS-",ingresos,ingreso,x,,Sepelio
+4412,004.004.001.002,Costos,vista,,,,
+44121,004.004.001.002.001,"Costo de Serv.Sepelios",gastos,egreso,x,,Sepelio
+4413,004.004.001.003,"Gastos de Explotación-Directos-",vista,,,,
+44131,004.004.001.003.001,Remuneraciones,vista,,,,
+441311,004.004.001.003.001.001,Sueldos-SS-,gastos,egreso,x,,Sepelio
+441312,004.004.001.003.001.002,"Aportes Seg.Social-SS-",gastos,egreso,x,,Sepelio
+441313,004.004.001.003.001.003,Despidos-SS-,gastos,egreso,x,,Sepelio
+441314,004.004.001.003.001.004,"Tickets Canasta-SS-",gastos,egreso,x,,Sepelio
+441315,004.004.001.003.001.005,"Gtos p/Medicamentos-SS-",gastos,egreso,x,,Sepelio
+441316,004.004.001.003.001.006,"Ropa de Trabajo y elem. de Protec. -SS-",gastos,egreso,x,,Sepelio
+44133,004.004.001.003.003,Mantenimiento,vista,,,,
+441331,004.004.001.003.003.001,"Combustibles y Lub.-SS-",gastos,egreso,x,,Sepelio
+441332,004.004.001.003.003.002,"Mant.de Redes e Instalac.-SS-",gastos,egreso,x,,Sepelio
+44134,004.004.001.003.004,"Serv.de Terceros",vista,,,,
+441341,004.004.001.003.004.001,"Mantenim.y Rep.Rodados-SS-",gastos,egreso,x,,Sepelio
+441342,004.004.001.003.004.002,"Publicidad y Propaganda-SS-",gastos,egreso,x,,Sepelio
+441345,004.004.001.003.004.005,"Franqueo y Tel‚fono-SS-",gastos,egreso,x,,Sepelio
+441346,004.004.001.003.004.006,Seguros-SS-,gastos,egreso,x,,Sepelio
+441347,004.004.001.003.004.007,Matafuegos-SS-,gastos,egreso,x,,Sepelio
+441348,004.004.001.003.004.008,Fletes-SS-,gastos,egreso,x,,Sepelio
+441349,004.004.001.003.004.009,"Gtos por Serv.Prestados-SS-",gastos,egreso,x,,Sepelio
+44136,004.004.001.003.006,Varios,vista,,,,
+441363,004.004.001.003.006.003,"Movilidad y Viaticos-SS-",gastos,egreso,x,,Sepelio
+441364,004.004.001.003.006.004,Incobrables-SS-,gastos,egreso,x,,Sepelio
+441365,004.004.001.003.006.005,Depreciaciones-SS-,gastos,egreso,x,,Sepelio
+441366,004.004.001.003.006.006,"Amortizaci¢n Nichos-SS-",gastos,egreso,x,,Sepelio
+441367,004.004.001.003.006.007,Alquileres-SS-,gastos,egreso,x,,Sepelio
+441369,004.004.001.003.006.009,"Gastos Diversos-SS-",gastos,egreso,x,,Sepelio
+44137,004.004.001.003.007,Impuestos,vista,,,,
+441371,004.004.001.003.007.001,"Impuestos,Tasas y Cont.-SS-",gastos,egreso,x,,Sepelio
+441373,004.004.001.003.007.003,"Débitos y Créd. Brios.L.25413-SS-",gastos,egreso,x,,Sepelio
+44138,004.004.001.003.008,Insumos,vista,,,,
+441381,004.004.001.003.008.001,"Gtos Energ.Eléctrica-SS-",gastos,egreso,x,,Sepelio
+441384,004.004.001.003.008.004,"Insumos Varios-SS-",gastos,egreso,x,,Sepelio
+4416,004.004.001.006,"Alquileres p/Concec.Nichos",gastos,egreso,x,,Sepelio
+4417,004.004.001.007,"Gtos.de Comercialización-Indirectos-",vista,,,,
+44171,004.004.001.007.001,"Gtos Ind.de Com.-SS-",gastos,egreso,x,,Sepelio
+4418,004.004.001.008,"Gtos.de Administracion-Indirectos-",vista,,,,
+44181,004.004.001.008.001,"Gtos Ind.de Adm.-SS-",gastos,egreso,x,,Sepelio
+442,004.004.002,"RESULTADOS ORD.NO OPERATIVOS-SS",vista,,,,
+4421,004.004.002.001,"Gtos Recuperados-SS-",ingresos,ingreso,x,,Sepelio
+4422,004.004.002.002,"Vtas.Bs.Uso -SS-",ingresos,ingreso,x,,Sepelio
+443,004.004.003,"RESULTADOS FINANCIEROS-SS-",vista,,,,
+4431,004.004.003.001,Int.p/Financiaci¢n-SS-,gastos,egreso,x,,Sepelio
+4432,004.004.003.002,Int.p/Financ.Alquil.Nichos-SS-,gastos,egreso,x,,Sepelio
+4433,004.004.003.003,"Intereses Morat.Cobrados-SS-",ingresos,ingreso,x,,Sepelio
+4434,004.004.003.004,"Intereses Ganados-SS-",ingresos,ingreso,x,,Sepelio
+4435,004.004.003.005,"Com.,Int.y Gtos Brios-SS-",gastos,egreso,x,,Sepelio
+4436,004.004.003.006,"Result.Fin.y p/Ten.(Incluído RECPAM)",ingresos,ingreso,x,,Sepelio
+45,004.005,"SECC.GAS LICUADO",vista,,,,
+451,004.005.001,"RESULTADOS ORD.OPERATIVOS-GAS-",vista,,,,
+4511,004.005.001.001,"Ingreso operativo seccional",vista,,,,
+45111,004.005.001.001.001,"Vtas de Cilindros y Garrafas-Asoc-",ingresos,ingreso,x,,Gas
+45112,004.005.001.001.002,"Vtas Gas a Granel-Asoc-",ingresos,ingreso,x,,Gas
+45113,004.005.001.001.003,"Vtas de Cil. y Garr.-No Asoc-",ingresos,ingreso,x,,Gas
+45114,004.005.001.001.004,"Vtas Gas a Granel-No Asoc-",ingresos,ingreso,x,,Gas
+45115,004.005.001.001.005,"Subsidios L.26.020",ingresos,ingreso,x,,Gas
+45117,004.005.001.001.007,"Logistica y servicios Gas-No Asoc-",ingresos,ingreso,x,,Gas
+45118,004.005.001.001.008,"Vtas p/transf.de bs. a ot.sec.-GL-",ingresos,ingreso,x,,Gas
+4512,004.005.001.002,Costos,vista,,,,
+45121,004.005.001.002.001,"Costo de Vtas Gas",gastos,egreso,x,,Gas
+4513,004.005.001.003,"Gastos de Explot.-Directos-",vista,,,,
+45131,004.005.001.003.001,Remuneraciones,vista,,,,
+451311,004.005.001.003.001.001,Sueldos-GAS-,gastos,egreso,x,,Gas
+451312,004.005.001.003.001.002,"Aportes Seg.Social-GAS-",gastos,egreso,x,,Gas
+451313,004.005.001.003.001.003,"Bonif. Personal a Jub.GL-",gastos,egreso,x,,Gas
+451314,004.005.001.003.001.004,"Tickets Canasta-GAS-",gastos,egreso,x,,Gas
+451315,004.005.001.003.001.005,"Gtos p/Medicamentos-GAS-",gastos,egreso,x,,Gas
+451316,004.005.001.003.001.006,"Ropa de Trabajo-GAS-",gastos,egreso,x,,Gas
+451317,004.005.001.003.001.007,"Despidos Gas",gastos,egreso,x,,Gas
+45133,004.005.001.003.003,Mantenimiento,vista,,,,
+451331,004.005.001.003.003.001,"Combustibles y Lub.-GAS-",gastos,egreso,x,,Gas
+451332,004.005.001.003.003.002,"Mant.de Redes e Instalac.-GAS-",gastos,egreso,x,,Gas
+45134,004.005.001.003.004,"Serv.de Terceros",vista,,,,
+451341,004.005.001.003.004.001,"Manten.y Rep.Rodados-GAS-",gastos,egreso,x,,Gas
+451343,004.005.001.003.004.003,"Honorarios y Gtos.Legales-GAS-",gastos,egreso,x,,Gas
+451344,004.005.001.003.004.004,"Cuotas C maras Empresarias-GAS",gastos,egreso,x,,Gas
+451346,004.005.001.003.004.006,Seguros-Gas-,gastos,egreso,x,,Gas
+451347,004.005.001.003.004.007,Matafuegos-GAS-,gastos,egreso,x,,Gas
+451349,004.005.001.003.004.009,Fletes-GAS-,gastos,egreso,x,,Gas
+4513410,004.005.001.003.004.010,"Reparación Envases-GAS",gastos,egreso,x,,Gas
+45136,004.005.001.003.006,Varios,vista,,,,
+451362,004.005.001.003.006.002,"Donaciones Programa solidario-GAS-",gastos,egreso,x,,Gas
+451363,004.005.001.003.006.003,"Movil. Y Viát.GAS",gastos,egreso,x,,Gas
+451365,004.005.001.003.006.005,Depreciaciones-GAS-,gastos,egreso,x,,Gas
+451369,004.005.001.003.006.009,"Gtos.Diversos -GAS-",gastos,egreso,x,,Gas
+45137,004.005.001.003.007,Impuestos,vista,,,,
+451371,004.005.001.003.007.001,"Impuestos,Tasas y Contrib-GL",gastos,egreso,x,,Gas
+451372,004.005.001.003.007.002,"Resolución 271/01 Sec.de Energía",gastos,egreso,x,,Gas
+451373,004.005.001.003.007.003,"Débitos y Créd. Brios.L.25413-GAS-",gastos,egreso,x,,Gas
+45138,004.005.001.003.008,Insumos,vista,,,,
+451381,004.005.001.003.008.001,"Gtos Energ.El‚ctrica-GAS-",gastos,egreso,x,,Gas
+451382,004.005.001.003.008.002,"Baberos,Precintos,Tapones y Pintura-GA",gastos,egreso,x,,Gas
+4514,004.005.001.004,"Gtos. de Comercialización-Directos-",vista,,,,
+45141,004.005.001.004.001,Remuneraciones,vista,,,,
+451411,004.005.001.004.001.001,"Sueldos-GAS- ( c)",gastos,egreso,x,,Gas
+451412,004.005.001.004.001.002,"Aportes Seg.Social-GAS- (c )",gastos,egreso,x,,Gas
+451413,004.005.001.004.001.003,"Bonif. Personal a Jub.GL-( c)",gastos,egreso,x,,Gas
+451415,004.005.001.004.001.005,"Gtos p/Medicamentos-GAS- (c)",gastos,egreso,x,,Gas
+451417,004.005.001.004.001.007,"Despidos-GAS- (c )",gastos,egreso,x,,Gas
+45143,004.005.001.004.003,Mantenimiento,vista,,,,
+451431,004.005.001.004.003.001,"Combustibles y Lub.-GAS-",gastos,egreso,x,,Gas
+45144,004.005.001.004.004,"Serv.de Terceros",vista,,,,
+451441,004.005.001.004.004.001,"Manten.y Rep.Rodados-GAS-( c)",gastos,egreso,x,,Gas
+451442,004.005.001.004.004.002,"Publicidad y Propaganda-GAS-( c)",gastos,egreso,x,,Gas
+451445,004.005.001.004.004.005,"Franqueo y Tel‚fono-GAS- ( c)",gastos,egreso,x,,Gas
+451446,004.005.001.004.004.006,"Seguros-Gas-( c)",gastos,egreso,x,,Gas
+451447,004.005.001.004.004.007,"Comisiones-GAS-( c)",gastos,egreso,x,,Gas
+451448,004.005.001.004.004.008,"Canje Envases-GAS-( c)",gastos,egreso,x,,Gas
+451449,004.005.001.004.004.009,"Serv.de Comp.e Imprenta-GAS-( c)",gastos,egreso,x,,Gas
+45146,004.005.001.004.006,Varios,vista,,,,
+451463,004.005.001.004.006.003,"Movilidad y Via ticos-GAS-(c)",gastos,egreso,x,,Gas
+451464,004.005.001.004.006.004,Incobrables-GAS-(c),gastos,egreso,x,,Gas
+451465,004.005.001.004.006.005,"Depreciaciones-GAS- ( c)",gastos,egreso,x,,Gas
+451466,004.005.001.004.006.006,"Amortización Numerales-GAS-(c)",gastos,egreso,x,,Gas
+451468,004.005.001.004.006.008,"Gtos Gles Gas a Granel ( c)",gastos,egreso,x,,Gas
+451469,004.005.001.004.006.009,"Gtos.Diversos -GAS- ( c)",gastos,egreso,x,,Gas
+45147,004.005.001.004.007,Impuestos,vista,,,,
+451471,004.005.001.004.007.001,"Impuestos,Tasas y Contrib-GL- ( c)",gastos,egreso,x,,Gas
+451473,004.005.001.004.007.003,"Débitos y Créd. Brios.L.25413-GL-( c)",gastos,egreso,x,,Gas
+4517,004.005.001.007,"Gtos. de Comercialización-Indirectos-",vista,,,,
+45171,004.005.001.007.001,"Gtos Indirec.de Com.-GAS-",gastos,egreso,x,,Gas
+4518,004.005.001.008,"Gtos.de Administracion-Indirectos-",vista,,,,
+45181,004.005.001.008.001,"Gtos Indirec.de Adm.-GAS-",gastos,egreso,x,,Gas
+452,004.005.002,"RESULTADOS ORD.NO OPERATIVOS-GL",vista,,,,
+4521,004.005.002.001,"Der.de Conex.Gas a Granel",ingresos,ingreso,x,,Gas
+4522,004.005.002.002,"Gtos Recuperados-GAS-",ingresos,ingreso,x,,Gas
+4523,004.005.002.003,"Fletes Facturados -GL-",gastos,egreso,x,,Gas
+4524,004.005.002.004,"Vta de Envases-GAS-",ingresos,ingreso,x,,Gas
+4525,004.005.002.005,Recuperos-GAS-,ingresos,ingreso,x,,Gas
+4526,004.005.002.006,"Vtas.de Bs.de Uso -GAS-",ingresos,ingreso,x,,Gas
+4527,004.005.002.007,"Ventas de Marcas de Fabrica -GL-",ingresos,ingreso,x,,Gas
+4528,004.005.002.008,"Descuentos Obtenidos-GL-",ingresos,ingreso,x,,Gas
+4529,004.005.002.009,"Costo de Vta Bs.de Uso-GAS-",gastos,egreso,x,,Gas
+45210,004.005.002.010,"Costo de Vta Envases-Gas-",gastos,egreso,x,,Gas
+45211,004.005.002.011,"Envases Irrecuperables-GAS-",gastos,egreso,x,,Gas
+45212,004.005.002.012,"Costo de Vta Marcas de Fab-GAS-",gastos,egreso,x,,Gas
+453,004.005.003,"RESULTADOS FINANCIEROS-GAS-",vista,,,,
+4531,004.005.003.001,"Intereses Morat.Cobrados-GAS-",ingresos,ingreso,x,,Gas
+4532,004.005.003.002,"Int.p/Financiaci¢n GAS",gastos,egreso,x,,Gas
+4534,004.005.003.004,"Intereses Ganados-GAS-",ingresos,ingreso,x,,Gas
+4535,004.005.003.005,"Com.,Int.y Gtos Brios-GAS-",gastos,egreso,x,,Gas
+4536,004.005.003.006,"Result.Fin.y p/Ten.(Incluído RECPAM)",ingresos,ingreso,x,,Gas
+454,004.005.004,"RESULTADOS EXTRAORDINARIOS-GL-",vista,,,,
+4541,004.005.004.101,"Siniestros B.de Uso-GL-",gastos,egreso,x,,Gas
+4542,004.005.004.301,"Indemnización p/Daños y Perjuicios-GL",gastos,egreso,x,,Gas
+46,004.006,"SECC. C.C.T.V.",vista,,,,
+461,004.006.001,"RESULTADOS ORD.OPERATIVOS-CCTV",vista,,,,
+4611,004.006.001.001,"Ingreso operativo seccional",vista,,,,
+46111,004.006.001.001.001,"Ingresos por Abonos-CCTV-",ingresos,ingreso,x,,CCTV
+46112,004.006.001.001.002,"Ingresos por Publicidad-CCTV-",ingresos,ingreso,x,,CCTV
+46113,004.006.001.001.003,"Venta Accesorios p/Conexión",ingresos,ingreso,x,,CCTV
+46114,004.006.001.001.004,"Vtas p/trasnf.de serv. a ot.sec-CCTV-",ingresos,ingreso,x,,CCTV
+4612,004.006.001.002,Costos,vista,,,,
+46121,004.002.001.002.001,"Costos de Programación",gastos,egreso,x,,CCTV
+4613,004.006.001.003,"Gastos de Explotación-Directos-",vista,,,,
+46131,004.006.001.003.001,Remuneraciones,vista,,,,
+461311,004.006.001.003.001.001,Sueldos-CCTV-,gastos,egreso,x,,CCTV
+461312,004.006.001.003.001.002,"Aportes Seg.Social-CCTV-",gastos,egreso,x,,CCTV
+461314,004.006.001.003.001.004,"Tickets Canasta-CCTV-",gastos,egreso,x,,CCTV
+461316,004.006.001.003.001.006,"Ropa de Trabajo-CCTV-",gastos,egreso,x,,CCTV
+461317,004.006.001.003.001.007,Despidos-CCTV-,gastos,egreso,x,,CCTV
+46133,004.006.001.003.003,Mantenimiento,vista,,,,
+461331,004.006.001.003.003.001,"Combustibles y Lub.-CCTV-",gastos,egreso,x,,CCTV
+461332,004.006.001.003.003.002,"Mantenim.de Redes e Inst.CCTV-",gastos,egreso,x,,CCTV
+46134,004.006.001.003.004,"Serv.de Terceros",vista,,,,
+461341,004.006.001.003.004.001,"Mantenim.y Rep.Rodados-CCTV-",gastos,egreso,x,,CCTV
+461342,004.006.001.003.004.002,"Publicidad y Propaganda-CCTV-",gastos,egreso,x,,CCTV
+461344,004.006.001.003.004.004,"Cuotas Cámaras Emp.-CCTV-",gastos,egreso,x,,CCTV
+461345,004.006.001.003.004.005,"Franqueo y Teléfono-CCTV-",gastos,egreso,x,,CCTV
+461346,004.006.001.003.004.006,Seguros-CCTV-,gastos,egreso,x,,CCTV
+461348,004.006.001.003.004.008,Comisiones-CCTV-,gastos,egreso,x,,CCTV
+461349,004.006.001.003.004.009,"Fletes -CCTV-",gastos,egreso,x,,CCTV
+4613410,004.006.001.003.004.010,"Reparaciones Equipos-CCTV-",gastos,egreso,x,,CCTV
+46136,004.006.001.003.006,Varios,vista,,,,
+461364,004.006.001.003.006.004,Incobrables-AH-(c),gastos,egreso,x,,CCTV
+461365,004.006.001.003.006.005,Depreciaciones-CCTV-,gastos,egreso,x,,CCTV
+461369,004.006.001.003.006.009,"Gtos.Diversos CCTV",gastos,egreso,x,,CCTV
+46137,004.006.001.003.007,Impuestos,vista,,,,
+461371,004.006.001.003.007.001,"Imp.,Tasas y Cont.-CCTV-",gastos,egreso,x,,CCTV
+461373,004.006.001.003.007.003,"Débitos y Créd. Brios.L.25413-CCTV-",gastos,egreso,x,,CCTV
+46138,004.006.001.003.008,Insumos,gastos,egreso,x,,CCTV
+461381,004.006.001.003.008.001,"Gastos EE-CCTV-",gastos,egreso,x,,CCTV
+4614,004.006.001.004,"Gtos.de Comercialización-Directos-",vista,,,,
+46144,004.006.001.004.004,"Serv. de Terceros",vista,,,,
+461442,004.006.001.004.004.002,"Publicidad y Prop.-CCTV-©",gastos,egreso,x,,CCTV
+4617,004.006.001.007,"Gtos.de Comercialización-Indirectos-",vista,,,,
+46171,004.006.001.007.001,"Gtos Ind.de com-CCTV-",gastos,egreso,x,,CCTV
+4618,004.006.001.008,"Gtos.de Administracion-Indirectos",vista,,,,
+46181,004.006.001.008.001,"Gtos Ind.de Adm-CCTV-",gastos,egreso,x,,CCTV
+462,004.006.002,"RESULTADOS ORD.NO OPERATIVOS-C",vista,,,,
+4621,004.006.002.001,"Result.Invers.otras Sociedades",ingresos,ingreso,x,,CCTV
+4622,004.006.002.002,"Derechos de Reconexión-CCTV-",ingresos,ingreso,x,,CCTV
+4623,004.006.002.003,"Gtos Recuperados -CCTV-",ingresos,ingreso,x,,CCTV
+4624,004.006.002.004,"Derechos de Conexión-CCTV-",ingresos,ingreso,x,,CCTV
+463,004.006.003,"RESULTADOS FINANCIEROS-CCTV-",vista,,,,
+4631,004.006.003.001,"Intereses Morat.Cobrados-CCTV-",ingresos,ingreso,x,,CCTV
+4632,004.006.003.002,"Intereses Ganados-CCTV-",ingresos,ingreso,x,,CCTV
+4633,004.006.003.003,"Com.,Int.y Gtos.Brios.-CCTV-",gastos,egreso,x,,CCTV
+4634,004.006.003.004,"Result.Fin.y p/Ten.(Incluído RECPAM)",ingresos,ingreso,x,,CCTV
+47,004.007,"SECC.SERVICIOS INTERNET",vista,,,,
+471,004.007.001,"RESULTADOS ORD.OPERATIVOS-INT-",vista,,,,
+4711,004.007.001.001,"Ingreso operativo seccional",vista,,,,
+47111,004.007.001.001.001,"Ventas Abonos INTERNET-Asoc-",ingresos,ingreso,x,,Internet
+47112,004.007.001.001.002,"Ventas Abonos INTERNET-No Asoc-",ingresos,ingreso,x,,Internet
+47113,004.007.001.001.003,"Vtas p/transf.de serv. a ot.sec.-INT-",ingresos,ingreso,x,,Internet
+4712,004.007.001.002,Costos,vista,,,,
+47121,004.007.001.002.001,"Costo de Vta.Serv.INTERNET",gastos,egreso,x,,Internet
+4713,004.007.001.003,"Gastos de Explotación-Directos",vista,,,,
+47131,004.007.001.003.001,Remuneraciones,vista,,,,
+471311,004.007.001.003.001.001,Sueldos-INT-,gastos,egreso,x,,Internet
+471312,004.007.001.003.001.002,"Aportes Seg.Soc.-INT-",gastos,egreso,x,,Internet
+471314,004.007.001.003.001.004,"Ticket Canasta-INT",gastos,egreso,x,,Internet
+471315,004.007.001.003.001.005,"Gtos p/Medicamentos-INT",gastos,egreso,x,,Internet
+47134,004.007.001.003.004,"Serv. de Terceros",vista,,,,
+471344,004.007.001.003.004.004,"Cuotas Cámaras Empresarias-INT-",gastos,egreso,x,,Internet
+471346,004.007.001.003.004.006,Seguros-INT-,gastos,egreso,x,,Internet
+47136,004.007.001.003.006,Varios,vista,,,,
+471364,004.007.001.003.006.004,Incobrales-Internet,gastos,egreso,x,,Internet
+471365,004.007.001.003.006.005,"Depreciaciones -INT-",gastos,egreso,x,,Internet
+471369,004.007.001.003.006.009,"Gtos.Diversos INTERNET",gastos,egreso,x,,Internet
+47137,004.007.001.003.007,Impuestos,vista,,,,
+471373,004.007.001.003.007.003,"Débitos y Créd. Brios.L.25413-INT-",gastos,egreso,x,,Internet
+47138,004.007.001.003.008,Insumos,vista,,,,
+471381,004.007.001.003.008.001,Gtos.Energ.Electr.INTERNET,gastos,egreso,x,,Internet
+4714,004.007.001.004,"Gtos. de Comercialización-Directos",vista,,,,
+47143,004.007.001.004.003,Mantenimiento,vista,,,,
+471431,004.007.001.004.003.001,"Combustibles y Lub.-INT-",gastos,egreso,x,,Internet
+47144,004.007.001.004.004,"Serv. de Terceros",vista,,,,
+471441,004.007.001.004.004.001,"Manten.y Rep.Rodados-INT-( c)",gastos,egreso,x,,Internet
+471442,004.007.001.004.004.002,"Publicidad INTERNET",gastos,egreso,x,,Internet
+471445,004.007.001.004.004.005,"Franqueo y Tel‚fonos INTERNET",gastos,egreso,x,,Internet
+471446,004.007.001.004.004.006,"Gtos.de Serv.p/Conex.INTERNET",gastos,egreso,x,,Internet
+471447,004.007.001.004.004.007,"Serv.de Comp.e Impr.INTERNET",gastos,egreso,x,,Internet
+47146,004.007.001.004.006,Varios,vista,,,,
+471463,004.007.001.004.006.003,"Viaticos y Movilidad INTERNET",gastos,egreso,x,,Internet
+471469,004.007.001.004.006.009,"Gtos.Diversos INTERNET",gastos,egreso,x,,Internet
+47147,004.007.001.004.007,Impuestos,vista,,,,
+471471,004.007.001.004.007.001,"Imp.,Tasas y Contrib.INTERNET",gastos,egreso,x,,Internet
+471473,004.007.001.004.007.003,"Débitos y Créd. Brios.L.25413-INT-",gastos,egreso,x,,Internet
+4717,004.007.001.007,"Gtos.de Comercialización-Indirectos-",vista,,,,
+47171,004.007.001.007.001,"Gtos Ind.de Com-INT-",gastos,egreso,x,,Internet
+4718,004.007.001.008,"Gtos.de Administracion-Indirectos-",vista,,,,
+47181,004.007.001.008.001,"Gtos Ind.de Adm-INT-",gastos,egreso,x,,Internet
+472,004.007.002,"RESULTADOS ORD.NO OPERAT.-INT-",vista,,,,
+4721,004.007.002.001,"Derechos de Conexión-INT-",ingresos,ingreso,x,,Internet
+4722,004.007.002.002,"Gtos Recuperados Internet",ingresos,ingreso,x,,Internet
+4723,004.007.002.003,"Prestación del Serv.INT-",ingresos,ingreso,x,,Internet
+473,004.007.003,"RESULTADOS FINANCIEROS-INT-",vista,,,,
+4731,004.007.003.001,"Intereses Morat.Cobr.INT",ingresos,ingreso,x,,Internet
+4732,004.007.003.002,"Com.,Int.y Gtos Brios-INT-",gastos,egreso,x,,Internet
+4733,004.007.003.003,"Result.Fin.y p/Ten.(Incluído RECPAM)",ingresos,ingreso,x,,Internet
+48,004.008,"RESULTADOS AJENOS A LA EXPLOTACION",vista,,,,
+481,004.008.001,"RESULTADOS ORDINARIOS AJENOS",vista,,,,
+4811,004.008.001.001,"RESULTADOS ORD.NO OPERATIVOS-RA-",vista,,,,
+48111,004.008.001.001.001,"Vtas.Bs.Uso - RA -",ingresos,ingreso,x,,Ajenos
+48112,004.008.001.001.002,"Costo de Vta.Bs.de Uso-RA-",gastos,egreso,x,,Ajenos
+48113,004.008.001.001.003,"Donaciones y subsidios-RA-",gastos,egreso,x,,Ajenos
+48114,004.008.001.001.004,"Depreciaciones Bco.Ortopedico-RA-",gastos,egreso,x,,Ajenos
+48115,004.008.001.001.005,"Otros Ingresos-RA-",ingresos,ingreso,x,,Ajenos
+4812,004.008.001.002,"RESULTADOS FINANCIEROS-RA-",vista,,,,
+48121,004.008.001.002.001,"Intereses Ganados-RA-",ingresos,ingreso,x,,Ajenos
+48122,004.008.001.002.002,"Diferencias de Cambio-RA-",ingresos,ingreso,x,,Ajenos
+48123,004.008.001.002.003,"Com.,Int.y Gtos Brios-RA-",gastos,egreso,x,,Ajenos
+48124,004.008.001.002.004,"Otros Resultados Financieros",ingresos,ingreso,x,,Ajenos
+48125,004.008.001.002.005,"Result.Fin.y p/Ten.(Incluído RECPAM)-RA-",ingresos,ingreso,x,,Ajenos
+482,004.008.002,"RESULTADOS EXTRAORDINARIOS AJENOS",vista,,,,
+4821,004.008.002.001,"DEL EJERCICIO",vista,,,,
+48211,004.008.002.001.001,"Siniestros Bienes de Uso-RA-",gastos,egreso,x,,Ajenos
+48212,004.008.002.001.002,"Indemnización por Daños y Perjuicios-RA-",gastos,egreso,x,,Ajenos
