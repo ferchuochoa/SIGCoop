@@ -21,7 +21,6 @@
         </record>
 
         <!-- Menus --> 
-        <menuitem name="Familiar" sequence="0" id="menu_familiar"/>
-        <menuitem parent="menu_familiar" sequence="0" action="act_familiar_form" icon="tryton-list" id="menu_familiar_form"/>
+        <menuitem parent="menu_usuario" sequence="0" action="act_familiar_form" icon="tryton-list" id="menu_familiar_form"/>
     </data>
 </tryton>

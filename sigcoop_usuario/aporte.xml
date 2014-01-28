@@ -21,7 +21,6 @@
         </record>
 
         <!-- Menus --> 
-        <menuitem name="Aporte" sequence="0" id="menu_aporte"/>
-        <menuitem parent="menu_aporte" sequence="0" action="act_aporte_form" icon="tryton-list" id="menu_aporte_form"/>
+        <menuitem parent="menu_usuario" sequence="0" action="act_aporte_form" icon="tryton-list" id="menu_aporte_form"/>
     </data>
 </tryton>

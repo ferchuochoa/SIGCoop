@@ -21,7 +21,6 @@
         </record>
 
         <!-- Menus --> 
-        <menuitem name="Suministro" sequence="0" id="menu_suministro"/>
-        <menuitem parent="menu_suministro" sequence="0" action="act_suministro_form" icon="tryton-list" id="menu_suministro_form"/>
+        <menuitem parent="menu_usuario" sequence="0" action="act_suministro_form" icon="tryton-list" id="menu_suministro_form"/>
     </data>
 </tryton>
