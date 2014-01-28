@@ -1,8 +1,5 @@
 <tryton>
   <data>
-    <record id="sector_sin_sector" model="account.sector.template">
-      <field name="name">Sin sector</field>
-    </record>
     <record id="sector_energia" model="account.sector.template">
       <field name="name">Energia</field>
     </record>
@@ -62,27 +59,23 @@
     <record id="root" model="account.account.template">
       <field name="name">Plan Contable para SIGCoop</field>
       <field name="kind">view</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="type" ref="ar" />
     </record>
     <record id="activo" model="account.account.template">
       <field name="name">Activo</field>
       <field name="code">1*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="root" />
     </record>
     <record id="activo_corriente" model="account.account.template">
       <field name="name">Activo Corriente</field>
       <field name="code">11*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="activo" />
     </record>
     <record id="caja_y_bancos" model="account.account.template">
       <field name="name">Caja y Bancos</field>
       <field name="code">111*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="activo_corriente" />
     </record>
@@ -91,7 +84,6 @@
       <field name="code">1111</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">stock</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="caja_y_bancos" />
@@ -101,7 +93,6 @@
       <field name="code">1112</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">stock</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="caja_y_bancos" />
@@ -111,7 +102,6 @@
       <field name="code">1113</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">stock</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="caja_y_bancos" />
@@ -119,7 +109,6 @@
     <record id="bancos" model="account.account.template">
       <field name="name">Bancos</field>
       <field name="code">1114*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="caja_y_bancos" />
     </record>
@@ -128,7 +117,6 @@
       <field name="code">11141</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">stock</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="bancos" />
@@ -136,7 +124,6 @@
     <record id="inversiones" model="account.account.template">
       <field name="name">Inversiones</field>
       <field name="code">112*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="activo_corriente" />
     </record>
@@ -144,7 +131,6 @@
       <field name="name">Plazo Fijo</field>
       <field name="code">1122</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">stock</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="inversiones" />
@@ -152,7 +138,6 @@
     <record id="creditos" model="account.account.template">
       <field name="name">Créditos</field>
       <field name="code">113*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="activo_corriente" />
     </record>
@@ -171,7 +156,6 @@
       <field name="code">1132</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="creditos" />
@@ -181,7 +165,6 @@
       <field name="code">1133</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="creditos" />
@@ -191,7 +174,6 @@
       <field name="code">1134</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="creditos" />
@@ -249,7 +231,6 @@
     <record id="otros_creditos" model="account.account.template">
       <field name="name">Otros Créditos</field>
       <field name="code">11310*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="creditos" />
     </record>
@@ -258,7 +239,6 @@
       <field name="code">113101</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="otros_creditos" />
@@ -266,7 +246,6 @@
     <record id="afip_creditos" model="account.account.template">
       <field name="name">A.F.I.P. Créditos</field>
       <field name="code">113102*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="otros_creditos" />
     </record>
@@ -275,7 +254,6 @@
       <field name="code">1131021</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">stock</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="afip_creditos" />
@@ -284,7 +262,6 @@
       <field name="name">IVA Retenciones</field>
       <field name="code">1131022</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="afip_creditos" />
@@ -293,7 +270,6 @@
       <field name="name">IVA Percepciones</field>
       <field name="code">1131023</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="afip_creditos" />
@@ -302,7 +278,6 @@
       <field name="name">Iva Saldo a Favor</field>
       <field name="code">1131024</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="afip_creditos" />
@@ -311,7 +286,6 @@
       <field name="name">Computo 34% Ley 25413</field>
       <field name="code">1131025</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="afip_creditos" />
@@ -320,7 +294,6 @@
       <field name="name">Retención Imp. a las Ganancias</field>
       <field name="code">1131026</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="afip_creditos" />
@@ -329,7 +302,6 @@
       <field name="name">Saldo a Favor Imp. a las Ganancias</field>
       <field name="code">1131027</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="afip_creditos" />
@@ -338,7 +310,6 @@
       <field name="name">Anticipo Ley 23427</field>
       <field name="code">1131028</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="afip_creditos" />
@@ -347,7 +318,6 @@
       <field name="name">Iva pagos a cuenta</field>
       <field name="code">1131029</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="afip_creditos" />
@@ -355,7 +325,6 @@
     <record id="dgr" model="account.account.template">
       <field name="name">D.G.R.</field>
       <field name="code">113103*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="otros_creditos" />
     </record>
@@ -363,7 +332,6 @@
       <field name="name">Retenciones Ingresos Brutos</field>
       <field name="code">1131031</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="dgr" />
@@ -372,7 +340,6 @@
       <field name="name">Percepciones Ingresos Brutos</field>
       <field name="code">1131032</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="dgr" />
@@ -381,7 +348,6 @@
       <field name="name">Ingresos Brutos Saldo a Favor</field>
       <field name="code">1131033</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="dgr" />
@@ -390,7 +356,6 @@
       <field name="name">Gastos a Recuperar</field>
       <field name="code">113104</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="otros_creditos" />
@@ -399,7 +364,6 @@
       <field name="name">Anticipo a Proveedores</field>
       <field name="code">113105</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">receivable</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="otros_creditos" />
@@ -407,7 +371,6 @@
     <record id="bienes_de_cambio" model="account.account.template">
       <field name="name">Bienes de Cambio</field>
       <field name="code">114*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="activo_corriente" />
     </record>
@@ -415,7 +378,6 @@
       <field name="name">Ataudes</field>
       <field name="code">1141</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">stock</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="bienes_de_cambio" />
@@ -423,21 +385,18 @@
     <record id="activo_no_corriente" model="account.account.template">
       <field name="name">Activo No Corriente</field>
       <field name="code">12*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="activo" />
     </record>
     <record id="bienes_de_uso" model="account.account.template">
       <field name="name">Bienes de Uso</field>
       <field name="code">124*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="activo_no_corriente" />
     </record>
     <record id="rodados" model="account.account.template">
       <field name="name">Rodados</field>
       <field name="code">1241*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="bienes_de_uso" />
     </record>
@@ -498,7 +457,6 @@
     <record id="muebles_y_utiles" model="account.account.template">
       <field name="name">Muebles y Utiles</field>
       <field name="code">1242*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="bienes_de_uso" />
     </record>
@@ -506,7 +464,6 @@
       <field name="name">Valor Origen Muebles y Utiles</field>
       <field name="code">12421</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="muebles_y_utiles" />
@@ -515,7 +472,6 @@
       <field name="name">Amortizaciones Acumuladas Muebles y Utiles</field>
       <field name="code">12422</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="muebles_y_utiles" />
@@ -523,7 +479,6 @@
     <record id="instalaciones" model="account.account.template">
       <field name="name">Instalaciones</field>
       <field name="code">1243*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="bienes_de_uso" />
     </record>
@@ -531,7 +486,6 @@
       <field name="name">Valor Origen instalaciones</field>
       <field name="code">12431</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="instalaciones" />
@@ -540,7 +494,6 @@
       <field name="name">Amortizaciones Acumuladas instalaciones</field>
       <field name="code">12432</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="instalaciones" />
@@ -548,7 +501,6 @@
     <record id="equipos_de_computacion" model="account.account.template">
       <field name="name">Equipos de Computación</field>
       <field name="code">1244*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="bienes_de_uso" />
     </record>
@@ -556,7 +508,6 @@
       <field name="name">Valor Origen Equipos de Computación</field>
       <field name="code">12441</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="equipos_de_computacion" />
@@ -565,7 +516,6 @@
       <field name="name">Amortizaciones Acumuladas Eq. de Computación</field>
       <field name="code">12442</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_activo" />
       <field name="parent" ref="equipos_de_computacion" />
@@ -573,21 +523,18 @@
     <record id="pasivo" model="account.account.template">
       <field name="name">Pasivo</field>
       <field name="code">2*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="root" />
     </record>
     <record id="pasivo_corriente" model="account.account.template">
       <field name="name">Pasivo Corriente</field>
       <field name="code">21*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="pasivo" />
     </record>
     <record id="deudas_comerciales" model="account.account.template">
       <field name="name">Deudas Comerciales</field>
       <field name="code">211*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="pasivo_corriente" />
     </record>
@@ -656,7 +603,6 @@
       <field name="code">2117</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="deudas_comerciales" />
@@ -666,7 +612,6 @@
       <field name="code">2118</field>
       <field eval="True" name="deferral" />
       <field eval="True" name="reconcile" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="deudas_comerciales" />
@@ -674,7 +619,6 @@
     <record id="deudas_financieras" model="account.account.template">
       <field name="name">Deudas Financieras</field>
       <field name="code">212*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="pasivo_corriente" />
     </record>
@@ -682,7 +626,6 @@
       <field name="name">Tarjeta de Crédito a Pagar</field>
       <field name="code">2121</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="deudas_financieras" />
@@ -691,7 +634,6 @@
       <field name="name">Transf.Bancarias Diferidas</field>
       <field name="code">2122</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="deudas_financieras" />
@@ -699,7 +641,6 @@
     <record id="deudas_sociales" model="account.account.template">
       <field name="name">Deudas Sociales</field>
       <field name="code">213*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="pasivo_corriente" />
     </record>
@@ -707,7 +648,6 @@
       <field name="name">Acreedor Servicios</field>
       <field name="code">2131</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="deudas_sociales" />
@@ -716,7 +656,6 @@
       <field name="name">Capital Coop. a Reintegrar</field>
       <field name="code">2132</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="deudas_sociales" />
@@ -725,7 +664,6 @@
       <field name="name">Retornos a Pagar</field>
       <field name="code">2133</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="deudas_sociales" />
@@ -733,14 +671,12 @@
     <record id="deudas_fiscales" model="account.account.template">
       <field name="name">Deudas Fiscales</field>
       <field name="code">214*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="pasivo_corriente" />
     </record>
     <record id="afip_deuda" model="account.account.template">
       <field name="name">A.F.I.P. Deuda</field>
       <field name="code">2141*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="deudas_fiscales" />
     </record>
@@ -748,7 +684,6 @@
       <field name="name">IVA Débito Fiscal</field>
       <field name="code">21411</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">stock</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="afip_deuda" />
@@ -757,7 +692,6 @@
       <field name="name">Iva a Pagar</field>
       <field name="code">21412</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="afip_deuda" />
@@ -766,7 +700,6 @@
       <field name="name">Impuesto a las Ganancias a Pagar</field>
       <field name="code">21413</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="afip_deuda" />
@@ -775,7 +708,6 @@
       <field name="name">Impuesto Ley 23427 a Pagar</field>
       <field name="code">21414</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="afip_deuda" />
@@ -784,7 +716,6 @@
       <field name="name">Plan Facilidades D478079</field>
       <field name="code">21415</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="afip_deuda" />
@@ -793,7 +724,6 @@
       <field name="name">Ret. Ganancias a Depositar</field>
       <field name="code">21416</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="afip_deuda" />
@@ -801,7 +731,6 @@
     <record id="dgr_2142" model="account.account.template">
       <field name="name">D.G.R.</field>
       <field name="code">2142*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="deudas_fiscales" />
     </record>
@@ -809,7 +738,6 @@
       <field name="name">Impuesto sobre los Ingresos Brutos a Pagar</field>
       <field name="code">21421</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="dgr_2142" />
@@ -817,14 +745,12 @@
     <record id="otras_deudas" model="account.account.template">
       <field name="name">Otras Deudas</field>
       <field name="code">215*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="pasivo_corriente" />
     </record>
     <record id="acreedores_varios" model="account.account.template">
       <field name="name">Acreedores Varios</field>
       <field name="code">2151*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="otras_deudas" />
     </record>
@@ -832,7 +758,6 @@
       <field name="name">Acreedores Varios</field>
       <field name="code">21511</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="acreedores_varios" />
@@ -841,7 +766,6 @@
       <field name="name">Prestamos Asociados</field>
       <field name="code">21512</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">payable</field>
       <field name="type" ref="account_type_pasivo" />
       <field name="parent" ref="acreedores_varios" />
@@ -849,42 +773,36 @@
     <record id="pasivo_no_corriente" model="account.account.template">
       <field name="name">Pasivo No Corriente</field>
       <field name="code">22*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="pasivo" />
     </record>
     <record id="cuentas_por_pagar" model="account.account.template">
       <field name="name">Cuentas por Pagar</field>
       <field name="code">221*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="pasivo_no_corriente" />
     </record>
     <record id="previsiones" model="account.account.template">
       <field name="name">Previsiones</field>
       <field name="code">222*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="pasivo_no_corriente" />
     </record>
     <record id="patrimonio_neto" model="account.account.template">
       <field name="name">Patrimonio Neto</field>
       <field name="code">3*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="root" />
     </record>
     <record id="capital" model="account.account.template">
       <field name="name">Capital</field>
       <field name="code">31*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="patrimonio_neto" />
     </record>
     <record id="capital_cooperativo" model="account.account.template">
       <field name="name">Capital Cooperativo</field>
       <field name="code">311*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="capital" />
     </record>
@@ -892,7 +810,6 @@
       <field name="name">Capital socio</field>
       <field name="code">312</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_patrimonio_neto" />
       <field name="parent" ref="capital" />
@@ -900,7 +817,6 @@
     <record id="ajustes_al_capital" model="account.account.template">
       <field name="name">Ajustes al Capital</field>
       <field name="code">32*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="patrimonio_neto" />
     </record>
@@ -908,7 +824,6 @@
       <field name="name">Ajustes al Capital</field>
       <field name="code">321</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_patrimonio_neto" />
       <field name="parent" ref="ajustes_al_capital" />
@@ -916,7 +831,6 @@
     <record id="ganancias_reservadas" model="account.account.template">
       <field name="name">Ganancias Reservadas</field>
       <field name="code">33*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="patrimonio_neto" />
     </record>
@@ -924,7 +838,6 @@
       <field name="name">Reserva Legal</field>
       <field name="code">331</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_patrimonio_neto" />
       <field name="parent" ref="ganancias_reservadas" />
@@ -933,7 +846,6 @@
       <field name="name">Reserva Especial Art. 42</field>
       <field name="code">332</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_patrimonio_neto" />
       <field name="parent" ref="ganancias_reservadas" />
@@ -942,7 +854,6 @@
       <field name="name">Fondo de Educ. y Prom. Coop.</field>
       <field name="code">333</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_patrimonio_neto" />
       <field name="parent" ref="ganancias_reservadas" />
@@ -951,7 +862,6 @@
       <field name="name">Fondo de Acción Asist.Lab.</field>
       <field name="code">334</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_patrimonio_neto" />
       <field name="parent" ref="ganancias_reservadas" />
@@ -959,7 +869,6 @@
     <record id="resultados_no_asignados" model="account.account.template">
       <field name="name">Resultados no Asignados</field>
       <field name="code">34*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="patrimonio_neto" />
     </record>
@@ -967,7 +876,6 @@
       <field name="name">Resultados no Asignados</field>
       <field name="code">341</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_patrimonio_neto" />
       <field name="parent" ref="resultados_no_asignados" />
@@ -976,7 +884,6 @@
       <field name="name">Resultado del Ejercicio</field>
       <field name="code">342</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">other</field>
       <field name="type" ref="account_type_patrimonio_neto" />
       <field name="parent" ref="resultados_no_asignados" />
@@ -984,28 +891,24 @@
     <record id="resultados" model="account.account.template">
       <field name="name">RESULTADOS</field>
       <field name="code">4*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="root" />
     </record>
     <record id="gastos_indirectos" model="account.account.template">
       <field name="name">GASTOS INDIRECTOS</field>
       <field name="code">41*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados" />
     </record>
     <record id="gastos_indirectos_(adm+com)" model="account.account.template">
       <field name="name">GASTOS INDIRECTOS (Adm+Com)</field>
       <field name="code">411*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_indirectos" />
     </record>
     <record id="seccadministracion" model="account.account.template">
       <field name="name">SECC.ADMINISTRACION</field>
       <field name="code">4112*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_indirectos_(adm+com)" />
     </record>
@@ -1238,7 +1141,6 @@
       <field name="name">SEC. COMERCIALIZACION</field>
       <field name="code">4113*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_indirectos_(adm+com)" />
     </record>
@@ -1345,7 +1247,6 @@
       <field name="name">SECC.ENERGIA ELECTRICA</field>
       <field name="code">42*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados" />
     </record>
@@ -1353,7 +1254,6 @@
       <field name="name">RESULTADOS ORD.OPERATIVOS-EE-</field>
       <field name="code">421*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccenergia_electrica" />
     </record>
@@ -1361,7 +1261,6 @@
       <field name="name">Ingreso operativo seccional</field>
       <field name="code">4211*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-ee-" />
     </record>
@@ -1450,7 +1349,6 @@
       <field name="name">Costos</field>
       <field name="code">4212*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-ee-" />
     </record>
@@ -1467,7 +1365,6 @@
       <field name="name">Gastos de Explotación-Directos-</field>
       <field name="code">4213*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-ee-" />
     </record>
@@ -1475,7 +1372,6 @@
       <field name="name">Remuneraciones</field>
       <field name="code">42131*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-" />
     </record>
@@ -1528,7 +1424,6 @@
       <field name="name">Mantenimiento</field>
       <field name="code">42133*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-" />
     </record>
@@ -1554,7 +1449,6 @@
       <field name="name">Serv.de Terceros</field>
       <field name="code">42134*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-" />
     </record>
@@ -1661,7 +1555,6 @@
       <field name="name">Varios</field>
       <field name="code">42136*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-" />
     </record>
@@ -1714,7 +1607,6 @@
       <field name="name">Impuestos</field>
       <field name="code">42137*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-" />
     </record>
@@ -1749,7 +1641,6 @@
       <field name="name">Gtos.de Comercialización-Directos-</field>
       <field name="code">4214*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-ee-" />
     </record>
@@ -1757,7 +1648,6 @@
       <field name="name">Serv.de Terceros</field>
       <field name="code">42144*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gtosde_comercializacion-directos-" />
     </record>
@@ -1783,7 +1673,6 @@
       <field name="name">Varios</field>
       <field name="code">42146*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gtosde_comercializacion-directos-" />
     </record>
@@ -1800,7 +1689,6 @@
       <field name="name">Gtos.de Comercialización-Indirectos-</field>
       <field name="code">4217*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-ee-" />
     </record>
@@ -1817,7 +1705,6 @@
       <field name="name">Gtos.de Administracion-Indirectos-</field>
       <field name="code">4218*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-ee-" />
     </record>
@@ -1834,7 +1721,6 @@
       <field name="name">RESULTADOS ORD.NO OPERATIVOS-E</field>
       <field name="code">422*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccenergia_electrica" />
     </record>
@@ -1896,7 +1782,6 @@
       <field name="name">RESULTADOS FINANCIEROS-EE-</field>
       <field name="code">423*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccenergia_electrica" />
     </record>
@@ -1967,7 +1852,6 @@
       <field name="name">RESULTADOS EXTRAORDINARIOS-EE-</field>
       <field name="code">424*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccenergia_electrica" />
     </record>
@@ -1993,7 +1877,6 @@
       <field name="name">SECC.AGUA POTABLE</field>
       <field name="code">43*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados" />
     </record>
@@ -2001,7 +1884,6 @@
       <field name="name">RESULTADOS ORD.OPERATIVOS-AP-</field>
       <field name="code">431*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccagua_potable" />
     </record>
@@ -2009,7 +1891,6 @@
       <field name="name">Ingreso operativo seccional</field>
       <field name="code">4311*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-ap-" />
     </record>
@@ -2044,7 +1925,6 @@
       <field name="name">Gastos de Explotacion-Directos-</field>
       <field name="code">4313*</field>
       <field eval="True" name="deferral" />
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-ap-" />
     </record>
@@ -2105,7 +1985,6 @@
     <record id="mantenimiento_43133" model="account.account.template">
       <field name="name">Mantenimiento</field>
       <field name="code">43133*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-_4313" />
     </record>
@@ -2130,7 +2009,6 @@
     <record id="servde_terceros_43134" model="account.account.template">
       <field name="name">Serv.de Terceros</field>
       <field name="code">43134*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-_4313" />
     </record>
@@ -2209,7 +2087,6 @@
     <record id="varios_43136" model="account.account.template">
       <field name="name">Varios</field>
       <field name="code">43136*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-_4313" />
     </record>
@@ -2252,7 +2129,6 @@
     <record id="impuestos_43137" model="account.account.template">
       <field name="name">Impuestos</field>
       <field name="code">43137*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-_4313" />
     </record>
@@ -2277,7 +2153,6 @@
     <record id="insumos" model="account.account.template">
       <field name="name">Insumos</field>
       <field name="code">43138*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-_4313" />
     </record>
@@ -2302,14 +2177,12 @@
     <record id="gtosde_comercializacion-directos-_4314" model="account.account.template">
       <field name="name">Gtos.de Comercialización-Directos-</field>
       <field name="code">4314*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-ap-" />
     </record>
     <record id="varios_43146" model="account.account.template">
       <field name="name">Varios</field>
       <field name="code">43146*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gtosde_comercializacion-directos-_4314" />
     </record>
@@ -2325,7 +2198,6 @@
     <record id="gtos_de_comercializacion-indirectos-" model="account.account.template">
       <field name="name">Gtos de Comercialización-Indirectos-</field>
       <field name="code">4317*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-ap-" />
     </record>
@@ -2341,7 +2213,6 @@
     <record id="gtos_de_administracion-indirectos-" model="account.account.template">
       <field name="name">Gtos de Administracion-Indirectos-</field>
       <field name="code">4318*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-ap-" />
     </record>
@@ -2357,7 +2228,6 @@
     <record id="resultados_ordno_operativos-ap" model="account.account.template">
       <field name="name">RESULTADOS ORD.NO OPERATIVOS-Ap</field>
       <field name="code">432*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccagua_potable" />
     </record>
@@ -2382,7 +2252,6 @@
     <record id="resultados_financieros-ap-" model="account.account.template">
       <field name="name">RESULTADOS FINANCIEROS-AP-</field>
       <field name="code">433*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccagua_potable" />
     </record>
@@ -2425,7 +2294,6 @@
     <record id="resultados_extraordinarios-ap-" model="account.account.template">
       <field name="name">RESULTADOS EXTRAORDINARIOS-AP-</field>
       <field name="code">434*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccagua_potable" />
     </record>
@@ -2450,21 +2318,18 @@
     <record id="seccservicio_sepelio" model="account.account.template">
       <field name="name">SECC.SERVICIO SEPELIO</field>
       <field name="code">44*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados" />
     </record>
     <record id="resultados_ordoperativos-ss-" model="account.account.template">
       <field name="name">RESULTADOS ORD.OPERATIVOS-SS-</field>
       <field name="code">441*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccservicio_sepelio" />
     </record>
     <record id="ingreso_operativo_seccional_4411" model="account.account.template">
       <field name="name">Ingreso operativo seccional</field>
       <field name="code">4411*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-ss-" />
     </record>
@@ -2489,7 +2354,6 @@
     <record id="costos_4412" model="account.account.template">
       <field name="name">Costos</field>
       <field name="code">4412*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-ss-" />
     </record>
@@ -2505,14 +2369,12 @@
     <record id="gastos_de_explotacion-directos-_4413" model="account.account.template">
       <field name="name">Gastos de Explotación-Directos-</field>
       <field name="code">4413*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-ss-" />
     </record>
     <record id="remuneraciones_44131" model="account.account.template">
       <field name="name">Remuneraciones</field>
       <field name="code">44131*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-_4413" />
     </record>
@@ -2573,7 +2435,6 @@
     <record id="mantenimiento_44133" model="account.account.template">
       <field name="name">Mantenimiento</field>
       <field name="code">44133*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-_4413" />
     </record>
@@ -2598,7 +2459,6 @@
     <record id="servde_terceros_44134" model="account.account.template">
       <field name="name">Serv.de Terceros</field>
       <field name="code">44134*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-_4413" />
     </record>
@@ -2668,7 +2528,6 @@
     <record id="varios_44136" model="account.account.template">
       <field name="name">Varios</field>
       <field name="code">44136*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-_4413" />
     </record>
@@ -2729,7 +2588,6 @@
     <record id="impuestos_44137" model="account.account.template">
       <field name="name">Impuestos</field>
       <field name="code">44137*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-_4413" />
     </record>
@@ -2754,7 +2612,6 @@
     <record id="insumos_44138" model="account.account.template">
       <field name="name">Insumos</field>
       <field name="code">44138*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-_4413" />
     </record>
@@ -2788,7 +2645,6 @@
     <record id="gtosde_comercializacion-indirectos-_4417" model="account.account.template">
       <field name="name">Gtos.de Comercialización-Indirectos-</field>
       <field name="code">4417*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-ss-" />
     </record>
@@ -2804,7 +2660,6 @@
     <record id="gtosde_administracion-indirectos-_4418" model="account.account.template">
       <field name="name">Gtos.de Administracion-Indirectos-</field>
       <field name="code">4418*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-ss-" />
     </record>
@@ -2820,7 +2675,6 @@
     <record id="resultados_ordno_operativos-ss" model="account.account.template">
       <field name="name">RESULTADOS ORD.NO OPERATIVOS-SS</field>
       <field name="code">442*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccservicio_sepelio" />
     </record>
@@ -2845,7 +2699,6 @@
     <record id="resultados_financieros-ss-" model="account.account.template">
       <field name="name">RESULTADOS FINANCIEROS-SS-</field>
       <field name="code">443*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccservicio_sepelio" />
     </record>
@@ -2906,21 +2759,18 @@
     <record id="seccgas_licuado" model="account.account.template">
       <field name="name">SECC.GAS LICUADO</field>
       <field name="code">45*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados" />
     </record>
     <record id="resultados_ordoperativos-gas-" model="account.account.template">
       <field name="name">RESULTADOS ORD.OPERATIVOS-GAS-</field>
       <field name="code">451*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccgas_licuado" />
     </record>
     <record id="ingreso_operativo_seccional_4511" model="account.account.template">
       <field name="name">Ingreso operativo seccional</field>
       <field name="code">4511*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-gas-" />
     </record>
@@ -2990,7 +2840,6 @@
     <record id="costos_4512" model="account.account.template">
       <field name="name">Costos</field>
       <field name="code">4512*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-gas-" />
     </record>
@@ -3006,14 +2855,12 @@
     <record id="gastos_de_explot-directos-" model="account.account.template">
       <field name="name">Gastos de Explot.-Directos-</field>
       <field name="code">4513*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-gas-" />
     </record>
     <record id="remuneraciones_45131" model="account.account.template">
       <field name="name">Remuneraciones</field>
       <field name="code">45131*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explot-directos-" />
     </record>
@@ -3083,7 +2930,6 @@
     <record id="mantenimiento_45133" model="account.account.template">
       <field name="name">Mantenimiento</field>
       <field name="code">45133*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explot-directos-" />
     </record>
@@ -3108,7 +2954,6 @@
     <record id="servde_terceros_45134" model="account.account.template">
       <field name="name">Serv.de Terceros</field>
       <field name="code">45134*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explot-directos-" />
     </record>
@@ -3178,7 +3023,6 @@
     <record id="varios_45136" model="account.account.template">
       <field name="name">Varios</field>
       <field name="code">45136*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explot-directos-" />
     </record>
@@ -3221,7 +3065,6 @@
     <record id="impuestos_45137" model="account.account.template">
       <field name="name">Impuestos</field>
       <field name="code">45137*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explot-directos-" />
     </record>
@@ -3255,7 +3098,6 @@
     <record id="insumos_45138" model="account.account.template">
       <field name="name">Insumos</field>
       <field name="code">45138*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explot-directos-" />
     </record>
@@ -3280,14 +3122,12 @@
     <record id="gtos_de_comercializacion-directos-" model="account.account.template">
       <field name="name">Gtos. de Comercialización-Directos-</field>
       <field name="code">4514*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-gas-" />
     </record>
     <record id="remuneraciones_45141" model="account.account.template">
       <field name="name">Remuneraciones</field>
       <field name="code">45141*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gtos_de_comercializacion-directos-" />
     </record>
@@ -3339,7 +3179,6 @@
     <record id="mantenimiento_45143" model="account.account.template">
       <field name="name">Mantenimiento</field>
       <field name="code">45143*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gtos_de_comercializacion-directos-" />
     </record>
@@ -3355,7 +3194,6 @@
     <record id="servde_terceros_45144" model="account.account.template">
       <field name="name">Serv.de Terceros</field>
       <field name="code">45144*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gtos_de_comercializacion-directos-" />
     </record>
@@ -3425,7 +3263,6 @@
     <record id="varios_45146" model="account.account.template">
       <field name="name">Varios</field>
       <field name="code">45146*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gtos_de_comercializacion-directos-" />
     </record>
@@ -3486,7 +3323,6 @@
     <record id="impuestos_45147" model="account.account.template">
       <field name="name">Impuestos</field>
       <field name="code">45147*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gtos_de_comercializacion-directos-" />
     </record>
@@ -3511,7 +3347,6 @@
     <record id="gtos_de_comercializacion-indirectos-_4517" model="account.account.template">
       <field name="name">Gtos. de Comercialización-Indirectos-</field>
       <field name="code">4517*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-gas-" />
     </record>
@@ -3527,7 +3362,6 @@
     <record id="gtosde_administracion-indirectos-_4518" model="account.account.template">
       <field name="name">Gtos.de Administracion-Indirectos-</field>
       <field name="code">4518*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-gas-" />
     </record>
@@ -3543,7 +3377,6 @@
     <record id="resultados_ordno_operativos-gl" model="account.account.template">
       <field name="name">RESULTADOS ORD.NO OPERATIVOS-GL</field>
       <field name="code">452*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccgas_licuado" />
     </record>
@@ -3658,7 +3491,6 @@
     <record id="resultados_financieros-gas-" model="account.account.template">
       <field name="name">RESULTADOS FINANCIEROS-GAS-</field>
       <field name="code">453*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccgas_licuado" />
     </record>
@@ -3710,7 +3542,6 @@
     <record id="resultados_extraordinarios-gl-" model="account.account.template">
       <field name="name">RESULTADOS EXTRAORDINARIOS-GL-</field>
       <field name="code">454*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccgas_licuado" />
     </record>
@@ -3735,21 +3566,18 @@
     <record id="secc_cctv" model="account.account.template">
       <field name="name">SECC. C.C.T.V.</field>
       <field name="code">46*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados" />
     </record>
     <record id="resultados_ordoperativos-cctv" model="account.account.template">
       <field name="name">RESULTADOS ORD.OPERATIVOS-CCTV</field>
       <field name="code">461*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="secc_cctv" />
     </record>
     <record id="ingreso_operativo_seccional_4611" model="account.account.template">
       <field name="name">Ingreso operativo seccional</field>
       <field name="code">4611*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-cctv" />
     </record>
@@ -3792,7 +3620,6 @@
     <record id="costos_4612" model="account.account.template">
       <field name="name">Costos</field>
       <field name="code">4612*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-cctv" />
     </record>
@@ -3808,14 +3635,12 @@
     <record id="gastos_de_explotacion-directos-_4613" model="account.account.template">
       <field name="name">Gastos de Explotación-Directos-</field>
       <field name="code">4613*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-cctv" />
     </record>
     <record id="remuneraciones_46131" model="account.account.template">
       <field name="name">Remuneraciones</field>
       <field name="code">46131*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-_4613" />
     </record>
@@ -3867,7 +3692,6 @@
     <record id="mantenimiento_46133" model="account.account.template">
       <field name="name">Mantenimiento</field>
       <field name="code">46133*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-_4613" />
     </record>
@@ -3892,7 +3716,6 @@
     <record id="servde_terceros_46134" model="account.account.template">
       <field name="name">Serv.de Terceros</field>
       <field name="code">46134*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-_4613" />
     </record>
@@ -3971,7 +3794,6 @@
     <record id="varios_46136" model="account.account.template">
       <field name="name">Varios</field>
       <field name="code">46136*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-_4613" />
     </record>
@@ -4005,7 +3827,6 @@
     <record id="impuestos_46137" model="account.account.template">
       <field name="name">Impuestos</field>
       <field name="code">46137*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos-_4613" />
     </record>
@@ -4048,14 +3869,12 @@
     <record id="gtosde_comercializacion-directos-_4614" model="account.account.template">
       <field name="name">Gtos.de Comercialización-Directos-</field>
       <field name="code">4614*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-cctv" />
     </record>
     <record id="serv_de_terceros" model="account.account.template">
       <field name="name">Serv. de Terceros</field>
       <field name="code">46144*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gtosde_comercializacion-directos-_4614" />
     </record>
@@ -4071,7 +3890,6 @@
     <record id="gtosde_comercializacion-indirectos-_4617" model="account.account.template">
       <field name="name">Gtos.de Comercialización-Indirectos-</field>
       <field name="code">4617*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-cctv" />
     </record>
@@ -4087,7 +3905,6 @@
     <record id="gtosde_administracion-indirectos" model="account.account.template">
       <field name="name">Gtos.de Administracion-Indirectos</field>
       <field name="code">4618*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-cctv" />
     </record>
@@ -4103,7 +3920,6 @@
     <record id="resultados_ordno_operativos-c" model="account.account.template">
       <field name="name">RESULTADOS ORD.NO OPERATIVOS-C</field>
       <field name="code">462*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="secc_cctv" />
     </record>
@@ -4146,7 +3962,6 @@
     <record id="resultados_financieros-cctv-" model="account.account.template">
       <field name="name">RESULTADOS FINANCIEROS-CCTV-</field>
       <field name="code">463*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="secc_cctv" />
     </record>
@@ -4189,21 +4004,18 @@
     <record id="seccservicios_internet" model="account.account.template">
       <field name="name">SECC.SERVICIOS INTERNET</field>
       <field name="code">47*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados" />
     </record>
     <record id="resultados_ordoperativos-int-" model="account.account.template">
       <field name="name">RESULTADOS ORD.OPERATIVOS-INT-</field>
       <field name="code">471*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccservicios_internet" />
     </record>
     <record id="ingreso_operativo_seccional_4711" model="account.account.template">
       <field name="name">Ingreso operativo seccional</field>
       <field name="code">4711*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-int-" />
     </record>
@@ -4237,7 +4049,6 @@
     <record id="costos_4712" model="account.account.template">
       <field name="name">Costos</field>
       <field name="code">4712*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-int-" />
     </record>
@@ -4253,14 +4064,12 @@
     <record id="gastos_de_explotacion-directos" model="account.account.template">
       <field name="name">Gastos de Explotación-Directos</field>
       <field name="code">4713*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-int-" />
     </record>
     <record id="remuneraciones_47131" model="account.account.template">
       <field name="name">Remuneraciones</field>
       <field name="code">47131*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos" />
     </record>
@@ -4303,7 +4112,6 @@
     <record id="serv_de_terceros_47134" model="account.account.template">
       <field name="name">Serv. de Terceros</field>
       <field name="code">47134*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos" />
     </record>
@@ -4328,7 +4136,6 @@
     <record id="varios_47136" model="account.account.template">
       <field name="name">Varios</field>
       <field name="code">47136*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos" />
     </record>
@@ -4362,7 +4169,6 @@
     <record id="impuestos_47137" model="account.account.template">
       <field name="name">Impuestos</field>
       <field name="code">47137*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos" />
     </record>
@@ -4378,7 +4184,6 @@
     <record id="insumos_47138" model="account.account.template">
       <field name="name">Insumos</field>
       <field name="code">47138*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gastos_de_explotacion-directos" />
     </record>
@@ -4394,14 +4199,12 @@
     <record id="gtos_de_comercializacion-directos" model="account.account.template">
       <field name="name">Gtos. de Comercialización-Directos</field>
       <field name="code">4714*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-int-" />
     </record>
     <record id="mantenimiento_47143" model="account.account.template">
       <field name="name">Mantenimiento</field>
       <field name="code">47143*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gtos_de_comercializacion-directos" />
     </record>
@@ -4417,7 +4220,6 @@
     <record id="serv_de_terceros_47144" model="account.account.template">
       <field name="name">Serv. de Terceros</field>
       <field name="code">47144*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gtos_de_comercializacion-directos" />
     </record>
@@ -4469,7 +4271,6 @@
     <record id="varios_47146" model="account.account.template">
       <field name="name">Varios</field>
       <field name="code">47146*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gtos_de_comercializacion-directos" />
     </record>
@@ -4494,7 +4295,6 @@
     <record id="impuestos_47147" model="account.account.template">
       <field name="name">Impuestos</field>
       <field name="code">47147*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="gtos_de_comercializacion-directos" />
     </record>
@@ -4519,7 +4319,6 @@
     <record id="gtosde_comercializacion-indirectos-_4717" model="account.account.template">
       <field name="name">Gtos.de Comercialización-Indirectos-</field>
       <field name="code">4717*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-int-" />
     </record>
@@ -4535,7 +4334,6 @@
     <record id="gtosde_administracion-indirectos-_4718" model="account.account.template">
       <field name="name">Gtos.de Administracion-Indirectos-</field>
       <field name="code">4718*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordoperativos-int-" />
     </record>
@@ -4551,7 +4349,6 @@
     <record id="resultados_ordno_operat-int-" model="account.account.template">
       <field name="name">RESULTADOS ORD.NO OPERAT.-INT-</field>
       <field name="code">472*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccservicios_internet" />
     </record>
@@ -4585,7 +4382,6 @@
     <record id="resultados_financieros-int-" model="account.account.template">
       <field name="name">RESULTADOS FINANCIEROS-INT-</field>
       <field name="code">473*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="seccservicios_internet" />
     </record>
@@ -4619,21 +4415,18 @@
     <record id="resultados_ajenos_a_la_explotacion" model="account.account.template">
       <field name="name">RESULTADOS AJENOS A LA EXPLOTACION</field>
       <field name="code">48*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados" />
     </record>
     <record id="resultados_ordinarios_ajenos" model="account.account.template">
       <field name="name">RESULTADOS ORDINARIOS AJENOS</field>
       <field name="code">481*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ajenos_a_la_explotacion" />
     </record>
     <record id="resultados_ordno_operativos-ra-" model="account.account.template">
       <field name="name">RESULTADOS ORD.NO OPERATIVOS-RA-</field>
       <field name="code">4811*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordinarios_ajenos" />
     </record>
@@ -4685,7 +4478,6 @@
     <record id="resultados_financieros-ra-" model="account.account.template">
       <field name="name">RESULTADOS FINANCIEROS-RA-</field>
       <field name="code">4812*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ordinarios_ajenos" />
     </record>
@@ -4737,14 +4529,12 @@
     <record id="resultados_extraordinarios_ajenos" model="account.account.template">
       <field name="name">RESULTADOS EXTRAORDINARIOS AJENOS</field>
       <field name="code">482*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_ajenos_a_la_explotacion" />
     </record>
     <record id="del_ejercicio" model="account.account.template">
       <field name="name">DEL EJERCICIO</field>
       <field name="code">4821*</field>
-      <field name="sector_id" ref="sector_sin_sector" />
       <field name="kind">view</field>
       <field name="parent" ref="resultados_extraordinarios_ajenos" />
     </record>

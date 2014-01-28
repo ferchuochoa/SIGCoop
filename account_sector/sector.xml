@@ -19,7 +19,7 @@
         <field name="type">tree</field>
       </record>
 
-      <menuitem name="Sector" sequence="0" id="menu_sector"/>
-      <menuitem parent="menu_sector" sequence="1" action="act_sector_form" icon="tryton-list" id="menu_sector_form"/>
+      <menuitem name="Sector" parent="account.menu_general_account_configuration" icon="tryton-list" id="menu_sector"/>
+      <menuitem parent="menu_sector" action="act_sector_form" icon="tryton-list" id="menu_sector_form"/>
     </data>
 </tryton>
