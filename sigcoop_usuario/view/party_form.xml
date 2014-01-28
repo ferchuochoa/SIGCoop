@@ -6,16 +6,19 @@
         <page string="Datos cliente" id="datos_cliente">
             <label name="asociado"/>
             <field name="asociado"/>
+            <label name="numero"/>
+            <field name="numero"/>
             <label name="dir_entrega_factura"/>
             <field name="dir_entrega_factura"/>
             <label name="ruta"/>
             <field name="ruta"/>
-            <label name="razon_social"/>
-            <field name="razon_social"/>
-            <label name="valor_razon_social"/>
-            <field name="valor_razon_social"/>
-            <label name="numero"/>
-            <field name="numero"/>
+            <label name="tipo_identificacion"/>
+            <field name="tipo_identificacion"/>
+            <label name="valor_identificacion"/>
+            <field name="valor_identificacion"/>
+
+            <field name="suministros" mode="tree,form" colspan="4"
+                view_ids="sigcoop_usuario.suministro_view_tree,sigcoop_usuario.suministro_view_form"/>
         </page>
         <page string="Datos asociado" id="datos_asociado" states="{'invisible': Not(Bool(Eval('asociado')))}">
             <label name="numero_titulo"/>

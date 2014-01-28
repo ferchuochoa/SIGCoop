@@ -8,7 +8,6 @@ class Suministro(ModelSQL, ModelView):
     "Suministro"
     __name__ = 'sigcoop_usuario.suministro'
     usuario_id = fields.Many2One('party.party', 'Usuario')
-    numero_usuario = fields.Integer('Numero usuario')
     numero_suministro = fields.Integer('Numero suministro')
     servicio = fields.Selection(
         [

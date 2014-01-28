@@ -7,11 +7,13 @@ __all__ = ['Familiar']
 class Familiar(ModelSQL, ModelView):
     "Familiar"
     __name__ = 'sigcoop_usuario.familiar'
-    dni = fields.Integer('Dni', required=True)
+    dni = fields.Integer('DNI', required=True)
     relacion = fields.Selection(
         [
             ('hijo', 'Hijo'),
             ('conyuge', 'Conyuge'),
+            ('padre', 'Padre'),
+            ('madre', 'Madre'),
         ],
         'Relacion'
     )
