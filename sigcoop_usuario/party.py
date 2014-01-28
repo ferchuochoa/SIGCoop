@@ -11,7 +11,7 @@ class Party(ModelSQL, ModelView):
     #Por defecto, es cliente ya que el campo es false.
     asociado = fields.Boolean('asociado')
     dir_entrega_factura = fields.Many2One('party.address', 'Direccion entrega factura')
-    ruta = fields.Integer('Ruta', required=True)
+    ruta = fields.Integer('Ruta')
     razon_social = fields.Selection(
         [
             ('CUIT', 'CUIT'),
