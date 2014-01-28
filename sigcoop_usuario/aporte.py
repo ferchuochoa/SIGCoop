@@ -9,5 +9,5 @@ class Aporte(ModelSQL, ModelView):
     __name__ = 'sigcoop_usuario.aporte'
     fecha = fields.Date('Fecha')
     monto = fields.Integer('Monto')
-    sector = fields.Many2One('account_sector.sector', 'Sector')
+    sector = fields.Many2One('account.sector', 'Sector')
     usuario_id = fields.Many2One('party.party', 'Usuario', domain=[('asociado', '=', True)])
