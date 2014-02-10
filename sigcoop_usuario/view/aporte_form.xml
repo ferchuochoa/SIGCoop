@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <form string="Aporte" col="6">
-
   <label name="fecha"/>
   <field name="fecha"/>
   <label name="monto"/>
