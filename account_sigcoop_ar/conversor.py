@@ -210,6 +210,13 @@ class WierdXMLGenerator(object):
 
         record.add_field(Field('parent', {'ref': parent}))
 
+        #Balance Gral y Perdidas y Ganancias
+        record.add_field(Field('balance_sheet', {'eval': 'True'}))
+        if row['clase'] == 'ingresos' or  row['clase'] == 'gastos':
+            record.add_field(Field('income_statement', {'eval': 'True'}))
+        else:
+            record.add_field(Field('income_statement', {'eval': 'False'}))    
+
         self.document.add_record(record)
 
     def get_parent_for(self, group, id):
