@@ -148,6 +148,13 @@ class WierdXMLGenerator(object):
         if row['parent']:
             record.add_field(Field('parent', {'ref': row['parent']}))
 
+        #Balance Gral y Perdidas y Ganancias
+        record.add_field(Field('balance_sheet', {'eval': 'True'}))
+        if row['parent'] == 'ingresos' or  row['parent'] == 'egreso':
+            record.add_field(Field('income_statement', {'eval': 'True'}))
+        else:
+            record.add_field(Field('income_statement', {'eval': 'False'}))      
+
         self.document.add_record(record)
 
     def process_sector_row(self, row):
@@ -208,14 +215,7 @@ class WierdXMLGenerator(object):
             type = self.account_types[row['tipo']]
             record.add_field(Field('type', {'ref': type}))
 
-        record.add_field(Field('parent', {'ref': parent}))
-
-        #Balance Gral y Perdidas y Ganancias
-        record.add_field(Field('balance_sheet', {'eval': 'True'}))
-        if row['clase'] == 'ingresos' or  row['clase'] == 'gastos':
-            record.add_field(Field('income_statement', {'eval': 'True'}))
-        else:
-            record.add_field(Field('income_statement', {'eval': 'False'}))    
+        record.add_field(Field('parent', {'ref': parent}))  
 
         self.document.add_record(record)
 

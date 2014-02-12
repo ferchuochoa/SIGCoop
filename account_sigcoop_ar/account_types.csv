@@ -1,10 +1,11 @@
 name,sequence,parent,id
 Balance General,10,,ar
-Activo,10,ar,activo
-Activo Corriente,10,activo,activocorriente
-Activo No Corriente,10,activo,activonocorriente
-Pasivo,10,ar,pasivo
-Pasivo Corriente,10,pasivo,pasivocorriente
+Activo,10,ar,tipoactivo
+Activo Corriente,10,tipoactivo,activocorriente
+Activo No Corriente,10,tipoactivo,activonocorriente
+Pasivo,10,ar,tipopasivo
+Pasivo Corriente,10,tipopasivo,pasivocorriente
+Pasivo No Corriente,10,tipopasivo,pasivonocorriente
 Ingreso,10,ar,ingreso
 Seccion Energia Electrica Ingresos,10,ingreso,ingresoenergia
 Seccion Agua Potable Ingresos,10,ingreso,ingresoaguapotable
