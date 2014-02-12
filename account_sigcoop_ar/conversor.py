@@ -150,7 +150,7 @@ class WierdXMLGenerator(object):
 
         #Balance Gral y Perdidas y Ganancias
         record.add_field(Field('balance_sheet', {'eval': 'True'}))
-        if row['parent'] == 'ingresos' or  row['parent'] == 'egreso':
+        if row['parent'] == 'ingreso' or  row['parent'] == 'egreso':
             record.add_field(Field('income_statement', {'eval': 'True'}))
         else:
             record.add_field(Field('income_statement', {'eval': 'False'}))      
