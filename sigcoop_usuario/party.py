@@ -10,7 +10,7 @@ class Party(ModelSQL, ModelView):
     "Party"
     __name__ = 'party.party'
     #El field cliente_socio aparece al lado del nombre de la entidad para definir si va a ser de este tipo.
-    cliente_socio = fields.Boolean('Cliente/Socio', help="Marcar si es un cliente de la cooperativa")
+    cliente_socio = fields.Boolean('Cliente/Socio', on_change=['cliente_socio'], help="Marcar si es un cliente de la cooperativa")
     #El field asociado nos da a elegir si es asociado o cliente.
     #Por defecto, es cliente ya que el campo es false.
     asociado = fields.Boolean('Es Asociado', 
@@ -32,7 +32,7 @@ class Party(ModelSQL, ModelView):
     valor_identificacion = fields.Char('Nro. Identificacion')
     #El numero indica el numero de cliente o
     #asociado segun se indique en el campo asociado.
-    numero = fields.Char('Nro. de Cliente/Asociado')
+    numero = fields.Char('Nro. de Cliente/Asociado', required=True)
     numero_titulo = fields.Char('Nro. de titulo')
     fecha_ingreso = fields.Date('Fecha de ingreso')
     #Referencias muchos a uno
@@ -50,3 +50,16 @@ class Party(ModelSQL, ModelView):
     @staticmethod
     def default_fecha_ingreso():
         return datetime.today()
+
+
+    @staticmethod
+    def default_numero():
+        return '-1'
+
+    def on_change_cliente_socio(self):
+        if self.cliente_socio:
+            return {'numero':None}
+        return {'numero':'-1'}
+
+
+
