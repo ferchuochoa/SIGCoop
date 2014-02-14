@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tryton>
+    <data>
+        <!-- Form View -->
+        <record model="ir.ui.view" id="consumo_view_form">
+            <field name="model">sigcoop_consumos.consumo</field>
+            <field name="type">form</field>
+            <field name="name">consumo_form</field>
+        </record>
+        <!-- Tree View -->
+        <record model="ir.ui.view" id="consumo_view_tree">
+            <field name="model">sigcoop_consumos.consumo</field>
+            <field name="type">tree</field>
+            <field name="name">consumo_tree</field>
+        </record>
+
+        <record id="act_consumo_form" model="ir.action.act_window">
+            <field name="name">Consumos</field>
+            <field name="res_model">sigcoop_consumos.consumo</field>
+            <field name="search_value"/>
+        </record>
+
+        <!-- Menu -->
+        <menuitem parent="sigcoop_usuario.menu_usuario" secuence="0" action="act_consumo_form" icon="tryton-list" id="menu_consumo_form"/>
+    </data>
+</tryton>

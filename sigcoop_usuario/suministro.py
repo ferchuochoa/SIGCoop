@@ -13,6 +13,7 @@ class Suministro(ModelSQL, ModelView):
         [
             ('luz', 'Luz'),
             ('agua', 'Agua'),
+            ('gas', 'Gas'),
             # TODO: Completar servicios.
         ],
         'Tipo de servicio'

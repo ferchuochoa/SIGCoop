@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<tree string="Consumos">
+  <field name="id_suministro"/>
+  <field name="id_medidor"/>
+  <field name="periodo"/>
+  <field name="fecha_anterior"/>
+  <field name="lectura_anterior"/>
+  <field name="fecha_actual"/>
+  <field name="lectura_actual"/>
+  <field name="consumo_neto"/>
+</tree>
