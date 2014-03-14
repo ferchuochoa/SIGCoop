@@ -1,5 +1,6 @@
 #-*- coding: utf-8 -*-
 from trytond.model import ModelSQL, ModelView, fields
+from trytond.pyson import Eval, And, Bool, Equal, Not
 
 __all__ = ['Party']
 
@@ -33,3 +34,39 @@ class Party(ModelSQL, ModelView):
     rangos = fields.One2Many('sigcoop_usuario.rango', 'asociado', 'Rangos')
     familiares = fields.One2Many('sigcoop_usuario.familiar', 'usuario_id', 'Familiares')
     aportes = fields.One2Many('sigcoop_usuario.aporte', 'usuario_id', 'Familiares')
+    iva_condition = fields.Selection(
+            [
+                ('', ''),
+                ('responsable_inscripto', 'Responsable Inscripto'),
+                ('exento', 'Exento'),
+                ('consumidor_final', 'Consumidor Final'),
+                ('monotributo', 'Monotributo'),
+                ('no_alcanzado', 'No alcanzado'),
+            ],
+            'Condicion ante el IVA',
+            states={
+                'readonly': ~Eval('active', True),
+                #'required': Equal(Eval('vat_country'), 'AR'), En account_invoice_ar, definen vat country
+                },
+            depends=['active'],
+            )
+    iibb_type = fields.Selection(
+            [
+                ('', ''),
+                ('cm', 'Convenio Multilateral'),
+                ('rs', 'Regimen Simplificado'),
+                ('exento', 'Exento'),
+            ],
+            'Tipo de Inscripcion de II BB',
+            states={
+                'readonly': ~Eval('active', True),
+                },
+            depends=['active'],
+            )
+    iibb_number = fields.Char('II BB',
+            states={
+                'readonly': ~Eval('active', True),
+                'required': And(Not(Equal(Eval('iibb_type'), 'exento')), Bool(Eval('iibb_type')))
+                },
+            depends=['active'],
+            )

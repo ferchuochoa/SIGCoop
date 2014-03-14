@@ -16,6 +16,12 @@
             <field name="tipo_identificacion"/>
             <label name="valor_identificacion"/>
             <field name="valor_identificacion"/>
+            <label name="iva_condition"/>
+            <field name="iva_condition"/>
+            <label name="iibb_type"/>
+            <field name="iibb_type"/>
+            <label name="iibb_number"/>
+            <field name="iibb_number"/>
         </page>
         <page string="Suministros" id="suministros">
             <field name="suministros" mode="tree,form" colspan="4"
