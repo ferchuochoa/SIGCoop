@@ -37,7 +37,7 @@ class Sale(Workflow, ModelSQL, ModelView):
         res['untaxed_amount'] += line.amount or Decimal(0)
         tax_list = ()
         with Transaction().set_context(self.get_tax_context()):
-          if (line.dont_multiply):
+          if (line.product and line.product.dont_multiply):
             tax_list = Tax.compute(getattr(line, 'taxes', []), line.unit_price or Decimal('0.0'), 1.0)
           else:
             tax_list = Tax.compute(getattr(line, 'taxes', []), line.unit_price or Decimal('0.0'), line.quantity or 0.0)
@@ -69,7 +69,7 @@ class Sale(Workflow, ModelSQL, ModelView):
       if line.type != 'line':
         continue
       with Transaction().set_context(context):
-        if (line.dont_multiply):
+        if (line.product and line.product.dont_multiply):
           tax_list = Tax.compute(line.taxes, line.unit_price,
               1.0)
         else:
@@ -110,7 +110,8 @@ class SaleLine(ModelSQL, ModelView):
   def on_change_with_amount(self):
     #import pdb;pdb.set_trace()
     logging.getLogger('sale').warning("USANDO GET: %s " % self._values.get('dont_multiply'))
-    if self._values.get('dont_multiply') and self.type == 'line':
+    #if self._values.get('dont_multiply') and self.type == 'line':
+    if self.type == 'line' and self.product and self.product.dont_multiply:
       logging.getLogger('sale').warning("EN on_change_with_amount tenemos el valor de dont")
       return (self.unit_price or Decimal('0.0'))
     else:
@@ -120,7 +121,8 @@ class SaleLine(ModelSQL, ModelView):
 
   def get_amount(self, name):
     #import pdb;pdb.set_trace()
-    if self.type == 'line' and self.dont_multiply:
+    #if self.type == 'line' and self.dont_multiply:
+    if self.type == 'line' and self.product and self.product.dont_multiply:
       logging.getLogger('sale').warning("AHORA dentro de GET_AMOUNT retornamos el dont")
       return self.unit_price
     else:

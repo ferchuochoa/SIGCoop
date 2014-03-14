@@ -3,9 +3,14 @@
 
 from trytond.pool import Pool
 from .sale import *
+from .product import *
+from .invoice import *
 
 def register():
     Pool.register(
         SaleLine,
+        Template,
         Sale,
+        Invoice,
+        InvoiceLine,
         module='sigcoop_sale', type_='model')
