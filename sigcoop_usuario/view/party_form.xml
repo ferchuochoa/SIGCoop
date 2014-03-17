@@ -1,49 +1,52 @@
 <?xml version="1.0"?>
 <data>
     <xpath
+        expr="/form/group/field[@name='active']"
+        position="after">
+        <label name="cliente_socio" string="Cliente"/>
+        <field name="cliente_socio" xexpand="0" width="25"/>
+        <label name="asociado" string="Socio"/>
+        <field name="asociado" xexpand="0" width="25"/>
+    </xpath>
+   
+    <xpath
         expr="/form/notebook/page[@id='accounting']"
         position="after">
-        <page string="Datos cliente" id="datos_cliente">
-            <label name="asociado"/>
-            <field name="asociado"/>
+        <page string="Datos cliente" id="datos_cliente" col="6" states="{'invisible': Not(Bool(Eval('cliente_socio')))}">
             <label name="numero"/>
             <field name="numero"/>
-            <label name="dir_entrega_factura"/>
-            <field name="dir_entrega_factura"/>
-            <label name="ruta"/>
-            <field name="ruta"/>
-            <label name="tipo_identificacion"/>
-            <field name="tipo_identificacion"/>
-            <label name="valor_identificacion"/>
-            <field name="valor_identificacion"/>
-            <label name="iva_condition"/>
-            <field name="iva_condition"/>
-            <label name="iibb_type"/>
-            <field name="iibb_type"/>
-            <label name="iibb_number"/>
-            <field name="iibb_number"/>
-        </page>
-        <page string="Suministros" id="suministros">
-            <field name="suministros" mode="tree,form" colspan="4"
+            <group col="2" colspan="1" id="identificacion">
+                <label name="tipo_identificacion"/>
+                <field name="tipo_identificacion" xexpand="0" width="80"/>
+            </group>
+            <label name="valor_identificacion" string="Nro.:"/>
+            <field name="valor_identificacion" xexpand="1"/>
+            <newline/>
+            <field name="suministros" mode="tree,form" colspan="6"
                 view_ids="sigcoop_usuario.suministro_view_tree,sigcoop_usuario.suministro_view_form"/>
         </page>
-        <page string="Datos asociado" id="datos_asociado" states="{'invisible': Not(Bool(Eval('asociado')))}">
+
+
+
+        <page string="Datos asociado" id="datos_asociado" col="4" states="{'invisible': Or(Not(Bool(Eval('asociado'))), Not(Bool(Eval('cliente_socio'))))}">
             <label name="numero_titulo"/>
-            <field name="numero_titulo"/>
-            <label name="fecha_ingreso"/>
+            <field name="numero_titulo" xexpand="1"/>
+            <label name="fecha_ingreso"/> 
             <field name="fecha_ingreso"/>
-        </page>
-        <page string="Rangos" id="rangos" states="{'invisible': Not(Bool(Eval('asociado')))}">
-            <field name="rangos" mode="tree,form" colspan="4"
-                view_ids="sigcoop_usuario.rango_view_tree,sigcoop_usuario.rango_view_form"/>
-        </page>
-        <page string="Familiares" id="familiares" states="{'invisible': Not(Bool(Eval('asociado')))}">
+            <newline/>
+            <group col="2" colspan="4" id="rangos_aportes">
+                <group col="1" colspan="1" id="rangos">
+                <field name="rangos" mode="tree,form" colspan="4"
+                    view_ids="sigcoop_usuario.rango_view_tree,sigcoop_usuario.rango_view_form" yexpand="1" height="200"/>
+                </group>
+                <group col="1" colspan="1" id="aportes">
+                <field name="aportes" mode="tree,form" colspan="4"
+                    view_ids="sigcoop_usuario.aporte_view_tree,sigcoop_usuario.aporte_view_form" yexpand="1" height="200"/>
+                </group>
+            </group>
+            <newline/>
             <field name="familiares" mode="tree,form" colspan="4"
-                view_ids="sigcoop_usuario.familiar_view_tree,sigcoop_usuario.familiar_view_form"/>
-        </page>
-        <page string="Aportes" id="aportes" states="{'invisible': Not(Bool(Eval('asociado')))}">
-            <field name="aportes" mode="tree,form" colspan="4"
-                view_ids="sigcoop_usuario.aporte_view_tree,sigcoop_usuario.aporte_view_form"/>
+                view_ids="sigcoop_usuario.familiar_view_tree,sigcoop_usuario.familiar_view_form"/>            
         </page>
     </xpath>
 </data>

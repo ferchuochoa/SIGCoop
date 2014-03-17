@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<!-- This file is part of the account_voucher_ar module for Tryton.
+The COPYRIGHT file at the top level of this repository contains
+the full copyright notices and license terms. -->
+<tryton>
+    <data>
+
+        <!-- Sequences for Account Voucher -->
+        <record id="seq_type_account_voucher" model="ir.sequence.type">
+            <field name="name">Account Voucher</field>
+            <field name="code">account.voucher</field>
+        </record>
+        <record id="seq_account_voucher" model="ir.sequence">
+            <field name="name">Account Voucher</field>
+            <field name="code">account.voucher</field>
+            <field name="prefix">${year}/</field>
+            <field name="padding">3</field>
+        </record>
+
+        <record model="ir.property" id="property_account_voucher_sequence">
+            <field name="field"
+                search="[('model.model', '=', 'account.voucher.sequence'), ('name', '=', 'voucher_sequence')]"/>
+            <field name="value" eval="'ir.sequence,' + str(ref('seq_account_voucher'))"/>
+        </record>
+
+<!-- Account Voucher -->
+        <menuitem name="Voucher" parent="account.menu_account"
+            id="menu_vouchers" sequence="21"/>
+
+        <record model="ir.action.wizard" id="wizard_select_invoices">
+            <field name="name">Select Invoices to receive/pay</field>
+            <field name="wiz_name">account.voucher.select_invoices</field>
+            <field name="model">account.voucher</field>
+        </record>
+
+        <record model="ir.ui.view" id="account_voucher_form">
+            <field name="model">account.voucher</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <form string="Voucher" col="8">
+                    <label name="party"/>
+                    <field name="party"/>
+                    <label name="number"/>
+                    <field name="number"/>
+                    <group col="4" colspan="4" id="amounts">
+                        <label name="amount_to_pay"/>
+                        <field name="amount_to_pay"/>
+                        <label name="amount"/>
+                        <field name="amount"/>
+                        <label name="amount_invoices"/>
+                        <field name="amount_invoices"/>
+                    </group>
+                    <label name="date"/>
+                    <field name="date"/>
+                    <label name="journal"/>
+                    <field name="journal"/>
+                    <label name="currency"/>
+                    <field name="currency"/>
+                    <field name="voucher_type" invisible="1"/>
+                    <newline/>
+                    <notebook colspan="4">
+                        <page string="Pay Mode Lines" id="pay_lines">
+                            <field name="pay_lines" mode="tree" colspan="4"
+                                view_ids="account_voucher_ar.pay_lines_view_tree"/>
+                        </page>
+                    </notebook>
+                    <notebook colspan="4">
+                        <page string="Voucher Lines" id="lines">
+                            <field name="lines" mode="tree" colspan="4"
+                                view_ids="account_voucher_ar.lines_view_tree"/>
+                            <field name="lines_credits" mode="tree" colspan="4"
+                                view_ids="account_voucher_ar.lines_credits_view_tree"/>
+                            <field name="lines_debits" mode="tree" colspan="4"
+                                view_ids="account_voucher_ar.lines_debits_view_tree"/>
+                        </page>
+                        <page string="Other Info" id="info">
+                            <label name="company"/>
+                            <field name="company"/>
+                            <label name="move"/>
+                            <field name="move"/>
+                            <separator name="comment" colspan="4"/>
+                            <field name="comment" colspan="4"/>
+                        </page>
+                    </notebook>
+                    <label name="state"/>
+                    <field name="state"/>
+                    <group colspan="6" id="group_voucher_1">
+                        <button name="post" string="_Pay"/>
+                    </group>
+                </form>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="account_voucher_tree">
+            <field name="model">account.voucher</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Voucher">
+                    <field name="number"/>
+                    <field name="party"/>
+                    <field name="date"/>
+                    <field name="amount"/>
+                    <field name="state"/>
+                </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_voucher_form">
+            <field name="name">All Vouchers</field>
+            <field name="res_model">account.voucher</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_voucher_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="account_voucher_tree"/>
+            <field name="act_window" ref="act_voucher_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_voucher_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="account_voucher_form"/>
+            <field name="act_window" ref="act_voucher_form"/>
+        </record>
+        <menuitem parent="menu_vouchers" action="act_voucher_form"
+            id="menu_voucher_form" sequence="5"/>
+
+        <record model="ir.action.act_window" id="act_voucher_receipt_form">
+            <field name="name">Receipts</field>
+            <field name="res_model">account.voucher</field>
+            <field name="domain">[('voucher_type', '=', 'receipt')]</field>
+            <field name="context">{'voucher_type': 'receipt'}</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_voucher_receipt_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="account_voucher_tree"/>
+            <field name="act_window" ref="act_voucher_receipt_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_voucher_receipt_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="account_voucher_form"/>
+            <field name="act_window" ref="act_voucher_receipt_form"/>
+        </record>
+        <menuitem parent="menu_vouchers" action="act_voucher_receipt_form"
+            id="menu_voucher_receipt_form" sequence="10"/>
+
+        <record model="ir.action.act_window" id="act_voucher_payment_form">
+            <field name="name">Payments</field>
+            <field name="res_model">account.voucher</field>
+            <field name="domain">[('voucher_type', '=', 'payment')]</field>
+            <field name="context">{'voucher_type': 'payment'}</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_voucher_payment_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="account_voucher_tree"/>
+            <field name="act_window" ref="act_voucher_payment_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_voucher_payment_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="account_voucher_form"/>
+            <field name="act_window" ref="act_voucher_payment_form"/>
+        </record>
+        <menuitem parent="menu_vouchers" action="act_voucher_payment_form"
+            id="menu_voucher_payment_form" sequence="15"/>
+
+        <record model="ir.ui.view" id="lines_view_tree">
+            <field name="model">account.voucher.line</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Lines" editable="top">
+                    <field name="name" expand="1"/>
+                    <field name="date"/>
+                    <field name="amount_original"/>
+                    <field name="amount_unreconciled"/>
+                    <field name="amount"/>
+                </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="lines_credits_view_tree">
+            <field name="model">account.voucher.line.credits</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Credits">
+                    <field name="name" expand="1"/>
+                    <field name="date"/>
+                    <field name="line_type"/>
+                    <field name="amount_original"/>
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="lines_debits_view_tree">
+            <field name="model">account.voucher.line.debits</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Debits">
+                    <field name="name" expand="1"/>
+                    <field name="date"/>
+                    <field name="line_type"/>
+                    <field name="amount_original"/>
+                </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="pay_lines_view_tree">
+            <field name="model">account.voucher.line.paymode</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree editable="top" string="Pay Mode Lines">
+                    <field name="pay_mode" expand="1"/>
+                    <field name="pay_amount" expand="1"/>
+                </tree>
+                ]]>
+            </field>
+        </record>
+
+    </data>
+</tryton>
