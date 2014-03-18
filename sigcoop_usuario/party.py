@@ -40,6 +40,7 @@ class Party(ModelSQL, ModelView):
     rangos = fields.One2Many('sigcoop_usuario.rango', 'asociado', 'Rangos')
     familiares = fields.One2Many('sigcoop_usuario.familiar', 'usuario_id', 'Familiares')
     aportes = fields.One2Many('sigcoop_usuario.aporte', 'usuario_id', 'Aportes')
+    #Este campo lo tomamos prestado de account_invoice_ar.
     iva_condition = fields.Selection(
             [
                 ('', ''),
@@ -56,6 +57,7 @@ class Party(ModelSQL, ModelView):
                 },
             depends=['active'],
             )
+    #Este campo lo tomamos prestado de account_invoice_ar.
     iibb_type = fields.Selection(
             [
                 ('', ''),
@@ -69,6 +71,7 @@ class Party(ModelSQL, ModelView):
                 },
             depends=['active'],
             )
+    #Este campo lo tomamos prestado de account_invoice_ar.
     iibb_number = fields.Char('II BB',
             states={
                 'readonly': ~Eval('active', True),
@@ -76,6 +79,10 @@ class Party(ModelSQL, ModelView):
                 },
             depends=['active'],
             )
+    #El tipo de alumbrado publico que se le cobra al cliente.
+    impuesto_alumbrado = fields.Many2One('account.tax', 'Impuesto alumbrado publico')
+
+
     @staticmethod
     def default_tipo_identificacion():
         return 'DNI'

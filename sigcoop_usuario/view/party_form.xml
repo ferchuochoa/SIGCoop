@@ -24,10 +24,14 @@
             <newline/>
             <label name="iva_condition"/>
             <field name="iva_condition"/>
+            <newline/>
             <label name="iibb_type"/>
             <field name="iibb_type"/>
             <label name="iibb_number"/>
             <field name="iibb_number"/>
+            <newline/>
+            <label name="impuesto_alumbrado"/>
+            <field name="impuesto_alumbrado"/>
             <newline/>
             <field name="suministros" mode="tree,form" colspan="6"
                 view_ids="sigcoop_usuario.suministro_view_tree,sigcoop_usuario.suministro_view_form"/>
