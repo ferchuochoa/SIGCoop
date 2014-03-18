@@ -1,12 +1,11 @@
 #This file is part of Tryton.  The COPYRIGHT file at the top level of
 #this repository contains the full copyright notices and license terms.
 from trytond.model import Workflow, ModelView, ModelSQL, fields
-from trytond.pyson import Eval, Not, Equal, Or, Bool
+from trytond.pyson import Eval
 from trytond.transaction import Transaction
 from decimal import Decimal
 from trytond.pool import Pool, PoolMeta
 
-import logging
 
 __all__ = ['SaleLine', 'Sale']
 __metaclass__ = PoolMeta
@@ -18,7 +17,6 @@ class Sale(Workflow, ModelSQL, ModelView):
   __name__ = 'sale.sale'
 
   def on_change_lines(self):
-    logging.getLogger('sale').warning("En onchange lines!!!!!!!!!!!!!!!!11")
     pool = Pool()
     Tax = pool.get('account.tax')
     Invoice = pool.get('account.invoice')
@@ -96,59 +94,18 @@ class SaleLine(ModelSQL, ModelView):
               '_parent_sale.currency', 'dont_multiply'],
           depends=['type', 'dont_multiply']), 'get_amount')
 
-  """
-  def on_change_amount(self):
-    logging.getLogger('sale').warning("************************")
-    logging.getLogger('sale').warning("OTRO ON_CHANGE_AMOUNT%s" % self.dont_multiply)
-    logging.getLogger('sale').warning("************************")
-    return {'amount': Decimal(43.0)}
-
-  def on_change_dont_multiply(self):
-    return {'amount': Decimal(34.0)}
-  """
 
   def on_change_with_amount(self):
-    #import pdb;pdb.set_trace()
-    logging.getLogger('sale').warning("USANDO GET: %s " % self._values.get('dont_multiply'))
-    #if self._values.get('dont_multiply') and self.type == 'line':
     if self.type == 'line' and self.product and self.product.dont_multiply:
-      logging.getLogger('sale').warning("EN on_change_with_amount tenemos el valor de dont")
       return (self.unit_price or Decimal('0.0'))
     else:
       ret = super(SaleLine, self).on_change_with_amount()
-      logging.getLogger('sale').warning("EN on_change_with_amount no tenemos el valor de dont retornamos: %s" % ret)
       return ret
 
   def get_amount(self, name):
     #import pdb;pdb.set_trace()
     #if self.type == 'line' and self.dont_multiply:
     if self.type == 'line' and self.product and self.product.dont_multiply:
-      logging.getLogger('sale').warning("AHORA dentro de GET_AMOUNT retornamos el dont")
       return self.unit_price
     else:
-      logging.getLogger('sale').warning("AHORA dentro de GET_AMOUNT retornamos el ret")
-      return super(SaleLine, self).get_amount(name) 
-    """
-    logging.getLogger('sale').warning("====================================")
-    logging.getLogger('sale').warning("AHORA dentro de GET_AMOUNT %s" % self.dont_multiply)
-    logging.getLogger('sale').warning("====================================")
-        if self.type == 'line':
-            return self.sale.currency.round(
-                Decimal(str(self.quantity)) * self.unit_price)
-        elif self.type == 'subtotal':
-            amount = Decimal('0.0')
-            for line2 in self.sale.lines:
-                if line2.type == 'line':
-                    amount += line2.sale.currency.round(
-                        Decimal(str(line2.quantity)) * line2.unit_price)
-                elif line2.type == 'subtotal':
-                    if self == line2:
-                        break
-                    amount = Decimal('0.0')
-            return amount
-        return Decimal('0.0')
-    logging.getLogger('sale').warning("GET_AMOUNT %s" % ret)
-    logging.getLogger('sale').warning("GET_AMOUNT %s" % self.dont_multiply)
-    logging.getLogger('sale').warning("GET_AMOUNT %s" % type(self))
-    return ret
-    """
+      return super(SaleLine, self).get_amount(name)
