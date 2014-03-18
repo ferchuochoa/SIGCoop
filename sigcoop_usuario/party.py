@@ -79,8 +79,6 @@ class Party(ModelSQL, ModelView):
                 },
             depends=['active'],
             )
-    #El tipo de alumbrado publico que se le cobra al cliente.
-    impuesto_alumbrado = fields.Many2One('account.tax', 'Impuesto alumbrado publico')
 
 
     @staticmethod
