@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<form string="Tasa" col="6">
+  <field name="desde"/>
+  <field name="valor"/>
+  <field name="tipo"/>
+</form>
