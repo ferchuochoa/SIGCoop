@@ -20,3 +20,5 @@ class Suministro(ModelSQL, ModelView):
     ruta = fields.Integer('Ruta')
     calle = fields.Char('Calle')
     calle_numero = fields.Char('Numero')
+    #El tipo de alumbrado publico que se le cobra al cliente.
+    impuesto_alumbrado = fields.Many2One('account.tax', 'Impuesto alumbrado publico')

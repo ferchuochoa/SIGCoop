@@ -4,12 +4,17 @@
   <field name="usuario_id"/>
   <label name="numero_suministro"/>
   <field name="numero_suministro"/>
+  <newline/>
   <label name="servicio"/>
   <field name="servicio"/>
+  <newline/>
   <label name="ruta"/>
   <field name="ruta"/>
   <label name="calle"/>
   <field name="calle"/>
   <label name="calle_numero"/>
   <field name="calle_numero"/>
+  <newline/>
+  <label name="impuesto_alumbrado"/>
+  <field name="impuesto_alumbrado"/>
 </form>
