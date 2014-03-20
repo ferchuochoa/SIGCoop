@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Tasa" col="6">
+  <label name="desde"/>
+  <field name="desde"/>
+  <label name="valor"/>
+  <field name="valor"/>
+  <label name="tipo"/>
+  <field name="tipo"/>
+</form>

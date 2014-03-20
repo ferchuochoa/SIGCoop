@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Tasa">
+  <field name="desde"/>
+  <field name="valor"/>
+  <field name="tipo"/>
+</tree>

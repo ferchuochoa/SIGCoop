@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tryton>
+    <data>
+
+        <record model="ir.ui.view" id="tasa_view_form">
+            <field name="model">sigcoop_tasas.tasa</field>
+            <field name="type">form</field>
+            <field name="name">tasa_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="tasa_view_tree">
+            <field name="model">sigcoop_tasas.tasa</field>
+            <field name="type">tree</field>
+            <field name="name">tasa_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_tasa_tree">
+            <field name="name">Tasas</field>
+            <field name="res_model">sigcoop_tasas.tasa</field>
+            <field name="search_value"/>
+        </record>
+
+        <record model="ir.action.act_window" id="act_tasa_banco">
+            <field name="name">Tasas de banco</field>
+            <field name="res_model">sigcoop_tasas.tasa</field>
+            <field name="context">{'tipo': 'banco'}</field>
+            <field name="domain">[('tipo', '=', 'banco')]</field>
+        </record>   
+
+        <record model="ir.action.act_window" id="act_tasa_coop">
+            <field name="name">Tasas de coop</field>
+            <field name="res_model">sigcoop_tasas.tasa</field>
+            <field name="context">{'tipo': 'cooperativa'}</field>
+            <field name="domain">[('tipo', '=', 'cooperativa')]</field>
+        </record>   
+
+        <menuitem name="Tasas" parent="account.menu_account_configuration" id="menu_tasa_tree"/>
+        <menuitem name="Tasas Banco" parent="menu_tasa_tree" action="act_tasa_banco" id="menu_tasa_tree_banco"/>
+        <menuitem name="Tasas Cooperativa" parent="menu_tasa_tree" action="act_tasa_coop" id="menu_tasa_tree_coop"/>
+
+    </data>
+</tryton>
