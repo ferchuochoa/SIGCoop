@@ -1,0 +1,51 @@
+<tryton>
+    <data>
+        <record model="product.template" id="prod_templ_1">
+            <field name="name">Papas</field>
+            <field name="type">goods</field>
+            <field name="active" eval="True"/>
+            <field name="dont_multiply" eval="True"/>
+            <field name="salable" eval="True"/>
+            <field name="sale_uom" eval="True"/>
+            <!--<field name="taxes_category" eval="False"/>-->
+        </record>
+        <record model="product.product" id="prod_1">
+            <field name="active" eval="True"/>
+            <field name="template" ref="prod_templ_1">
+        </record>
+
+        <!--
+        <record model="ir.property" id="property_prod_templ_1">
+            <field name="field"
+                search="[('model.model', '=', 'account.voucher.sequence'), ('name', '=', 'voucher_sequence')]"/>
+            <field name="value" eval="'ir.sequence,' + str(ref('seq_account_voucher'))"/>
+        </record>
+        -->
+
+        <!-- list_price -->
+        <record model="ir.property" id="list_price_1">
+            <field name="field"
+                search="[('model.model', '=', 'product.template'), ('name', '=', 'list_price')]"/>
+            <field name="value" eval="str(,21.000)"/>
+        </record>
+        <!-- cost_price_method -->
+        <record model="ir.property" id="cost_price_method_1">
+            <field name="field"
+                search="[('model.model', '=', 'product.template'), ('name', '=', 'cost_price_method')]"/>
+            <field name="value" eval="str(,fixed)"/>
+        </record>
+        <!-- cost_price -->
+        <record model="ir.property" id="cost_price_1">
+            <field name="field"
+                search="[('model.model', '=', 'product.template'), ('name', '=', 'cost_price')]"/>
+            <field name="value" eval="str(,12.000)"/>
+        </record>
+        <!-- account_revenue -->
+        <record model="ir.property" id="account_revenue_1">
+            <field name="field"
+                search="[('model.model', '=', 'product.template'), ('name', '=', 'account_revenue')]"/>
+            <field name="value" eval="str(account.account,7)"/><!-- estoy hay que cambiarlo por un ref a la cuenta posta-->
+        </record>
+
+    </data>
+</tryton>
