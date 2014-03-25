@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <form string="Suministro" col="6">
-  <label name="numero_suministro"/>
-  <field name="numero_suministro"/>
+  <label name="codigo_suministro"/>
+  <field name="codigo_suministro"/>
   <label name="servicio"/>
   <field name="servicio"/>
   <label name="ruta"/>

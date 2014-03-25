@@ -20,6 +20,28 @@
             <field name="search_value"/>
         </record>
 
+
+        <!--Wizard-->
+        <record model="ir.action.wizard" id="wizard">
+            <field name="name">Importación de consumos</field>
+            <field name="wiz_name">sigcoop_consumos.importacion_consumos</field>
+            <field name="model">sigcoop_consumos.consumo</field>
+        </record>
+
+        <!--Formulario agregar alumno wizard inscripcion-->
+        <record model="ir.ui.view" id="view_importacion_form">
+            <field name="model">sigcoop_consumos.importacion_consumos.start</field>
+            <field name="type">form</field>
+            <field name="name">importacion_form</field>
+        </record>
+
+        <!--keyword wizard-->
+        <record model="ir.action.keyword" id="act_open_importacion_consumos">
+            <field name="keyword">form_action</field>
+            <field name="model">sigcoop_consumos.consumo,-1</field>
+            <field name="action" ref="wizard"/>
+        </record>
+
         <!-- Menu -->
         <menuitem parent="sigcoop_usuario.menu_usuario" secuence="0" action="act_consumo_form" icon="tryton-list" id="menu_consumo_form"/>
     </data>
