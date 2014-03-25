@@ -28,6 +28,35 @@ prod = {
         "customer_taxes" : ["account.tax", [('name', '=', 'Porcentaje 10p')]]
 }
 
+tax = {
+        "id" : 1,
+        "model" : "account.tax",
+        "name": "La name!!",
+        "description": "La descripcion!!",
+        "list_price" : Decimal(32.00),
+        "rate" : Decimal('0.29'),
+        "type" : "percentage",
+        "invoice_account" : ("account.account", [('name', '=', 'Efectivo principal')]),
+        "credit_note_account" : ("account.account", [('name', '=', 'Efectivo principal')]),
+}
+
+price_list = {
+        "id" : 1,
+        "model" : "product.price_list",
+        "name": "Mi price list",
+        "company" : ("company.company", [()]),
+}
+
+price_list_line = {
+        "id" : 1,
+        "model" : "product.price_list.line",
+        "price_list": ("product.price_list", [('name', '=', 'Mi price list')]),
+        "product": ("product.product", [('name', '=', 'Termito')]),
+        "quantity" : 23,
+        "unit_digits" : 12,
+        "formula" : "unit_price * 2",
+}
+
 def create_entity(values):
     if not values.get("model"):
         print "Falta el modelo. Que estamos haciendo??"
@@ -43,8 +72,6 @@ def create_entity(values):
     #Contructor del modelo
     const = Model.get(model)
     entity = const()
-    #import pdb;pdb.set_trace()
-
     save_for_last = []
 
     for k,v in values.iteritems():
@@ -55,18 +82,12 @@ def create_entity(values):
             constructor = Model.get(v[0])
             to_save = []
             for elem in v[1]:
-                #getattr(entity, k).append(constructor.find([elem])[0])
                 to_save.append(constructor.find([elem])[0])
-                #entity.save()
             save_for_last.append((k, to_save))
         else:
             setattr(entity, k, v)
-    #print "Antes de guardar"
     for i in save_for_last:
-        print i[0]
-        print i[1]
         getattr(entity, i[0]).extend(i[1])
-    print entity.customer_taxes
     entity.save()
     return entity
 
@@ -133,4 +154,4 @@ def create_pricelist():
 if __name__ == "__main__":
     #print create_prod(create_tax())
     #print create_pricelist_line(create_pricelist())
-    print create_entity(prod)
+    print create_entity(tax)
