@@ -50,6 +50,32 @@ def translate_to_tax(_id, row):
 
     return ret
 
+"""
+Nombre
+Vendible
+Tipo
+Producto de precio independiente de la cantidad
+Precio de lista
+Precio de costo
+UdM por defecto/Nombre
+Cuenta de ingresos/Código
+Impuestos de cliente/Nombre
+Categoria/Nombre
+
+Comprable false por defecto
+Consumible false por defecto
+"""
+
+def check_category(cat_name):
+    cats = Model.get('product.category').find([("name", "=", cat_name)])
+    if not cats:
+        cat = Model.get('product.category')()
+        cat.name = cat_name
+        cat.save()
+        return cat
+    else:
+        return cats[0]
+
 def translate_to_product(_id, row):
     ret = dict()
     ret["model"] = "product.template"
@@ -58,13 +84,15 @@ def translate_to_product(_id, row):
     ret["name"] = row["Nombre"]
     ret["salable"] = row["Vendible"] == "True"
     ret["type"] = row["Tipo"]
-    ret["dont_multiply"] = row[""]
-    ret["list_price"] = row["Precio de lista"]
-    ret["cost_price"] = row["Precio de costo"]
+    ret["dont_multiply"] = row["Producto de precio independiente de la cantidad"]
+    ret["list_price"] = Decimal(row["Precio de lista"])
+    ret["cost_price"] = Decimal(row["Precio de costo"])
 
-    ret["default_uom"] = ("product.uom", [("name", "=", row["Udm por defecto"])])
-    ret["account_revenue"] = ("account.account", [('code', '=', row["Cuenta de ingresos"])])
-    ret["customer_taxes"] = ["account.tax", [('name', '=', '%s' %i ) for i in row["Impuestos de cliente"].split("#")]]
+    check_category(row["Categoria/Nombre"])
+    ret["category"] = ("product.category", [("name", "=", row["Categoria/Nombre"])])
+    ret["default_uom"] = ("product.uom", [("name", "=", row["UdM por defecto/Nombre"])])
+    ret["account_revenue"] = ("account.account", [('code', '=', row["Cuenta de ingresos/Código"])])
+    ret["customer_taxes"] = ["account.tax", [('name', '=', '%s' %i ) for i in row["Impuestos de cliente/Nombre"].split("#")]]
 
     return ret
 
@@ -72,8 +100,8 @@ def create_entities(csv_reader, translator):
     for _id, row in enumerate(csv_reader):
         #Traducimos cada fila al diccionario que corresponde y usamos este diccionario
         #para crear la entidad
-        create_entity(translator(_id, row))
-        #print translator(_id, row)
+        #create_entity(translator(_id, row))
+        print translator(_id, row)
 
 def create_entity(values):
     if not values.get("model"):
@@ -116,7 +144,8 @@ def main():
     print fname
     #create_entities(csv.DictReader(fname, delimiter=";"), translate_to_product)
     with open(fname) as fi:
-        create_entities(csv.DictReader(fi, delimiter=";"), translate_to_tax)
+        #create_entities(csv.DictReader(fi, delimiter=";"), translate_to_tax)
+        create_entities(csv.DictReader(fi, delimiter=";"), translate_to_product)
 
 if __name__ == "__main__":
     main()
