@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 from proteus import config, Model
 from decimal import Decimal
 from datetime import datetime
@@ -8,22 +11,37 @@ c = config.set_trytond(database_name="probar_multi2", database_type="postgresql"
 
 Product = Model.get('product.product')
 
+prod_posta = {
+        "id" : 1,
+        "model" : "product.template",
+
+        "name" : "%s:%s Nuevo Producto creado desde create_entity" % (str(ahora.hour), str(ahora.minute)),
+        "salable" : True,
+        "type" : "service",
+        "dont_multiply": False,
+        "list_price" : Decimal(32.00),
+        "cost_price" : Decimal(44.00),
+
+        "default_uom": ("product.uom", [("name", "=", "Unidad")]),
+        "account_revenue" : ("account.account", [('code', '=', '1')]),
+        "customer_taxes" : ["account.tax", [('name', '=', 'Porcentaje 10p')]]
+}
 prod = {
         "id" : 1,
         "model" : "product.template",
-        "uom" : ("product.uom", [("name", "=", "Unidad")]),
+        #"uom" : ("product.uom", [("name", "=", "Unidad")]),
         "name" : "%s:%s Nuevo Producto creado desde create_entity" % (str(ahora.hour), str(ahora.minute)),
         "active" : True,
         "salable" : True,
         "type" : "service",
-        "taxes_category": False,
-        "account_category": False,
-        "sale_uom": ("product.uom", [("name", "=", "Unidad")]),
+        #"taxes_category": False,
+        #"account_category": False,
+        #"sale_uom": ("product.uom", [("name", "=", "Unidad")]),
         "default_uom": ("product.uom", [("name", "=", "Unidad")]),
         "dont_multiply": False,
         "list_price" : Decimal(32.00),
         "cost_price" : Decimal(44.00),
-        "cost_price_method" : "fixed",
+        #"cost_price_method" : "fixed",
         "account_revenue" : ("account.account", [('name', '=', 'Ingresos principal')]),
         "customer_taxes" : ["account.tax", [('name', '=', 'Porcentaje 10p')]]
 }
@@ -154,4 +172,4 @@ def create_pricelist():
 if __name__ == "__main__":
     #print create_prod(create_tax())
     #print create_pricelist_line(create_pricelist())
-    print create_entity(tax)
+    print create_entity(prod_posta)
