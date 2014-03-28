@@ -7,6 +7,8 @@ from decimal import Decimal
 
 
 """
+Fields de impuestos
+
 Nombre
 Descripción
 Tipo
@@ -25,7 +27,7 @@ Dígitos de moneda
 """
 def check_existance(ref_list):
     for model, search_param in ref_list:
-        if not Model.get(model).find(search):
+        if not Model.get(model).find(search_param):
             return False
     return True
 
@@ -50,6 +52,8 @@ def translate_to_tax(_id, row, simulate):
     return ret
 
 """
+Fields de producto
+
 Nombre
 Vendible
 Tipo
@@ -131,6 +135,8 @@ def check_price_list(price_list_name, simulate):
 
 
 """
+Fields de pricelist
+
 Nombre
 Líneas/Category/Nombre
 Líneas/Producto/Nombre
@@ -159,13 +165,12 @@ def translate_to_price_list_line(_id, row, simulate):
 
 def create_entities(csv_reader, translator, simulate=False):
     for _id, row in enumerate(csv_reader):
-        #Traducimos cada fila al diccionario que corresponde y usamos este diccionario
-        #para crear la entidad
+        #Traducimos cada fila a un diccionario
         entity_dict = translator(_id, row, simulate)
         if entity_dict is None:
-            print "WARNING, no creamos el registro %s" % _id
+            print "============= WARNING! No creamos el registro %s. ====================" % _id
         elif not simulate:
-            create_entity()
+            create_entity(entity_dict)
         else:
             print entity_dict
 
@@ -205,18 +210,23 @@ def create_entity(values):
 
 
 def main():
-    if (len(sys.argv) != 4):
+    if (len(sys.argv) != 7):
         print "Me estan faltando algunos parametros."
-        print "Llamame así, masa: \n \t conversor.py archivo-impuestos archivo-productos archivo-pricelist"
+        print "Llamame así, masa: \n \t conversor.py nombre-db password-admin-db archivo-configuracion archivo-impuestos archivo-productos archivo-pricelist"
         return False
     else:
         print "Conectando a trytond..."
-        c = config.set_trytond(database_name="probar_multi2", database_type="postgresql", password="admin", config_file="/home/tryton/runtime/trytond.conf")
+        print "Los parametros son: database_name=%s password=%s config_file=%s" % tuple(sys.argv[1:4])
+        c = config.set_trytond(
+                database_name=sys.argv[1],
+                database_type="postgresql",
+                password=sys.argv[2],
+                config_file=sys.argv[3])
         print "Conectado??"
 
-        print "Vamos a crear las entidades de %s" % str(sys.argv[1:])
+        print "Vamos a crear las entidades de %s" % str(sys.argv[4:])
         translators = [translate_to_tax, translate_to_product, translate_to_price_list_line]
-        for filename, translator in zip(sys.argv[1:], translators):
+        for filename, translator in zip(sys.argv[4:], translators):
             with open(filename) as fi:
                 create_entities(csv.DictReader(fi, delimiter=";"), translator, False)
 
