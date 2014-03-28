@@ -23,6 +23,12 @@ Cuenta de la factura/Nombre
 Secuencia
 Dígitos de moneda
 """
+def check_existance(ref_list):
+    for model, search_param in ref_list:
+        if not Model.get(model).find(search):
+            return False
+    return True
+
 def translate_to_tax(_id, row, simulate):
     ret = {
     "id" : _id,
@@ -33,6 +39,8 @@ def translate_to_tax(_id, row, simulate):
     "invoice_account" : ("account.account", [('code', '=', row["Cuenta de la factura/Código"])]),
     "credit_note_account" : ("account.account", [('code', '=', row["Cuenta de la nota de crédito/Código"])]),
     }
+    if not check_existance([ret["invoice_account"], ret["credit_note_account"]]):
+        return None
 
     if (ret["type"] == "fixed"):
         ret["amount"] = Decimal(row["Importe"])
@@ -103,6 +111,9 @@ def translate_to_product(_id, row, simulate):
     ret["account_revenue"] = ("account.account", [('code', '=', row["Cuenta de ingresos/Código"])])
     ret["customer_taxes"] = ["account.tax", [('name', '=', '%s' % i ) for i in row["Impuestos de cliente/Nombre"].split("#") if i]]
 
+    if not check_existance([ret["account_revenue"]]):
+        return None
+
     return ret
 
 def check_price_list(price_list_name, simulate):
@@ -141,16 +152,22 @@ def translate_to_price_list_line(_id, row, simulate):
     if row["Líneas/Cantidad"]:
         ret["quantity"] = float(row["Líneas/Cantidad"])
 
+    if not check_existance([ret["product"], ret["category"], ret["price_list"]]):
+        return None
+
     return ret
 
 def create_entities(csv_reader, translator, simulate=False):
     for _id, row in enumerate(csv_reader):
         #Traducimos cada fila al diccionario que corresponde y usamos este diccionario
         #para crear la entidad
-        if not simulate:
-            create_entity(translator(_id, row, simulate))
+        entity_dict = translator(_id, row, simulate)
+        if entity_dict is None:
+            print "WARNING, no creamos el registro %s" % _id
+        elif not simulate:
+            create_entity()
         else:
-            print translator(_id, row, simulate)
+            print entity_dict
 
 def create_entity(values):
     if not values.get("model"):
