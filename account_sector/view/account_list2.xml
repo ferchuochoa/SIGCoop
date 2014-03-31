@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<data>
-    <xpath
-        expr="/tree/field[@name='balance']"
-        position="after">
-	    <field name="sector_id"/>
-    </xpath>
-</data>

@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<tree string="Familiares">
-  <field name="dni"/>
-  <field name="relacion"/>
-  <field name="nombre"/>
-  <field name="apellido"/>
-  <field name="fecha_nacimiento"/>
-</tree>
