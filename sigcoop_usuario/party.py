@@ -9,6 +9,8 @@ __all__ = ['Party']
 class Party(ModelSQL, ModelView):
     "Party"
     __name__ = 'party.party'
+    # El cliente/socio puede estar exento de PUREE
+    exento_PUREE = fields.Boolean('Exento PUREE', help = "Marcar si el usuario esta exento frente al PUREE")
     #El field cliente_socio aparece al lado del nombre de la entidad para definir si va a ser de este tipo.
     cliente_socio = fields.Boolean('Cliente/Socio', on_change=['cliente_socio'], help="Marcar si es un cliente de la cooperativa")
     #El field asociado nos da a elegir si es asociado o cliente.
@@ -60,6 +62,5 @@ class Party(ModelSQL, ModelView):
         if self.cliente_socio:
             return {'numero':None}
         return {'numero':'-1'}
-
 
 
