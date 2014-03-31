@@ -6,14 +6,10 @@
   <field name="id_medidor"/>
   <label name="periodo"/>
   <field name="periodo"/>
-  <label name="fecha_anterior"/>
-  <field name="fecha_anterior"/>
-  <label name="lectura_anterior"/>
-  <field name="lectura_anterior"/>
-  <label name="fecha_actual"/>
-  <field name="fecha_actual"/>
-  <label name="lectura_actual"/>
-  <field name="lectura_actual"/>
+  <label name="fecha"/>
+  <field name="fecha"/>
+  <label name="lectura"/>
+  <field name="lectura"/>
   <label name="consumo_neto"/>
   <field name="consumo_neto"/>
 </form>
