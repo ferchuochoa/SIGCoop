@@ -169,6 +169,8 @@ def create_entities(csv_reader, translator, simulate=False):
         entity_dict = translator(_id, row, simulate)
         if entity_dict is None:
             print "============= WARNING! No creamos el registro %s. ====================" % _id
+            print entity_dict
+            print "============================="
         elif not simulate:
             create_entity(entity_dict)
         else:
@@ -184,7 +186,7 @@ def create_entity(values):
     model = values.pop("model")
     _id = values.pop("id")
 
-    print "Creando la entidad %s para el registro numero %s" % (model, _id)
+    #print "Creando la entidad %s para el registro numero %s" % (model, _id)
 
     #Contructor del modelo
     const = Model.get(model)

@@ -1,0 +1,518 @@
+Nombre;Líneas/Category/Nombre;Líneas/Producto/Nombre;Líneas/Cantidad;Líneas/Fórmula;Líneas/Secuencia
+T1R Residencial;Servicios de Energía;Cargo Fijo T1R;;unit_price*5.37;1
+T1R Residencial;Servicios de Energía;Cargo Variable T1R;1401.0;unit_price*0.5952;5
+T1R Residencial;Servicios de Energía;Cargo Variable T1R;701.0;unit_price*0.4622;6
+T1R Residencial;Servicios de Energía;Cargo Variable T1R;501.0;unit_price*0.3905;7
+T1R Residencial;Servicios de Energía;Cargo Variable T1R;401.0;unit_price*0.3194;8
+T1R Residencial;Servicios de Energía;Cargo Variable T1R;201.0;unit_price*0.2886;9
+T1R Residencial;Servicios de Energía;Cargo Variable T1R;101.0;unit_price*0.2503;10
+T1R Residencial;Servicios de Energía;Cargo Variable T1R;;unit_price*0.2090;11
+T1R Residencial;Servicios de Energía;Incremento Costo Mayorista T1R;1401.0;unit_price*0.0515;14
+T1R Residencial;Servicios de Energía;Incremento Costo Mayorista T1R;701.0;unit_price*0.0426;15
+T1R Residencial;Servicios de Energía;Incremento Costo Mayorista T1R;501.0;unit_price*0.0404;16
+T1R Residencial;Servicios de Energía;Incremento Costo Mayorista T1R;401.0;unit_price*0.0314;18
+T1R Residencial;Servicios de Energía;Incremento Costo Mayorista T1R;201.0;unit_price*0.0247;19
+T1R Residencial;Servicios de Energía;Incremento Costo Mayorista T1R;101.0;unit_price*0.0180;20
+T1R Residencial;Servicios de Energía;Incremento Costo Mayorista T1R;;unit_price*0.0157;21
+T1R Residencial;Servicios de Energía;Resolución MI 206/13  T1R;1401.0;unit_price*75.00;25
+T1R Residencial;Servicios de Energía;Resolución MI 206/13  T1R;701.0;unit_price*60.00;26
+T1R Residencial;Servicios de Energía;Resolución MI 206/13  T1R;501.0;unit_price*35.00;27
+T1R Residencial;Servicios de Energía;Resolución MI 206/13  T1R;401.0;unit_price*20.00;28
+T1R Residencial;Servicios de Energía;Resolución MI 206/13  T1R;201.0;unit_price*15.00;29
+T1R Residencial;Servicios de Energía;Resolución MI 206/13  T1R;101.0;10.00;30
+T1R Residencial;Servicios de Energía;Resolución MI 206/13  T1R;1.0;5.00;31
+T1R Residencial;Servicios de Energía;Cargo Variable T1R Sin Subsidio;1401.0;unit_price*0.7867;36
+T1R Residencial;Servicios de Energía;Cargo Variable T1R Sin Subsidio;701.0;unit_price*0.7214;37
+T1R Residencial;Servicios de Energía;Cargo Variable T1R Sin Subsidio;501.0;unit_price*0.6823;38
+T1R Residencial;Servicios de Energía;Cargo Variable T1R Sin Subsidio;401.0;unit_price*0.6451;39
+T1R Residencial;Servicios de Energía;Cargo Variable T1R Sin Subsidio;201.0;unit_price*0.6143;40
+T1R Residencial;Servicios de Energía;Cargo Variable T1R Sin Subsidio;101.0;unit_price*0.5760;41
+T1R Residencial;Servicios de Energía;Cargo Variable T1R Sin Subsidio;;unit_price*0.5347;42
+T1R Residencial;Servicios de Energía;Resta Cargo Variable T1R Sin Subsidio;1401.0;unit_price*-0.7867;45
+T1R Residencial;Servicios de Energía;Resta Cargo Variable T1R Sin Subsidio;701.0;unit_price*-0.7214;46
+T1R Residencial;Servicios de Energía;Resta Cargo Variable T1R Sin Subsidio;501.0;unit_price*-0.6823;47
+T1R Residencial;Servicios de Energía;Resta Cargo Variable T1R Sin Subsidio;401.0;unit_price*-0.6451;48
+T1R Residencial;Servicios de Energía;Resta Cargo Variable T1R Sin Subsidio;201.0;unit_price*-0.6143;49
+T1R Residencial;Servicios de Energía;Resta Cargo Variable T1R Sin Subsidio;101.0;unit_price*-0.5760;50
+T1R Residencial;Servicios de Energía;Resta Cargo Variable T1R Sin Subsidio;;unit_price*-0.5347;51
+T1R Residencial;Servicios de Energía;Conexión Aerea-Monofasica T1R;;unit_price*88.1550;100
+T1R Residencial;Servicios de Energía;Conexión Aerea-Trifasica T1R;;unit_price*268.3650;101
+T1R Residencial;Servicios de Energía;Conexión Subterranea - Monofasica T1R;;unit_price*268.3650;102
+T1R Residencial;Servicios de Energía;Conexion Subterranea - Trifasica T1R;;unit_price*355.6650;103
+T1R Residencial;Servicios de Energía;Rehabilitacion (fusible) T1R;;unit_price*12.66;104
+T1R Residencial;Servicios de Energía;Desconexión directa ( 2a. rehab.) T1R;;unit_price*12.66;105
+T1R Residencial;Servicios de Energía;Plan Municipal de AP Ord. 3000/10;1.0;unit_price*4.00;106
+T1R Residencial;Servicios de Energía;Res. Asamblea 30/12/04 T1R Cuota Capital;1.0;unit_price*25.00;107
+T1R Residencial;Servicios de Energía;Cuota Extraordinaria DEC 3142/07 - Resolución 604/07 T1R;1.0;unit_price*10.00;108
+T1AP Alumbrado Publico;Servicios de Energía;Cargo Fijo T1AP;;unit_price*20.75;1
+T1AP Alumbrado Publico;Servicios de Energía;Cargo Variable T1AP;;unit_price*0.3045;2
+T1AP Alumbrado Publico;Servicios de Energía;Cargo Variable T1AP Sin Subsidio;;unit_price*0.6112;3
+T1AP Alumbrado Publico;Servicios de Energía;Resta Cargo Variable T1AP Sin Subsidio;;unit_price*-0.6112;4
+T1AP Alumbrado Publico;Servicios de Energía;Incremento Costo Mayorista T1AP;;unit_price*0.00448;5
+T1AP Alumbrado Publico;Servicios de Energía;Resolución 705 T1AP;;unit_price*0.0230;6
+T1AP Alumbrado Publico;Servicios de Energía;Conexión Aerea-Monofasica T1AP;;unit_price*141.4050;7
+T1AP Alumbrado Publico;Servicios de Energía;Conexión Aerea-Trifasica T1AP;;unit_price*430.4550;8
+T1AP Alumbrado Publico;Servicios de Energía;Conexión Subterranea-Monofasica T1AP;;unit_price*430.4550;9
+T1AP Alumbrado Publico;Servicios de Energía;Conexión Subterranea-Trifasica T1AP;;unit_price*570.3450;10
+T1AP Alumbrado Publico;Servicios de Energía;Rehabilitacion T1AP;;unit_price*74.7150;11
+T1AP Alumbrado Publico;Servicios de Energía;Desconexión Directa T1AP;;unit_price*74.7150;12
+T1GBC Servicio General Bajo Consumo;Servicios de Energía;Cargo Fijo T1GBC;;20.75;1
+T1GBC Servicio General Bajo Consumo;Servicios de Energía;Cargo Variable T1GBC;;unit_price*0.4709;2
+T1GBC Servicio General Bajo Consumo;Servicios de Energía;Incremento Costo Mayorista T1GBC;;unit_price*0.0515;3
+T1GBC Servicio General Bajo Consumo;Servicios de Energía;RES MI 206/13 T1GBC;;unit_price*20.00;4
+T1GBC Servicio General Bajo Consumo;Servicios de Energía;Cargo Perdida Transformador T1GBC;;unit_price*0.4709;5
+T1GBC Servicio General Bajo Consumo;Servicios de Energía;Cargo Variable T1GBC Sin Subsidio;;unit_price*0.7621;6
+T1GBC Servicio General Bajo Consumo;Servicios de Energía;Resta Cargo Variable T1GBC Sin Subsidio;;unit_price*-0.7621;7
+T1GBC Servicio General Bajo Consumo;Servicios de Energía;Conexión Aerea-Monofasica T1GBC;;unit_price*141.4050;8
+T1GBC Servicio General Bajo Consumo;Servicios de Energía;Conexión Aerea-Trifasica T1GBC;;unit_price*430.4550;9
+T1GBC Servicio General Bajo Consumo;Servicios de Energía;Conexión Subterranea-Monofasica T1GBC;;unit_price*430.4550;10
+T1GBC Servicio General Bajo Consumo;Servicios de Energía;Conexión Subterranea-Trifasica T1GBC;;unit_price*570.3450;11
+T1GBC Servicio General Bajo Consumo;Servicios de Energía;Rehabilitacion T1GBC;;unit_price*74.7150;12
+T1GBC Servicio General Bajo Consumo;Servicios de Energía;Desconexion Directa T1GBC;;unit_price*74.7150;13
+T1GBC Servicio General Bajo Consumo;Servicios de Energía;Plan Municipal de AP Ord. 3000/10;;unit_price*10.00;14
+T1GBC Servicio General Bajo Consumo;Servicios de Energía;Res. Asamblea 30/12/04 T1GBC Cuota Capital ;;unit_price*75.00;15
+T1GBC Servicio General Bajo Consumo;Servicios de Energía;Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T1GBC;;unit_price*10.00;16
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Cargo Fijo T1GAC;;unit_price*110.11;1
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Cargo Variable T1GAC;2001.0;unit_price*0.3784;2
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Cargo Variable T1GAC;1001.0;unit_price*0.3663;3
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Incremento Costo Mayorista T1GAC;2001.0;unit_price*0.0538;4
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Incremento Costo Mayorista T1GAC;1001.0;unit_price*0.0493;5
+T1GAC Servicio General Alto Consumo;Servicios de Energía;RES MI 206/13 T1GAC;;unit_price*75.00;6
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Cargo Perdida Transformador T1GAC;;unit_price*0.3784;7
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Cargo Variable T1GAC Sin Subsidio;2001.0;unit_price*0.6594;8
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Cargo Variable T1GAC Sin Subsidio;1001.0;unit_price*0.6575;9
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Cargo Perdida Transformador T1GAC Sin Subsidio;;unit_price*0.6594;10
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Resta Cargo Variable T1GAC Sin Subsidio;2001.0;unit_price*-0.6594;11
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Resta Cargo Variable T1GAC Sin Subsidio;1001.0;unit_price*-0.6575;12
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Resta Cargo Perdida Transformador T1GAC Sin Subsidio;;unit_price*-0.6594;13
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Conexión Aerea-Monofasica T1GAC;;unit_price*141.4050;14
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Conexión Aerea-Trifasica T1GAC;;unit_price*430.4550;15
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Conexión Subterranea-Monofasica T1GAC;;unit_price*430.4550;16
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Conexión Subterranea-Trifasica T1GAC;;unit_price*570.3450;17
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Rehabilitacion T1GAC;;unit_price*74.7150;18
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Desconexion Directa T1GAC;;unit_price*74.7150;19
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Plan Municipal de AP Ord. 3000/10;;unit_price*15.00;20
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Res. Asamblea 30/12/04 T1GAC Cuota Capital ;;unit_price*180.00;21
+T1GAC Servicio General Alto Consumo;Servicios de Energía;Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T1GAC;;unit_price*10.00;22
+T1R Residencial Social;Servicios de Energía;Cargo Fijo 2 TIS;101.0;unit_price*5.37;1
+T1R Residencial Social;Servicios de Energía;Cargo Fijo 1 TIS;;unit_price*2.6850;2
+T1R Residencial Social;Servicios de Energía;Cargo Variable TIS;1401.0;unit_price*0.5952;3
+T1R Residencial Social;Servicios de Energía;Cargo Variable TIS;701.0;unit_price*0.4622;4
+T1R Residencial Social;Servicios de Energía;Cargo Variable TIS;501.0;unit_price*0.3905;5
+T1R Residencial Social;Servicios de Energía;Cargo Variable TIS;401.0;unit_price*0.3194;6
+T1R Residencial Social;Servicios de Energía;Cargo Variable TIS;201.0;unit_price*0.2886;7
+T1R Residencial Social;Servicios de Energía;Cargo Variable TIS;101.0;unit_price*0.2503;8
+T1R Residencial Social;Servicios de Energía;Cargo Variable TIS;71.0;unit_price*0.2090;9
+T1R Residencial Social;Servicios de Energía;Cargo Variable TIS;;unit_price*0.1045;10
+T1R Residencial Social;Servicios de Energía;Cargo Variable TIS Sin Subsidio;1401.0;unit_price*0.7867;11
+T1R Residencial Social;Servicios de Energía;Cargo Variable TIS Sin Subsidio;701.0;unit_price*0.7214;12
+T1R Residencial Social;Servicios de Energía;Cargo Variable TIS Sin Subsidio;501.0;unit_price*0.6823;13
+T1R Residencial Social;Servicios de Energía;Cargo Variable TIS Sin Subsidio;401.0;unit_price*0.6451;14
+T1R Residencial Social;Servicios de Energía;Cargo Variable TIS Sin Subsidio;201.0;unit_price*0.6143;15
+T1R Residencial Social;Servicios de Energía;Cargo Variable TIS Sin Subsidio;101.0;unit_price*0.5760;16
+T1R Residencial Social;Servicios de Energía;Cargo Variable TIS Sin Subsidio;71.0;unit_price*0.5347;17
+T1R Residencial Social;Servicios de Energía;Cargo Variable TIS Sin Subsidio;;unit_price*0.2673;18
+T1R Residencial Social;Servicios de Energía;Resta Cargo Variable TIS Sin Subsidio;1401.0;unit_price*-0.7867;19
+T1R Residencial Social;Servicios de Energía;Resta Cargo Variable TIS Sin Subsidio;701.0;unit_price*-0.7214;20
+T1R Residencial Social;Servicios de Energía;Resta Cargo Variable TIS Sin Subsidio;501.0;unit_price*-0.6823;21
+T1R Residencial Social;Servicios de Energía;Resta Cargo Variable TIS Sin Subsidio;401.0;unit_price*-0.6451;22
+T1R Residencial Social;Servicios de Energía;Resta Cargo Variable TIS Sin Subsidio;201.0;unit_price*-0.6143;23
+T1R Residencial Social;Servicios de Energía;Resta Cargo Variable TIS Sin Subsidio;101.0;unit_price*-0.5760;24
+T1R Residencial Social;Servicios de Energía;Resta Cargo Variable TIS Sin Subsidio;71.0;unit_price*-0.5347;25
+T1R Residencial Social;Servicios de Energía;Resta Cargo Variable TIS Sin Subsidio;;unit_price*-0.2673;26
+T1R Residencial Social;Servicios de Energía;Conexión Aerea-Monofasica TIS;;unit_price*88.1550;27
+T1R Residencial Social;Servicios de Energía;Rehabilitacion TIS;;unit_price*12.66;28
+T1R Residencial Social;Servicios de Energía;Desconexion Directa TIS;;unit_price*12.66;29
+T1R Residencial Social;Servicios de Energía;Res. Asamblea 30/12/04 TIS Cuota Capital ;;unit_price*25.00;30
+T1R Residencial Social;Servicios de Energía;Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 TIS;;unit_price*5.00;31
+T2BT Baja Tension;Servicios de Energía;Cargo Fijo T2BT;;unit_price*133.66;1
+T2BT Baja Tension;Servicios de Energía;Cargo Potencia en Pico T2BT;;unit_price*35.72;2
+T2BT Baja Tension;Servicios de Energía;Cargo Potencia Fuera de Pico T2BT;;unit_price*15.31;3
+T2BT Baja Tension;Servicios de Energía;Recargo por Exceso de Potencia en Pico T2BT;;unit_price*53.58;4
+T2BT Baja Tension;Servicios de Energía;Recargo por Exceso de Potencia Fuera Pico T2BT;;unit_price*22.97;5
+T2BT Baja Tension;Servicios de Energía;Cargo Variable por Energia Demandada En Pico T2BT;;unit_price*0.1156;6
+T2BT Baja Tension;Servicios de Energía;Cargo Variable por Energia Demandada Fuera de Pico T2BT;;unit_price*0.1081;7
+T2BT Baja Tension;Servicios de Energía;Recargo por Bajo Coseno de Fi T2BT;;unit_price*0.0320;8
+T2BT Baja Tension;Servicios de Energía;Cargo Perdida Transformador T2BT;;unit_price*0.1081;9
+T2BT Baja Tension;Servicios de Energía;RES MI 206/13 T2BT;;unit_price*8.00;10
+T2BT Baja Tension;Servicios de Energía;Incremento Costo Mayorista Pico T2BT;;unit_price*0.0448;11
+T2BT Baja Tension;Servicios de Energía;Incremento Costo Mayorista Fuera de Pico T2BT;;unit_price*0.0448;12
+T2BT Baja Tension;Servicios de Energía;Cargo Potencia en Pico T2BT Sin Subsidio;;unit_price*35.75;13
+T2BT Baja Tension;Servicios de Energía;Cargo Potencia Fuera de Pico T2BT Sin Subsidio;;unit_price*15.32;14
+T2BT Baja Tension;Servicios de Energía;Recargo por Exceso de Potencia en Pico T2BT Sin Subsidio;;unit_price*53.62;15
+T2BT Baja Tension;Servicios de Energía;Recargo por Exceso de Potencia Fuera Pico T2BT Sin Subsidio;;unit_price*22.98;16
+T2BT Baja Tension;Servicios de Energía;Cargo Variable por Energia Demandada En Pico T2BT Sin Subsidio;;unit_price*0.3744;17
+T2BT Baja Tension;Servicios de Energía;Cargo Variable por Energia Demandada Fuera de Pico T2BT Sin Subsidio;;unit_price*0.3680;18
+T2BT Baja Tension;Servicios de Energía;Recargo por Bajo Coseno de Fi T2BT Sin Subsidio;;unit_price*0.0320;19
+T2BT Baja Tension;Servicios de Energía;Cargo Perdida Transformador T2BT Sin Subsidio;;unit_price*0.3680;20
+T2BT Baja Tension;Servicios de Energía;Resta Cargo Potencia en Pico T2BT Sin Subsidio;;unit_price*-35.75;21
+T2BT Baja Tension;Servicios de Energía;Resta Cargo Potencia Fuera de Pico T2BT Sin Subsidio;;unit_price*-15.32;22
+T2BT Baja Tension;Servicios de Energía;Resta Recargo por Exceso de Potencia en Pico T2BT Sin Subsidio;;unit_price*-53.62;23
+T2BT Baja Tension;Servicios de Energía;Resta Recargo por Exceso de Potencia Fuera Pico T2BT Sin Subsidio;;unit_price*-22.98;24
+T2BT Baja Tension;Servicios de Energía;Resta Cargo Variable por Energia Demandada En Pico T2BT Sin Subsidio;;unit_price*-0.3744;25
+T2BT Baja Tension;Servicios de Energía;Resta Cargo Variable por Energia Demandada Fuera de Pico T2BT Sin Subsidio;;unit_price*-0.3680;26
+T2BT Baja Tension;Servicios de Energía;Resta Recargo por Bajo Coseno de Fi T2BT Sin Subsidio;;unit_price*-0.0320;27
+T2BT Baja Tension;Servicios de Energía;Resta Cargo Perdida Transformador T2BT Sin Subsidio;;unit_price*-0.3680;28
+T2BT Baja Tension;Servicios de Energía;Res. Asamblea 30/12/04 T2BT Cuota Capital;;unit_price*848.86;29
+T2BT Baja Tension;Servicios de Energía;Plan Municipal de AP Ord. 3000/10;;unit_price*15.00;30
+T2BT Baja Tension;Servicios de Energía;Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T2BT;;unit_price*10.00;31
+T2BT Baja Tension;Servicios de Energía;Conexión Aerea-Monofasica T2BT;;unit_price*0;32
+T2BT Baja Tension;Servicios de Energía;Conexión Aerea-Trifasica T2BT;;unit_price*646.65;33
+T2BT Baja Tension;Servicios de Energía;Conexión Subterranea-Monofasica T2BT;;unit_price*0;34
+T2BT Baja Tension;Servicios de Energía;Conexión Subterranea-Trifasica T2BT;;unit_price*916.950;35
+T2BT Baja Tension;Servicios de Energía;Rehabilitacion T2BT;;unit_price*183.6450;36
+T2BT Baja Tension;Servicios de Energía;Desconexion Directa T2BT;;unit_price*183.6450;37
+T2MT Media Tension;Servicios de Energía;Cargo Fijo T2MT;;unit_price*202.52;1
+T2MT Media Tension;Servicios de Energía;Cargo Potencia en Pico T2MT;;unit_price*26.07;2
+T2MT Media Tension;Servicios de Energía;Cargo Potencia Fuera de Pico T2MT;;unit_price*11.17;3
+T2MT Media Tension;Servicios de Energía;Recargo por Exceso de Potencia en Pico T2MT;;unit_price*39.1050;4
+T2MT Media Tension;Servicios de Energía;Recargo por Exceso de Potencia Fuera Pico T2MT;;unit_price*16.7550;5
+T2MT Media Tension;Servicios de Energía;Cargo Variable por Energia Demandada En Pico T2MT;;unit_price*0.1141;6
+T2MT Media Tension;Servicios de Energía;Cargo Variable por Energia Demandada Fuera de Pico T2MT;;unit_price*0.1063;7
+T2MT Media Tension;Servicios de Energía;Recargo por Bajo Coseno de Fi T2MT;;unit_price*0.0320;8
+T2MT Media Tension;Servicios de Energía;Cargo Perdida Transformador T2MT;;unit_price*0.1063;9
+T2MT Media Tension;Servicios de Energía;RES MI 206/13 T2MT;;unit_price*8.00;10
+T2MT Media Tension;Servicios de Energía;Incremento Costo Mayorista Pico T2MT;;unit_price*0.0508;11
+T2MT Media Tension;Servicios de Energía;Incremento Costo Mayorista Fuera de Pico T2MT;;unit_price*0.0508;12
+T2MT Media Tension;Servicios de Energía;Cargo Potencia en Pico T2MT Sin Subsidio;;unit_price*26.09;13
+T2MT Media Tension;Servicios de Energía;Cargo Potencia Fuera de Pico T2MT Sin Subsidio;;unit_price*11.18;14
+T2MT Media Tension;Servicios de Energía;Recargo por Exceso de Potencia en Pico T2MT Sin Subsidio;;unit_price*39.13;15
+T2MT Media Tension;Servicios de Energía;Recargo por Exceso de Potencia Fuera Pico T2MT Sin Subsidio;;unit_price*16.77;16
+T2MT Media Tension;Servicios de Energía;Cargo Variable por Energia Demandada En Pico T2MT Sin Subsidio;;unit_price*0.3674;17
+T2MT Media Tension;Servicios de Energía;Cargo Variable por Energia Demandada Fuera de Pico T2MT Sin Subsidio;;unit_price*0.3606;18
+T2MT Media Tension;Servicios de Energía;Recargo por Bajo Coseno de Fi T2MT Sin Subsidio;;unit_price*0.0320;19
+T2MT Media Tension;Servicios de Energía;Cargo Perdida Transformador T2MT Sin Subsidio;;unit_price*0.3606;20
+T2MT Media Tension;Servicios de Energía;Resta Cargo Potencia en Pico T2MT Sin Subsidio;;unit_price*-26.09;21
+T2MT Media Tension;Servicios de Energía;Resta Cargo Potencia Fuera de Pico T2MT Sin Subsidio;;unit_price*-11.18;22
+T2MT Media Tension;Servicios de Energía;Resta Recargo por Exceso de Potencia en Pico T2MT Sin Subsidio;;unit_price*-39.13;23
+T2MT Media Tension;Servicios de Energía;Resta Recargo por Exceso de Potencia Fuera Pico T2MT Sin Subsidio;;unit_price*-16.77;24
+T2MT Media Tension;Servicios de Energía;Resta Cargo Variable por Energia Demandada En Pico T2MT Sin Subsidio;;unit_price*-0.3674;25
+T2MT Media Tension;Servicios de Energía;Resta Cargo Variable por Energia Demandada Fuera de Pico T2MT Sin Subsidio;;unit_price*-0.3606;26
+T2MT Media Tension;Servicios de Energía;Resta Recargo por Bajo Coseno de Fi T2MT Sin Subsidio;;unit_price*-0.0320;27
+T2MT Media Tension;Servicios de Energía;Resta Cargo Perdida Transformador T2MT Sin Subsidio;;unit_price*-0.3606;28
+T2MT Media Tension;Servicios de Energía;Res. Asamblea 30/12/04 T2MT Cuota Capital;;unit_price*352.82;29
+T2MT Media Tension;Servicios de Energía;Plan Municipal de AP Ord. 3000/10;;unit_price*15.00;30
+T2MT Media Tension;Servicios de Energía;Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T2MT;;unit_price*10.00;31
+T2MT Media Tension;Servicios de Energía;Conexión Aerea-Monofasica T2MT;;unit_price*0;32
+T2MT Media Tension;Servicios de Energía;Conexión Aerea-Trifasica T2MT;;unit_price*646.65;33
+T2MT Media Tension;Servicios de Energía;Conexión Subterranea-Monofasica T2MT;;unit_price*0;34
+T2MT Media Tension;Servicios de Energía;Conexión Subterranea-Trifasica T2MT;;unit_price*916.950;35
+T2MT Media Tension;Servicios de Energía;Rehabilitacion T2MT;;unit_price*183.6450;36
+T2MT Media Tension;Servicios de Energía;Desconexion Directa T2MT;;unit_price*183.6450;37
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Fijo T3BT;;unit_price*129.64;1
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Variable Pico T3BT;;unit_price*0.1021;2
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Variable Valle T3BT;;unit_price*0.0928;3
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Variable Resto T3BT;;unit_price*0.0949;4
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Potencia Pico T3BT;;unit_price*47.49;5
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Potencia Resto T3BT;;unit_price*20.35;6
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Recargo por Exceso de Potencia Pico T3BT;;unit_price*71.23;7
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Recargo por Exceso de Potencia Resto T3BT;;unit_price*30.52;8
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Recargo por Bajo Coseno de Fi T3BT;;unit_price*0.0320;9
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Perdida Transformador T3BT;;unit_price*0.0928;10
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;RES MI 206/13 T3BT;;unit_price*8.00;11
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Incremento Costo Mayorista Pico T3BT;;unit_price*0.0533;12
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Incremento Costo Mayorista Valle T3BT;;unit_price*0.0533;13
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Incremento Costo Mayorista Resto T3BT;;unit_price*0.0533;14
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Variable Pico T3BT Sin Subsidio;;unit_price*0.3609;15
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Variable Valle T3BT Sin Subsidio;;unit_price*0.3505;16
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Variable Resto T3BT Sin Subsidio;;unit_price*0.3552;17
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Potencia Pico T3BT Sin Subsidio;;unit_price*47.52;18
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Potencia Resto T3BT Sin Subsidio;;unit_price*20.37;19
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Recargo por Exceso de Potencia Pico T3BT Sin Subsidio;;unit_price*71.28;20
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Recargo por Exceso de Potencia Resto T3BT Sin Subsidio;;unit_price*30.55;21
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Recargo por Bajo Coseno de Fi T3BT Sin Subsidio;;unit_price*0.0320;22
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Perdida Transformador T3BT Sin Subsidio;;unit_price*0.3505;23
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Cargo Variable Pico T3BT Sin Subsidio;;unit_price*-0.3609;24
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Cargo Variable Valle T3BT Sin Subsidio;;unit_price*-0.3505;25
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Cargo Variable Resto T3BT Sin Subsidio;;unit_price*-0.3552;26
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Cargo Potencia Pico T3BT Sin Subsidio;;unit_price*-47.52;27
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Cargo Potencia Resto T3BT Sin Subsidio;;unit_price*-20.37;28
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Recargo por Exceso de Potencia Pico T3BT Sin Subsidio;;unit_price*-71.28;29
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Recargo por Exceso de Potencia Resto T3BT Sin Subsidio;;unit_price*-30.55;30
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Recargo por Bajo Coseno de Fi T3BT Sin Subsidio;;unit_price*-0.0320;31
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Cargo Perdida Transformador T3BT Sin Subsidio;;unit_price*-0.3505;32
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Res. Asamblea 30/12/04 T3BT Cuota Capital;;unit_price*848.86;33
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Plan Municipal de AP Ord. 3000/10;;unit_price*20.00;34
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T3BT;;unit_price*10.00;35
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Conexión Aerea-Monofasica T3BT;;unit_price*0;36
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Conexión Aerea-Trifasica T3BT;;unit_price*969.9750;37
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Conexión Subterranea-Monofasica T3BT;;unit_price*0;38
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Conexión Subterranea-Trifasica T3BT;;unit_price*1379.52;39
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Rehabilitacion T3BT;;unit_price*229.5450;40
+T3BT Baja Tension (50 a 300KW);Servicios de Energía;Desconexion Directa T3BT;;unit_price*229.5450;41
+T3BT Baja Tension (>300KW);Servicios de Energía;Cargo Fijo T3BT (>300);;unit_price*129.64;1
+T3BT Baja Tension (>300KW);Servicios de Energía;Cargo Variable Pico T3BT (>300);;unit_price*0.1356;2
+T3BT Baja Tension (>300KW);Servicios de Energía;Cargo Variable Valle T3BT (>300);;unit_price*0.1264;3
+T3BT Baja Tension (>300KW);Servicios de Energía;Cargo Variable Resto T3BT (>300);;unit_price*0.1286;4
+T3BT Baja Tension (>300KW);Servicios de Energía;Cargo Potencia Pico T3BT (>300);;unit_price*47.49;5
+T3BT Baja Tension (>300KW);Servicios de Energía;Cargo Potencia Resto T3BT (>300);;unit_price*20.35;6
+T3BT Baja Tension (>300KW);Servicios de Energía;Recargo por Exceso de Potencia Pico T3BT (>300);;unit_price*71.23;7
+T3BT Baja Tension (>300KW);Servicios de Energía;Recargo por Exceso de Potencia Resto T3BT (>300);;unit_price*30.52;8
+T3BT Baja Tension (>300KW);Servicios de Energía;Recargo por Bajo Coseno de Fi T3BT (>300);;unit_price*0.0320;9
+T3BT Baja Tension (>300KW);Servicios de Energía;Cargo Perdida Transformador T3BT (>300);;unit_price*0.1264;10
+T3BT Baja Tension (>300KW);Servicios de Energía;RES MI 206/13 T3BT (>300);;unit_price*8.00;11
+T3BT Baja Tension (>300KW);Servicios de Energía;Incremento Costo Mayorista Pico T3BT (>300);;unit_price*0.0533;12
+T3BT Baja Tension (>300KW);Servicios de Energía;Incremento Costo Mayorista Valle T3BT (>300);;unit_price*0.0533;13
+T3BT Baja Tension (>300KW);Servicios de Energía;Incremento Costo Mayorista Resto T3BT (>300);;unit_price*0.0533;14
+T3BT Baja Tension (>300KW);Servicios de Energía;Cargo Variable Pico T3BT (>300) Sin Subsidio;;unit_price*0.3631;15
+T3BT Baja Tension (>300KW);Servicios de Energía;Cargo Variable Valle T3BT (>300) Sin Subsidio;;unit_price*0.3529;16
+T3BT Baja Tension (>300KW);Servicios de Energía;Cargo Variable Resto T3BT (>300) Sin Subsidio;;unit_price*0.3576;17
+T3BT Baja Tension (>300KW);Servicios de Energía;Cargo Potencia Pico T3BT (>300) Sin Subsidio;;unit_price*47.52;18
+T3BT Baja Tension (>300KW);Servicios de Energía;Cargo Potencia Resto T3BT (>300) Sin Subsidio;;unit_price*20.37;19
+T3BT Baja Tension (>300KW);Servicios de Energía;Recargo por Exceso de Potencia Pico T3BT (>300) Sin Subsidio;;unit_price*71.28;20
+T3BT Baja Tension (>300KW);Servicios de Energía;Recargo por Exceso de Potencia Resto T3BT (>300) Sin Subsidio;;unit_price*30.55;21
+T3BT Baja Tension (>300KW);Servicios de Energía;Recargo por Bajo Coseno de Fi T3BT (>300) Sin Subsidio;;unit_price*0.0320;22
+T3BT Baja Tension (>300KW);Servicios de Energía;Cargo Perdida Transformador T3BT (>300) Sin Subsidio;;unit_price*0.3529;23
+T3BT Baja Tension (>300KW);Servicios de Energía;Resta Cargo Variable Pico T3BT (>300) Sin Subsidio;;unit_price*-0.3631;24
+T3BT Baja Tension (>300KW);Servicios de Energía;Resta Cargo Variable Valle T3BT (>300) Sin Subsidio;;unit_price*-0.3529;25
+T3BT Baja Tension (>300KW);Servicios de Energía;Resta Cargo Variable Resto T3BT (>300) Sin Subsidio;;unit_price*-0.3576;26
+T3BT Baja Tension (>300KW);Servicios de Energía;Resta Cargo Potencia Pico T3BT (>300) Sin Subsidio;;unit_price*-47.52;27
+T3BT Baja Tension (>300KW);Servicios de Energía;Resta Cargo Potencia Resto T3BT (>300) Sin Subsidio;;unit_price*-20.37;28
+T3BT Baja Tension (>300KW);Servicios de Energía;Resta Recargo por Exceso de Potencia Pico T3BT (>300) Sin Subsidio;;unit_price*-71.28;29
+T3BT Baja Tension (>300KW);Servicios de Energía;Resta Recargo por Exceso de Potencia Resto T3BT (>300) Sin Subsidio;;unit_price*-30.55;30
+T3BT Baja Tension (>300KW);Servicios de Energía;Resta Recargo por Bajo Coseno de Fi T3BT (>300) Sin Subsidio;;unit_price*-0.0320;31
+T3BT Baja Tension (>300KW);Servicios de Energía;Resta Cargo Perdida Transformador T3BT (>300) Sin Subsidio;;unit_price*-0.3529;32
+T3BT Baja Tension (>300KW);Servicios de Energía;Res. Asamblea 30/12/04 T3BT (>300) Cuota Capital;;unit_price*848.86;33
+T3BT Baja Tension (>300KW);Servicios de Energía;Plan Municipal de AP Ord. 3000/10;;unit_price*20.00;34
+T3BT Baja Tension (>300KW);Servicios de Energía;Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T3BT (>300);;unit_price*10.00;35
+T3BT Baja Tension (>300KW);Servicios de Energía;Conexión Aerea-Monofasica T3BT (>300);;unit_price*0;36
+T3BT Baja Tension (>300KW);Servicios de Energía;Conexión Aerea-Trifasica T3BT (>300);;unit_price*969.9750;37
+T3BT Baja Tension (>300KW);Servicios de Energía;Conexión Subterranea-Monofasica T3BT (>300);;unit_price*0;38
+T3BT Baja Tension (>300KW);Servicios de Energía;Conexión Subterranea-Trifasica T3BT (>300);;unit_price*1379.52;39
+T3BT Baja Tension (>300KW);Servicios de Energía;Rehabilitacion T3BT (>300);;unit_price*229.5450;40
+T3BT Baja Tension (>300KW);Servicios de Energía;Desconexion Directa T3BT (>300);;unit_price*229.5450;41
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Fijo T3MT;;unit_price*188.87;1
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Variable Pico T3MT;;unit_price*0.1005;2
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Variable Valle T3MT;;unit_price*0.0913;3
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Variable Resto T3MT;;unit_price*0.0935;4
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Potencia Pico T3MT;;unit_price*36.46;5
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Potencia Resto T3MT;;unit_price*15.63;6
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Recargo por Exceso de Potencia Pico T3MT;;unit_price*54.69;7
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Recargo por Exceso de Potencia Resto T3MT;;unit_price*23.45;8
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Recargo por Bajo Coseno de Fi T3MT;;unit_price*0.0320;9
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Perdida Transformador T3MT;;unit_price*0.0913;10
+T3MT Media Tension (50 a 300KW);Servicios de Energía;RES MI 206/13 T3MT;;unit_price*8.00;11
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Incremento Costo Mayorista Pico T3MT;;unit_price*0.0533;12
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Incremento Costo Mayorista Valle T3MT;;unit_price*0.0533;13
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Incremento Costo Mayorista Resto T3MT;;unit_price*0.0533;14
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Variable Pico T3MT Sin Subsidio;;unit_price*0.3538;15
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Variable Valle T3MT Sin Subsidio;;unit_price*0.3436;16
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Variable Resto T3MT Sin Subsidio;;unit_price*0.3483;17
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Potencia Pico T3MT Sin Subsidio;;unit_price*36.49;18
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Potencia Resto T3MT Sin Subsidio;;unit_price*15.64;19
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Recargo por Exceso de Potencia Pico T3MT Sin Subsidio;;unit_price*54.73;20
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Recargo por Exceso de Potencia Resto T3MT Sin Subsidio;;unit_price*23.46;21
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Recargo por Bajo Coseno de Fi T3MT Sin Subsidio;;unit_price*0.0320;22
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Perdida Transformador T3MT Sin Subsidio;;unit_price*0.3436;23
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Resta Cargo Variable Pico T3MT Sin Subsidio;;unit_price*-0.3538;24
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Resta Cargo Variable Valle T3MT Sin Subsidio;;unit_price*-0.3436;25
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Resta Cargo Variable Resto T3MT Sin Subsidio;;unit_price*-0.3483;26
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Resta Cargo Potencia Pico T3MT Sin Subsidio;;unit_price*-36.49;27
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Resta Cargo Potencia Resto T3MT Sin Subsidio;;unit_price*-15.64;28
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Resta Recargo por Exceso de Potencia Pico T3MT Sin Subsidio;;unit_price*-54.73;29
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Resta Recargo por Exceso de Potencia Resto T3MT Sin Subsidio;;unit_price*-23.46;30
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Resta Recargo por Bajo Coseno de Fi T3MT Sin Subsidio;;unit_price*-0.0320;31
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Resta Cargo Perdida Transformador T3MT Sin Subsidio;;unit_price*-0.3436;32
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Res. Asamblea 30/12/04 T3MT Cuota Capital;;unit_price*848.86;33
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Plan Municipal de AP Ord. 3000/10;;unit_price*20.00;34
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T3MT;;unit_price*10.00;35
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Conexión Aerea-Monofasica T3MT;;unit_price*0;36
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Conexión Aerea-Trifasica T3MT;;unit_price*969.9750;37
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Conexión Subterranea-Monofasica T3MT;;unit_price*0;38
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Conexión Subterranea-Trifasica T3MT;;unit_price*1379.52;39
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Rehabilitacion T3MT;;unit_price*229.5450;40
+T3MT Media Tension (50 a 300KW);Servicios de Energía;Desconexion Directa T3MT;;unit_price*229.5450;41
+T3MT Media Tension (>300KW);Servicios de Energía;Cargo Fijo T3MT (> 300);;unit_price*188.87;1
+T3MT Media Tension (>300KW);Servicios de Energía;Cargo Variable Pico T3MT (> 300);;unit_price*0.1333;2
+T3MT Media Tension (>300KW);Servicios de Energía;Cargo Variable Valle T3MT (> 300);;unit_price*0.1243;3
+T3MT Media Tension (>300KW);Servicios de Energía;Cargo Variable Resto T3MT (> 300);;unit_price*0.1265;4
+T3MT Media Tension (>300KW);Servicios de Energía;Cargo Potencia Pico T3MT (> 300);;unit_price*36.46;5
+T3MT Media Tension (>300KW);Servicios de Energía;Cargo Potencia Resto T3MT (> 300);;unit_price*15.63;6
+T3MT Media Tension (>300KW);Servicios de Energía;Recargo por Exceso de Potencia Pico T3MT (> 300);;unit_price*54.69;7
+T3MT Media Tension (>300KW);Servicios de Energía;Recargo por Exceso de Potencia Resto T3MT (> 300);;unit_price*23.45;8
+T3MT Media Tension (>300KW);Servicios de Energía;Recargo por Bajo Coseno de Fi T3MT (> 300);;unit_price*0.0320;9
+T3MT Media Tension (>300KW);Servicios de Energía;Cargo Perdida Transformador T3MT (> 300);;unit_price*0.1243;10
+T3MT Media Tension (>300KW);Servicios de Energía;RES MI 206/13 T3MT (> 300);;unit_price*8.00;11
+T3MT Media Tension (>300KW);Servicios de Energía;Incremento Costo Mayorista Pico T3MT (> 300);;unit_price*0.0533;12
+T3MT Media Tension (>300KW);Servicios de Energía;Incremento Costo Mayorista Valle T3MT (> 300);;unit_price*0.0533;13
+T3MT Media Tension (>300KW);Servicios de Energía;Incremento Costo Mayorista Resto T3MT (> 300);;unit_price*0.0533;14
+T3MT Media Tension (>300KW);Servicios de Energía;Cargo Variable Pico T3MT Sin Subsidio (> 300);;unit_price*0.3560;15
+T3MT Media Tension (>300KW);Servicios de Energía;Cargo Variable Valle T3MT Sin Subsidio (> 300);;unit_price*0.3460;16
+T3MT Media Tension (>300KW);Servicios de Energía;Cargo Variable Resto T3MT Sin Subsidio (> 300);;unit_price*0.3507;17
+T3MT Media Tension (>300KW);Servicios de Energía;Cargo Potencia Pico T3MT (> 300) Sin Subsidio ;;unit_price*36.49;18
+T3MT Media Tension (>300KW);Servicios de Energía;Cargo Potencia Resto T3MT (> 300) Sin Subsidio;;unit_price*15.64;19
+T3MT Media Tension (>300KW);Servicios de Energía;Recargo por Exceso de Potencia Pico T3MT (> 300) Sin Subsidio;;unit_price*54.73;20
+T3MT Media Tension (>300KW);Servicios de Energía;Recargo por Exceso de Potencia Resto T3MT (> 300) Sin Subsidio;;unit_price*23.46;21
+T3MT Media Tension (>300KW);Servicios de Energía;Recargo por Bajo Coseno de Fi T3MT (> 300) Sin Subsidio;;unit_price*0.0320;22
+T3MT Media Tension (>300KW);Servicios de Energía;Cargo Perdida Transformador T3MT (> 300) Sin Subsidio;;unit_price*0.3460;23
+T3MT Media Tension (>300KW);Servicios de Energía;Resta Cargo Variable Pico T3MT Sin Subsidio (> 300);;unit_price*-0.3560;24
+T3MT Media Tension (>300KW);Servicios de Energía;Resta Cargo Variable Valle T3MT Sin Subsidio (> 300);;unit_price*-0.3460;25
+T3MT Media Tension (>300KW);Servicios de Energía;Resta Cargo Variable Resto T3MT Sin Subsidio (> 300);;unit_price*-0.3507;26
+T3MT Media Tension (>300KW);Servicios de Energía;Resta Cargo Potencia Pico T3MT (> 300) Sin Subsidio ;;unit_price*-36.49;27
+T3MT Media Tension (>300KW);Servicios de Energía;Resta Cargo Potencia Resto T3MT (> 300) Sin Subsidio;;unit_price*-15.64;28
+T3MT Media Tension (>300KW);Servicios de Energía;Resta Recargo por Exceso de Potencia Pico T3MT (> 300) Sin Subsidio;;unit_price*-54.73;29
+T3MT Media Tension (>300KW);Servicios de Energía;Resta Recargo por Exceso de Potencia Resto T3MT (> 300) Sin Subsidio;;unit_price*-23.46;30
+T3MT Media Tension (>300KW);Servicios de Energía;Resta Recargo por Bajo Coseno de Fi T3MT (> 300) Sin Subsidio;;unit_price*-0.0320;31
+T3MT Media Tension (>300KW);Servicios de Energía;Resta Cargo Perdida Transformador T3MT (> 300) Sin Subsidio;;unit_price*-0.3460;32
+T3MT Media Tension (>300KW);Servicios de Energía;Res. Asamblea 30/12/04 T3MT (> 300) Cuota Capital;;unit_price*848.86;33
+T3MT Media Tension (>300KW);Servicios de Energía;Plan Municipal de AP Ord. 3000/10;;unit_price*20.00;34
+T3MT Media Tension (>300KW);Servicios de Energía;Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T3MT (> 300);;unit_price*10.00;35
+T3MT Media Tension (>300KW);Servicios de Energía;Conexión Aerea-Monofasica T3MT (> 300);;unit_price*0;36
+T3MT Media Tension (>300KW);Servicios de Energía;Conexión Aerea-Trifasica T3MT (> 300);;unit_price*969.9750;37
+T3MT Media Tension (>300KW);Servicios de Energía;Conexión Subterranea-Monofasica T3MT (> 300);;unit_price*0;38
+T3MT Media Tension (>300KW);Servicios de Energía;Conexión Subterranea-Trifasica T3MT (> 300);;unit_price*1379.52;39
+T3MT Media Tension (>300KW);Servicios de Energía;Rehabilitacion T3MT (> 300);;unit_price*229.5450;40
+T3MT Media Tension (>300KW);Servicios de Energía;Desconexion Directa T3MT (> 300);;unit_price*229.5450;41
+T4 Rural;Servicios de Energía;Cargo Fijo T4R;;unit_price*72.56;1
+T4 Rural;Servicios de Energía;Cargo Variable T4R;1401.0;unit_price*0.5164;2
+T4 Rural;Servicios de Energía;Cargo Variable T4R;701.0;unit_price*0.4225;3
+T4 Rural;Servicios de Energía;Cargo Variable T4R;501.0;unit_price*0.3675;4
+T4 Rural;Servicios de Energía;Cargo Variable T4R;;unit_price*0.3113;5
+T4 Rural;Servicios de Energía;Incremento Costo Mayorista T4R;1401.0;unit_price*0.0538;6
+T4 Rural;Servicios de Energía;Incremento Costo Mayorista T4R;701.0;unit_price*0.0493;7
+T4 Rural;Servicios de Energía;Incremento Costo Mayorista T4R;501.0;unit_price*0.0448;8
+T4 Rural;Servicios de Energía;Incremento Costo Mayorista T4R;;unit_price*0.0314;9
+T4 Rural;Servicios de Energía;RES MI 206/13 T4R;;unit_price*75.00;10
+T4 Rural;Servicios de Energía;Cargo Perdida Transformador T4R;;unit_price*0.6040;11
+T4 Rural;Servicios de Energía;Cargo Variable T4R Sin Subsidio;1401.0;unit_price*0.7815;12
+T4 Rural;Servicios de Energía;Cargo Variable T4R Sin Subsidio;701.0;unit_price*0.7065;13
+T4 Rural;Servicios de Energía;Cargo Variable T4R Sin Subsidio;501.0;unit_price*0.6607;14
+T4 Rural;Servicios de Energía;Cargo Variable T4R Sin Subsidio;;unit_price*0.6139;15
+T4 Rural;Servicios de Energía;Cargo Perdida Transformador T4R Sin Subsidio;;unit_price*0.7815;16
+T4 Rural;Servicios de Energía;Resta Cargo Variable T4R Sin Subsidio;1401.0;unit_price*-0.7815;17
+T4 Rural;Servicios de Energía;Resta Cargo Variable T4R Sin Subsidio;701.0;unit_price*-0.7065;18
+T4 Rural;Servicios de Energía;Resta Cargo Variable T4R Sin Subsidio;501.0;unit_price*-0.6607;19
+T4 Rural;Servicios de Energía;Resta Cargo Variable T4R Sin Subsidio;;unit_price*-0.6139;20
+T4 Rural;Servicios de Energía;Resta Cargo Perdida Transformador T4R Sin Subsidio;;unit_price*-0.7815;21
+T4 Rural;Servicios de Energía;Plan Municipal de AP Ord. 3000/10;;unit_price*0;22
+T4 Rural;Servicios de Energía;Res. Asamblea 30/12/04 T4R Cuota Capital ;;unit_price*150.00;23
+T4 Rural;Servicios de Energía;Conexión Aerea-Monofasica T4R;;unit_price*156.27;24
+T4 Rural;Servicios de Energía;Conexión Aerea-Trifasica T4R;;unit_price*422.9100;25
+T4 Rural;Servicios de Energía;Conexión Subterranea-Monofasica T4R;;unit_price*422.9100;26
+T4 Rural;Servicios de Energía;Conexión Subterranea-Trifasica T4R;;unit_price*511.9350;27
+T4 Rural;Servicios de Energía;Rehabilitacion T4R;;unit_price*74.7150;28
+T4 Rural;Servicios de Energía;Desconexion Directa T4R;;unit_price*74.7150;29
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Fijo T5BT;;unit_price*27.56;1
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Variable Pico T5BT;;unit_price*0.0032;2
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Variable Valle T5BT;;unit_price*0.0028;3
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Variable Resto T5BT;;unit_price*0.0029;4
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Potencia Pico T5BT;;unit_price*44.04;5
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Potencia Resto T5BT;;unit_price*18.87;6
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Recargo por Exceso de Potencia Pico T5BT;;unit_price*66.06;7
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Recargo por Exceso de Potencia Resto T5BT;;unit_price*28.30;8
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Recargo por Bajo Coseno de Fi T5BT;;unit_price*0.0320;9
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Perdida Transformador T5BT;;unit_price*0.0028;10
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;RES MI 206/13 T5BT;;unit_price*5.00;11
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Variable Pico T5BT Sin Subsidio;;unit_price*0.0137;12
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Variable Valle T5BT Sin Subsidio;;unit_price*0.0133;13
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Variable Resto T5BT Sin Subsidio;;unit_price*0.0134;14
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Potencia Pico T5BT Sin Subsidio;;unit_price*44.04;15
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Potencia Resto T5BT Sin Subsidio;;unit_price*18.87;16
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Recargo por Exceso de Potencia Pico T5BT Sin Subsidio;;unit_price*66.06;17
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Recargo por Exceso de Potencia Resto T5BT Sin Subsidio;;unit_price*18.87;18
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Recargo por Bajo Coseno de Fi T5BT Sin Subsidio;;unit_price*0.0320;19
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Cargo Perdida Transformador T5BT Sin Subsidio;;unit_price*0.0133;20
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Cargo Variable Pico T5BT Sin Subsidio;;unit_price*-0.0137;21
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Cargo Variable Valle T5BT Sin Subsidio;;unit_price*-0.0133;22
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Cargo Variable Resto T5BT Sin Subsidio;;unit_price*-0.0134;23
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Cargo Potencia Pico T5BT Sin Subsidio;;unit_price*-44.04;24
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Cargo Potencia Resto T5BT Sin Subsidio;;unit_price*-18.87;25
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Recargo por Exceso de Potencia Pico T5BT Sin Subsidio;;unit_price*-66.06;26
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Recargo por Exceso de Potencia Resto T5BT Sin Subsidio;;unit_price*-18.87;27
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Recargo por Bajo Coseno de Fi T5BT Sin Subsidio;;unit_price*-0.0320;28
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Resta Cargo Perdida Transformador T5BT Sin Subsidio;;unit_price*-0.0133;29
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Res. Asamblea 30/12/04 T5BT Cuota Capital;;unit_price*0;30
+T5BT Baja Tension (50 a 300KW);Servicios de Energía;Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T5BT;;unit_price*0;31
+T5BT Baja Tension (>300KW);Servicios de Energía;Cargo Fijo T5BT (>300);;unit_price*27.56;1
+T5BT Baja Tension (>300KW);Servicios de Energía;Cargo Variable Pico T5BT (>300);;unit_price*0.0032;2
+T5BT Baja Tension (>300KW);Servicios de Energía;Cargo Variable Valle T5BT (>300);;unit_price*0.0028;3
+T5BT Baja Tension (>300KW);Servicios de Energía;Cargo Variable Resto T5BT (>300);;unit_price*0.0029;4
+T5BT Baja Tension (>300KW);Servicios de Energía;Cargo Potencia Pico T5BT (>300);;unit_price*44.04;5
+T5BT Baja Tension (>300KW);Servicios de Energía;Cargo Potencia Resto T5BT (>300);;unit_price*18.87;6
+T5BT Baja Tension (>300KW);Servicios de Energía;Recargo por Exceso de Potencia Pico T5BT (>300);;unit_price*66.06;7
+T5BT Baja Tension (>300KW);Servicios de Energía;Recargo por Exceso de Potencia Resto T5BT (>300);;unit_price*28.30;8
+T5BT Baja Tension (>300KW);Servicios de Energía;Recargo por Bajo Coseno de Fi T5BT (>300);;unit_price*0.0320;9
+T5BT Baja Tension (>300KW);Servicios de Energía;Cargo Perdida Transformador T5BT (>300);;unit_price*0.0028;10
+T5BT Baja Tension (>300KW);Servicios de Energía;RES MI 206/13 T5BT (>300);;unit_price*5.00;11
+T5BT Baja Tension (>300KW);Servicios de Energía;Cargo Variable Pico T5BT Sin Subsidio (>300);;unit_price*0.0137;12
+T5BT Baja Tension (>300KW);Servicios de Energía;Cargo Variable Valle T5BT Sin Subsidio (>300);;unit_price*0.0133;13
+T5BT Baja Tension (>300KW);Servicios de Energía;Cargo Variable Resto T5BT Sin Subsidio (>300);;unit_price*0.0134;14
+T5BT Baja Tension (>300KW);Servicios de Energía;Cargo Potencia Pico T5BT Sin Subsidio (>300);;unit_price*44.04;15
+T5BT Baja Tension (>300KW);Servicios de Energía;Cargo Potencia Resto T5BT Sin Subsidio (>300);;unit_price*18.87;16
+T5BT Baja Tension (>300KW);Servicios de Energía;Recargo por Exceso de Potencia Pico T5BT Sin Subsidio (>300);;unit_price*66.06;17
+T5BT Baja Tension (>300KW);Servicios de Energía;Recargo por Exceso de Potencia Resto T5BT Sin Subsidio (>300);;unit_price*18.87;18
+T5BT Baja Tension (>300KW);Servicios de Energía;Recargo por Bajo Coseno de Fi T5BT Sin Subsidio (>300);;unit_price*0.0320;19
+T5BT Baja Tension (>300KW);Servicios de Energía;Cargo Perdida Transformador T5BT Sin Subsidio (>300);;unit_price*0.0133;20
+T5BT Baja Tension (>300KW);Servicios de Energía;Resta Cargo Variable Pico T5BT Sin Subsidio (>300);;unit_price*-0.0137;21
+T5BT Baja Tension (>300KW);Servicios de Energía;Resta Cargo Variable Valle T5BT Sin Subsidio (>300);;unit_price*-0.0133;22
+T5BT Baja Tension (>300KW);Servicios de Energía;Resta Cargo Variable Resto T5BT Sin Subsidio (>300);;unit_price*-0.0134;23
+T5BT Baja Tension (>300KW);Servicios de Energía;Resta Cargo Potencia Pico T5BT Sin Subsidio (>300);;unit_price*-44.04;24
+T5BT Baja Tension (>300KW);Servicios de Energía;Resta Cargo Potencia Resto T5BT Sin Subsidio (>300);;unit_price*-18.87;25
+T5BT Baja Tension (>300KW);Servicios de Energía;Resta Recargo por Exceso de Potencia Pico T5BT Sin Subsidio (>300);;unit_price*-66.06;26
+T5BT Baja Tension (>300KW);Servicios de Energía;Resta Recargo por Exceso de Potencia Resto T5BT Sin Subsidio (>300);;unit_price*-18.87;27
+T5BT Baja Tension (>300KW);Servicios de Energía;Resta Recargo por Bajo Coseno de Fi T5BT Sin Subsidio (>300);;unit_price*-0.0320;28
+T5BT Baja Tension (>300KW);Servicios de Energía;Resta Cargo Perdida Transformador T5BT Sin Subsidio (>300);;unit_price*-0.0133;29
+T5BT Baja Tension (>300KW);Servicios de Energía;Res. Asamblea 30/12/04 T5BT (>300) Cuota Capital ;;unit_price*0;30
+T5BT Baja Tension (>300KW);Servicios de Energía;Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T5BT (>300);;unit_price*0;31
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Fijo T5MT ;;unit_price*27.56;1
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Variable Pico T5MT;;unit_price*0.0045;2
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Variable Valle T5MT;;unit_price*0.0041;3
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Variable Resto T5MT;;unit_price*0.0041;4
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Potencia Pico T5MT;;unit_price*44.04;5
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Potencia Resto T5MT;;unit_price*18.87;6
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Recargo por Exceso de Potencia Pico T5MT;;unit_price*66.06;7
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Recargo por Exceso de Potencia Resto T5MT;;unit_price*28.30;8
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Recargo por Bajo Coseno de Fi T5MT;;unit_price*0.0320;9
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Perdida Transformador T5MT;;unit_price*0.0014;10
+T5MT Media Tension (50 a 300KW);Servicios de Energía;RES MI 206/13 T5MT;;unit_price*5.00;11
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Variable Pico T5MT Sin Subsidio;;unit_price*0.0137;12
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Variable Valle T5MT Sin Subsidio;;unit_price*0.0133;13
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Variable Resto T5MT Sin Subsidio;;unit_price*0.0134;14
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Potencia Pico T5MT Sin Subsidio;;unit_price*44.04;15
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Potencia Resto T5MT Sin Subsidio;;unit_price*18.87;16
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Recargo por Exceso de Potencia Pico T5MT Sin Subsidio;;unit_price*66.06;17
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Recargo por Exceso de Potencia Resto T5MT Sin Subsidio;;unit_price*18.87;18
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Recargo por Bajo Coseno de Fi T5MT Sin Subsidio;;unit_price*0.0320;19
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Cargo Perdida Transformador T5MT Sin Subsidio;;unit_price*0.0133;20
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Resta Cargo Variable Pico T5MT Sin Subsidio;;unit_price*-0.0137;21
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Resta Cargo Variable Valle T5MT Sin Subsidio;;unit_price*-0.0133;22
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Resta Cargo Variable Resto T5MT Sin Subsidio;;unit_price*-0.0134;23
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Resta Cargo Potencia Pico T5MT Sin Subsidio;;unit_price*-44.04;24
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Resta Cargo Potencia Resto T5MT Sin Subsidio;;unit_price*-18.87;25
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Resta Recargo por Exceso de Potencia Pico T5MT Sin Subsidio;;unit_price*-66.06;26
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Resta Recargo por Exceso de Potencia Resto T5MT Sin Subsidio;;unit_price*-18.87;27
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Resta Recargo por Bajo Coseno de Fi T5MT Sin Subsidio;;unit_price*-0.0320;28
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Resta Cargo Perdida Transformador T5MT Sin Subsidio;;unit_price*-0.0133;29
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Res. Asamblea 30/12/04 T5MT Cuota Capital;;unit_price*0;30
+T5MT Media Tension (50 a 300KW);Servicios de Energía;Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T5MT;;unit_price*0;31
+T5MT Media Tension (>300KW);Servicios de Energía;Cargo Fijo T5MT (>300);;unit_price*41.53;1
+T5MT Media Tension (>300KW);Servicios de Energía;Cargo Variable Pico T5MT (>300);;unit_price*0.0021;2
+T5MT Media Tension (>300KW);Servicios de Energía;Cargo Variable Valle T5MT (>300);;unit_price*0.0020;3
+T5MT Media Tension (>300KW);Servicios de Energía;Cargo Variable Resto T5MT (>300);;unit_price*0.0020;4
+T5MT Media Tension (>300KW);Servicios de Energía;Cargo Potencia Pico T5MT (>300);;unit_price*29.54;5
+T5MT Media Tension (>300KW);Servicios de Energía;Cargo Potencia Resto T5MT (>300);;unit_price*12.66;6
+T5MT Media Tension (>300KW);Servicios de Energía;Recargo por Exceso de Potencia Pico T5MT (>300);;unit_price*44.31;7
+T5MT Media Tension (>300KW);Servicios de Energía;Recargo por Exceso de Potencia Resto T5MT (>300);;unit_price*18.99;8
+T5MT Media Tension (>300KW);Servicios de Energía;Recargo por Bajo Coseno de Fi T5MT (>300) ;;unit_price*0.0320;9
+T5MT Media Tension (>300KW);Servicios de Energía;Cargo Perdida Transformador T5MT (>300);;unit_price*0.0020;10
+T5MT Media Tension (>300KW);Servicios de Energía;RES MI 206/13 T5MT (>300);;unit_price*5.00;11
+T5MT Media Tension (>300KW);Servicios de Energía;Cargo Variable Pico T5MT (>300) Sin Subsidio ;;unit_price*0.0066;12
+T5MT Media Tension (>300KW);Servicios de Energía;Cargo Variable Valle T5MT (>300) Sin Subsidio;;unit_price*0.0064;13
+T5MT Media Tension (>300KW);Servicios de Energía;Cargo Variable Resto T5MT (>300) Sin Subsidio ;;unit_price*0.0066;14
+T5MT Media Tension (>300KW);Servicios de Energía;Cargo Potencia Pico T5MT (>300) Sin Subsidio ;;unit_price*29.54;15
+T5MT Media Tension (>300KW);Servicios de Energía;Cargo Potencia Resto T5MT (>300) Sin Subsidio ;;unit_price*12.66;16
+T5MT Media Tension (>300KW);Servicios de Energía;Recargo por Exceso de Potencia Pico T5MT (>300)Sin Subsidio;;unit_price*44.31;17
+T5MT Media Tension (>300KW);Servicios de Energía;Recargo por Exceso de Potencia Resto T5MT (>300) Sin Subsidio;;unit_price*18.99;18
+T5MT Media Tension (>300KW);Servicios de Energía;Recargo por Bajo Coseno de Fi T5MT (>300) Sin Subsidio;;unit_price*0.0320;19
+T5MT Media Tension (>300KW);Servicios de Energía;Cargo Perdida Transformador T5MT (>300) Sin Subsidio;;unit_price*0.0064;20
+T5MT Media Tension (>300KW);Servicios de Energía;Resta Cargo Variable Pico T5MT (>300) Sin Subsidio ;;unit_price*-0.0066;21
+T5MT Media Tension (>300KW);Servicios de Energía;Resta Cargo Variable Valle T5MT (>300) Sin Subsidio;;unit_price*-0.0064;22
+T5MT Media Tension (>300KW);Servicios de Energía;Resta Cargo Variable Resto T5MT (>300) Sin Subsidio ;;unit_price*-0.0066;23
+T5MT Media Tension (>300KW);Servicios de Energía;Resta Cargo Potencia Pico T5MT (>300) Sin Subsidio ;;unit_price*-29.54;24
+T5MT Media Tension (>300KW);Servicios de Energía;Resta Cargo Potencia Resto T5MT (>300) Sin Subsidio ;;unit_price*-12.66;25
+T5MT Media Tension (>300KW);Servicios de Energía;Resta Recargo por Exceso de Potencia Pico T5MT (>300)Sin Subsidio;;unit_price*-44.31;26
+T5MT Media Tension (>300KW);Servicios de Energía;Resta Recargo por Exceso de Potencia Resto T5MT (>300) Sin Subsidio;;unit_price*-18.99;27
+T5MT Media Tension (>300KW);Servicios de Energía;Resta Recargo por Bajo Coseno de Fi T5MT (>300) Sin Subsidio;;unit_price*-0.0320;28
+T5MT Media Tension (>300KW);Servicios de Energía;Resta Cargo Perdida Transformador T5MT (>300) Sin Subsidio;;unit_price*-0.0064;29
+T5MT Media Tension (>300KW);Servicios de Energía;Res. Asamblea 30/12/04 T5MT (>300) Cuota Capital;;unit_price*0;30
+T5MT Media Tension (>300KW);Servicios de Energía;Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T5MT (>300);;unit_price*0;31

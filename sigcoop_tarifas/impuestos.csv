@@ -1,0 +1,25 @@
+Cuenta de la factura/Código;Cuenta de la nota de crédito/Código;Descripción;Nombre;Tipo;Importe;Tasa de cambio
+21411;21411;IVA Asociado a ventas - 21%;IVA Ventas 21%;percentage;;0.21
+21411;21411;IVA Asociado a ventas - 10.5%;IVA Ventas 10.5%;percentage;;10.5
+21411;21411;IVA Asociado a ventas - 27%;IVA Ventas 27%;percentage;;0.27
+1131021;1131021;IVA Asociado a compras - 21%;IVA Compras 21%;percentage;;0.21
+1131021;1131021;IVA Asociado a compras - 10.5%;IVA Compras 10.5%;percentage;;10.5
+1131021;1131021;IVA Asociado a compras - 27%;IVA Compras 27%;percentage;;0.27
+421371;411271;Ord. Municipal 2756/09 Tasa Salud T1R;Ord. Municipal 2756/09 Tasa Salud T1R;fixed;1.25;
+411271;411271;Ley 11769-Art. 74-Prov. 0,6%;Ley 11769-Art. 74-Prov. 0,6%;percentage;;0.0060000
+411271;411271;Ley 11769-Art. 75-Mun. 6,00%;Ley 11769-Art. 75-Mun. 6,00%;percentage;;0.0600000
+411271;411271;Ley 23681-Fesp.Sta.Cruz 0,6%;Ley 23681-Fesp.Sta.Cruz 0,6%;percentage;;0.0060000
+411271;411271;Ley 11769-FPCT Prov. 6%;Ley 11769-FPCT Prov. 6%;percentage;;0.06
+411271;411271;Ley 7290-Prov. 10.00%;Ley 7290-Prov. 10.00%;percentage;;0.1000000
+411271;411271;Ley 9038-Prov. 5.5%;Ley 9038-Prov. 5.5%;percentage;;0.0550000
+411271;411271;Ley 11769-FPCT T3 3%;Ley 11769-FPCT T3 3%;percentage;;0.0300000
+411271;411271;Ley 11769-FPCT T2 6%;Ley 11769-FPCT T2 6%;percentage;;0.06
+411271;411271;Ord. Municipal 2756/09 Tasa Salud T1GBC;Ord. Municipal 2756/09 Tasa Salud T1GBC;fixed;2.0;
+411271;411271;Ord. Municipal 2756/09 Tasa Salud T1GAC;Ord. Municipal 2756/09 Tasa Salud T1GAC;fixed;3.0;
+411271;411271;Ord. Municipal 2756/09 Tasa Salud T2BT;Ord. Municipal 2756/09 Tasa Salud T2BT;fixed;3.0;
+411271;411271;Ord. Municipal 2756/09 Tasa Salud T2MT;Ord. Municipal 2756/09 Tasa Salud T2MT;fixed;3.0;
+411271;411271;Ord. Municipal 2756/09 Tasa Salud T3BT;Ord. Municipal 2756/09 Tasa Salud T3BT;fixed;3.0;
+411271;411271;Ord. Municipal 2756/09 Tasa Salud T3BT (> 300);Ord. Municipal 2756/09 Tasa Salud T3BT (> 300);fixed;3.0;
+411271;411271;Ord. Municipal 2756/09 Tasa Salud T3MT;Ord. Municipal 2756/09 Tasa Salud T3MT;fixed;3.0;
+411271;411271;Ord. Municipal 2756/09 Tasa Salud T3MT (> 300);Ord. Municipal 2756/09 Tasa Salud T3MT (> 300);fixed;3.0;
+411271;411271;Ord. Municipal 2756/09 Tasa Salud T4R;Ord. Municipal 2756/09 Tasa Salud T4R;fixed;1.75;
