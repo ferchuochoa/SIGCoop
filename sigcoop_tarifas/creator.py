@@ -212,19 +212,21 @@ def create_entity(values):
 
 
 def main():
+    print "Bienvenido a fedecoba entity creator 4.5!."
     if (len(sys.argv) != 7):
-        print "Me estan faltando algunos parametros."
-        print "Llamame así, masa: \n \t conversor.py nombre-db password-admin-db archivo-configuracion archivo-impuestos archivo-productos archivo-pricelist"
+        print "Maldición, estan faltando algunos parametros!"
+        print "El script hay que llamarlo así: \n \t creator.py nombre-db password-admin-db archivo-configuracion archivo-impuestos archivo-productos archivo-pricelist"
         return False
     else:
         print "Conectando a trytond..."
+        print "Activando GPS...detectando ubicación geoespacial...triangulando coordenadas...usted se encuentra en: EL SUCUCHITO"
         print "Los parametros son: database_name=%s password=%s config_file=%s" % tuple(sys.argv[1:4])
         c = config.set_trytond(
                 database_name=sys.argv[1],
                 database_type="postgresql",
                 password=sys.argv[2],
                 config_file=sys.argv[3])
-        print "Conectado??"
+        print "Conectado"
 
         print "Vamos a crear las entidades de %s" % str(sys.argv[4:])
         translators = [translate_to_tax, translate_to_product, translate_to_price_list_line]
