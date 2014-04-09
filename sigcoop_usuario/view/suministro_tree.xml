@@ -3,6 +3,7 @@
   <field name="usuario_id"/>
   <field name="numero_suministro"/>
   <field name="servicio"/>
+  <field name="tarifa"/>
   <field name="ruta"/>
   <field name="calle"/>
   <field name="calle_numero"/>

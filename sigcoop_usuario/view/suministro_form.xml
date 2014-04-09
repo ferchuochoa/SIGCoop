@@ -22,4 +22,6 @@
   <field name="tarifa"/>
   <label name="lista_precios"/>
   <field name="lista_precios"/>
+  <label name="potencia_contratada"/>
+  <field name="potencia_contratada"/>
 </form>

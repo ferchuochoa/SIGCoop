@@ -1,5 +1,6 @@
 #-*- coding: utf-8 -*-
 from trytond.model import ModelSQL, ModelView, fields
+from trytond.pyson import In, Eval
 
 __all__ = ['Suministro']
 
@@ -22,6 +23,9 @@ TARIFAS = [
 ("T5MT2", "T5MT Media Tension (50 a 300KW)"),
 ]
 
+TARIFAS_POTENCIA_KEYS = ['T2BT', 'T2MT', 'T3BT', 'T3BT2', 'T3MT', 'T3MT2', 'T5BT', 'T5BT2', 'T5MT', 'T5MT2']
+
+
 class Suministro(ModelSQL, ModelView):
     "Suministro"
     __name__ = 'sigcoop_usuario.suministro'
@@ -42,3 +46,8 @@ class Suministro(ModelSQL, ModelView):
     impuesto_alumbrado = fields.Many2One('account.tax', 'Impuesto alumbrado publico')
     lista_precios = fields.Many2One('product.price_list', 'Lista de precios para tarifa')
     tarifa = fields.Selection(TARIFAS, 'Tarifa')
+    potencia_contratada = fields.Integer('Potencia Contratada',
+        states={
+            'invisible': (~In(Eval('tarifa'), TARIFAS_POTENCIA_KEYS))
+        }
+    )
