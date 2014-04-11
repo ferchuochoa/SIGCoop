@@ -12,7 +12,7 @@ Conexión Subterranea - Monofasica T1R;4223;1;1;service;;Servicios de Energía;U
 Conexión Aerea-Trifasica T1R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;
 Conexión Aerea-Monofasica T1R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;
 Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;
-Res. Asamblea 30/12/04 T1R Cuota Capital ;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;
+Res. Asamblea 30/12/04 T1R Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;
 Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T1R;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;
 Cargo Fijo T1AP;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 23681-Fesp.Sta.Cruz 0,6%
 Cargo Variable T1AP;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 23681-Fesp.Sta.Cruz 0,6%
