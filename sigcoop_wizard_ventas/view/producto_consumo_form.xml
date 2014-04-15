@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<form string="Familiar" col="6">
+    <label name="producto_id"/>
+    <field name="producto_id"/>
+    <label name="codigo_consumo"/>
+    <field name="codigo_consumo"/>
+    <newline/>
+    <label name="cantidad_fija"/>
+    <field name="cantidad_fija"/>
+    <label name="cantidad"/>
+    <field name="cantidad"/>
+</form>
