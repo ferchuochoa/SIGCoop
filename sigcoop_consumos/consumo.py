@@ -12,6 +12,21 @@ class Consumo(ModelSQL, ModelView):
     id_suministro = fields.Many2One('sigcoop_usuario.suministro', 'Suministro', required=True)
     id_medidor = fields.Char('Medidor', required=True)
     periodo = fields.Char('Periodo', required=True)
+    concepto =  fields.Selection(
+        [
+            ('1', 'Cargo variable'),
+            ('2', 'Cargo variable Pico'),
+            ('3', 'Cargo variable Valle'),
+            ('4', 'Cargo variable Resto'),
+            ('5', 'Potencia Pico'),
+            ('6', 'Potencia Resto'),
+            ('7', 'Exceso potencia Pico'),
+            ('8', 'Exceso potencia Resto'),
+            ('9', 'Cargo perdida Transformador'),
+            ('10', 'Recargos x Bajo Cos Fi'),
+        ],
+        'Concepto'
+    )
     fecha = fields.Date('Fecha lec. actual', required=True)
     lectura = fields.BigInteger('Lectura actual', required=True)
     consumo_neto = fields.BigInteger('Consumo Neto', required=True)
@@ -23,7 +38,16 @@ class Consumo(ModelSQL, ModelView):
 class ImportacionStart(ModelView): 
     "Importacion Start"
     __name__= 'sigcoop_consumos.importacion_consumos.start'
+
     file = fields.Binary('Archivo')
+    periodo = fields.Char('Periodo')
+
+
+class ImportacionResumen(ModelView):
+    "Importacion Resumen"
+    __name__= 'sigcoop_consumos.importacion_consumos.resumen'
+
+    resumen = fields.Text('algo')
 
 
 class ImportacionConsumos(Wizard):
@@ -36,11 +60,15 @@ class ImportacionConsumos(Wizard):
 
     importar = StateTransition()
 
+    resumen = StateView('sigcoop_consumos.importacion_consumos.resumen', 'sigcoop_consumos.view_resumen_form',
+                        [ Button('Fin', 'end', 'tryton-ok', default = True)])
+
     def transition_importar(self):
         #obtengo el esquema de consumo
         consumo_t = Pool().get('sigcoop_consumos.consumo')
         #obtengo el archivo del campo file del modelo relacionado con el estado "start"
         file = self.start.file
+        period = self.start.periodo
         i = 0
         while (i < len(file)):
             linea = ''
@@ -50,7 +78,7 @@ class ImportacionConsumos(Wizard):
             i+= 1
             (suministro,_,resto) = linea.partition(',')
             (medidor,_,resto) = resto.partition(',')
-            (period,_,resto) = resto.partition(',')
+            (concept,_,resto) = resto.partition(',')
             (fecha,_,resto) = resto.partition(',')
             (estado,_,consumoNeto) = resto.partition(',')
 
@@ -63,6 +91,7 @@ class ImportacionConsumos(Wizard):
                         'id_suministro':existe_suministro.id,
                         'id_medidor':medidor,
                         'periodo':period,
+                        'concepto':concept,
                         'fecha':date,
                         'lectura':estado,
                         'consumo_neto':c_neto,
@@ -70,7 +99,4 @@ class ImportacionConsumos(Wizard):
                 consumo_nuevo.save()
             except:
                 print 'El suministro ', suministro, ' no existe.'
-        return 'end'
-
-
-
+        return 'resumen'

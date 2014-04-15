@@ -26,45 +26,19 @@ def convertir(inpath, outpath):
 
                 f_actual = date(int(anio),int(mes),int(dia))
                 f_anterior = date(int(anio),int(mes)-1,int(dia))
-                period = mes + '/' + anio
                 c_anterior = int(consumo_anterior)
                 c_actual = int(consumo_actual)
                 c_neto = c_actual - c_anterior
 
                 outfile.write(suministro + ',' 
                     + medidor + ',' 
-                    + period + ',' 
+                    + str(1) + ','
                     + f_actual.strftime('%d-%m-%Y') + ',' 
                     + consumo_actual + ',' 
                     + str(c_neto) + '\n')
 
 
 
-
-
-# def main(argv):
-#     inputfile = ''
-#     outputfile = ''
-#     try:
-#         opts, args = getopt.getopt(argv,"hi:o:",["ifile=","ofile="])
-#     except getopt.GetoptError:
-#         print 'conversorDLG.py -i <inputfile> -o <outputfile>'
-#         sys.exit(2)
-#     for opt, arg in opts:
-#         if opt == '-h':
-#             print 'conversorDLG.py -i <inputfile> -o <outputfile>'
-#             sys.exit()
-#         elif opt in ("-i", "--ifile"):
-#             inputfile = arg
-#         elif opt in ("-o", "--ofile"):
-#             outputfile = arg
-
-#     convertir(inputfile, outputfile)
-
-
-# if __name__ == "__main__":
-#    main(sys.argv[1:])
-
-inputfile = '/home/dooky/Desarrollo/FEDECOBA/Archivos Consumos/lecturas_prueba.txt'
-outputfile = '/home/dooky/Desarrollo/FEDECOBA/Archivos Consumos/lecturas_estandar.txt'
+inputfile = 'lecturasDLG.txt'
+outputfile = 'estandarDLG.txt'
 convertir(inputfile, outputfile)
