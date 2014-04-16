@@ -1,0 +1,19 @@
+Nombre
+T1R Residencial
+T1R Residencial Social
+T1ER Residencial Estacional
+T1GBC Servicio General Bajo Consumo
+T1EG Servicio General Estacional
+T1AP Alumbrado Publico
+T2BT Baja Tension
+T2MT Media Tension
+T3BT Baja Tension (50 a 300KW)
+T3MT Media Tension (50 a 300KW)
+T4 Rural
+T3BT Baja Tension (>300KW)
+T3MT Media Tension (>300KW)
+T5BT Baja Tension (50 a 300KW)
+T5MT Media Tension (50 a 300KW)
+T5BT Baja Tension (>300KW)
+T5MT Media Tension (>300KW)
+T1GAC Servicio General Alto Consumo
