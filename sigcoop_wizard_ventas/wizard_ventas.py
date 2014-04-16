@@ -1,5 +1,6 @@
+from trytond.pool import Pool
 from trytond.model import ModelView, fields
-from trytond.wizard import Wizard, StateView, StateAction, StateTransition, Button
+from trytond.wizard import Wizard, StateView, StateTransition, Button
 
 CATEGORIAS = [
 ("T1AP", "T1AP Alumbrado Publico"),
@@ -38,17 +39,61 @@ class CrearVentas(Wizard):
     __name__ = 'wizard_ventas.crear_ventas'
 
     start = StateView('wizard_ventas.crear_ventas.start',
-        'wizard_ventas.crear_ventas_start_view_form', [
+        'sigcoop_wizard_ventas.crear_ventas_start_view_form', [
             Button('Cancel', 'end', 'tryton-cancel'),
             Button('Crear Ventas', 'crear', 'tryton-ok', default=True),
             ])
 
     exito = StateView('wizard_ventas.crear_ventas.exito',
-        'wizard_ventas.crear_ventas_exito_view_form', [
+        'sigcoop_wizard_ventas.crear_ventas_exito_view_form', [
             Button('Ok', 'end', 'tryton-ok', default=True),
             ])
 
     crear = StateTransition()
 
+    def crear_sale_lines(sale):
+        """
+        Para las sale_lines, necesitamos:
+            quantity
+            product
+        """
+        ret = []
+        SaleLine = Pool().get('sale.line')
+        Product = Pool().get('product.product')
+        new_line = SaleLine(
+                product=Product.search([])[0],
+                quantity=12.0,
+                description="descripcion",
+                unit=Product.search([])[0].default_uom,
+                unit_price=Product.search([])[0].list_price,
+                )
+        ret.append(new_line)
+        return ret
+
     def transition_crear(self):
+        """
+        Creamos las ventas a partir de los consumos que correspondan.
+        Ver sale.py linea 721 para creacion invoice
+        Necesitamos:
+            party : party.party
+            price_list : m2o product.price_list
+            lines : o2m sale.line
+        """
+        import logging
+        logging.getLogger('sale').error("Transition Crear+++++++++++++++")
+        logging.getLogger('sale').error("Periodo: %s" % self.start.periodo)
+        #logging.getLogger('sale').error("Ruta: %s" % self.ruta)
+        #logging.getLogger('sale').error("Cat: %s" % self.categoria)
+        Sale = Pool().get('sale.sale')
+        Party = Pool().get('party.party')
+        PriceList = Pool().get('product.price_list')
+        #logging.getLogger('sale').error("Metodos sale: %s" % sale_constructor.__dict__)
+        sale = Sale(
+                party=Party.search([])[0],
+                price_list=PriceList.search([])[0],
+                description="Creado desde el wizard 2"
+        )
+        sale.lines = self.crear_sale_lines()
+        sale.save()
+        logging.getLogger('sale').error("Transition Crear----------------")
         return 'exito'
