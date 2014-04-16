@@ -1,6 +1,6 @@
+<?xml version="1.0"?>
 <!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
 this repository contains the full copyright notices and license terms. -->
-<?xml version="1.0"?>
 <tryton>
     <data>
         <record model="ir.ui.view" id="template_view_form">
@@ -8,6 +8,5 @@ this repository contains the full copyright notices and license terms. -->
             <field name="inherit" ref="product.template_view_form"/>
             <field name="name">template_form</field>
         </record>
-
     </data>
 </tryton>

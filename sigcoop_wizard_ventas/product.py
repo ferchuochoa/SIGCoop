@@ -12,3 +12,4 @@ class Template(ModelSQL, ModelView):
 
     aplica_iva = fields.Boolean('Aplicar iva')
     aplica_ap = fields.Boolean('Aplicar alumbrado publico')
+    aplica_iibb = fields.Boolean('Aplicar ingresos brutos')

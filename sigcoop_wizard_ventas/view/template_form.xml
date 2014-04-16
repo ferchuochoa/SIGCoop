@@ -9,5 +9,7 @@ this repository contains the full copyright notices and license terms. -->
         <field name="aplica_ap"/>
         <label name="aplica_iva"/>
         <field name="aplica_iva"/>
+        <label name="aplica_iibb"/>
+        <field name="aplica_iibb"/>
     </xpath>
 </data>

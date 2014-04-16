@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<form string="Crear ventas de consumos" col="2">
+    <label name="periodo"/>
+    <field name="periodo"/>
+    <label name="categoria"/>
+    <field name="categoria"/>
+    <label name="fecha_vencimiento_1"/>
+    <field name="fecha_vencimiento_1"/>
+    <label name="fecha_vencimiento_2"/>
+    <field name="fecha_vencimiento_2"/>
+    <label name="ruta"/>
+    <field name="ruta"/>
+</form>
