@@ -7,6 +7,7 @@ def register():
         Consumo,
         Suministro,
         ImportacionStart,
+        ImportacionResumen,
         module='sigcoop_consumos', type_='model')
 
     Pool.register(

@@ -30,6 +30,14 @@ class Consumo(ModelSQL, ModelView):
     fecha = fields.Date('Fecha lec. actual', required=True)
     lectura = fields.BigInteger('Lectura actual', required=True)
     consumo_neto = fields.BigInteger('Consumo Neto', required=True)
+    estado = fields.Selection(
+        [
+            ('0', 'No facturable'),
+            ('1', 'Facturable'), 
+            ('2', 'Facturado'),
+        ],
+        'Estado'
+    )
     
 
 
