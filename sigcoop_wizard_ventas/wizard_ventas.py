@@ -1,6 +1,9 @@
 from trytond.pool import Pool
 from trytond.model import ModelView, fields
 from trytond.wizard import Wizard, StateView, StateTransition, Button
+import logging
+from decimal import Decimal
+from trytond.transaction import Transaction
 
 CATEGORIAS = [
 ("T1AP", "T1AP Alumbrado Publico"),
@@ -51,7 +54,7 @@ class CrearVentas(Wizard):
 
     crear = StateTransition()
 
-    def crear_sale_lines(sale):
+    def crear_sale_lines(sale, price_list, customer):
         """
         Para las sale_lines, necesitamos:
             quantity
@@ -60,14 +63,16 @@ class CrearVentas(Wizard):
         ret = []
         SaleLine = Pool().get('sale.line')
         Product = Pool().get('product.product')
+        cargo_variable = Product.search([('name', '=', 'Cargo Variable T1R')])[0]
         new_line = SaleLine(
-                product=Product.search([])[0],
-                quantity=12.0,
+                product=cargo_variable,
+                quantity=Decimal(120.0),
                 description="descripcion",
-                unit=Product.search([])[0].default_uom,
-                unit_price=Product.search([])[0].list_price,
+                unit=cargo_variable.default_uom,
                 )
-        ret.append(new_line)
+        with Transaction().set_context({"price_list": price_list, "customer": customer}):
+            new_line.unit_price = cargo_variable.get_sale_price([cargo_variable], 120.0)[cargo_variable.id]
+            ret.append(new_line)
         return ret
 
     def transition_crear(self):
@@ -79,21 +84,14 @@ class CrearVentas(Wizard):
             price_list : m2o product.price_list
             lines : o2m sale.line
         """
-        import logging
-        logging.getLogger('sale').error("Transition Crear+++++++++++++++")
-        logging.getLogger('sale').error("Periodo: %s" % self.start.periodo)
-        #logging.getLogger('sale').error("Ruta: %s" % self.ruta)
-        #logging.getLogger('sale').error("Cat: %s" % self.categoria)
         Sale = Pool().get('sale.sale')
         Party = Pool().get('party.party')
         PriceList = Pool().get('product.price_list')
-        #logging.getLogger('sale').error("Metodos sale: %s" % sale_constructor.__dict__)
         sale = Sale(
                 party=Party.search([])[0],
                 price_list=PriceList.search([])[0],
                 description="Creado desde el wizard 2"
         )
-        sale.lines = self.crear_sale_lines()
+        sale.lines = self.crear_sale_lines(PriceList.search([])[0], Party.search([])[0])
         sale.save()
-        logging.getLogger('sale').error("Transition Crear----------------")
         return 'exito'
