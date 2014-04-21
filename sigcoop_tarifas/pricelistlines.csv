@@ -38,12 +38,12 @@ T1R Residencial;Servicios de Energía;Resta Cargo Variable T1R Sin Subsidio;;uni
 T1R Residencial;Servicios de Energía;Conexión Aerea-Monofasica T1R;;unit_price*88.1550;100
 T1R Residencial;Servicios de Energía;Conexión Aerea-Trifasica T1R;;unit_price*268.3650;101
 T1R Residencial;Servicios de Energía;Conexión Subterranea - Monofasica T1R;;unit_price*268.3650;102
-T1R Residencial;Servicios de Energía;Conexion Subterranea - Trifasica T1R;;unit_price*355.6650;103
+T1R Residencial;Servicios de Energía;Conexión Subterranea - Trifasica T1R;;unit_price*355.6650;103
 T1R Residencial;Servicios de Energía;Rehabilitacion (fusible) T1R;;unit_price*12.66;104
 T1R Residencial;Servicios de Energía;Desconexión directa ( 2a. rehab.) T1R;;unit_price*12.66;105
 T1R Residencial;Servicios de Energía;Plan Municipal de AP Ord. 3000/10;1.0;unit_price*4.00;106
 T1R Residencial;Servicios de Energía;Res. Asamblea 30/12/04 T1R Cuota Capital;1.0;unit_price*25.00;107
-T1R Residencial;Servicios de Energía;Cuota Extraordinaria DEC 3142/07 - Resolución 604/07 T1R;1.0;unit_price*10.00;108
+T1R Residencial;Servicios de Energía;Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T1R;1.0;unit_price*10.00;108
 T1AP Alumbrado Publico;Servicios de Energía;Cargo Fijo T1AP;;unit_price*20.75;1
 T1AP Alumbrado Publico;Servicios de Energía;Cargo Variable T1AP;;unit_price*0.3045;2
 T1AP Alumbrado Publico;Servicios de Energía;Cargo Variable T1AP Sin Subsidio;;unit_price*0.6112;3

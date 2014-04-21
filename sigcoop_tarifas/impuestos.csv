@@ -1,10 +1,12 @@
 Cuenta de la factura/Código;Cuenta de la nota de crédito/Código;Descripción;Nombre;Tipo;Importe;Tasa de cambio
-21411;21411;IVA Asociado a ventas - 21%;IVA Ventas 21%;percentage;;0.21
-21411;21411;IVA Asociado a ventas - 10.5%;IVA Ventas 10.5%;percentage;;10.5
-21411;21411;IVA Asociado a ventas - 27%;IVA Ventas 27%;percentage;;0.27
-1131021;1131021;IVA Asociado a compras - 21%;IVA Compras 21%;percentage;;0.21
-1131021;1131021;IVA Asociado a compras - 10.5%;IVA Compras 10.5%;percentage;;10.5
-1131021;1131021;IVA Asociado a compras - 27%;IVA Compras 27%;percentage;;0.27
+21411;21411;IVA RI 27%;IVA RI 27%;percentage;;0.2700000
+21411;21411;IVA RMT 27%;IVA RMT 27%;percentage;;0.2700000
+21411;21411;IVA NO CAT 27%;IVA NO CAT 27%;percentage;;0.27
+1131021;1131021;IVA CF 21%;IVA CF 21%;percentage;;0.21
+1131021;1131021;IVA EX 21%;IVA EX 21%;percentage;;0.2100000
+1131021;1131021;IVA RI 21%;IVA RI 21%;percentage;;0.2100000
+21411;21411;IVA RMT 21%;IVA RMT 21%;percentage;;0.21
+21411;21411;IVA NO CAT 21%;IVA NO CAT 21%;percentage;;0.2100000
 421371;411271;Ord. Municipal 2756/09 Tasa Salud T1R;Ord. Municipal 2756/09 Tasa Salud T1R;fixed;1.25;
 411271;411271;Ley 11769-Art. 74-Prov. 0,6%;Ley 11769-Art. 74-Prov. 0,6%;percentage;;0.0060000
 411271;411271;Ley 11769-Art. 75-Mun. 6,00%;Ley 11769-Art. 75-Mun. 6,00%;percentage;;0.0600000
@@ -23,3 +25,21 @@ Cuenta de la factura/Código;Cuenta de la nota de crédito/Código;Descripción;
 411271;411271;Ord. Municipal 2756/09 Tasa Salud T3MT;Ord. Municipal 2756/09 Tasa Salud T3MT;fixed;3.0;
 411271;411271;Ord. Municipal 2756/09 Tasa Salud T3MT (> 300);Ord. Municipal 2756/09 Tasa Salud T3MT (> 300);fixed;3.0;
 411271;411271;Ord. Municipal 2756/09 Tasa Salud T4R;Ord. Municipal 2756/09 Tasa Salud T4R;fixed;1.75;
+411271;411271;Alumbrado Publico 18.40%;Alumbrado Publico 18.40%;percentage;;0.1840000
+411271;411271;Alumbrado Publico 8.80%;Alumbrado Publico 8.80%;percentage;;88
+411271;411271;Alumbrado Publico 0.00%;Alumbrado Publico 0.00%;percentage;;0E-7
+411271;411271;Alumbrado Publico 25.00%;Alumbrado Publico 25.00%;percentage;;0.2500000
+411271;411271;Alumbrado Publico 2.60%;Alumbrado Publico 2.60%;percentage;;0.0260000
+411271;411271;Alumbrado Publico 1.00%;Alumbrado Publico 1.00%;percentage;;0.0100000
+411271;411271;Alumbrado Publico 22.00%;Alumbrado Publico 22.00%;percentage;;0.2200000
+411271;411271;DN 74/07 Percep IB 0.10%;DN 74/07 Percep IB 0.10%;percentage;;0.0010000
+411271;411271;DN 74/07 Percep IB 0.20%;DN 74/07 Percep IB 0.20%;percentage;;0.0020000
+411271;411271;DN 74/07 Percep IB 2.50%;DN 74/07 Percep IB 2.50%;percentage;;0.0250000
+411271;411271;DN 74/07 Percep IB 2.60%;DN 74/07 Percep IB 2.60%;percentage;;0.0260000
+411271;411271;DN 74/07 Percep IB 3.00%;DN 74/07 Percep IB 3.00%;percentage;;0.0300000
+411271;411271;DN 74/07 Percep IB 3.50%;DN 74/07 Percep IB 3.50%;percentage;;0.0350000
+411271;411271;DN 74/07 Percep IB 5.00%;DN 74/07 Percep IB 5.00%;percentage;;0.0500000
+411271;411271;DN 74/07 Percep IB 6.00%;DN 74/07 Percep IB 6.00%;percentage;;0.0600000
+411271;411271;DN 74/07 Percep IB 0.00%;DN 74/07 Percep IB 0.00%;percentage;;0E-7
+411271;411271;DN 74/07 Percep IB 4.00%;DN 74/07 Percep IB 4.00%;percentage;;0.0400000
+411271;411271;DN 74/07 Percep IB 2.00%;DN 74/07 Percep IB 2.00%;percentage;;0.0200000
