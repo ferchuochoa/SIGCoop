@@ -54,27 +54,6 @@ class CrearVentas(Wizard):
 
     crear = StateTransition()
 
-    def crear_sale_lines(sale, price_list, customer):
-        """
-        Para las sale_lines, necesitamos:
-            quantity
-            product
-        """
-        ret = []
-        SaleLine = Pool().get('sale.line')
-        Product = Pool().get('product.product')
-        cargo_variable = Product.search([('name', '=', 'Cargo Variable T1R')])[0]
-        new_line = SaleLine(
-                product=cargo_variable,
-                quantity=Decimal(120.0),
-                description="descripcion",
-                unit=cargo_variable.default_uom,
-                )
-        with Transaction().set_context({"price_list": price_list, "customer": customer}):
-            new_line.unit_price = cargo_variable.get_sale_price([cargo_variable], 120.0)[cargo_variable.id]
-            ret.append(new_line)
-        return ret
-
     def buscar(self, modelo, atributo, abuscar):
         search = modelo.search([atributo, '=', abuscar])
         if search:
@@ -82,39 +61,62 @@ class CrearVentas(Wizard):
         else:
             return None
 
-    def crear_sales(self, cliente):
+    def buscar_cliente(self, id_suministro):
+        Suministro = Pool().get('sigcoop_usuario.suministro')
+        suministro = self.buscar(Suministro, "id", id_suministro)
+        if suministro is not None:
+            return suministro.usuario_id
+        else:
+            return None
+
+    def construir_descripcion(self):
+        return "Descripcion"
+
+    def crear_sale_line(self, cantidad, producto, cliente, lista_precios):
+        SaleLine = Pool().get('sale.line')
+        Product = Pool().get('product.product')
+        new_line = SaleLine(
+                product=producto,
+                quantity=Decimal(cantidad),
+                description="descripcion",
+                unit=producto.default_uom,
+                )
+        with Transaction().set_context({"price_list": lista_precios, "customer": cliente}):
+            new_line.unit_price = cargo_variable.get_sale_price([producto], cantidad)[producto.id]
+        return new_line
+
+    def crear_sale_lines(self, codigo_consumo, cantidad_consumida, cliente, lista_precios):
+        ret = []
+        ProductoConsumo = Pool().get('sigcoop_wizard_ventas.producto_consumo')
+        producto_consumo_list = ProductoConsumo.search([('codigo_consumo', '=', codigo_consumo)])
+        for producto_consumo in producto_consumo_list:
+            cantidad = producto_consumo.cantidad_fija and producto_consumo.cantidad or cantidad_consumida
+            ret.append(self.crear_sale_line(cantidad, producto_consumo.producto_id, cliente, lista_precios))
+        return ret
+
+    def crear_sales(self, id_suministro, cantidad_consumida, codigo_consumo):
         """
         Crea instancias de sale.sale
         """
         Sale = Pool().get('sale.sale')
-        Party = Pool().get('party.party')
-        PriceList = Pool().get('product.price_list')
-        party = self.buscar(Party, name, cliente)
-        price_list = self.buscar(PriceList, name, lista_precios)
+        Suministro = Pool().get('sigcoop_usuario.suministro')
+        suministro = self.buscar(Suministro, id, id_suministro)
+        party = suministro and suministro.usuario_id or None
+        price_list = suministro.lista_precios
         sale = Sale(
                 party=party,
-                price_list=PriceList.search([])[0],
-                description="Creado desde el wizard 2"
+                price_list=price_list,
+                description="Sale para %s" % (self.construir_descripcion(),)
         )
-
+        sale.lines = self.crear_sale_lines(codigo_consumo, cantidad_consumida, cliente, lista_precios)
+        sale.save()
 
     def transition_crear(self):
-        """
-        Creamos las ventas a partir de los consumos que correspondan.
-        Ver sale.py linea 721 para creacion invoice
-        Necesitamos:
-            party : party.party
-            price_list : m2o product.price_list
-            lines : o2m sale.line
-        """
-        Sale = Pool().get('sale.sale')
-        Party = Pool().get('party.party')
-        PriceList = Pool().get('product.price_list')
-        sale = Sale(
-                party=Party.search([])[0],
-                price_list=PriceList.search([])[0],
-                description="Creado desde el wizard 2"
-        )
-        sale.lines = self.crear_sale_lines(PriceList.search([])[0], Party.search([])[0])
-        sale.save()
+        Consumos = Pool().get('sigcoop_consumos.consumo')
+        search_params = [
+                (''),
+                (''),
+        ]
+        for consumo in Consumos.search(search_params):
+            self.crear_sales(consumo.id_suministro, consumo.consumo_neto, consumo.concepto)
         return 'exito'
