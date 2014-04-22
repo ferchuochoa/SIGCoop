@@ -75,6 +75,29 @@ class CrearVentas(Wizard):
             ret.append(new_line)
         return ret
 
+    def buscar(self, modelo, atributo, abuscar):
+        search = modelo.search([atributo, '=', abuscar])
+        if search:
+            return search[0]
+        else:
+            return None
+
+    def crear_sales(self, cliente):
+        """
+        Crea instancias de sale.sale
+        """
+        Sale = Pool().get('sale.sale')
+        Party = Pool().get('party.party')
+        PriceList = Pool().get('product.price_list')
+        party = self.buscar(Party, name, cliente)
+        price_list = self.buscar(PriceList, name, lista_precios)
+        sale = Sale(
+                party=party,
+                price_list=PriceList.search([])[0],
+                description="Creado desde el wizard 2"
+        )
+
+
     def transition_crear(self):
         """
         Creamos las ventas a partir de los consumos que correspondan.
