@@ -11,13 +11,13 @@ def convertir(inpath, outpath):
                 (algo,_,resto) = resto.partition(':')
                 (medidor,_,resto) = resto.partition(':')
                 (_,_,resto) = resto.partition(':')
-                (consumo_anterior,_,resto) = resto.partition(':')
+                (estado_anterior,_,resto) = resto.partition(':')
                 (_,_,resto) = resto.partition(':')
                 (_,_,resto) = resto.partition(':')
                 (fecha,_,resto) = resto.partition(':')
                 (_,_,resto) = resto.partition(':')
                 (_,_,resto) = resto.partition('::')
-                (consumo_actual,_,resto) = resto.partition(':')
+                (estado_actual,_,resto) = resto.partition(':')
                 suministro = calle + '.' + ruta + '.' + numero + '.' + algo 
                 # print suministro, ',', medidor, ',', consumo_anterior, ',', fecha, ',', consumo_actual
 
@@ -26,15 +26,15 @@ def convertir(inpath, outpath):
 
                 f_actual = date(int(anio),int(mes),int(dia))
                 f_anterior = date(int(anio),int(mes)-1,int(dia))
-                c_anterior = int(consumo_anterior)
-                c_actual = int(consumo_actual)
+                c_anterior = int(estado_anterior)
+                c_actual = int(estado_actual)
                 c_neto = c_actual - c_anterior
 
                 outfile.write(suministro + ',' 
                     + medidor + ',' 
                     + str(1) + ','
                     + f_actual.strftime('%d-%m-%Y') + ',' 
-                    + consumo_actual + ',' 
+                    + estado_actual + ',' 
                     + str(c_neto) + '\n')
 
 

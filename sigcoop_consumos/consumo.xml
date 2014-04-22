@@ -35,6 +35,13 @@
             <field name="name">importacion_form</field>
         </record>
 
+        <!--Formulario agregar alumno wizard inscripcion-->
+        <record model="ir.ui.view" id="view_importacion_form">
+            <field name="model">sigcoop_consumos.importacion_consumos.resumen</field>
+            <field name="type">form</field>
+            <field name="name">importacion_resumen_form</field>
+        </record>
+
         <!--keyword wizard-->
         <record model="ir.action.keyword" id="act_open_importacion_consumos">
             <field name="keyword">form_action</field>

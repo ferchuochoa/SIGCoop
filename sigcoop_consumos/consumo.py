@@ -49,13 +49,14 @@ class ImportacionStart(ModelView):
 
     file = fields.Binary('Archivo')
     periodo = fields.Char('Periodo')
+    checkListado = fields.Boolean('Hacer listado')
 
 
 class ImportacionResumen(ModelView):
     "Importacion Resumen"
     __name__= 'sigcoop_consumos.importacion_consumos.resumen'
 
-    resumen = fields.Text('algo')
+    resumen = fields.Text('{0}, {1}, {2}'.format('a', 'b', 'c'))
 
 
 class ImportacionConsumos(Wizard):
@@ -107,4 +108,13 @@ class ImportacionConsumos(Wizard):
                 consumo_nuevo.save()
             except:
                 print 'El suministro ', suministro, ' no existe.'
+
+
+        if self.start.checkListado:
+            generarListadoConsistencia()
         return 'resumen'
+
+
+
+    def generarListadoConsistencia(self):
+        

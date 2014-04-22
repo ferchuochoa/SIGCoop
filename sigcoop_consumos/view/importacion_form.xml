@@ -3,4 +3,8 @@
 <form string="Importacion">
     <label name="file"/>
     <field name="file"/>
+    <label name="periodo" string="Periodo a importar"/>
+    <field name="periodo"/>
+    <label name="checkListado" string="Generar listado de consistencia al finalizar la importacion"/>
+    <field name="checkListado"/>
 </form>
