@@ -1,7 +1,7 @@
 from trytond.pool import Pool
 from trytond.model import ModelView, fields
 from trytond.wizard import Wizard, StateView, StateTransition, Button
-import logging
+#import logging
 from decimal import Decimal
 from trytond.transaction import Transaction
 
@@ -27,11 +27,11 @@ CATEGORIAS = [
 class CrearVentasStart(ModelView):
     'Crear Ventas Start'
     __name__ = 'wizard_ventas.crear_ventas.start'
-    periodo = fields.Integer('Periodo')
-    categoria = fields.Selection(CATEGORIAS, 'Categoria')
-    fecha_vencimiento_1 = fields.Date('1er Fecha de Vencimiento')
-    fecha_vencimiento_2 = fields.Date('2da Fecha de Vencimiento')
-    ruta = fields.Integer('Ruta')
+    periodo = fields.Char('Periodo', required=True)
+    categoria = fields.Selection(CATEGORIAS, 'Categoria', required=True)
+    fecha_vencimiento_1 = fields.Date('1er Fecha de Vencimiento', required=True)
+    fecha_vencimiento_2 = fields.Date('2da Fecha de Vencimiento', required=True)
+    ruta = fields.Integer('Ruta', required=True)
 
 class CrearVentasExito(ModelView):
     'Crear Ventas Exito'
@@ -72,26 +72,26 @@ class CrearVentas(Wizard):
     def construir_descripcion(self):
         return "Descripcion"
 
-    def crear_sale_line(self, cantidad, producto, cliente, lista_precios):
+    def crear_sale_line(self, amount, product, customer, price_list):
         SaleLine = Pool().get('sale.line')
-        Product = Pool().get('product.product')
+        #Product = Pool().get('product.product')
         new_line = SaleLine(
-                product=producto,
-                quantity=Decimal(cantidad),
+                product=product,
+                quantity=Decimal(amount),
                 description="descripcion",
-                unit=producto.default_uom,
+                unit=product.default_uom,
                 )
-        with Transaction().set_context({"price_list": lista_precios, "customer": cliente}):
-            new_line.unit_price = cargo_variable.get_sale_price([producto], cantidad)[producto.id]
+        with Transaction().set_context({"price_list": price_list, "customer": customer}):
+            new_line.unit_price = product.get_sale_price([product], amount)[product.id]
         return new_line
 
-    def crear_sale_lines(self, codigo_consumo, cantidad_consumida, cliente, lista_precios):
+    def crear_sale_lines(self, codigo_consumo, cantidad_consumida, customer, price_list):
         ret = []
         ProductoConsumo = Pool().get('sigcoop_wizard_ventas.producto_consumo')
         producto_consumo_list = ProductoConsumo.search([('codigo_consumo', '=', codigo_consumo)])
         for producto_consumo in producto_consumo_list:
             cantidad = producto_consumo.cantidad_fija and producto_consumo.cantidad or cantidad_consumida
-            ret.append(self.crear_sale_line(cantidad, producto_consumo.producto_id, cliente, lista_precios))
+            ret.append(self.crear_sale_line(cantidad, producto_consumo.producto_id, customer, price_list))
         return ret
 
     def crear_sales(self, id_suministro, cantidad_consumida, codigo_consumo):
@@ -108,15 +108,19 @@ class CrearVentas(Wizard):
                 price_list=price_list,
                 description="Sale para %s" % (self.construir_descripcion(),)
         )
-        sale.lines = self.crear_sale_lines(codigo_consumo, cantidad_consumida, cliente, lista_precios)
+        sale.lines = self.crear_sale_lines(codigo_consumo, cantidad_consumida, party, price_list)
         sale.save()
 
     def transition_crear(self):
+        """
+        Esta es la primer transicion que se ejecuta cuando ingresamos los datos
+        de facturacion.
+        """
         Consumos = Pool().get('sigcoop_consumos.consumo')
-        search_params = [
-                (''),
-                (''),
+        consumos_search_params = [
+                ('estado', '=', '1'),
+                ('periodo', '=', self.periodo),
         ]
-        for consumo in Consumos.search(search_params):
+        for consumo in Consumos.search(consumos_search_params):
             self.crear_sales(consumo.id_suministro, consumo.consumo_neto, consumo.concepto)
         return 'exito'
