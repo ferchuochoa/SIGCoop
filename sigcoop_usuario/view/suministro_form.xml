@@ -5,6 +5,9 @@
   <label name="numero_suministro"/>
   <field name="numero_suministro"/>
   <newline/>
+  <label name="codigo_suministro"/>
+  <field name="codigo_suministro"/>
+  <newline/>
   <label name="servicio"/>
   <field name="servicio"/>
   <newline/>

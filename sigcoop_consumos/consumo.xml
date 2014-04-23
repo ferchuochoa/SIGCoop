@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tryton>
+    <data>
+        <!-- Form View -->
+        <record model="ir.ui.view" id="consumo_view_form">
+            <field name="model">sigcoop_consumos.consumo</field>
+            <field name="type">form</field>
+            <field name="name">consumo_form</field>
+        </record>
+        <!-- Tree View -->
+        <record model="ir.ui.view" id="consumo_view_tree">
+            <field name="model">sigcoop_consumos.consumo</field>
+            <field name="type">tree</field>
+            <field name="name">consumo_tree</field>
+        </record>
+
+        <record id="act_consumo_form" model="ir.action.act_window">
+            <field name="name">Consumos</field>
+            <field name="res_model">sigcoop_consumos.consumo</field>
+            <field name="search_value"/>
+        </record>
+
+
+        <!--Wizard-->
+        <record model="ir.action.wizard" id="wizard_importacion_consumo">
+            <field name="name">Importación de consumos</field>
+            <field name="wiz_name">sigcoop_consumos.importacion_consumos</field>
+            <!--field name="model">sigcoop_consumos.consumo</field-->
+        </record>
+
+        <!--Formulario para elegir archivo de importacion-->
+        <record model="ir.ui.view" id="view_importacion_form">
+            <field name="model">sigcoop_consumos.importacion_consumos.start</field>
+            <field name="type">form</field>
+            <field name="name">importacion_form</field>
+        </record>
+
+        <!--Formulario de resumen de la importacion-->
+        <record model="ir.ui.view" id="view_importacion_resumen_form">
+            <field name="model">sigcoop_consumos.importacion_consumos.resumen</field>
+            <field name="type">form</field>
+            <field name="name">importacion_resumen_form</field>
+        </record>
+
+        <!--keyword wizard-->
+        <record model="ir.action.keyword" id="act_open_importacion_consumos">
+            <field name="keyword">form_action</field>
+            <field name="model">sigcoop_consumos.consumo,-1</field>
+            <field name="action" ref="wizard_importacion_consumo"/>
+        </record>
+
+
+        <!-- Menu -->
+        <menuitem parent="sigcoop_usuario.menu_usuario" secuence="0" action="act_consumo_form" icon="tryton-list" id="menu_consumo_form"/>
+        <menuitem parent="menu_consumo_form"
+            action="wizard_importacion_consumo" id="menu_importar_consumos"/>
+        <record model="ir.module.module.config_wizard.item"
+            id="config_wizard_item_consumo">
+            <field name="action" ref="wizard_importacion_consumo"/>
+        </record>
+    </data>
+</tryton>

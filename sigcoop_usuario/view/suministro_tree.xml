@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <tree string="Suministros">
   <field name="usuario_id"/>
-  <field name="numero_suministro"/>
+  <field name="codigo_suministro"/>
   <field name="servicio"/>
   <field name="tarifa"/>
   <field name="ruta"/>

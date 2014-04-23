@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form string="Consumo" col="6">
+  <label name="id_suministro"/>
+  <field name="id_suministro"/>
+  <label name="id_medidor"/>
+  <field name="id_medidor"/>
+  <label name="periodo"/>
+  <field name="periodo"/>
+  <label name="fecha"/>
+  <field name="fecha"/>
+  <label name="lectura"/>
+  <field name="lectura"/>
+  <label name="consumo_neto"/>
+  <field name="consumo_neto"/>
+</form>
