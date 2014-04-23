@@ -10,7 +10,7 @@ class Medidor(ModelSQL, ModelView):
 
     idMedidor = fields.Char('IdMedidor', required=True)
     registrador = fields.Integer('Registrador', required=True)
-    suministro = fields.One2One('sigcoop_usuario.suministro', 'idMedidor', 'codigo_suministro', "Suministro")
+    consumos = fields.One2Many('sigcoop_consumos.comsumo', 'id_medidor', 'Consumos')
 
 
 

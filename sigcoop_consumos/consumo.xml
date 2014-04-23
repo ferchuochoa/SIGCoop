@@ -28,15 +28,15 @@
             <!--field name="model">sigcoop_consumos.consumo</field-->
         </record>
 
-        <!--Formulario agregar alumno wizard inscripcion-->
+        <!--Formulario para elegir archivo de importacion-->
         <record model="ir.ui.view" id="view_importacion_form">
             <field name="model">sigcoop_consumos.importacion_consumos.start</field>
             <field name="type">form</field>
             <field name="name">importacion_form</field>
         </record>
 
-        <!--Formulario agregar alumno wizard inscripcion-->
-        <record model="ir.ui.view" id="view_importacion_form">
+        <!--Formulario de resumen de la importacion-->
+        <record model="ir.ui.view" id="view_importacion_resumen_form">
             <field name="model">sigcoop_consumos.importacion_consumos.resumen</field>
             <field name="type">form</field>
             <field name="name">importacion_resumen_form</field>
@@ -48,6 +48,7 @@
             <field name="model">sigcoop_consumos.consumo,-1</field>
             <field name="action" ref="wizard_importacion_consumo"/>
         </record>
+
 
         <!-- Menu -->
         <menuitem parent="sigcoop_usuario.menu_usuario" secuence="0" action="act_consumo_form" icon="tryton-list" id="menu_consumo_form"/>

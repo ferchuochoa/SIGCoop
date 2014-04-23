@@ -10,7 +10,7 @@ class Consumo(ModelSQL, ModelView):
     __name__ = 'sigcoop_consumos.consumo'
 
     id_suministro = fields.Many2One('sigcoop_usuario.suministro', 'Suministro', required=True)
-    id_medidor = fields.Char('Medidor', required=True)
+    id_medidor = fields.Many2One('sigcoop_consumos.medidor', 'Medidor', required=True)
     periodo = fields.Char('Periodo', required=True)
     concepto =  fields.Selection(
         [
@@ -56,7 +56,12 @@ class ImportacionResumen(ModelView):
     "Importacion Resumen"
     __name__= 'sigcoop_consumos.importacion_consumos.resumen'
 
-    resumen = fields.Text('{0}, {1}, {2}'.format('a', 'b', 'c'))
+    resumen = fields.Text('Resumen de importacion', readonly = True)
+
+
+    @classmethod
+    def default_resumen(cls):
+        return 'hola'
 
 
 class ImportacionConsumos(Wizard):
@@ -69,7 +74,7 @@ class ImportacionConsumos(Wizard):
 
     importar = StateTransition()
 
-    resumen = StateView('sigcoop_consumos.importacion_consumos.resumen', 'sigcoop_consumos.view_resumen_form',
+    resumen = StateView('sigcoop_consumos.importacion_consumos.resumen', 'sigcoop_consumos.view_importacion_resumen_form',
                         [ Button('Fin', 'end', 'tryton-ok', default = True)])
 
     def transition_importar(self):
@@ -110,11 +115,11 @@ class ImportacionConsumos(Wizard):
                 print 'El suministro ', suministro, ' no existe.'
 
 
-        if self.start.checkListado:
-            generarListadoConsistencia()
+        # if self.start.checkListado:
+        #     generarListadoConsistencia()
         return 'resumen'
 
 
 
     def generarListadoConsistencia(self):
-        
+        pass
