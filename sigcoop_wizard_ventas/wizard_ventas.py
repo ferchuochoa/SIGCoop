@@ -4,6 +4,8 @@ from trytond.wizard import Wizard, StateView, StateTransition, Button
 #import logging
 from decimal import Decimal
 from trytond.transaction import Transaction
+import logging
+logger = logging.getLogger('sale')
 
 CATEGORIAS = [
 ("T1AP", "T1AP Alumbrado Publico"),
@@ -27,11 +29,11 @@ CATEGORIAS = [
 class CrearVentasStart(ModelView):
     'Crear Ventas Start'
     __name__ = 'wizard_ventas.crear_ventas.start'
-    periodo = fields.Char('Periodo', required=True)
-    categoria = fields.Selection(CATEGORIAS, 'Categoria', required=True)
-    fecha_vencimiento_1 = fields.Date('1er Fecha de Vencimiento', required=True)
-    fecha_vencimiento_2 = fields.Date('2da Fecha de Vencimiento', required=True)
-    ruta = fields.Integer('Ruta', required=True)
+    periodo = fields.Char('Periodo')#, required=True)
+    categoria = fields.Selection(CATEGORIAS, 'Categoria')#, required=True)
+    fecha_vencimiento_1 = fields.Date('1er Fecha de Vencimiento')#, required=True)
+    fecha_vencimiento_2 = fields.Date('2da Fecha de Vencimiento')#, required=True)
+    ruta = fields.Integer('Ruta')#, required=True)
 
 class CrearVentasExito(ModelView):
     'Crear Ventas Exito'
@@ -116,11 +118,14 @@ class CrearVentas(Wizard):
         Esta es la primer transicion que se ejecuta cuando ingresamos los datos
         de facturacion.
         """
+        #import pudb; pu.db
+        logger.error("self es: %s" % self.__dict__)
         Consumos = Pool().get('sigcoop_consumos.consumo')
         consumos_search_params = [
                 ('estado', '=', '1'),
-                ('periodo', '=', self.periodo),
+                ('periodo', '=', self.start.periodo),
         ]
         for consumo in Consumos.search(consumos_search_params):
+            logger.error(consumo)
             self.crear_sales(consumo.id_suministro, consumo.consumo_neto, consumo.concepto)
         return 'exito'
