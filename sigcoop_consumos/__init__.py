@@ -1,9 +1,11 @@
 from trytond.pool import Pool
 from .consumo import *
 from .suministro import *
+from .medidor import *
 
 def register():
     Pool.register(
+        Medidor,
         Consumo,
         Suministro,
         ImportacionStart,
