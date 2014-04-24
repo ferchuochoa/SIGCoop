@@ -2,7 +2,7 @@
 from trytond.model import ModelView, ModelSQL, fields
 
 __all__ = ['ProductoConsumo']
-CODIGOS = [
+CONCEPTOS = [
     ('1', 'Cargo variable'),
     ('2', 'Cargo variable Pico'),
     ('3', 'Cargo variable Valle'),
@@ -20,6 +20,6 @@ class ProductoConsumo(ModelSQL, ModelView):
     __name__ = "sigcoop_wizard_ventas.producto_consumo"
 
     producto_id = fields.Many2One('product.product', 'Producto')
-    codigo_consumo = fields.Selection(CODIGOS, 'Codigo consumo')
+    concepto = fields.Selection(CONCEPTOS, 'Concepto')
     cantidad_fija = fields.Boolean('Cantidad fija?')
     cantidad = fields.Integer('Cantidad')

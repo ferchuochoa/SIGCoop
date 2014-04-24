@@ -10,7 +10,7 @@ class Medidor(ModelSQL, ModelView):
 
     idMedidor = fields.Char('IdMedidor', required=True)
     registrador = fields.Integer('Registrador', required=True)
-    consumos = fields.One2Many('sigcoop_consumos.comsumo', 'id_medidor', 'Consumos')
+    consumos = fields.One2Many('sigcoop_consumos.consumo', 'id_medidor', 'Consumos')
 
     @staticmethod
     def default_registrador():

@@ -87,21 +87,24 @@ class CrearVentas(Wizard):
             new_line.unit_price = product.get_sale_price([product], amount)[product.id]
         return new_line
 
-    def crear_sale_lines(self, codigo_consumo, cantidad_consumida, customer, price_list):
+    def crear_sale_lines(self, concepto, cantidad_consumida, customer, price_list):
         ret = []
         ProductoConsumo = Pool().get('sigcoop_wizard_ventas.producto_consumo')
-        producto_consumo_list = ProductoConsumo.search([('codigo_consumo', '=', codigo_consumo)])
+        producto_consumo_list = ProductoConsumo.search([('concepto', '=', concepto)])
         for producto_consumo in producto_consumo_list:
             cantidad = producto_consumo.cantidad_fija and producto_consumo.cantidad or cantidad_consumida
             ret.append(self.crear_sale_line(cantidad, producto_consumo.producto_id, customer, price_list))
+        logger.error("Las sale lines son:")
+        logger.error(ret)
         return ret
 
-    def crear_sales(self, id_suministro, cantidad_consumida, codigo_consumo):
+    def crear_sale(self, id_suministro, cantidad_consumida, concepto):
         """
-        Crea instancias de sale.sale
+        Crea una instancia de sale.sale
         """
         Sale = Pool().get('sale.sale')
         Suministro = Pool().get('sigcoop_usuario.suministro')
+
         suministro = self.buscar(Suministro, id, id_suministro)
         party = suministro and suministro.usuario_id or None
         price_list = suministro.lista_precios
@@ -110,7 +113,7 @@ class CrearVentas(Wizard):
                 price_list=price_list,
                 description="Sale para %s" % (self.construir_descripcion(),)
         )
-        sale.lines = self.crear_sale_lines(codigo_consumo, cantidad_consumida, party, price_list)
+        sale.lines = self.crear_sale_lines(concepto, cantidad_consumida, party, price_list)
         sale.save()
 
     def transition_crear(self):
@@ -118,14 +121,12 @@ class CrearVentas(Wizard):
         Esta es la primer transicion que se ejecuta cuando ingresamos los datos
         de facturacion.
         """
-        #import pudb; pu.db
-        logger.error("self es: %s" % self.__dict__)
         Consumos = Pool().get('sigcoop_consumos.consumo')
-        consumos_search_params = [
+        filtro_consumo = [
                 ('estado', '=', '1'),
                 ('periodo', '=', self.start.periodo),
         ]
-        for consumo in Consumos.search(consumos_search_params):
+        for consumo in Consumos.search(filtro_consumo):
             logger.error(consumo)
-            self.crear_sales(consumo.id_suministro, consumo.consumo_neto, consumo.concepto)
+            self.crear_sale(consumo.id_suministro, consumo.consumo_neto, consumo.concepto)
         return 'exito'
