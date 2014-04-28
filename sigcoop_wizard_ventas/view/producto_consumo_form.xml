@@ -2,8 +2,8 @@
 <form string="Familiar" col="6">
     <label name="producto_id"/>
     <field name="producto_id"/>
-    <label name="codigo_consumo"/>
-    <field name="codigo_consumo"/>
+    <label name="concepto"/>
+    <field name="concepto"/>
     <newline/>
     <label name="cantidad_fija"/>
     <field name="cantidad_fija"/>

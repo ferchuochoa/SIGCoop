@@ -1,36 +1,16 @@
 from trytond.pool import Pool
 from trytond.model import ModelView, fields
 from trytond.wizard import Wizard, StateView, StateTransition, Button
-#import logging
 from decimal import Decimal
 from trytond.transaction import Transaction
 import logging
 logger = logging.getLogger('sale')
 
-CATEGORIAS = [
-("T1AP", "T1AP Alumbrado Publico"),
-("T1GAC", "T1GAC Servicio General Alto Consumo"),
-("T1GBC", "T1GBC Servicio General Bajo Consumo"),
-("T1R", "T1R Residencial"),
-("T1R2", "T1R Residencial Social"),
-("T2BT", "T2BT Baja Tension"),
-("T2MT", "T2MT Media Tension"),
-("T3BT", "T3BT Baja Tension (>300KW)"),
-("T3BT2", "T3BT Baja Tension (50 a 300KW)"),
-("T3MT", "T3MT Media Tension (>300KW)"),
-("T3MT2", "T3MT Media Tension (50 a 300KW)"),
-("T4", "T4 Rural"),
-("T5BT", "T5BT Baja Tension (>300KW)"),
-("T5BT2", "T5BT Baja Tension (50 a 300KW)"),
-("T5MT", "T5MT Media Tension (>300KW)"),
-("T5MT2", "T5MT Media Tension (50 a 300KW)"),
-]
-
 class CrearVentasStart(ModelView):
     'Crear Ventas Start'
     __name__ = 'wizard_ventas.crear_ventas.start'
     periodo = fields.Char('Periodo')#, required=True)
-    categoria = fields.Selection(CATEGORIAS, 'Categoria')#, required=True)
+    categoria = fields.Many2One('product.price_list', 'Categoria')#, required=True)
     fecha_vencimiento_1 = fields.Date('1er Fecha de Vencimiento')#, required=True)
     fecha_vencimiento_2 = fields.Date('2da Fecha de Vencimiento')#, required=True)
     ruta = fields.Integer('Ruta')#, required=True)
@@ -85,6 +65,7 @@ class CrearVentas(Wizard):
                 )
         with Transaction().set_context({"price_list": price_list, "customer": customer}):
             new_line.unit_price = product.get_sale_price([product], amount)[product.id]
+        #new_line.taxes.append()
         return new_line
 
     def crear_sale_lines(self, concepto, cantidad_consumida, customer, price_list):
@@ -98,15 +79,28 @@ class CrearVentas(Wizard):
         logger.error(ret)
         return ret
 
-    def crear_sale(self, id_suministro, cantidad_consumida, concepto):
+    def get_extra_taxes(self, product, suministro, party):
+        ret = []
+        if product.aplica_ap:
+            ret.append(suministro.impuesto_alumbrado)
+        """
+        if product.aplica_iva:
+            pedimos el condition_iva a party y determinamos el tipo de impuesto a agregar
+            pass
+        if product.aplica_iibb:
+            preguntamos si el party esta exento
+            igual a alumbrado
+            pass
+        """
+        return ret
+
+    def crear_sale(self, suministro, cantidad_consumida, concepto):
         """
         Crea una instancia de sale.sale
         """
         Sale = Pool().get('sale.sale')
-        Suministro = Pool().get('sigcoop_usuario.suministro')
 
-        suministro = self.buscar(Suministro, id, id_suministro)
-        party = suministro and suministro.usuario_id or None
+        party = suministro.usuario_id
         price_list = suministro.lista_precios
         sale = Sale(
                 party=party,
@@ -114,6 +108,15 @@ class CrearVentas(Wizard):
                 description="Sale para %s" % (self.construir_descripcion(),)
         )
         sale.lines = self.crear_sale_lines(concepto, cantidad_consumida, party, price_list)
+        sale.save()
+        import pudb; pu.db
+        Tax = Pool().get('account.tax')
+        for i in sale.lines:
+            tax_ids = i.on_change_product().get("taxes")#lista de ids
+            tax_browse_records = Tax.browse(tax_ids) or []
+            extra_tax_browse_records = self.get_extra_taxes(i.product, suministro, party)
+            i.taxes = tuple(tax_browse_records) + tuple(extra_tax_browse_records)
+            i.save()
         sale.save()
 
     def transition_crear(self):
@@ -125,8 +128,12 @@ class CrearVentas(Wizard):
         filtro_consumo = [
                 ('estado', '=', '1'),
                 ('periodo', '=', self.start.periodo),
+                ('id_suministro.ruta', '=', self.start.ruta),
+                ('id_suministro.lista_precios', '=', self.start.categoria),
         ]
+        logger.error("===========Iterando sobre los consumos============")
         for consumo in Consumos.search(filtro_consumo):
             logger.error(consumo)
             self.crear_sale(consumo.id_suministro, consumo.consumo_neto, consumo.concepto)
+        logger.error("===========/Iterando sobre los consumos============")
         return 'exito'

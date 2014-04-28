@@ -21,8 +21,6 @@
   <label name="impuesto_alumbrado"/>
   <field name="impuesto_alumbrado"/>
   <newline/>
-  <label name="tarifa"/>
-  <field name="tarifa"/>
   <label name="lista_precios"/>
   <field name="lista_precios"/>
   <label name="potencia_contratada"/>

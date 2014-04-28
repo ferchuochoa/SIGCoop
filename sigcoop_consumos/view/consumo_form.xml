@@ -12,4 +12,8 @@
   <field name="lectura"/>
   <label name="consumo_neto"/>
   <field name="consumo_neto"/>
+  <label name="concepto"/>
+  <field name="concepto"/>
+  <label name="estado"/>
+  <field name="estado"/>
 </form>

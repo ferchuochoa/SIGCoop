@@ -46,7 +46,7 @@ class Suministro(ModelSQL, ModelView):
     #El tipo de alumbrado publico que se le cobra al cliente.
     impuesto_alumbrado = fields.Many2One('account.tax', 'Impuesto alumbrado publico')
     lista_precios = fields.Many2One('product.price_list', 'Lista de precios para tarifa')
-    tarifa = fields.Selection(TARIFAS, 'Tarifa')
+    #tarifa = fields.Selection(TARIFAS, 'Tarifa')
     potencia_contratada = fields.Integer('Potencia Contratada',
         states={
             'invisible': (~In(Eval('tarifa'), TARIFAS_POTENCIA_KEYS))

@@ -33,17 +33,16 @@ class Consumo(ModelSQL, ModelView):
     estado = fields.Selection(
         [
             ('0', 'No facturable'),
-            ('1', 'Facturable'), 
+            ('1', 'Facturable'),
             ('2', 'Facturado'),
         ],
         'Estado'
     )
-    
 
 
 #----------------------------Wizard de importacion----------------------------------#
 
-class ImportacionStart(ModelView): 
+class ImportacionStart(ModelView):
     "Importacion Start"
     __name__= 'sigcoop_consumos.importacion_consumos.start'
 
@@ -68,8 +67,8 @@ class ImportacionConsumos(Wizard):
     "Importacion Consumos"
     __name__= 'sigcoop_consumos.importacion_consumos'
 
-    start = StateView('sigcoop_consumos.importacion_consumos.start', 'sigcoop_consumos.view_importacion_form', 
-                      [Button('Cancelar', 'end', 'tryton-cancel'), 
+    start = StateView('sigcoop_consumos.importacion_consumos.start', 'sigcoop_consumos.view_importacion_form',
+                      [Button('Cancelar', 'end', 'tryton-cancel'),
                        Button('Importar', 'importar', 'tryton-go-next', default = True)])
 
     importar = StateTransition()
@@ -88,7 +87,7 @@ class ImportacionConsumos(Wizard):
             linea = ''
             while (i < len(file)) and (not file[i] == '\n'):
                 linea += file[i]
-                i+= 1 
+                i+= 1
             i+= 1
             (suministro,_,resto) = linea.partition(',')
             (medidor,_,resto) = resto.partition(',')
