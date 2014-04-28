@@ -109,7 +109,7 @@ class CrearVentas(Wizard):
         )
         sale.lines = self.crear_sale_lines(concepto, cantidad_consumida, party, price_list)
         sale.save()
-        import pudb; pu.db
+        #import pudb; pu.db
         Tax = Pool().get('account.tax')
         for i in sale.lines:
             tax_ids = i.on_change_product().get("taxes")#lista de ids
