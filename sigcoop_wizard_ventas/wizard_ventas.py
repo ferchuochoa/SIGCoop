@@ -5,15 +5,16 @@ from decimal import Decimal
 from trytond.transaction import Transaction
 import logging
 logger = logging.getLogger('sale')
+REQUERIDO = False
 
 class CrearVentasStart(ModelView):
     'Crear Ventas Start'
     __name__ = 'wizard_ventas.crear_ventas.start'
-    periodo = fields.Char('Periodo')#, required=True)
-    categoria = fields.Many2One('product.price_list', 'Categoria')#, required=True)
-    fecha_vencimiento_1 = fields.Date('1er Fecha de Vencimiento')#, required=True)
-    fecha_vencimiento_2 = fields.Date('2da Fecha de Vencimiento')#, required=True)
-    ruta = fields.Integer('Ruta')#, required=True)
+    periodo = fields.Char('Periodo', required=REQUERIDO)
+    categoria = fields.Many2One('product.price_list', 'Categoria', required=REQUERIDO)
+    fecha_vencimiento_1 = fields.Date('1er Fecha de Vencimiento', required=REQUERIDO)
+    fecha_vencimiento_2 = fields.Date('2da Fecha de Vencimiento', required=REQUERIDO)
+    ruta = fields.Integer('Ruta', required=REQUERIDO)
 
 class CrearVentasExito(ModelView):
     'Crear Ventas Exito'
@@ -55,8 +56,10 @@ class CrearVentas(Wizard):
         return "Descripcion"
 
     def crear_sale_line(self, amount, product, customer, price_list):
+        """
+        Creamos una linea de ventas de acuerdo a los parametros que recibimos.
+        """
         SaleLine = Pool().get('sale.line')
-        #Product = Pool().get('product.product')
         new_line = SaleLine(
                 product=product,
                 quantity=Decimal(amount),
@@ -65,7 +68,6 @@ class CrearVentas(Wizard):
                 )
         with Transaction().set_context({"price_list": price_list, "customer": customer}):
             new_line.unit_price = product.get_sale_price([product], amount)[product.id]
-        #new_line.taxes.append()
         return new_line
 
     def crear_sale_lines(self, concepto, cantidad_consumida, customer, price_list):
@@ -80,6 +82,10 @@ class CrearVentas(Wizard):
         return ret
 
     def get_extra_taxes(self, product, suministro, party):
+        """
+        Retornamos una lista de account.tax con los impuestos que tenemos que calcular
+        dinamicamente.
+        """
         ret = []
         if product.aplica_ap:
             ret.append(suministro.impuesto_alumbrado)
