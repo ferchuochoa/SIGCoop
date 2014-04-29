@@ -7,6 +7,7 @@ from decimal import Decimal
 
 
 """
+==================================Tax==================================
 Fields de impuestos
 
 Nombre
@@ -52,6 +53,7 @@ def translate_to_tax(_id, row, simulate):
     return ret
 
 """
+==================================Product==================================
 Fields de producto
 
 Nombre
@@ -133,8 +135,10 @@ def check_price_list(price_list_name, simulate):
         return None
     return pl[0]
 
-
 """
+==================================PriceList==================================
+
+
 Fields de pricelist
 
 Nombre
@@ -163,14 +167,29 @@ def translate_to_price_list_line(_id, row, simulate):
 
     return ret
 
+"""
+==================================ProductoConsumo==================================
+"""
+
+def transalate_to_producto_consumo(_id, row, simulate):
+    ret = {
+            "model" : "sigcoop_wizard_ventas.producto_consumo",
+            "id" : _id,
+            "producto_id":("product.product", [('name', '=', row["Líneas/Producto/Nombre"])]),
+            "concepto": None,
+            "tarifa":None,
+            "cantidad_fija":None,
+            "cantidad":None,
+    }
+    return ret
+
 def create_entities(csv_reader, translator, simulate=False):
     for _id, row in enumerate(csv_reader):
         #Traducimos cada fila a un diccionario
         entity_dict = translator(_id, row, simulate)
         if entity_dict is None:
             print "============= WARNING! No creamos el registro %s. ====================" % _id
-            print entity_dict
-            print "============================="
+            print "============= Checkea la linea %s +2 ===============" % _id
         elif not simulate:
             create_entity(entity_dict)
         else:
@@ -231,6 +250,7 @@ def main():
         print "Vamos a crear las entidades de %s" % str(sys.argv[4:])
         translators = [translate_to_tax, translate_to_product, translate_to_price_list_line]
         for filename, translator in zip(sys.argv[4:], translators):
+            print "Creando entidades para %s" % filename
             with open(filename) as fi:
                 create_entities(csv.DictReader(fi, delimiter=";"), translator, False)
 
