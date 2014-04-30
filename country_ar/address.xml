@@ -9,17 +9,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="model">party.address</field>
             <field name="type">form</field>
             <field name="inherit" ref="party.address_view_form"/>
-            <field name="arch" type="xml">
-                <![CDATA[
-                <data>
-                    <xpath
-                        expr="/form/field[@name=&quot;subdivision&quot;]"
-                        position="replace">
-                        <field name="subdivision"/>
-                    </xpath>
-                </data>
-                ]]>
-            </field>
+            <field name="name">address_form</field>
         </record>
 
     </data>

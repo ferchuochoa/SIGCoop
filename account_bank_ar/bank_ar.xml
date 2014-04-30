@@ -7,57 +7,12 @@ the full copyright notices and license terms. -->
         <record model="ir.ui.view" id="bank_view_form">
             <field name="model">account.bank</field>
             <field name="type">form</field>
-            <field name="arch" type="xml">
-                <![CDATA[
-                <form string="Bank" col="6">
-                    <label name="name"/>
-                    <field name="name"/>
-                    <label name="code"/>
-                    <field name="code"/>
-                    <label name="active"/>
-                    <field name="active" xexpand="0" width="100"/>
-                    <newline/>
-                    <separator string="Address" colspan="3" id="address"/>
-                    <separator string="Communication" colspan="3"
-                        id="communication"/>
-                    <group colspan="3" col="4" id="address_group">
-                        <label name="street"/>
-                        <field name="street"/>
-                        <label name="street2"/>
-                        <field name="street2"/>
-                        <label name="zip"/>
-                        <field name="zip"/>
-                        <label name="city"/>
-                        <field name="city"/>
-                        <label name="country"/>
-                        <field name="country"/>
-                        <label name="state"/>
-                        <field name="state"/>
-                    </group>
-                    <group colspan="3" col="2" id="communication_group">
-                        <label name="phone"/>
-                        <field name="phone"/>
-                        <label name="fax"/>
-                        <field name="fax"/>
-                        <label name="email"/>
-                        <field name="email"/>
-                    </group>
-                </form>
-                ]]>
-            </field>
+            <field name="name">bank_form</field>
         </record>
         <record model="ir.ui.view" id="bank_view_tree">
             <field name="model">account.bank</field>
             <field name="type">tree</field>
-            <field name="arch" type="xml">
-                <![CDATA[
-                <tree string="Banks">
-                    <field name="name"/>
-                    <field name="code"/>
-                    <field name="country"/>
-                </tree>
-                ]]>
-            </field>
+            <field name="name">bank_tree</field>
         </record>
         <record model="ir.action.act_window" id="act_bank_form">
             <field name="name">Banks</field>
@@ -84,75 +39,18 @@ the full copyright notices and license terms. -->
         <record model="ir.ui.view" id="party_bank_view_form">
             <field name="model">account.party.bank</field>
             <field name="type">form</field>
-            <field name="arch" type="xml">
-                <![CDATA[
-                <form string="Bank Account" col="6">
-                    <label name="name"/>
-                    <field name="name"/>
-                    <label name="bank"/>
-                    <field name="bank"/>
-                    <label name="active"/>
-                    <field name="active" xexpand="0" width="100"/>
-                    <label name="journal"/>
-                    <field name="journal"/>
-                    <newline/>
-                    <separator string="Address" colspan="3" id="address"/>
-                    <separator string="Communication" colspan="3"
-                        id="communication"/>
-                    <group colspan="3" col="4" id="address_group">
-                        <label name="street"/>
-                        <field name="street"/>
-                        <label name="street2"/>
-                        <field name="street2"/>
-                        <label name="zip"/>
-                        <field name="zip"/>
-                        <label name="city"/>
-                        <field name="city"/>
-                        <label name="country"/>
-                        <field name="country"/>
-                        <label name="state"/>
-                        <field name="state"/>
-                    </group>
-                    <group colspan="3" col="2" id="communication_group">
-                        <label name="phone"/>
-                        <field name="phone"/>
-                        <label name="fax"/>
-                        <field name="fax"/>
-                        <label name="email"/>
-                        <field name="email"/>
-                    </group>
-                </form>
-                ]]>
-            </field>
+            <field name="name">party_bank_form</field>
         </record>
         <record model="ir.ui.view" id="party_bank_view_tree">
             <field name="model">account.party.bank</field>
             <field name="type">tree</field>
-            <field name="arch" type="xml">
-                <![CDATA[
-                <tree string="Bank Accounts">
-                    <field name="name"/>
-                    <field name="bank"/>
-                </tree>
-                ]]>
-            </field>
+            <field name="name">party_bank_tree</field>
         </record>
         <record model="ir.ui.view" id="party_view_form">
             <field name="model">party.party</field>
             <field name="inherit" ref="party.party_view_form"/>
             <field name="type">form</field>
-            <field name="arch" type="xml">
-                <![CDATA[
-                <data>
-                    <xpath
-                        expr="/form/notebook/page[@id=&quot;accounting&quot;]/field[@name=&quot;supplier_tax_rule&quot;]"
-                        position="after">
-                        <field name="bank_accounts" mode="tree,form" colspan="4"
-                            view_ids="account_bank_ar.party_bank_view_tree,account_bank_ar.party_bank_view_form"/>
-                    </xpath>
-                </data>
-                ]]>
-            </field>
+            <field name="name">party_form</field>
         </record>
     </data>
     <data skiptest="1">
