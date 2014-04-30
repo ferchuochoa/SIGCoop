@@ -11,5 +11,10 @@ this repository contains the full copyright notices and license terms. -->
         <field name="aplica_iva"/>
         <label name="aplica_iibb"/>
         <field name="aplica_iibb"/>
+        <newline/>
+        <label name="tipo_cargo"/>
+        <field name="tipo_cargo"/>
+        <label name="tipo_producto"/>
+        <field name="tipo_producto"/>
     </xpath>
 </data>

@@ -9,4 +9,7 @@
     <field name="cantidad_fija"/>
     <label name="cantidad"/>
     <field name="cantidad"/>
+    <newline/>
+    <label name="tarifa_id"/>
+    <field name="tarifa_id"/>
 </form>

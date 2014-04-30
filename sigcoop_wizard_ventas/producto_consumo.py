@@ -20,6 +20,7 @@ class ProductoConsumo(ModelSQL, ModelView):
     __name__ = "sigcoop_wizard_ventas.producto_consumo"
 
     producto_id = fields.Many2One('product.product', 'Producto')
+    tarifa_id = fields.Many2One('product.price_list', 'Tarifa')
     concepto = fields.Selection(CONCEPTOS, 'Concepto')
     cantidad_fija = fields.Boolean('Cantidad fija?')
     cantidad = fields.Integer('Cantidad')

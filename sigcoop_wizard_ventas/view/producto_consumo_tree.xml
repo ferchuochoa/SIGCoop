@@ -4,4 +4,5 @@
     <field name="concepto"/>
     <field name="cantidad_fija"/>
     <field name="cantidad"/>
+    <field name="tarifa_id"/>
 </tree>
