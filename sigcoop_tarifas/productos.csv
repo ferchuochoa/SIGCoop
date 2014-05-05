@@ -1,451 +1,451 @@
-Nombre;Cuenta de ingresos/Código;Precio de lista;Precio de costo;Tipo;Producto de precio independiente de la cantidad;Categoria/Nombre;UdM por defecto/Nombre;Vendible;Comprable;Consumible;Impuestos de cliente/Nombre;Iva;IIBB;AP
-Resta Cargo Variable T1R Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable T1R Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Incremento Costo Mayorista T1R;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True
-Cargo Variable T1R;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True
-Resolución MI 206/13  T1R;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True
-Cargo Fijo T1R;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%#Ord. Municipal 2756/09 Tasa Salud T1R;True;True;True
-Desconexión directa ( 2a. rehab.) T1R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Rehabilitacion (fusible) T1R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea - Trifasica T1R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea - Monofasica T1R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Aerea-Trifasica T1R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Aerea-Monofasica T1R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Res. Asamblea 30/12/04 T1R Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T1R;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cargo Fijo T1AP;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable T1AP;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable T1AP Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable T1AP Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Incremento Costo Mayorista T1AP;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Resolución 705 T1AP;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Conexión Aerea-Monofasica T1AP;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Aerea-Trifasica T1AP;4223;1;1;service;;Servicios de Energía;Unidad;True;True;;;True;False;False
-Conexión Subterranea-Monofasica T1AP;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Trifasica T1AP;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Rehabilitacion T1AP;4223;1;1;service;True;Servicios de Energía;Unidad;True;False;;;True;False;False
-Desconexión Directa T1AP;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Cargo Fijo T1GBC;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ord. Municipal 2756/09 Tasa Salud T1GBC;True;True;True
-Cargo Variable T1GBC;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista T1GBC;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-RES MI 206/13 T1GBC;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Perdida Transformador T1GBC;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable T1GBC Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable T1GBC Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Conexión Aerea-Monofasica T1GBC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Aerea-Trifasica T1GBC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Monofasica T1GBC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Trifasica T1GBC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Rehabilitacion T1GBC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Desconexion Directa T1GBC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Res. Asamblea 30/12/04 T1GBC Cuota Capital ;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T1GBC;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cargo Fijo T1GAC;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ord. Municipal 2756/09 Tasa Salud T1GAC;True;True;True
-Cargo Variable T1GAC;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista T1GAC;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-RES MI 206/13 T1GAC;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Perdida Transformador T1GAC;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable T1GAC Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Perdida Transformador T1GAC Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable T1GAC Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Perdida Transformador T1GAC Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Conexión Aerea-Monofasica T1GAC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Aerea-Trifasica T1GAC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Monofasica T1GAC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Trifasica T1GAC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Rehabilitacion T1GAC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Desconexion Directa T1GAC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Res. Asamblea 30/12/04 T1GAC Cuota Capital ;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T1GAC;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cargo Fijo 1 TIS;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True
-Cargo Fijo 2 TIS;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True
-Cargo Variable TIS;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True
-Cargo Variable TIS Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable TIS Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Conexión Aerea-Monofasica TIS;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Rehabilitacion TIS;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Desconexion Directa TIS;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Res. Asamblea 30/12/04 TIS Cuota Capital ;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 TIS;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cargo Fijo T2BT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ord. Municipal 2756/09 Tasa Salud T2BT;True;True;True
-Cargo Potencia en Pico T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Potencia Fuera de Pico T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Exceso de Potencia en Pico T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Exceso de Potencia Fuera Pico T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable por Energia Demandada En Pico T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable por Energia Demandada Fuera de Pico T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Bajo Coseno de Fi T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Perdida Transformador T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-RES MI 206/13 T2BT;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista Pico T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista Fuera de Pico T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Potencia en Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Fuera de Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia en Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Fuera Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable por Energia Demandada En Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable por Energia Demandada Fuera de Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Bajo Coseno de Fi T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Perdida Transformador T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia en Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Fuera de Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia en Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Fuera Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable por Energia Demandada En Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable por Energia Demandada Fuera de Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Bajo Coseno de Fi T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Perdida Transformador T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Res. Asamblea 30/12/04 T2BT Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T2BT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Conexión Aerea-Monofasica T2BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Aerea-Trifasica T2BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Monofasica T2BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Trifasica T2BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Rehabilitacion T2BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Desconexion Directa T2BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Cargo Fijo T2MT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ord. Municipal 2756/09 Tasa Salud T2MT;True;True;True
-Cargo Potencia en Pico T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Potencia Fuera de Pico T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Exceso de Potencia en Pico T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Exceso de Potencia Fuera Pico T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable por Energia Demandada En Pico T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable por Energia Demandada Fuera de Pico T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Bajo Coseno de Fi T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Perdida Transformador T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-RES MI 206/13 T2MT;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista Pico T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista Fuera de Pico T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Potencia en Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Fuera de Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia en Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Fuera Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable por Energia Demandada En Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable por Energia Demandada Fuera de Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Bajo Coseno de Fi T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Perdida Transformador T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia en Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Fuera de Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia en Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Fuera Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable por Energia Demandada En Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable por Energia Demandada Fuera de Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Bajo Coseno de Fi T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Perdida Transformador T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Res. Asamblea 30/12/04 T2MT Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T2MT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Conexión Aerea-Monofasica T2MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Aerea-Trifasica T2MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Monofasica T2MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Trifasica T2MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Rehabilitacion T2MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Desconexion Directa T2MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Cargo Fijo T3BT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ord. Municipal 2756/09 Tasa Salud T3BT;True;True;True
-Cargo Variable Pico T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable Valle T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable Resto T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Potencia Pico T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Potencia Resto T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Exceso de Potencia Pico T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Exceso de Potencia Resto T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Bajo Coseno de Fi T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Perdida Transformador T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-RES MI 206/13 T3BT;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista Pico T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista Valle T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista Resto T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable Pico T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable Valle T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable Resto T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Pico T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Resto T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Pico T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Resto T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Bajo Coseno de Fi T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Perdida Transformador T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Pico T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Valle T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Resto T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Pico T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Resto T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Pico T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Resto T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Bajo Coseno de Fi T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Perdida Transformador T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Res. Asamblea 30/12/04 T3BT Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T3BT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Conexión Aerea-Monofasica T3BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Aerea-Trifasica T3BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Monofasica T3BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Trifasica T3BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Rehabilitacion T3BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Desconexion Directa T3BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Cargo Fijo T3BT (>300);421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ord. Municipal 2756/09 Tasa Salud T3BT (> 300);True;True;True
-Cargo Variable Pico T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable Valle T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable Resto T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Potencia Pico T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Potencia Resto T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Exceso de Potencia Pico T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Exceso de Potencia Resto T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Bajo Coseno de Fi T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Perdida Transformador T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-RES MI 206/13 T3BT (>300);421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista Pico T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista Valle T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista Resto T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable Pico T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable Valle T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable Resto T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Pico T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Resto T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Pico T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Resto T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Bajo Coseno de Fi T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Perdida Transformador T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Pico T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Valle T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Resto T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Pico T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Resto T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Pico T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Resto T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Bajo Coseno de Fi T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Perdida Transformador T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Res. Asamblea 30/12/04 T3BT (>300) Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T3BT (>300);421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Conexión Aerea-Monofasica T3BT (>300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Aerea-Trifasica T3BT (>300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Monofasica T3BT (>300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Trifasica T3BT (>300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Rehabilitacion T3BT (>300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Desconexion Directa T3BT (>300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Cargo Fijo T3MT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ord. Municipal 2756/09 Tasa Salud T3MT;True;True;True
-Cargo Variable Pico T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable Valle T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable Resto T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Potencia Pico T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Potencia Resto T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Exceso de Potencia Pico T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Exceso de Potencia Resto T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Bajo Coseno de Fi T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Perdida Transformador T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-RES MI 206/13 T3MT;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista Pico T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista Valle T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista Resto T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable Pico T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable Valle T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable Resto T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Pico T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Resto T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Pico T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Resto T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Bajo Coseno de Fi T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Perdida Transformador T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Pico T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Valle T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Resto T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Pico T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Resto T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Pico T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Resto T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Bajo Coseno de Fi T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Perdida Transformador T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Res. Asamblea 30/12/04 T3MT Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T3MT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Conexión Aerea-Monofasica T3MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Aerea-Trifasica T3MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Monofasica T3MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Trifasica T3MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Rehabilitacion T3MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Desconexion Directa T3MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Cargo Fijo T3MT (> 300);421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ord. Municipal 2756/09 Tasa Salud T3MT (> 300);True;True;True
-Cargo Variable Pico T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable Valle T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable Resto T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Potencia Pico T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Potencia Resto T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Exceso de Potencia Pico T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Exceso de Potencia Resto T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Bajo Coseno de Fi T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Perdida Transformador T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-RES MI 206/13 T3MT (> 300);421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista Pico T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista Valle T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Incremento Costo Mayorista Resto T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable Pico T3MT Sin Subsidio (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable Valle T3MT Sin Subsidio (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable Resto T3MT Sin Subsidio (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Pico T3MT (> 300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Resto T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Pico T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Resto T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Bajo Coseno de Fi T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Perdida Transformador T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Pico T3MT Sin Subsidio (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Valle T3MT Sin Subsidio (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Resto T3MT Sin Subsidio (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Pico T3MT (> 300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Resto T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Pico T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Resto T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Bajo Coseno de Fi T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Perdida Transformador T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Res. Asamblea 30/12/04 T3MT (> 300) Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T3MT (> 300);421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Conexión Aerea-Monofasica T3MT (> 300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Aerea-Trifasica T3MT (> 300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Monofasica T3MT (> 300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Trifasica T3MT (> 300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Rehabilitacion T3MT (> 300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Desconexion Directa T3MT (> 300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Cargo Fijo T4R;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6#%Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%#Ord. Municipal 2756/09 Tasa Salud T4R;True;True;True
-Cargo Variable T4R;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6#%Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True
-Incremento Costo Mayorista T4R;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6#%Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True
-RES MI 206/13 T4R;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6#%Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True
-Cargo Perdida Transformador T4R;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6#%Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True
-Cargo Variable T4R Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Perdida Transformador T4R Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable T4R Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Perdida Transformador T4R Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Res. Asamblea 30/12/04 T4R Cuota Capital ;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Conexión Aerea-Monofasica T4R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Aerea-Trifasica T4R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Monofasica T4R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Conexión Subterranea-Trifasica T4R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Rehabilitacion T4R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Desconexion Directa T4R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False
-Cargo Fijo T5BT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Variable Pico T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Variable Valle T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Variable Resto T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Potencia Pico T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Potencia Resto T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Recargo por Exceso de Potencia Pico T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Recargo por Exceso de Potencia Resto T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Recargo por Bajo Coseno de Fi T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Perdida Transformador T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-RES MI 206/13 T5BT;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Variable Pico T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable Valle T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable Resto T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Pico T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Resto T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Pico T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Resto T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Bajo Coseno de Fi T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Perdida Transformador T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Pico T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Valle T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Resto T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Pico T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Resto T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Pico T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Resto T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Bajo Coseno de Fi T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Perdida Transformador T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Res. Asamblea 30/12/04 T5BT Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T5BT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cargo Fijo T5BT (>300);421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Variable Pico T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Variable Valle T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Variable Resto T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Potencia Pico T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Potencia Resto T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Recargo por Exceso de Potencia Pico T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Recargo por Exceso de Potencia Resto T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Recargo por Bajo Coseno de Fi T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Perdida Transformador T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-RES MI 206/13 T5BT (>300);421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Variable Pico T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable Valle T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable Resto T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Pico T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Resto T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Pico T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Resto T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Bajo Coseno de Fi T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Perdida Transformador T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Pico T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Valle T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Resto T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Pico T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Resto T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Pico T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Resto T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Bajo Coseno de Fi T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Perdida Transformador T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Res. Asamblea 30/12/04 T5BT (>300) Cuota Capital ;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T5BT (>300);421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cargo Fijo T5MT ;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Variable Pico T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Variable Valle T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Variable Resto T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Potencia Pico T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Potencia Resto T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Recargo por Exceso de Potencia Pico T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Recargo por Exceso de Potencia Resto T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Recargo por Bajo Coseno de Fi T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Perdida Transformador T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-RES MI 206/13 T5MT;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True
-Cargo Variable Pico T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable Valle T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable Resto T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Pico T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Resto T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Pico T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Resto T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Bajo Coseno de Fi T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Perdida Transformador T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Pico T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Valle T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Resto T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Pico T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Resto T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Pico T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Resto T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Bajo Coseno de Fi T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Perdida Transformador T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Res. Asamblea 30/12/04 T5MT Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T5MT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cargo Fijo T5MT (>300);421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable Pico T5MT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable Valle T5MT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable Resto T5MT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Potencia Pico T5MT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Potencia Resto T5MT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Exceso de Potencia Pico T5MT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Exceso de Potencia Resto T5MT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Recargo por Bajo Coseno de Fi T5MT (>300) ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Perdida Transformador T5MT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-RES MI 206/13 T5MT (>300);421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True
-Cargo Variable Pico T5MT (>300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable Valle T5MT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Variable Resto T5MT (>300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Pico T5MT (>300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Potencia Resto T5MT (>300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Pico T5MT (>300)Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Exceso de Potencia Resto T5MT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Recargo por Bajo Coseno de Fi T5MT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Cargo Perdida Transformador T5MT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Pico T5MT (>300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Valle T5MT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Variable Resto T5MT (>300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Pico T5MT (>300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Potencia Resto T5MT (>300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Pico T5MT (>300)Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Exceso de Potencia Resto T5MT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Recargo por Bajo Coseno de Fi T5MT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Resta Cargo Perdida Transformador T5MT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False
-Res. Asamblea 30/12/04 T5MT (>300) Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
-Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T5MT (>300);421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False
+Nombre;Cuenta de ingresos/Código;Precio de lista;Precio de costo;Tipo;Producto de precio independiente de la cantidad;Categoria/Nombre;UdM por defecto/Nombre;Vendible;Comprable;Consumible;Impuestos de cliente/Nombre;Iva;IIBB;AP;TipoCargo;TipoProducto
+Resta Cargo Variable T1R Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable T1R Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Incremento Costo Mayorista T1R;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True;Variable;Cargos
+Cargo Variable T1R;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True;Variable;Cargos
+Resolución MI 206/13  T1R;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True;Variable;Cargos
+Cargo Fijo T1R;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%#Ord. Municipal 2756/09 Tasa Salud T1R;True;True;True;Fijo;Cargos
+Desconexión directa ( 2a. rehab.) T1R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Rehabilitacion (fusible) T1R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea - Trifasica T1R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea - Monofasica T1R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Aerea-Trifasica T1R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Aerea-Monofasica T1R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Res. Asamblea 30/12/04 T1R Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T1R;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cargo Fijo T1AP;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Fijo;Cargos
+Cargo Variable T1AP;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable T1AP Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable T1AP Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Incremento Costo Mayorista T1AP;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Resolución 705 T1AP;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Conexión Aerea-Monofasica T1AP;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Aerea-Trifasica T1AP;4223;1;1;service;;Servicios de Energía;Unidad;True;True;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Monofasica T1AP;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Trifasica T1AP;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Rehabilitacion T1AP;4223;1;1;service;True;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Desconexión Directa T1AP;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Cargo Fijo T1GBC;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ord. Municipal 2756/09 Tasa Salud T1GBC;True;True;True;Fijo;Cargos
+Cargo Variable T1GBC;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista T1GBC;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+RES MI 206/13 T1GBC;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Perdida Transformador T1GBC;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable T1GBC Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable T1GBC Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Conexión Aerea-Monofasica T1GBC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Aerea-Trifasica T1GBC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Monofasica T1GBC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Trifasica T1GBC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Rehabilitacion T1GBC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Desconexion Directa T1GBC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Res. Asamblea 30/12/04 T1GBC Cuota Capital ;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T1GBC;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cargo Fijo T1GAC;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ord. Municipal 2756/09 Tasa Salud T1GAC;True;True;True;Fijo;Cargos
+Cargo Variable T1GAC;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista T1GAC;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+RES MI 206/13 T1GAC;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Perdida Transformador T1GAC;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable T1GAC Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Perdida Transformador T1GAC Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable T1GAC Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Perdida Transformador T1GAC Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Conexión Aerea-Monofasica T1GAC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Aerea-Trifasica T1GAC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Monofasica T1GAC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Trifasica T1GAC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Rehabilitacion T1GAC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Desconexion Directa T1GAC;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Res. Asamblea 30/12/04 T1GAC Cuota Capital ;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T1GAC;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cargo Fijo 1 TIS;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True;Fijo;Cargos
+Cargo Fijo 2 TIS;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True;Fijo;Cargos
+Cargo Variable TIS;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True;Variable;Cargos
+Cargo Variable TIS Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable TIS Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Conexión Aerea-Monofasica TIS;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Rehabilitacion TIS;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Desconexion Directa TIS;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Res. Asamblea 30/12/04 TIS Cuota Capital ;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 TIS;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cargo Fijo T2BT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ord. Municipal 2756/09 Tasa Salud T2BT;True;True;True;Fijo;Cargos
+Cargo Potencia en Pico T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Fuera de Pico T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia en Pico T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Fuera Pico T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable por Energia Demandada En Pico T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable por Energia Demandada Fuera de Pico T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Bajo Coseno de Fi T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Perdida Transformador T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+RES MI 206/13 T2BT;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista Pico T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista Fuera de Pico T2BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia en Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Fuera de Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia en Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Fuera Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable por Energia Demandada En Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable por Energia Demandada Fuera de Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Bajo Coseno de Fi T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Perdida Transformador T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia en Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Fuera de Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia en Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Fuera Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable por Energia Demandada En Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable por Energia Demandada Fuera de Pico T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Bajo Coseno de Fi T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Perdida Transformador T2BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Res. Asamblea 30/12/04 T2BT Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T2BT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Conexión Aerea-Monofasica T2BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Aerea-Trifasica T2BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Monofasica T2BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Trifasica T2BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Rehabilitacion T2BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Desconexion Directa T2BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Cargo Fijo T2MT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ord. Municipal 2756/09 Tasa Salud T2MT;True;True;True;Fijo;Cargos
+Cargo Potencia en Pico T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Fuera de Pico T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia en Pico T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Fuera Pico T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable por Energia Demandada En Pico T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable por Energia Demandada Fuera de Pico T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Bajo Coseno de Fi T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Perdida Transformador T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+RES MI 206/13 T2MT;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista Pico T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista Fuera de Pico T2MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia en Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Fuera de Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia en Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Fuera Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable por Energia Demandada En Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable por Energia Demandada Fuera de Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Bajo Coseno de Fi T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Perdida Transformador T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia en Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Fuera de Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia en Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Fuera Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable por Energia Demandada En Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable por Energia Demandada Fuera de Pico T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Bajo Coseno de Fi T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Perdida Transformador T2MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Res. Asamblea 30/12/04 T2MT Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T2MT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Conexión Aerea-Monofasica T2MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Aerea-Trifasica T2MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Monofasica T2MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Trifasica T2MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Rehabilitacion T2MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Desconexion Directa T2MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Cargo Fijo T3BT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ord. Municipal 2756/09 Tasa Salud T3BT;True;True;True;Fijo;Cargos
+Cargo Variable Pico T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Valle T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Resto T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Pico T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Resto T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Pico T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Resto T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Bajo Coseno de Fi T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Perdida Transformador T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+RES MI 206/13 T3BT;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista Pico T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista Valle T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista Resto T3BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T2 6%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Pico T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable Valle T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable Resto T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Pico T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Resto T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Pico T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Resto T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Bajo Coseno de Fi T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Perdida Transformador T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Pico T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Valle T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Resto T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Pico T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Resto T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Pico T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Resto T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Bajo Coseno de Fi T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Perdida Transformador T3BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Res. Asamblea 30/12/04 T3BT Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T3BT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Conexión Aerea-Monofasica T3BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Aerea-Trifasica T3BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Monofasica T3BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Trifasica T3BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Rehabilitacion T3BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Desconexion Directa T3BT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Cargo Fijo T3BT (>300);421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ord. Municipal 2756/09 Tasa Salud T3BT (> 300);True;True;True;Fijo;Cargos
+Cargo Variable Pico T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Valle T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Resto T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Pico T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Resto T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Pico T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Resto T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Bajo Coseno de Fi T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Perdida Transformador T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+RES MI 206/13 T3BT (>300);421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista Pico T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista Valle T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista Resto T3BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Pico T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable Valle T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable Resto T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Pico T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Resto T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Pico T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Resto T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Bajo Coseno de Fi T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Perdida Transformador T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Pico T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Valle T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Resto T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Pico T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Resto T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Pico T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Resto T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Bajo Coseno de Fi T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Perdida Transformador T3BT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Res. Asamblea 30/12/04 T3BT (>300) Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T3BT (>300);421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Conexión Aerea-Monofasica T3BT (>300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Aerea-Trifasica T3BT (>300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Monofasica T3BT (>300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Trifasica T3BT (>300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Rehabilitacion T3BT (>300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Desconexion Directa T3BT (>300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Cargo Fijo T3MT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ord. Municipal 2756/09 Tasa Salud T3MT;True;True;True;Fijo;Cargos
+Cargo Variable Pico T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Valle T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Resto T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Pico T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Resto T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Pico T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Resto T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Bajo Coseno de Fi T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Perdida Transformador T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+RES MI 206/13 T3MT;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista Pico T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista Valle T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista Resto T3MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Pico T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable Valle T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable Resto T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Pico T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Resto T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Pico T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Resto T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Bajo Coseno de Fi T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Perdida Transformador T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Pico T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Valle T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Resto T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Pico T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Resto T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Pico T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Resto T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Bajo Coseno de Fi T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Perdida Transformador T3MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Res. Asamblea 30/12/04 T3MT Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T3MT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Conexión Aerea-Monofasica T3MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Aerea-Trifasica T3MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Monofasica T3MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Trifasica T3MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Rehabilitacion T3MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Desconexion Directa T3MT;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Cargo Fijo T3MT (> 300);421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ord. Municipal 2756/09 Tasa Salud T3MT (> 300);True;True;True;Fijo;Cargos
+Cargo Variable Pico T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Valle T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Resto T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Pico T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Resto T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Pico T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Resto T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Bajo Coseno de Fi T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Perdida Transformador T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+RES MI 206/13 T3MT (> 300);421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista Pico T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista Valle T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista Resto T3MT (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT T3 3%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Pico T3MT Sin Subsidio (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable Valle T3MT Sin Subsidio (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable Resto T3MT Sin Subsidio (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Pico T3MT (> 300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Resto T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Pico T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Resto T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Bajo Coseno de Fi T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Perdida Transformador T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Pico T3MT Sin Subsidio (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Valle T3MT Sin Subsidio (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Resto T3MT Sin Subsidio (> 300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Pico T3MT (> 300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Resto T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Pico T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Resto T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Bajo Coseno de Fi T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Perdida Transformador T3MT (> 300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Res. Asamblea 30/12/04 T3MT (> 300) Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T3MT (> 300);421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Conexión Aerea-Monofasica T3MT (> 300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Aerea-Trifasica T3MT (> 300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Monofasica T3MT (> 300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Trifasica T3MT (> 300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Rehabilitacion T3MT (> 300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Desconexion Directa T3MT (> 300);4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Cargo Fijo T4R;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%#Ord. Municipal 2756/09 Tasa Salud T4R;True;True;True;Fijo;Cargos
+Cargo Variable T4R;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True;Variable;Cargos
+Incremento Costo Mayorista T4R;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True;Variable;Cargos
+RES MI 206/13 T4R;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True;Variable;Cargos
+Cargo Perdida Transformador T4R;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 11769-FPCT Prov. 6%#Ley 23681-Fesp.Sta.Cruz 0,6%#Ley 7290-Prov. 10.00%#Ley 9038-Prov. 5.5%;True;True;True;Variable;Cargos
+Cargo Variable T4R Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Perdida Transformador T4R Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable T4R Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Perdida Transformador T4R Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Plan Municipal de AP Ord. 3000/10;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Res. Asamblea 30/12/04 T4R Cuota Capital ;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Conexión Aerea-Monofasica T4R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Aerea-Trifasica T4R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Monofasica T4R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Conexión Subterranea-Trifasica T4R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Rehabilitacion T4R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Desconexion Directa T4R;4223;1;1;service;;Servicios de Energía;Unidad;True;False;;;True;False;False;Fijo;Otros
+Cargo Fijo T5BT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Fijo;Cargos
+Cargo Variable Pico T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Valle T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Resto T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Pico T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Resto T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Pico T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Resto T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Recargo por Bajo Coseno de Fi T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Perdida Transformador T5BT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+RES MI 206/13 T5BT;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Pico T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable Valle T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable Resto T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Pico T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Resto T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Pico T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Resto T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Bajo Coseno de Fi T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Perdida Transformador T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Pico T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Valle T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Resto T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Pico T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Resto T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Pico T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Resto T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Bajo Coseno de Fi T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Perdida Transformador T5BT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Res. Asamblea 30/12/04 T5BT Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Otros
+Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T5BT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Otros
+Cargo Fijo T5BT (>300);421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Fijo;Cargos
+Cargo Variable Pico T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Valle T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Resto T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Pico T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Resto T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Pico T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Resto T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Recargo por Bajo Coseno de Fi T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Perdida Transformador T5BT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+RES MI 206/13 T5BT (>300);421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Pico T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable Valle T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable Resto T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Pico T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Resto T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Pico T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Resto T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Bajo Coseno de Fi T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Perdida Transformador T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Pico T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Valle T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Resto T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Pico T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Resto T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Pico T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Resto T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Bajo Coseno de Fi T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Perdida Transformador T5BT Sin Subsidio (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Res. Asamblea 30/12/04 T5BT (>300) Cuota Capital ;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T5BT (>300);421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cargo Fijo T5MT ;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Fijo;Cargos
+Cargo Variable Pico T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Valle T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Resto T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Pico T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Resto T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Pico T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Resto T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Recargo por Bajo Coseno de Fi T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Perdida Transformador T5MT;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+RES MI 206/13 T5MT;421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Pico T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable Valle T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable Resto T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Pico T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Resto T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Pico T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Resto T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Bajo Coseno de Fi T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Perdida Transformador T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Pico T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Valle T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Resto T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Pico T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Resto T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Pico T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Resto T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Bajo Coseno de Fi T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Perdida Transformador T5MT Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Res. Asamblea 30/12/04 T5MT Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T5MT;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cargo Fijo T5MT (>300);421110;1;1;service;;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Fijo;Cargos
+Cargo Variable Pico T5MT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Valle T5MT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Resto T5MT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Pico T5MT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Potencia Resto T5MT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Pico T5MT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Exceso de Potencia Resto T5MT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Recargo por Bajo Coseno de Fi T5MT (>300) ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Perdida Transformador T5MT (>300);421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+RES MI 206/13 T5MT (>300);421110;1;1;service;True;Servicios de Energía;Unidad;True;False;;Ley 11769-Art. 74-Prov. 0,6%#Ley 11769-Art. 75-Mun. 6,00%#Ley 23681-Fesp.Sta.Cruz 0,6%;True;True;True;Variable;Cargos
+Cargo Variable Pico T5MT (>300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable Valle T5MT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Variable Resto T5MT (>300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Pico T5MT (>300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Potencia Resto T5MT (>300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Pico T5MT (>300)Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Exceso de Potencia Resto T5MT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Recargo por Bajo Coseno de Fi T5MT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Cargo Perdida Transformador T5MT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Pico T5MT (>300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Valle T5MT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Variable Resto T5MT (>300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Pico T5MT (>300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Potencia Resto T5MT (>300) Sin Subsidio ;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Pico T5MT (>300)Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Exceso de Potencia Resto T5MT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Recargo por Bajo Coseno de Fi T5MT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Resta Cargo Perdida Transformador T5MT (>300) Sin Subsidio;421110;1;1;service;;Servicios de Energía;Kilowatts;True;False;;;False;False;False;Variable;Cargos
+Res. Asamblea 30/12/04 T5MT (>300) Cuota Capital;421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios
+Cuota Extraordinaria Dec 3142/07 - Resolución 604/07 T5MT (>300);421110;1;1;service;;Servicios de Energía;Unidad;True;False;;;False;False;False;Fijo;Varios

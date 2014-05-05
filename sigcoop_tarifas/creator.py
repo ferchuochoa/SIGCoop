@@ -205,7 +205,7 @@ def create_entity(values):
     model = values.pop("model")
     _id = values.pop("id")
 
-    #print "Creando la entidad %s para el registro numero %s" % (model, _id)
+    print "Creando la entidad %s para el registro numero %s" % (model, _id)
 
     #Contructor del modelo
     const = Model.get(model)
