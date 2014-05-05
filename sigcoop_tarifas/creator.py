@@ -107,6 +107,11 @@ def translate_to_product(_id, row, simulate):
     ret["dont_multiply"] = row["Producto de precio independiente de la cantidad"] == "True"
     ret["list_price"] = Decimal(row["Precio de lista"])
     ret["cost_price"] = Decimal(row["Precio de costo"])
+    ret["tipo_producto"] = row["TipoProducto"].lower()
+    ret["tipo_cargo"] = row["TipoCargo"].lower()
+    ret["aplica_ap"] = row["AP"] == "True"
+    ret["aplica_iva"] = row["Iva"] == "True"
+    ret["aplica_iibb"] = row["IIBB"] == "True"
 
     check_category(row["Categoria/Nombre"], simulate)
     ret["category"] = ("product.category", [("name", "=", row["Categoria/Nombre"])])
@@ -169,17 +174,37 @@ def translate_to_price_list_line(_id, row, simulate):
 
 """
 ==================================ProductoConsumo==================================
+
+Fields de producto consumo
+
+Concepto
+Producto
+Tarifa
 """
 
-def transalate_to_producto_consumo(_id, row, simulate):
+concepto_to_int = dict([
+    ('Cargo variable', '1'),
+    ('Cargo variable Pico', '2'),
+    ('Cargo variable Fuera de pico', '3'),
+    ('Cargo variable Valle', '4'),
+    ('Cargo variable Resto', '5'),
+    ('Potencia Pico', '6'),
+    ('Potencia Resto', '7'),
+    ('Exceso potencia Pico', '8'),
+    ('Exceso potencia Resto', '9'),
+    ('Cargo perdida Transformador', '10'),
+    ('Recargos x Bajo Cos Fi', '11'),
+    ])
+
+def translate_to_producto_consumo(_id, row, simulate):
     ret = {
             "model" : "sigcoop_wizard_ventas.producto_consumo",
             "id" : _id,
-            "producto_id":("product.product", [('name', '=', row["Líneas/Producto/Nombre"])]),
-            "concepto": None,
-            "tarifa":None,
-            "cantidad_fija":None,
-            "cantidad":None,
+            "producto_id": ("product.product", [('name', '=', row["Producto"])]),
+            "concepto": concepto_to_int[row["Concepto"]],
+            "tarifa": ("product.price_list", [('name', '=', row["Tarifa"])]),
+            "cantidad_fija":False,
+            "cantidad":0,
     }
     return ret
 
@@ -248,7 +273,12 @@ def main():
         print "Conectado"
 
         print "Vamos a crear las entidades de %s" % str(sys.argv[4:])
-        translators = [translate_to_tax, translate_to_product, translate_to_price_list_line]
+        translators = [
+                translate_to_tax,
+                translate_to_product,
+                translate_to_price_list_line,
+                translate_to_producto_consumo,
+        ]
         for filename, translator in zip(sys.argv[4:], translators):
             print "Creando entidades para %s" % filename
             with open(filename) as fi:
