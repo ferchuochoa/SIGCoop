@@ -10,20 +10,22 @@ class Consumo(ModelSQL, ModelView):
     __name__ = 'sigcoop_consumos.consumo'
 
     id_suministro = fields.Many2One('sigcoop_usuario.suministro', 'Suministro', required=True)
-    id_medidor = fields.Many2One('sigcoop_consumos.medidor', 'Medidor', required=True)
+    id_medidor = fields.Many2One('sigcoop_suministro.medidor', 'Medidor', required=True)
+    # id_medidor = fields.Char('Medidor', required = True)
     periodo = fields.Char('Periodo', required=True)
     concepto =  fields.Selection(
         [
             ('1', 'Cargo variable'),
             ('2', 'Cargo variable Pico'),
-            ('3', 'Cargo variable Valle'),
-            ('4', 'Cargo variable Resto'),
-            ('5', 'Potencia Pico'),
-            ('6', 'Potencia Resto'),
-            ('7', 'Exceso potencia Pico'),
-            ('8', 'Exceso potencia Resto'),
-            ('9', 'Cargo perdida Transformador'),
-            ('10', 'Recargos x Bajo Cos Fi'),
+            ('3', 'Cargo variable Fuera de pico'),
+            ('4', 'Cargo variable Valle'),
+            ('5', 'Cargo variable Resto'),
+            ('6', 'Potencia Pico'),
+            ('7', 'Potencia Resto'),
+            ('8', 'Exceso potencia Pico'),
+            ('9', 'Exceso potencia Resto'),
+            ('10', 'Cargo perdida Transformador'),
+            ('11', 'Recargos x Bajo Cos Fi'),
         ],
         'Concepto'
     )
@@ -38,7 +40,6 @@ class Consumo(ModelSQL, ModelView):
         ],
         'Estado'
     )
-    
 
 
 #----------------------------Wizard de importacion----------------------------------#
@@ -58,6 +59,17 @@ class ImportacionResumen(ModelView):
 
     resumen = fields.Text('Resumen de importacion', readonly = True)
 
+    dato = fields.Function(fields.Char('Un dato'), 'get_dato')
+
+    elDato = ''
+
+    def get_dato(self):
+        print self.elDato + ' get'
+        return self.elDato
+
+    def set_dato(self, dato):
+        self.elDato = dato
+        print self.elDato + ' set'
 
     @classmethod
     def default_resumen(cls):
@@ -99,8 +111,10 @@ class ImportacionConsumos(Wizard):
 
             consumo_t = Pool().get('sigcoop_consumos.consumo')
             suministro_t = Pool().get('sigcoop_usuario.suministro')
+            # medidor_t = Pool().get('sigcoop_consumos.medidor')
             try:
                 existe_suministro = suministro_t(suministro_t.search([('codigo_suministro', '=', suministro)])[0])
+                # existe_medidor = medidor_t(medidor_t.search(['idMedidor', '=', medidor])[0])
                 consumo_nuevo = consumo_t.create([{
                         'id_suministro':existe_suministro.id,
                         'id_medidor':medidor,
@@ -117,6 +131,7 @@ class ImportacionConsumos(Wizard):
 
         # if self.start.checkListado:
         #     generarListadoConsistencia()
+        self.resumen.set_dato('el dato que paso')
         return 'resumen'
 
 

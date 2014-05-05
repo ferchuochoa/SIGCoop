@@ -11,7 +11,7 @@ def register():
         Suministro,
         Familiar,
         Aporte,
-	Rango,
+        Rango,
         module='sigcoop_usuario', type_='model'
     )
 
