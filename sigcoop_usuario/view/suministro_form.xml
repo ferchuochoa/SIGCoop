@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<form string="Suministro" col="6">
+<form string="Suministro" col="4">
   <label name="usuario_id"/>
   <field name="usuario_id"/>
   <label name="numero_suministro"/>
@@ -7,9 +7,9 @@
   <newline/>
   <label name="servicio"/>
   <field name="servicio"/>
-  <newline/>
   <label name="ruta"/>
   <field name="ruta"/>
+  <newline/>
   <label name="calle"/>
   <field name="calle"/>
   <label name="calle_numero"/>
@@ -17,11 +17,9 @@
   <newline/>
   <label name="impuesto_alumbrado"/>
   <field name="impuesto_alumbrado"/>
-  <newline/>
-  <label name="tarifa"/>
-  <field name="tarifa"/>
   <label name="lista_precios"/>
   <field name="lista_precios"/>
+  <newline/>
   <label name="potencia_contratada"/>
   <field name="potencia_contratada"/>
 </form>
