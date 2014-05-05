@@ -93,14 +93,21 @@ class CrearVentas(Wizard):
 
     def crear_sale_lines_independientes_consumo(self, concepto, cantidad_consumida, party, price_list):
         ret = []
+        #TODO: tal vez es mas eficiente hacer un search sobre PriceList
         filtro_producto = lambda x: (x.product.tipo_cargo == 'fijo' and x.product.tipo_producto == 'cargos')
         productos = map(lambda x: x.product, filter(filtro_producto, price_list.lines))
         for producto in productos:
             ret.append(self.crear_sale_line(1, producto, party, price_list))
         return ret
 
-    def crear_sale_lines_sin_impuestos(self, concepto, cantidad_consumida, customer, price_list):
-        return []
+    def crear_sale_lines_sin_impuestos(self, concepto, cantidad_consumida, party, price_list):
+        ret = []
+        #TODO: tal vez es mas eficiente hacer un search sobre PriceList
+        filtro_producto = lambda x: (x.product.tipo_cargo == 'fijo' and x.product.tipo_producto == 'varios')
+        productos = map(lambda x: x.product, filter(filtro_producto, price_list.lines))
+        for producto in productos:
+            ret.append(self.crear_sale_line(1, producto, party, price_list))
+        return ret
 
     def get_extra_taxes(self, product, suministro, party):
         """
@@ -173,7 +180,7 @@ class CrearVentas(Wizard):
 
     def agrupar_por_suministro(self, lista_consumos):
         """
-        Retornamos algo asi:
+        Retornamos los consumos agrupados por suministro:
             [
             (id suministro 1, [consumo 1, consumo 2, ...]),
             (id suministro 2, [consumo 3, consumo 4, ...])
