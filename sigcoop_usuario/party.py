@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 from trytond.model import ModelSQL, ModelView, fields
-from trytond.pyson import Eval, If
+from trytond.pyson import Eval, And, Bool, Equal, Not
 from datetime import *
 
 __all__ = ['Party']
@@ -13,8 +13,8 @@ class Party(ModelSQL, ModelView):
     cliente_socio = fields.Boolean('Cliente/Socio', on_change=['cliente_socio'], help="Marcar si es un cliente de la cooperativa")
     #El field asociado nos da a elegir si es asociado o cliente.
     #Por defecto, es cliente ya que el campo es false.
-    asociado = fields.Boolean('Es Asociado', 
-                                states = {'readonly': ~Eval('cliente_socio', True)}, 
+    asociado = fields.Boolean('Es Asociado',
+                                states = {'readonly': ~Eval('cliente_socio', True)},
                                 depends=['cliente_socio'],
                                 help="Marcar si es un socio de la cooperativa (debe ser cliente tambien)")
     dir_entrega_factura = fields.Many2One('party.address', 'Direccion entrega factura')
@@ -40,6 +40,45 @@ class Party(ModelSQL, ModelView):
     rangos = fields.One2Many('sigcoop_usuario.rango', 'asociado', 'Rangos')
     familiares = fields.One2Many('sigcoop_usuario.familiar', 'usuario_id', 'Familiares')
     aportes = fields.One2Many('sigcoop_usuario.aporte', 'usuario_id', 'Aportes')
+    #Este campo lo tomamos prestado de account_invoice_ar.
+    iva_condition = fields.Selection(
+            [
+                ('', ''),
+                ('responsable_inscripto', 'Responsable Inscripto'),
+                ('exento', 'Exento'),
+                ('consumidor_final', 'Consumidor Final'),
+                ('monotributo', 'Monotributo'),
+                ('no_alcanzado', 'No alcanzado'),
+            ],
+            'Condicion ante el IVA',
+            states={
+                'readonly': ~Eval('active', True),
+                #'required': Equal(Eval('vat_country'), 'AR'), En account_invoice_ar, definen vat country
+                },
+            depends=['active'],
+            )
+    #Este campo lo tomamos prestado de account_invoice_ar.
+    iibb_type = fields.Selection(
+            [
+                ('', ''),
+                ('cm', 'Convenio Multilateral'),
+                ('rs', 'Regimen Simplificado'),
+                ('exento', 'Exento'),
+            ],
+            'Tipo de Inscripcion de II BB',
+            states={
+                'readonly': ~Eval('active', True),
+                },
+            depends=['active'],
+            )
+    #Este campo lo tomamos prestado de account_invoice_ar.
+    iibb_number = fields.Char('II BB',
+            states={
+                'readonly': ~Eval('active', True),
+                'required': And(Not(Equal(Eval('iibb_type'), 'exento')), Bool(Eval('iibb_type')))
+                },
+            depends=['active'],
+            )
 
 
     @staticmethod
