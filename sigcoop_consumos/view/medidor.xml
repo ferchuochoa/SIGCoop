@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="/form/field[@name='registrador']" position="after">
+        <newline/>
+        <field name="consumos" mode="tree" colspan="6"
+        view_ids="sigcoop_consumos.consumo_view_tree"/>
+    </xpath>
+</data>
