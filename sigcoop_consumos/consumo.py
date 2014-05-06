@@ -10,7 +10,7 @@ class Consumo(ModelSQL, ModelView):
     __name__ = 'sigcoop_consumos.consumo'
 
     id_suministro = fields.Many2One('sigcoop_usuario.suministro', 'Suministro', required=True)
-    id_medidor = fields.Many2One('sigcoop_suministro.medidor', 'Medidor', required=True)
+    id_medidor = fields.Many2One('sigcoop_medidor.medidor', 'Medidor', required=True)
     periodo = fields.Char('Periodo', required=True)
     concepto =  fields.Selection(
         [

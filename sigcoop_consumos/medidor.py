@@ -6,5 +6,5 @@ __all__ = ['Medidor']
 
 class Medidor(ModelSQL, ModelView):
     "Medidor"
-    __name__ = 'sigcoop_suministro.medidor'
+    __name__ = 'sigcoop_medidor.medidor'
     consumos = fields.One2Many('sigcoop_consumos.consumo', 'id_medidor', 'Consumos')

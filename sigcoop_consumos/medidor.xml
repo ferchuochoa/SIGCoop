@@ -2,8 +2,8 @@
 <tryton>
     <data>
         <record model="ir.ui.view" id="medidor_view_form">
-            <field name="model">sigcoop_suministro.medidor</field>
-            <field name="inherit" ref="sigcoop_suministro.medidor_view_form"/>
+            <field name="model">sigcoop_medidor.medidor</field>
+            <field name="inherit" ref="sigcoop_medidor.medidor_view_form"/>
             <field name="name">medidor_form</field>
         </record>
     </data>
