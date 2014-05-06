@@ -285,28 +285,13 @@ def main():
         ("tarifas", translate_to_price_list_line),
         ("consumos", translate_to_producto_consumo)
     ]
+
     for key, translator in keys:
         arch = parsed[key]
         if arch:
             print "Vamos a crear las entidades de: %s" % arch
             with open(arch) as fi:
-                print translator
-                #create_entities(csv.DictReader(fi, delimiter=";"), translator, False)
-
-    """
-
-    print "Vamos a crear las entidades de %s" % str(sys.argv[4:])
-    translators = [
-            translate_to_tax,
-            translate_to_product,
-            translate_to_price_list_line,
-            translate_to_producto_consumo,
-    ]
-    for filename, translator in zip(sys.argv[4:], translators):
-        print "Creando entidades para %s" % filename
-        with open(filename) as fi:
-            create_entities(csv.DictReader(fi, delimiter=";"), translator, False)
-    """
+                create_entities(csv.DictReader(fi, delimiter=";"), translator, False)
 
 if __name__ == "__main__":
     main()
