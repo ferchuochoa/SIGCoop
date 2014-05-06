@@ -180,7 +180,6 @@ Concepto
 Producto
 Tarifa
 """
-
 concepto_to_int = dict([
     ('Cargo variable', '1'),
     ('Cargo variable Pico', '2'),
@@ -193,7 +192,7 @@ concepto_to_int = dict([
     ('Exceso potencia Resto', '9'),
     ('Cargo perdida Transformador', '10'),
     ('Recargos x Bajo Cos Fi', '11'),
-    ])
+])
 
 def translate_to_producto_consumo(_id, row, simulate):
     ret = {
@@ -201,11 +200,15 @@ def translate_to_producto_consumo(_id, row, simulate):
             "id" : _id,
             "producto_id": ("product.product", [('name', '=', row["Producto"])]),
             "concepto": concepto_to_int[row["Concepto"]],
-            "tarifa": ("product.price_list", [('name', '=', row["Tarifa"])]),
+            "tarifa_id": ("product.price_list", [('name', '=', row["Tarifa"])]),
             "cantidad_fija":False,
             "cantidad":0,
     }
-    return ret
+    if check_existance([ret["producto_id"], ret["tarifa_id"]]) and concepto_to_int.has_key(row["Concepto"]):
+        return ret
+    else:
+        import pdb; pdb.set_trace()
+        return None
 
 def create_entities(csv_reader, translator, simulate=False):
     for _id, row in enumerate(csv_reader):

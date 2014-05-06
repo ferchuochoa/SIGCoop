@@ -1,30 +1,30 @@
-Concepto,Producto,Tarifa
-Cargo variable,Cargo Variable T1R,T1R Residencial
-Cargo variable,Resta Cargo Variable T1R Sin Subsidio,T1R Residencial
-Cargo variable,Cargo Variable T1R Sin Subsidio,T1R Residencial
-Cargo variable,Incremento Costo Mayorista T1R,T1R Residencial
-Cargo variable,Resolución MI 206/13  T1R,T1R Residencial
-Cargo variable Pico,Cargo Variable por Energia Demandada En Pico T2BT,T2BT Baja Tension
-Cargo variable Pico,Cargo Variable por Energia Demandada En Pico T2BT Sin Subsidio,T2BT Baja Tension
-Cargo variable Pico,Resta Cargo Variable por Energia Demandada En Pico T2BT Sin Subsidio,T2BT Baja Tension
-Cargo variable Fuera de Pico,Cargo Variable por Energia Demandada Fuera de Pico T2BT Sin Subsidio,T2BT Baja Tension
-Cargo variable Fuera de Pico,Cargo Variable por Energia Demandada Fuera de Pico T2BT,T2BT Baja Tension
-Cargo variable Fuera de Pico,Resta Cargo Variable por Energia Demandada Fuera de Pico T2BT Sin Subsidio,T2BT Baja Tension
-Potencia Pico,Cargo Potencia en Pico T2BT,T2BT Baja Tension
-Potencia Pico,Cargo Potencia en Pico T2BT Sin Subsidio,T2BT Baja Tension
-Potencia Pico,Resta Cargo Potencia en Pico T2BT Sin Subsidio,T2BT Baja Tension
-Potencia Resto,Cargo Potencia Fuera de Pico T2BT,T2BT Baja Tension
-Potencia Resto,Cargo Potencia Fuera de Pico T2BT Sin Subsidio,T2BT Baja Tension
-Potencia Resto,Resta Cargo Potencia Fuera de Pico T2BT Sin Subsidio,T2BT Baja Tension
-Exceso potencia Pico,Recargo por Exceso de Potencia en Pico T2BT,T2BT Baja Tension
-Exceso potencia Pico,Recargo por Exceso de Potencia en Pico T2BT Sin Subsidio,T2BT Baja Tension
-Exceso potencia Pico,Resta Recargo por Exceso de Potencia en Pico T2BT Sin Subsidio,T2BT Baja Tension
-Exceso potencia Resto,Recargo por Exceso de Potencia Fuera Pico T2BT,T2BT Baja Tension
-Exceso potencia Resto,Recargo por Exceso de Potencia Fuera Pico T2BT Sin Subsidio,T2BT Baja Tension
-Exceso potencia Resto,Resta Recargo por Exceso de Potencia Fuera Pico T2BT Sin Subsidio,T2BT Baja Tension
-Cargo perdida Transformador,Cargo Perdida Transformador T2BT,T2BT Baja Tension
-Cargo perdida Transformador,Cargo Perdida Transformador T2BT Sin Subsidio,T2BT Baja Tension
-Cargo perdida Transformador,Resta Cargo Perdida Transformador T2BT Sin Subsidio,T2BT Baja Tension
-Recargos x Bajo Cos Fi,Recargo por Bajo Coseno de Fi T2BT,T2BT Baja Tension
-Recargos x Bajo Cos Fi,Recargo por Bajo Coseno de Fi T2BT Sin Subsidio,T2BT Baja Tension
-Recargos x Bajo Cos Fi,Resta Recargo por Bajo Coseno de Fi T2BT Sin Subsidio,T2BT Baja Tension
+Concepto;Producto;Tarifa
+Cargo variable;Cargo Variable T1R;T1R Residencial
+Cargo variable;Resta Cargo Variable T1R Sin Subsidio;T1R Residencial
+Cargo variable;Cargo Variable T1R Sin Subsidio;T1R Residencial
+Cargo variable;Incremento Costo Mayorista T1R;T1R Residencial
+Cargo variable;Resolución MI 206/13  T1R;T1R Residencial
+Cargo variable Pico;Cargo Variable por Energia Demandada En Pico T2BT;T2BT Baja Tension
+Cargo variable Pico;Cargo Variable por Energia Demandada En Pico T2BT Sin Subsidio;T2BT Baja Tension
+Cargo variable Pico;Resta Cargo Variable por Energia Demandada En Pico T2BT Sin Subsidio;T2BT Baja Tension
+Cargo variable Fuera de pico;Cargo Variable por Energia Demandada Fuera de Pico T2BT Sin Subsidio;T2BT Baja Tension
+Cargo variable Fuera de pico;Cargo Variable por Energia Demandada Fuera de Pico T2BT;T2BT Baja Tension
+Cargo variable Fuera de pico;Resta Cargo Variable por Energia Demandada Fuera de Pico T2BT Sin Subsidio;T2BT Baja Tension
+Potencia Pico;Cargo Potencia en Pico T2BT;T2BT Baja Tension
+Potencia Pico;Cargo Potencia en Pico T2BT Sin Subsidio;T2BT Baja Tension
+Potencia Pico;Resta Cargo Potencia en Pico T2BT Sin Subsidio;T2BT Baja Tension
+Potencia Resto;Cargo Potencia Fuera de Pico T2BT;T2BT Baja Tension
+Potencia Resto;Cargo Potencia Fuera de Pico T2BT Sin Subsidio;T2BT Baja Tension
+Potencia Resto;Resta Cargo Potencia Fuera de Pico T2BT Sin Subsidio;T2BT Baja Tension
+Exceso potencia Pico;Recargo por Exceso de Potencia en Pico T2BT;T2BT Baja Tension
+Exceso potencia Pico;Recargo por Exceso de Potencia en Pico T2BT Sin Subsidio;T2BT Baja Tension
+Exceso potencia Pico;Resta Recargo por Exceso de Potencia en Pico T2BT Sin Subsidio;T2BT Baja Tension
+Exceso potencia Resto;Recargo por Exceso de Potencia Fuera Pico T2BT;T2BT Baja Tension
+Exceso potencia Resto;Recargo por Exceso de Potencia Fuera Pico T2BT Sin Subsidio;T2BT Baja Tension
+Exceso potencia Resto;Resta Recargo por Exceso de Potencia Fuera Pico T2BT Sin Subsidio;T2BT Baja Tension
+Cargo perdida Transformador;Cargo Perdida Transformador T2BT;T2BT Baja Tension
+Cargo perdida Transformador;Cargo Perdida Transformador T2BT Sin Subsidio;T2BT Baja Tension
+Cargo perdida Transformador;Resta Cargo Perdida Transformador T2BT Sin Subsidio;T2BT Baja Tension
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T2BT;T2BT Baja Tension
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T2BT Sin Subsidio;T2BT Baja Tension
+Recargos x Bajo Cos Fi;Resta Recargo por Bajo Coseno de Fi T2BT Sin Subsidio;T2BT Baja Tension
