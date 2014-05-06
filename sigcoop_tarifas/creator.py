@@ -5,8 +5,8 @@ import csv
 from proteus import config, Model
 from decimal import Decimal
 
-
 """
+==================================Tax==================================
 Fields de impuestos
 
 Nombre
@@ -52,6 +52,7 @@ def translate_to_tax(_id, row, simulate):
     return ret
 
 """
+==================================Product==================================
 Fields de producto
 
 Nombre
@@ -105,6 +106,11 @@ def translate_to_product(_id, row, simulate):
     ret["dont_multiply"] = row["Producto de precio independiente de la cantidad"] == "True"
     ret["list_price"] = Decimal(row["Precio de lista"])
     ret["cost_price"] = Decimal(row["Precio de costo"])
+    ret["tipo_producto"] = row["TipoProducto"].lower()
+    ret["tipo_cargo"] = row["TipoCargo"].lower()
+    ret["aplica_ap"] = row["AP"] == "True"
+    ret["aplica_iva"] = row["Iva"] == "True"
+    ret["aplica_iibb"] = row["IIBB"] == "True"
 
     check_category(row["Categoria/Nombre"], simulate)
     ret["category"] = ("product.category", [("name", "=", row["Categoria/Nombre"])])
@@ -133,8 +139,10 @@ def check_price_list(price_list_name, simulate):
         return None
     return pl[0]
 
-
 """
+==================================PriceList==================================
+
+
 Fields de pricelist
 
 Nombre
@@ -163,14 +171,49 @@ def translate_to_price_list_line(_id, row, simulate):
 
     return ret
 
+"""
+==================================ProductoConsumo==================================
+
+Fields de producto consumo
+
+Concepto
+Producto
+Tarifa
+"""
+
+concepto_to_int = dict([
+    ('Cargo variable', '1'),
+    ('Cargo variable Pico', '2'),
+    ('Cargo variable Fuera de pico', '3'),
+    ('Cargo variable Valle', '4'),
+    ('Cargo variable Resto', '5'),
+    ('Potencia Pico', '6'),
+    ('Potencia Resto', '7'),
+    ('Exceso potencia Pico', '8'),
+    ('Exceso potencia Resto', '9'),
+    ('Cargo perdida Transformador', '10'),
+    ('Recargos x Bajo Cos Fi', '11'),
+    ])
+
+def translate_to_producto_consumo(_id, row, simulate):
+    ret = {
+            "model" : "sigcoop_wizard_ventas.producto_consumo",
+            "id" : _id,
+            "producto_id": ("product.product", [('name', '=', row["Producto"])]),
+            "concepto": concepto_to_int[row["Concepto"]],
+            "tarifa": ("product.price_list", [('name', '=', row["Tarifa"])]),
+            "cantidad_fija":False,
+            "cantidad":0,
+    }
+    return ret
+
 def create_entities(csv_reader, translator, simulate=False):
     for _id, row in enumerate(csv_reader):
         #Traducimos cada fila a un diccionario
         entity_dict = translator(_id, row, simulate)
         if entity_dict is None:
             print "============= WARNING! No creamos el registro %s. ====================" % _id
-            print entity_dict
-            print "============================="
+            print "============= Checkea la linea %s +2 ===============" % _id
         elif not simulate:
             create_entity(entity_dict)
         else:
@@ -212,26 +255,42 @@ def create_entity(values):
 
 
 def main():
-    print "Bienvenido a fedecoba entity creator 4.5!."
-    if (len(sys.argv) != 7):
-        print "Maldición, estan faltando algunos parametros!"
-        print "El script hay que llamarlo así: \n \t creator.py nombre-db password-admin-db archivo-configuracion archivo-impuestos archivo-productos archivo-pricelist"
-        return False
-    else:
-        print "Conectando a trytond..."
-        print "Activando GPS...detectando ubicación geoespacial...triangulando coordenadas...usted se encuentra en: EL SUCUCHITO"
-        print "Los parametros son: database_name=%s password=%s config_file=%s" % tuple(sys.argv[1:4])
-        c = config.set_trytond(
-                database_name=sys.argv[1],
-                database_type="postgresql",
-                password=sys.argv[2],
-                config_file=sys.argv[3])
-        print "Conectado"
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('nombre-db', action="store", help="Nombre de la base de datos en la que insertar los registros.")
+    parser.add_argument('password-admin-db', action="store", help="Password del usuario admin en la base de datos.")
+    parser.add_argument('archivo-configuracion', action="store", help="Archivo trytond.conf que usas para correr el server. \n Si no sabes donde esta, escribi 'locate trytond.conf' en la consola, amigx.")
+    parser.add_argument('-p','--productos', action="store", help="Crear productos a partir del archivo indicado.")
+    parser.add_argument('-i','--impuestos', action="store", help="Crear impuestos a partir del archivo indicado.")
+    parser.add_argument('-t','--tarifas', action="store", help="Crear tarifas a partir del archivo indicado.")
+    parser.add_argument('-c','--consumos', action="store", help="Crear vinculo producto-consumos a partir del archivo indicado.")
+    parsed = parser.parse_args()
+    parsed = vars(parsed)
 
-        print "Vamos a crear las entidades de %s" % str(sys.argv[4:])
-        translators = [translate_to_tax, translate_to_product, translate_to_price_list_line]
-        for filename, translator in zip(sys.argv[4:], translators):
-            with open(filename) as fi:
+    print "Enhorabuena, los parametros son correctos!.\nConectando a trytond..."
+    print "Activando GPS...detectando ubicación geoespacial...triangulando coordenadas...usted se encuentra en: EL SUCUCHITO"
+    print "Los parametros son: nombre-db=%s password-admin-db=%s archivo-configuracion=%s" % (parsed["nombre-db"], parsed["password-admin-db"], parsed["archivo-configuracion"])
+
+    c = config.set_trytond(
+            database_name=sys.argv[1],
+            database_type="postgresql",
+            password=sys.argv[2],
+            config_file=sys.argv[3])
+    print "Conectado"
+
+    #Ojo que el orden importa
+    keys = [
+        ("impuestos", translate_to_tax),
+        ("productos", translate_to_product),
+        ("tarifas", translate_to_price_list_line),
+        ("consumos", translate_to_producto_consumo)
+    ]
+
+    for key, translator in keys:
+        arch = parsed[key]
+        if arch:
+            print "Vamos a crear las entidades de: %s" % arch
+            with open(arch) as fi:
                 create_entities(csv.DictReader(fi, delimiter=";"), translator, False)
 
 if __name__ == "__main__":
