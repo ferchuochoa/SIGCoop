@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<form string="Medidor" col="6">
-    <label name="id_medidor"/>
-    <field name="id_medidor"/>
-    <label name="registrador"/>
-    <field name="registrador"/>
-</form>
