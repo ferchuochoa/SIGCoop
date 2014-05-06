@@ -286,7 +286,7 @@ def main():
         ("consumos", translate_to_producto_consumo)
     ]
     for key, translator in keys:
-        arch = parsed["i"]
+        arch = parsed[key]
         if arch:
             print "Vamos a crear las entidades de: %s" % arch
             with open(arch) as fi:
