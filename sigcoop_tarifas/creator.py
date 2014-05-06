@@ -5,7 +5,6 @@ import csv
 from proteus import config, Model
 from decimal import Decimal
 
-
 """
 ==================================Tax==================================
 Fields de impuestos
@@ -256,33 +255,58 @@ def create_entity(values):
 
 
 def main():
-    print "Bienvenido a fedecoba entity creator 4.5!."
-    if (len(sys.argv) != 7):
-        print "Maldición, estan faltando algunos parametros!"
-        print "El script hay que llamarlo así: \n \t creator.py nombre-db password-admin-db archivo-configuracion archivo-impuestos archivo-productos archivo-pricelist"
-        return False
-    else:
-        print "Conectando a trytond..."
-        print "Activando GPS...detectando ubicación geoespacial...triangulando coordenadas...usted se encuentra en: EL SUCUCHITO"
-        print "Los parametros son: database_name=%s password=%s config_file=%s" % tuple(sys.argv[1:4])
-        c = config.set_trytond(
-                database_name=sys.argv[1],
-                database_type="postgresql",
-                password=sys.argv[2],
-                config_file=sys.argv[3])
-        print "Conectado"
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('nombre-db', action="store", help="Nombre de la base de datos en la que insertar los registros.")
+    parser.add_argument('password-admin-db', action="store", help="Password del usuario admin en la base de datos.")
+    parser.add_argument('archivo-configuracion', action="store", help="Archivo trytond.conf que usas para correr el server. \n Si no sabes donde esta, escribi 'locate trytond.conf' en la consola, amigx.")
+    parser.add_argument('-p','--productos', action="store", help="Crear productos a partir del archivo indicado.")
+    parser.add_argument('-i','--impuestos', action="store", help="Crear impuestos a partir del archivo indicado.")
+    parser.add_argument('-t','--tarifas', action="store", help="Crear tarifas a partir del archivo indicado.")
+    parser.add_argument('-c','--consumos', action="store", help="Crear vinculo producto-consumos a partir del archivo indicado.")
+    parsed = parser.parse_args()
+    parsed = vars(parsed)
 
-        print "Vamos a crear las entidades de %s" % str(sys.argv[4:])
-        translators = [
-                translate_to_tax,
-                translate_to_product,
-                translate_to_price_list_line,
-                translate_to_producto_consumo,
-        ]
-        for filename, translator in zip(sys.argv[4:], translators):
-            print "Creando entidades para %s" % filename
-            with open(filename) as fi:
-                create_entities(csv.DictReader(fi, delimiter=";"), translator, False)
+    print "Enhorabuena, los parametros son correctos!.\nConectando a trytond..."
+    print "Activando GPS...detectando ubicación geoespacial...triangulando coordenadas...usted se encuentra en: EL SUCUCHITO"
+    print "Los parametros son: nombre-db=%s password-admin-db=%s archivo-configuracion=%s" % (parsed["nombre-db"], parsed["password-admin-db"], parsed["archivo-configuracion"])
+
+    c = config.set_trytond(
+            database_name=sys.argv[1],
+            database_type="postgresql",
+            password=sys.argv[2],
+            config_file=sys.argv[3])
+    print "Conectado"
+
+    #Ojo que el orden importa
+    keys = [
+        ("impuestos", translate_to_tax),
+        ("productos", translate_to_product),
+        ("tarifas", translate_to_price_list_line),
+        ("consumos", translate_to_producto_consumo)
+    ]
+    for key, translator in keys:
+        arch = parsed["i"]
+        if arch:
+            print "Vamos a crear las entidades de: %s" % arch
+            with open(arch) as fi:
+                print translator
+                #create_entities(csv.DictReader(fi, delimiter=";"), translator, False)
+
+    """
+
+    print "Vamos a crear las entidades de %s" % str(sys.argv[4:])
+    translators = [
+            translate_to_tax,
+            translate_to_product,
+            translate_to_price_list_line,
+            translate_to_producto_consumo,
+    ]
+    for filename, translator in zip(sys.argv[4:], translators):
+        print "Creando entidades para %s" % filename
+        with open(filename) as fi:
+            create_entities(csv.DictReader(fi, delimiter=";"), translator, False)
+    """
 
 if __name__ == "__main__":
     main()
