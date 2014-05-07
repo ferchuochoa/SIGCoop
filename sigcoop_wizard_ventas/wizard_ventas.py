@@ -115,15 +115,17 @@ class CrearVentas(Wizard):
         dinamicamente.
         """
         ret = []
-        if product.aplica_ap:
+        if product.aplica_ap and suministro.impuesto_alumbrado:
             ret.append(suministro.impuesto_alumbrado)
         """
         if product.aplica_iva:
             pedimos el condition_iva a party y determinamos el tipo de impuesto a agregar
+            chequear que el impuesto este seteado
             pass
         if product.aplica_iibb:
             preguntamos si el party esta exento
             igual a alumbrado
+            chequear que el impuesto este seteado
             pass
         """
         return ret
@@ -133,7 +135,6 @@ class CrearVentas(Wizard):
         lista_consumos[0]: id del suministro
         lista_consumos[1]: iterador sobre Consumo para el suministro
         """
-        #import pudb; pu.db
         #Creamos la venta a la que le vamos a asociar las lineas de venta
         Sale = Pool().get('sale.sale')
         Suministro = Pool().get('sigcoop_usuario.suministro')
