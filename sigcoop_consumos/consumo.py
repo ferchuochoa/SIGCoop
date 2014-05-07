@@ -48,7 +48,7 @@ class ImportacionStart(ModelView):
     __name__= 'sigcoop_consumos.importacion_consumos.start'
 
     file = fields.Binary('Archivo')
-    periodo = fields.Char('Periodo')
+    periodo = fields.Char('Periodo', required=True)
     checkListado = fields.Boolean('Hacer listado')
 
 
@@ -107,23 +107,31 @@ class ImportacionConsumos(Wizard):
             (fecha,_,resto) = resto.partition(',')
             (estado,_,consumoNeto) = resto.partition(',')
 
+            (dia,_,resto) = fecha.partition('-')
+            (mes,_,anio) = resto.partition('-')
+            fechaActual = date(int(anio),int(mes),int(dia))
+
 
             consumo_t = Pool().get('sigcoop_consumos.consumo')
             suministro_t = Pool().get('sigcoop_usuario.suministro')
-            # medidor_t = Pool().get('sigcoop_consumos.medidor')
+            medidor_t = Pool().get('sigcoop_medidor.medidor')
             try:
                 existe_suministro = suministro_t(suministro_t.search([('codigo_suministro', '=', suministro)])[0])
-                # existe_medidor = medidor_t(medidor_t.search(['idMedidor', '=', medidor])[0])
-                consumo_nuevo = consumo_t.create([{
-                        'id_suministro':existe_suministro.id,
-                        'id_medidor':medidor,
-                        'periodo':period,
-                        'concepto':concept,
-                        'fecha':date,
-                        'lectura':estado,
-                        'consumo_neto':c_neto,
-                    }])[0]
-                consumo_nuevo.save()
+                try:
+                    existe_medidor = medidor_t(medidor_t.search(['id_medidor', '=', medidor])[0])
+                    print 'sum: ', existe_suministro.id, 'med: ', existe_medidor.id, 'per: ', period, 'con: ', concept, 'fecha: ', fechaActual, 'estado: ', estado, 'c neto: ', consumoNeto
+                    consumo_nuevo = consumo_t.create([{
+                            'id_suministro':existe_suministro.id,
+                            'id_medidor':existe_medidor.id,
+                            'periodo':period,
+                            'concepto':concept,
+                            'fecha':fechaActual,
+                            'lectura':estado,
+                            'consumo_neto':consumoNeto,
+                        }])[0]
+                    consumo_nuevo.save()
+                except:
+                    print 'El medidor ', medidor, ' no exite.'
             except:
                 print 'El suministro ', suministro, ' no existe.'
 
