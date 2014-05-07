@@ -5,6 +5,12 @@ import csv
 from proteus import config, Model
 from decimal import Decimal
 
+def check_existance(ref_list):
+    for model, search_param in ref_list:
+        if not Model.get(model).find(search_param):
+            return False
+    return True
+
 """
 ==================================Tax==================================
 Fields de impuestos
@@ -16,20 +22,23 @@ Cuenta de la factura/Código
 Cuenta de la nota de crédito/Código
 Importe
 Tasa de cambio
-
-No usados:
-Cuenta de la factura/Nombre
-Cuenta de la nota de crédito/Nombre
-Cuenta de la factura/Código
-Cuenta de la factura/Nombre
-Secuencia
-Dígitos de moneda
+Grupo
 """
-def check_existance(ref_list):
-    for model, search_param in ref_list:
-        if not Model.get(model).find(search_param):
-            return False
-    return True
+
+def check_group(group_name, simulate):
+    groups = Model.get('account.tax.group').find([("name", "=", group_name)])
+    if not groups and not simulate:
+        print "-=-= Vamos a crear un grupo de impuestos -=--=-"
+        print group_name
+        new_group = Model.get('account.tax.group')()
+        new_group.name = group_name
+        new_group.code = group_name
+        new_group.kind = 'both'
+        new_group.save()
+        return new_group
+    if groups:
+        return groups[0]
+    return None
 
 def translate_to_tax(_id, row, simulate):
     ret = {
@@ -43,6 +52,8 @@ def translate_to_tax(_id, row, simulate):
     }
     if not check_existance([ret["invoice_account"], ret["credit_note_account"]]):
         return None
+
+    ret["group"] = check_group(row["Grupo"], simulate)
 
     if (ret["type"] == "fixed"):
         ret["amount"] = Decimal(row["Importe"])
@@ -266,7 +277,7 @@ def main():
     parser.add_argument('-p','--productos', action="store", help="Crear productos a partir del archivo indicado.")
     parser.add_argument('-i','--impuestos', action="store", help="Crear impuestos a partir del archivo indicado.")
     parser.add_argument('-t','--tarifas', action="store", help="Crear tarifas a partir del archivo indicado.")
-    parser.add_argument('-c','--consumos', action="store", help="Crear vinculo producto-consumos a partir del archivo indicado.")
+    parser.add_argument('-c','--conceptos', action="store", help="Crear vinculo producto-consumos a partir del archivo indicado.")
     parsed = parser.parse_args()
     parsed = vars(parsed)
 
@@ -286,7 +297,7 @@ def main():
         ("impuestos", translate_to_tax),
         ("productos", translate_to_product),
         ("tarifas", translate_to_price_list_line),
-        ("consumos", translate_to_producto_consumo)
+        ("conceptos", translate_to_producto_consumo)
     ]
 
     for key, translator in keys:
