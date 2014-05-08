@@ -4,9 +4,32 @@ Cargo variable;Resta Cargo Variable T1R Sin Subsidio;T1R Residencial
 Cargo variable;Cargo Variable T1R Sin Subsidio;T1R Residencial
 Cargo variable;Incremento Costo Mayorista T1R;T1R Residencial
 Cargo variable;Resolución MI 206/13  T1R;T1R Residencial
+Cargo variable;Cargo Variable T1AP;T1AP Alumbrado Publico
+Cargo variable;Cargo Variable T1AP Sin Subsidio;T1AP Alumbrado Publico
+Cargo variable;Resta Cargo Variable T1AP Sin Subsidio;T1AP Alumbrado Publico
+Cargo variable;Incremento Costo Mayorista T1AP;T1AP Alumbrado Publico
+Cargo variable;Resolución 705 T1AP;T1AP Alumbrado Publico
+Cargo variable;Cargo Variable T1GBC;T1GBC Servicio General Bajo Consumo
+Cargo variable;Incremento Costo Mayorista T1GBC;T1GBC Servicio General Bajo Consumo
+Cargo variable;RES MI 206/13 T1GBC;T1GBC Servicio General Bajo Consumo
+Cargo variable;Cargo Perdida Transformador T1GBC;T1GBC Servicio General Bajo Consumo
+Cargo variable;Cargo Variable T1GBC Sin Subsidio;T1GBC Servicio General Bajo Consumo
+Cargo variable;Resta Cargo Variable T1GBC Sin Subsidio;T1GBC Servicio General Bajo Consumo
+Cargo variable;Cargo Variable T1GAC;T1GAC Servicio General Alto Consumo
+Cargo variable;Incremento Costo Mayorista T1GAC;T1GAC Servicio General Alto Consumo
+Cargo variable;RES MI 206/13 T1GAC;T1GAC Servicio General Alto Consumo
+Cargo variable;Cargo Perdida Transformador T1GAC;T1GAC Servicio General Alto Consumo
+Cargo variable;Cargo Variable T1GAC Sin Subsidio;T1GAC Servicio General Alto Consumo
+Cargo variable;Cargo Perdida Transformador T1GAC Sin Subsidio;T1GAC Servicio General Alto Consumo
+Cargo variable;Resta Cargo Variable T1GAC Sin Subsidio;T1GAC Servicio General Alto Consumo
+Cargo variable;Resta Cargo Perdida Transformador T1GAC Sin Subsidio;T1GAC Servicio General Alto Consumo
+Cargo variable;Cargo Variable TIS;T1R Residencial Social
+Cargo variable;Cargo Variable TIS Sin Subsidio;T1R Residencial Social
+Cargo variable;Resta Cargo Variable TIS Sin Subsidio;T1R Residencial Social
 Cargo variable Pico;Cargo Variable por Energia Demandada En Pico T2BT;T2BT Baja Tension
 Cargo variable Pico;Cargo Variable por Energia Demandada En Pico T2BT Sin Subsidio;T2BT Baja Tension
 Cargo variable Pico;Resta Cargo Variable por Energia Demandada En Pico T2BT Sin Subsidio;T2BT Baja Tension
+Cargo variable Pico;RES MI 206/13 T2BT;T2BT Baja Tension
 Cargo variable Fuera de pico;Cargo Variable por Energia Demandada Fuera de Pico T2BT Sin Subsidio;T2BT Baja Tension
 Cargo variable Fuera de pico;Cargo Variable por Energia Demandada Fuera de Pico T2BT;T2BT Baja Tension
 Cargo variable Fuera de pico;Resta Cargo Variable por Energia Demandada Fuera de Pico T2BT Sin Subsidio;T2BT Baja Tension
@@ -28,3 +51,262 @@ Cargo perdida Transformador;Resta Cargo Perdida Transformador T2BT Sin Subsidio;
 Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T2BT;T2BT Baja Tension
 Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T2BT Sin Subsidio;T2BT Baja Tension
 Recargos x Bajo Cos Fi;Resta Recargo por Bajo Coseno de Fi T2BT Sin Subsidio;T2BT Baja Tension
+Cargo variable Pico;Cargo Variable por Energia Demandada En Pico T2MT;T2MT Media Tension
+Cargo variable Pico;Cargo Variable por Energia Demandada En Pico T2MT Sin Subsidio;T2MT Media Tension
+Cargo variable Pico;Resta Cargo Variable por Energia Demandada En Pico T2MT Sin Subsidio;T2MT Media Tension
+Cargo variable Pico;RES MI 206/13 T2MT;T2MT Media Tension
+Cargo variable Fuera de pico;Cargo Variable por Energia Demandada Fuera de Pico T2MT;T2MT Media Tension
+Cargo variable Fuera de pico;Cargo Variable por Energia Demandada Fuera de Pico T2MT Sin Subsidio;T2MT Media Tension
+Cargo variable Fuera de pico;Resta Cargo Variable por Energia Demandada Fuera de Pico T2MT Sin Subsidio;T2MT Media Tension
+Potencia Pico;Cargo Potencia en Pico T2MT;T2MT Media Tension
+Potencia Pico;Cargo Potencia en Pico T2MT Sin Subsidio;T2MT Media Tension
+Potencia Pico;Resta Cargo Potencia en Pico T2MT Sin Subsidio;T2MT Media Tension
+Potencia Resto;Cargo Potencia Fuera de Pico T2MT;T2MT Media Tension
+Potencia Resto;Cargo Potencia Fuera de Pico T2MT Sin Subsidio;T2MT Media Tension
+Potencia Resto;Resta Cargo Potencia Fuera de Pico T2MT Sin Subsidio;T2MT Media Tension
+Exceso potencia Pico;Recargo por Exceso de Potencia en Pico T2MT;T2MT Media Tension
+Exceso potencia Pico;Recargo por Exceso de Potencia en Pico T2MT Sin Subsidio;T2MT Media Tension
+Exceso potencia Pico;Resta Recargo por Exceso de Potencia en Pico T2MT Sin Subsidio;T2MT Media Tension
+Exceso potencia Resto;Recargo por Exceso de Potencia Fuera Pico T2MT;T2MT Media Tension
+Exceso potencia Resto;Recargo por Exceso de Potencia Fuera Pico T2MT Sin Subsidio;T2MT Media Tension
+Exceso potencia Resto;Resta Recargo por Exceso de Potencia Fuera Pico T2MT Sin Subsidio;T2MT Media Tension
+Cargo perdida Transformador;Cargo Perdida Transformador T2MT;T2MT Media Tension
+Cargo perdida Transformador;Cargo Perdida Transformador T2MT Sin Subsidio;T2MT Media Tension
+Cargo perdida Transformador;Resta Cargo Perdida Transformador T2MT Sin Subsidio;T2MT Media Tension
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T2MT;T2MT Media Tension
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T2MT Sin Subsidio;T2MT Media Tension
+Recargos x Bajo Cos Fi;Resta Recargo por Bajo Coseno de Fi T2MT Sin Subsidio;T2MT Media Tension
+Cargo variable Pico;Cargo Variable Pico T3BT;T3BT Baja Tension (50 a 300KW)
+Cargo variable Pico;Cargo Variable Pico T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Cargo variable Pico;Resta Cargo Variable Pico T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Cargo variable Pico;RES MI 206/13 T3BT;T3BT Baja Tension (50 a 300KW)
+Cargo variable Resto;Cargo Variable Resto T3BT;T3BT Baja Tension (50 a 300KW)
+Cargo variable Resto;Cargo Variable Resto T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Cargo variable Resto;Resta Cargo Variable Resto T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Cargo variable Valle;Cargo Variable Valle T3BT;T3BT Baja Tension (50 a 300KW)
+Cargo variable Valle;Cargo Variable Valle T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Cargo variable Valle;Resta Cargo Variable Valle T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Potencia Pico;Cargo Potencia Pico T3BT;T3BT Baja Tension (50 a 300KW)
+Potencia Pico;Cargo Potencia Pico T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Potencia Pico;Resta Cargo Potencia Pico T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Potencia Resto;Cargo Potencia Resto T3BT;T3BT Baja Tension (50 a 300KW)
+Potencia Resto;Cargo Potencia Resto T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Potencia Resto;Resta Cargo Potencia Resto T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Exceso potencia Pico;Recargo por Exceso de Potencia Pico T3BT;T3BT Baja Tension (50 a 300KW)
+Exceso potencia Pico;Recargo por Exceso de Potencia Pico T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Exceso potencia Pico;Resta Recargo por Exceso de Potencia Pico T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Exceso potencia Resto;Recargo por Exceso de Potencia Resto T3BT;T3BT Baja Tension (50 a 300KW)
+Exceso potencia Resto;Recargo por Exceso de Potencia Resto T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Exceso potencia Resto;Resta Recargo por Exceso de Potencia Resto T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Cargo perdida Transformador;Cargo Perdida Transformador T3BT;T3BT Baja Tension (50 a 300KW)
+Cargo perdida Transformador;Cargo Perdida Transformador T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Cargo perdida Transformador;Resta Cargo Perdida Transformador T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T3BT;T3BT Baja Tension (50 a 300KW)
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Recargos x Bajo Cos Fi;Resta Recargo por Bajo Coseno de Fi T3BT Sin Subsidio;T3BT Baja Tension (50 a 300KW)
+Cargo variable Pico;Cargo Variable Pico T3BT (>300);T3BT Baja Tension (>300KW)
+Cargo variable Pico;Cargo Variable Pico T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Cargo variable Pico;Resta Cargo Variable Pico T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Cargo variable Pico;RES MI 206/13 T3BT (>300);T3BT Baja Tension (>300KW)
+Cargo variable Resto;Cargo Variable Resto T3BT (>300);T3BT Baja Tension (>300KW)
+Cargo variable Resto;Cargo Variable Resto T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Cargo variable Resto;Resta Cargo Variable Resto T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Cargo variable Valle;Cargo Variable Valle T3BT (>300);T3BT Baja Tension (>300KW)
+Cargo variable Valle;Cargo Variable Valle T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Cargo variable Valle;Resta Cargo Variable Valle T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Potencia Pico;Cargo Potencia Pico T3BT (>300);T3BT Baja Tension (>300KW)
+Potencia Pico;Cargo Potencia Pico T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Potencia Pico;Resta Cargo Potencia Pico T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Potencia Resto;Cargo Potencia Resto T3BT (>300);T3BT Baja Tension (>300KW)
+Potencia Resto;Cargo Potencia Resto T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Potencia Resto;Resta Cargo Potencia Resto T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Exceso potencia Pico;Recargo por Exceso de Potencia Pico T3BT (>300);T3BT Baja Tension (>300KW)
+Exceso potencia Pico;Recargo por Exceso de Potencia Pico T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Exceso potencia Pico;Resta Recargo por Exceso de Potencia Pico T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Exceso potencia Resto;Recargo por Exceso de Potencia Resto T3BT (>300);T3BT Baja Tension (>300KW)
+Exceso potencia Resto;Recargo por Exceso de Potencia Resto T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Exceso potencia Resto;Resta Recargo por Exceso de Potencia Resto T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Cargo perdida Transformador;Cargo Perdida Transformador T3BT (>300);T3BT Baja Tension (>300KW)
+Cargo perdida Transformador;Cargo Perdida Transformador T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Cargo perdida Transformador;Resta Cargo Perdida Transformador T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T3BT (>300);T3BT Baja Tension (>300KW)
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Recargos x Bajo Cos Fi;Resta Recargo por Bajo Coseno de Fi T3BT (>300) Sin Subsidio;T3BT Baja Tension (>300KW)
+Cargo variable Pico;Cargo Variable Pico T3MT;T3MT Media Tension (50 a 300KW)
+Cargo variable Pico;Cargo Variable Pico T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Cargo variable Pico;Resta Cargo Variable Pico T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Cargo variable Pico;RES MI 206/13 T3MT;T3MT Media Tension (50 a 300KW)
+Cargo variable Resto;Cargo Variable Resto T3MT;T3MT Media Tension (50 a 300KW)
+Cargo variable Resto;Cargo Variable Resto T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Cargo variable Resto;Resta Cargo Variable Resto T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Cargo variable Valle;Cargo Variable Valle T3MT;T3MT Media Tension (50 a 300KW)
+Cargo variable Valle;Cargo Variable Valle T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Cargo variable Valle;Resta Cargo Variable Valle T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Potencia Pico;Cargo Potencia Pico T3MT;T3MT Media Tension (50 a 300KW)
+Potencia Pico;Cargo Potencia Pico T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Potencia Pico;Resta Cargo Potencia Pico T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Potencia Resto;Cargo Potencia Resto T3MT;T3MT Media Tension (50 a 300KW)
+Potencia Resto;Cargo Potencia Resto T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Potencia Resto;Resta Cargo Potencia Resto T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Exceso potencia Pico;Recargo por Exceso de Potencia Pico T3MT;T3MT Media Tension (50 a 300KW)
+Exceso potencia Pico;Recargo por Exceso de Potencia Pico T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Exceso potencia Pico;Resta Recargo por Exceso de Potencia Pico T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Exceso potencia Resto;Recargo por Exceso de Potencia Resto T3MT;T3MT Media Tension (50 a 300KW)
+Exceso potencia Resto;Recargo por Exceso de Potencia Resto T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Exceso potencia Resto;Resta Recargo por Exceso de Potencia Resto T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Cargo perdida Transformador;Cargo Perdida Transformador T3MT;T3MT Media Tension (50 a 300KW)
+Cargo perdida Transformador;Cargo Perdida Transformador T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Cargo perdida Transformador;Resta Cargo Perdida Transformador T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T3MT;T3MT Media Tension (50 a 300KW)
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Recargos x Bajo Cos Fi;Resta Recargo por Bajo Coseno de Fi T3MT Sin Subsidio;T3MT Media Tension (50 a 300KW)
+Cargo variable Pico;Cargo Variable Pico T3MT (> 300);T3MT Media Tension (>300KW)
+Cargo variable Pico;Cargo Variable Pico T3MT Sin Subsidio (> 300);T3MT Media Tension (>300KW)
+Cargo variable Pico;Resta Cargo Variable Pico T3MT Sin Subsidio (> 300);T3MT Media Tension (>300KW)
+Cargo variable Pico;RES MI 206/13 T3MT (> 300);T3MT Media Tension (>300KW)
+Cargo variable Resto;Cargo Variable Resto T3MT (> 300);T3MT Media Tension (>300KW)
+Cargo variable Resto;Cargo Variable Resto T3MT Sin Subsidio (> 300);T3MT Media Tension (>300KW)
+Cargo variable Resto;Resta Cargo Variable Resto T3MT Sin Subsidio (> 300);T3MT Media Tension (>300KW)
+Cargo variable Valle;Cargo Variable Valle T3MT (> 300);T3MT Media Tension (>300KW)
+Cargo variable Valle;Cargo Variable Valle T3MT Sin Subsidio (> 300);T3MT Media Tension (>300KW)
+Cargo variable Valle;Resta Cargo Variable Valle T3MT Sin Subsidio (> 300);T3MT Media Tension (>300KW)
+Potencia Pico;Cargo Potencia Pico T3MT (> 300);T3MT Media Tension (>300KW)
+Potencia Pico;Cargo Potencia Pico T3MT (> 300) Sin Subsidio ;T3MT Media Tension (>300KW)
+Potencia Pico;Resta Cargo Potencia Pico T3MT (> 300) Sin Subsidio ;T3MT Media Tension (>300KW)
+Potencia Resto;Cargo Potencia Resto T3MT (> 300);T3MT Media Tension (>300KW)
+Potencia Resto;Cargo Potencia Resto T3MT (> 300) Sin Subsidio;T3MT Media Tension (>300KW)
+Potencia Resto;Resta Cargo Potencia Resto T3MT (> 300) Sin Subsidio;T3MT Media Tension (>300KW)
+Exceso potencia Pico;Recargo por Exceso de Potencia Pico T3MT (> 300);T3MT Media Tension (>300KW)
+Exceso potencia Pico;Recargo por Exceso de Potencia Pico T3MT (> 300) Sin Subsidio;T3MT Media Tension (>300KW)
+Exceso potencia Pico;Resta Recargo por Exceso de Potencia Pico T3MT (> 300) Sin Subsidio;T3MT Media Tension (>300KW)
+Exceso potencia Resto;Recargo por Exceso de Potencia Resto T3MT (> 300);T3MT Media Tension (>300KW)
+Exceso potencia Resto;Recargo por Exceso de Potencia Resto T3MT (> 300) Sin Subsidio;T3MT Media Tension (>300KW)
+Exceso potencia Resto;Resta Recargo por Exceso de Potencia Resto T3MT (> 300) Sin Subsidio;T3MT Media Tension (>300KW)
+Cargo perdida Transformador;Cargo Perdida Transformador T3MT (> 300);T3MT Media Tension (>300KW)
+Cargo perdida Transformador;Cargo Perdida Transformador T3MT (> 300) Sin Subsidio;T3MT Media Tension (>300KW)
+Cargo perdida Transformador;Resta Cargo Perdida Transformador T3MT (> 300) Sin Subsidio;T3MT Media Tension (>300KW)
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T3MT (> 300);T3MT Media Tension (>300KW)
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T3MT (> 300) Sin Subsidio;T3MT Media Tension (>300KW)
+Recargos x Bajo Cos Fi;Resta Recargo por Bajo Coseno de Fi T3MT (> 300) Sin Subsidio;T3MT Media Tension (>300KW)
+Cargo variable;Cargo Variable T4R;T4 Rural
+Cargo variable;Incremento Costo Mayorista T4R;T4 Rural
+Cargo variable;RES MI 206/13 T4R;T4 Rural
+Cargo variable;Cargo Perdida Transformador T4R;T4 Rural
+Cargo variable;Cargo Variable T4R Sin Subsidio;T4 Rural
+Cargo variable;Cargo Perdida Transformador T4R Sin Subsidio;T4 Rural
+Cargo variable;Resta Cargo Variable T4R Sin Subsidio;T4 Rural
+Cargo variable;Resta Cargo Perdida Transformador T4R Sin Subsidio;T4 Rural
+Cargo variable;Cargo Variable T4R;T4 Rural
+Cargo variable;Incremento Costo Mayorista T4R;T4 Rural
+Cargo variable Pico;Cargo Variable Pico T5BT;T5BT Baja Tension (50 a 300KW)
+Cargo variable Pico;Cargo Variable Pico T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Cargo variable Pico;Resta Cargo Variable Pico T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Cargo variable Pico;RES MI 206/13 T5BT;T5BT Baja Tension (50 a 300KW)
+Cargo variable Resto;Cargo Variable Resto T5BT;T5BT Baja Tension (50 a 300KW)
+Cargo variable Resto;Cargo Variable Resto T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Cargo variable Resto;Resta Cargo Variable Resto T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Cargo variable Valle;Cargo Variable Valle T5BT;T5BT Baja Tension (50 a 300KW)
+Cargo variable Valle;Cargo Variable Valle T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Cargo variable Valle;Resta Cargo Variable Valle T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Potencia Pico;Cargo Potencia Pico T5BT;T5BT Baja Tension (50 a 300KW)
+Potencia Pico;Cargo Potencia Pico T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Potencia Pico;Resta Cargo Potencia Pico T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Potencia Resto;Cargo Potencia Resto T5BT;T5BT Baja Tension (50 a 300KW)
+Potencia Resto;Cargo Potencia Resto T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Potencia Resto;Resta Cargo Potencia Resto T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Exceso potencia Pico;Recargo por Exceso de Potencia Pico T5BT;T5BT Baja Tension (50 a 300KW)
+Exceso potencia Pico;Recargo por Exceso de Potencia Pico T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Exceso potencia Pico;Resta Recargo por Exceso de Potencia Pico T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Exceso potencia Resto;Recargo por Exceso de Potencia Resto T5BT;T5BT Baja Tension (50 a 300KW)
+Exceso potencia Resto;Recargo por Exceso de Potencia Resto T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Exceso potencia Resto;Resta Recargo por Exceso de Potencia Resto T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Cargo perdida Transformador;Cargo Perdida Transformador T5BT;T5BT Baja Tension (50 a 300KW)
+Cargo perdida Transformador;Cargo Perdida Transformador T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Cargo perdida Transformador;Resta Cargo Perdida Transformador T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T5BT;T5BT Baja Tension (50 a 300KW)
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Recargos x Bajo Cos Fi;Resta Recargo por Bajo Coseno de Fi T5BT Sin Subsidio;T5BT Baja Tension (50 a 300KW)
+Cargo variable Pico;Cargo Variable Pico T5BT (>300);T5BT Baja Tension (>300KW)
+Cargo variable Pico;Cargo Variable Pico T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Cargo variable Pico;Resta Cargo Variable Pico T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Cargo variable Pico;RES MI 206/13 T5BT (>300);T5BT Baja Tension (>300KW)
+Cargo variable Resto;Cargo Variable Resto T5BT (>300);T5BT Baja Tension (>300KW)
+Cargo variable Resto;Cargo Variable Resto T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Cargo variable Resto;Resta Cargo Variable Resto T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Cargo variable Valle;Cargo Variable Valle T5BT (>300);T5BT Baja Tension (>300KW)
+Cargo variable Valle;Cargo Variable Valle T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Cargo variable Valle;Resta Cargo Variable Valle T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Potencia Pico;Cargo Potencia Pico T5BT (>300);T5BT Baja Tension (>300KW)
+Potencia Pico;Cargo Potencia Pico T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Potencia Pico;Resta Cargo Potencia Pico T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Potencia Resto;Cargo Potencia Resto T5BT (>300);T5BT Baja Tension (>300KW)
+Potencia Resto;Cargo Potencia Resto T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Potencia Resto;Resta Cargo Potencia Resto T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Exceso potencia Pico;Recargo por Exceso de Potencia Pico T5BT (>300);T5BT Baja Tension (>300KW)
+Exceso potencia Pico;Recargo por Exceso de Potencia Pico T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Exceso potencia Pico;Resta Recargo por Exceso de Potencia Pico T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Exceso potencia Resto;Recargo por Exceso de Potencia Resto T5BT (>300);T5BT Baja Tension (>300KW)
+Exceso potencia Resto;Recargo por Exceso de Potencia Resto T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Exceso potencia Resto;Resta Recargo por Exceso de Potencia Resto T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Cargo perdida Transformador;Cargo Perdida Transformador T5BT (>300);T5BT Baja Tension (>300KW)
+Cargo perdida Transformador;Cargo Perdida Transformador T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Cargo perdida Transformador;Resta Cargo Perdida Transformador T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T5BT (>300);T5BT Baja Tension (>300KW)
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Recargos x Bajo Cos Fi;Resta Recargo por Bajo Coseno de Fi T5BT Sin Subsidio (>300);T5BT Baja Tension (>300KW)
+Cargo variable Pico;Cargo Variable Pico T5MT;T5MT Media Tension (50 a 300KW)
+Cargo variable Pico;Cargo Variable Pico T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Cargo variable Pico;Resta Cargo Variable Pico T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Cargo variable Pico;RES MI 206/13 T5MT;T5MT Media Tension (50 a 300KW)
+Cargo variable Resto;Cargo Variable Resto T5MT;T5MT Media Tension (50 a 300KW)
+Cargo variable Resto;Cargo Variable Resto T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Cargo variable Resto;Resta Cargo Variable Resto T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Cargo variable Valle;Cargo Variable Valle T5MT;T5MT Media Tension (50 a 300KW)
+Cargo variable Valle;Cargo Variable Valle T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Cargo variable Valle;Resta Cargo Variable Valle T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Potencia Pico;Cargo Potencia Pico T5MT;T5MT Media Tension (50 a 300KW)
+Potencia Pico;Cargo Potencia Pico T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Potencia Pico;Resta Cargo Potencia Pico T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Potencia Resto;Cargo Potencia Resto T5MT;T5MT Media Tension (50 a 300KW)
+Potencia Resto;Cargo Potencia Resto T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Potencia Resto;Resta Cargo Potencia Resto T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Exceso potencia Pico;Recargo por Exceso de Potencia Pico T5MT;T5MT Media Tension (50 a 300KW)
+Exceso potencia Pico;Recargo por Exceso de Potencia Pico T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Exceso potencia Pico;Resta Recargo por Exceso de Potencia Pico T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Exceso potencia Resto;Recargo por Exceso de Potencia Resto T5MT;T5MT Media Tension (50 a 300KW)
+Exceso potencia Resto;Recargo por Exceso de Potencia Resto T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Exceso potencia Resto;Resta Recargo por Exceso de Potencia Resto T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Cargo perdida Transformador;Cargo Perdida Transformador T5MT;T5MT Media Tension (50 a 300KW)
+Cargo perdida Transformador;Cargo Perdida Transformador T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Cargo perdida Transformador;Resta Cargo Perdida Transformador T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T5MT;T5MT Media Tension (50 a 300KW)
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Recargos x Bajo Cos Fi;Resta Recargo por Bajo Coseno de Fi T5MT Sin Subsidio;T5MT Media Tension (50 a 300KW)
+Cargo variable Pico;Cargo Variable Pico T5MT (>300);T5MT Media Tension (>300KW)
+Cargo variable Pico;Cargo Variable Pico T5MT (>300) Sin Subsidio ;T5MT Media Tension (>300KW)
+Cargo variable Pico;Resta Cargo Variable Pico T5MT (>300) Sin Subsidio ;T5MT Media Tension (>300KW)
+Cargo variable Pico;RES MI 206/13 T5MT (>300);T5MT Media Tension (>300KW)
+Cargo variable Resto;Cargo Variable Resto T5MT (>300);T5MT Media Tension (>300KW)
+Cargo variable Resto;Cargo Variable Resto T5MT (>300) Sin Subsidio ;T5MT Media Tension (>300KW)
+Cargo variable Resto;Resta Cargo Variable Resto T5MT (>300) Sin Subsidio ;T5MT Media Tension (>300KW)
+Cargo variable Valle;Cargo Variable Valle T5MT (>300);T5MT Media Tension (>300KW)
+Cargo variable Valle;Cargo Variable Valle T5MT (>300) Sin Subsidio;T5MT Media Tension (>300KW)
+Cargo variable Valle;Resta Cargo Variable Valle T5MT (>300) Sin Subsidio;T5MT Media Tension (>300KW)
+Potencia Pico;Cargo Potencia Pico T5MT (>300);T5MT Media Tension (>300KW)
+Potencia Pico;Cargo Potencia Pico T5MT (>300) Sin Subsidio ;T5MT Media Tension (>300KW)
+Potencia Pico;Resta Cargo Potencia Pico T5MT (>300) Sin Subsidio ;T5MT Media Tension (>300KW)
+Potencia Resto;Cargo Potencia Resto T5MT (>300);T5MT Media Tension (>300KW)
+Potencia Resto;Cargo Potencia Resto T5MT (>300) Sin Subsidio ;T5MT Media Tension (>300KW)
+Potencia Resto;Resta Cargo Potencia Resto T5MT (>300) Sin Subsidio ;T5MT Media Tension (>300KW)
+Exceso potencia Pico;Recargo por Exceso de Potencia Pico T5MT (>300);T5MT Media Tension (>300KW)
+Exceso potencia Pico;Recargo por Exceso de Potencia Pico T5MT (>300)Sin Subsidio;T5MT Media Tension (>300KW)
+Exceso potencia Pico;Resta Recargo por Exceso de Potencia Pico T5MT (>300)Sin Subsidio;T5MT Media Tension (>300KW)
+Exceso potencia Resto;Recargo por Exceso de Potencia Resto T5MT (>300);T5MT Media Tension (>300KW)
+Exceso potencia Resto;Recargo por Exceso de Potencia Resto T5MT (>300) Sin Subsidio;T5MT Media Tension (>300KW)
+Exceso potencia Resto;Resta Recargo por Exceso de Potencia Resto T5MT (>300) Sin Subsidio;T5MT Media Tension (>300KW)
+Cargo perdida Transformador;Cargo Perdida Transformador T5MT (>300);T5MT Media Tension (>300KW)
+Cargo perdida Transformador;Cargo Perdida Transformador T5MT (>300) Sin Subsidio;T5MT Media Tension (>300KW)
+Cargo perdida Transformador;Resta Cargo Perdida Transformador T5MT (>300) Sin Subsidio;T5MT Media Tension (>300KW)
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T5MT (>300) ;T5MT Media Tension (>300KW)
+Recargos x Bajo Cos Fi;Recargo por Bajo Coseno de Fi T5MT (>300) Sin Subsidio;T5MT Media Tension (>300KW)
+Recargos x Bajo Cos Fi;Resta Recargo por Bajo Coseno de Fi T5MT (>300) Sin Subsidio;T5MT Media Tension (>300KW)

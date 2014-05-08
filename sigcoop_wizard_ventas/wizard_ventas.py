@@ -72,7 +72,7 @@ class CrearVentas(Wizard):
         new_line = SaleLine(
                 product=product,
                 quantity=Decimal(amount),
-                description="descripcion",
+                description=product.name + " - " + str(amount),
                 unit=product.default_uom,
                 )
         with Transaction().set_context({"price_list": price_list, "customer": customer}):
@@ -91,7 +91,7 @@ class CrearVentas(Wizard):
             ret.append(self.crear_sale_line(cantidad, producto_consumo.producto_id, customer, price_list))
         return ret
 
-    def crear_sale_lines_independientes_consumo(self, concepto, cantidad_consumida, party, price_list):
+    def crear_sale_lines_independientes_consumo(self, party, price_list):
         ret = []
         #TODO: tal vez es mas eficiente hacer un search sobre PriceList
         filtro_producto = lambda x: (x.product.tipo_cargo == 'fijo' and x.product.tipo_producto == 'cargos')
@@ -100,7 +100,7 @@ class CrearVentas(Wizard):
             ret.append(self.crear_sale_line(1, producto, party, price_list))
         return ret
 
-    def crear_sale_lines_sin_impuestos(self, concepto, cantidad_consumida, party, price_list):
+    def crear_sale_lines_sin_impuestos(self, party, price_list):
         ret = []
         #TODO: tal vez es mas eficiente hacer un search sobre PriceList
         filtro_producto = lambda x: (x.product.tipo_cargo == 'fijo' and x.product.tipo_producto == 'varios')
@@ -142,26 +142,24 @@ class CrearVentas(Wizard):
         party = suministro.usuario_id
         price_list = suministro.lista_precios
         sale = Sale(
-                party=party,
-                price_list=price_list,
-                description="Sale para %s" % (self.construir_descripcion(),)
+                party = party,
+                price_list = price_list,
+                description = str(party.name) + " - " + str(price_list.name)
         )
 
         #Creamos las lineas para los distintos tipos de productos
         sale_lines = []
+        #Primero creamos las lineas que dependen de lo consumido
         for i in lista_consumos[1]:
             sale_lines.extend(
                     self.crear_sale_lines_dependientes_consumo(
                         i.concepto, i.consumo_neto, party, price_list
                     ))
-            sale_lines.extend(
-                    self.crear_sale_lines_independientes_consumo(
-                        i.concepto, i.consumo_neto, party, price_list
-                    ))
-            sale_lines.extend(
-                    self.crear_sale_lines_sin_impuestos(
-                        i.concepto, i.consumo_neto, party, price_list
-                    ))
+
+        #Las lineas que no dependen del consumo, solo se crean una vez por venta
+        sale_lines.extend(self.crear_sale_lines_independientes_consumo(party, price_list))
+        sale_lines.extend(self.crear_sale_lines_sin_impuestos(party, price_list))
+
         sale.lines = sale_lines
         sale.save()
 

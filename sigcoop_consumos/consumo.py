@@ -4,7 +4,6 @@ from trytond.wizard import Wizard, StateTransition, StateView, Button
 from trytond.pool import Pool
 from datetime import *
 
-
 class Consumo(ModelSQL, ModelView):
     "Consumo"
     __name__ = 'sigcoop_consumos.consumo'
@@ -16,14 +15,15 @@ class Consumo(ModelSQL, ModelView):
         [
             ('1', 'Cargo variable'),
             ('2', 'Cargo variable Pico'),
-            ('3', 'Cargo variable Valle'),
-            ('4', 'Cargo variable Resto'),
-            ('5', 'Potencia Pico'),
-            ('6', 'Potencia Resto'),
-            ('7', 'Exceso potencia Pico'),
-            ('8', 'Exceso potencia Resto'),
-            ('9', 'Cargo perdida Transformador'),
-            ('10', 'Recargos x Bajo Cos Fi'),
+            ('3', 'Cargo variable Fuera de pico'),
+            ('4', 'Cargo variable Valle'),
+            ('5', 'Cargo variable Resto'),
+            ('6', 'Potencia Pico'),
+            ('7', 'Potencia Resto'),
+            ('8', 'Exceso potencia Pico'),
+            ('9', 'Exceso potencia Resto'),
+            ('10', 'Cargo perdida Transformador'),
+            ('11', 'Recargos x Bajo Cos Fi'),
         ],
         'Concepto'
     )
