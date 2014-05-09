@@ -135,6 +135,7 @@ class CrearVentas(Wizard):
         lista_consumos[0]: id del suministro
         lista_consumos[1]: iterador sobre Consumo para el suministro
         """
+        consumos = list(lista_consumos[1])
         #Creamos la venta a la que le vamos a asociar las lineas de venta
         Sale = Pool().get('sale.sale')
         Suministro = Pool().get('sigcoop_usuario.suministro')
@@ -149,8 +150,10 @@ class CrearVentas(Wizard):
 
         #Creamos las lineas para los distintos tipos de productos
         sale_lines = []
+
         #Primero creamos las lineas que dependen de lo consumido
-        for i in lista_consumos[1]:
+        #for i in lista_consumos[1]:
+        for i in consumos:
             sale_lines.extend(
                     self.crear_sale_lines_dependientes_consumo(
                         i.concepto, i.consumo_neto, party, price_list
@@ -168,13 +171,34 @@ class CrearVentas(Wizard):
         for i in sale.lines:
             tax_ids = i.on_change_product().get("taxes")#lista de ids
             tax_browse_records = Tax.browse(tax_ids) or []
+            """
             logger.error("-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=")
             for t in tax_browse_records:
                 logger.error(t.description)
             logger.error("-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=")
+            """
             extra_tax_browse_records = self.get_extra_taxes(i.product, suministro, party)
             i.taxes = tuple(tax_browse_records) + tuple(extra_tax_browse_records)
             i.save()
+        sale.save()
+
+        #Avanzamos a presupuesto
+        sale.invoice_address = sale.party.address_get(type='invoice')
+        sale.shipment_address = sale.party.address_get(type='delivery')
+        sale.quote([sale])
+
+        #Avanzamos a confirmado
+        sale.confirm([sale])
+
+        #Avanzamos a procesado. En este estado se crea la factura
+        #de la venta.
+        sale.process([sale])
+
+        #Seteamos el estado de los consumos como facturado
+        for c in consumos:
+            c.estado = '2'
+            c.save()
+
         sale.save()
 
     def agrupar_por_suministro(self, lista_consumos):
