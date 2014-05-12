@@ -15,15 +15,15 @@ class SuministroMedidor(ModelSQL):
     'Suministro Medidor'
     __name__= 'sigcoop_usuario.suministro_medidor'
 
-    suminitro = fields.Many2One('sigcoop_usuario.suministro', 'Suministro')
+    suministro = fields.Many2One('sigcoop_usuario.suministro', 'Suministro')
     medidor = fields.Many2One('sigcoop_medidor.medidor', 'Medidor')
 
     @classmethod
     def __setup__(cls):
         super(SuministroMedidor, cls).__setup__()
         cls._sql_constraints += [
-            ('suminitro_unique', 'UNIQUE(suminitro)',
-                'suminitro must be unique'),
+            ('suministro_unique', 'UNIQUE(suministro)',
+                'suministro must be unique'),
             ('medidor_unique', 'UNIQUE(medidor)',
                 'medidor must be unique'),
             ]

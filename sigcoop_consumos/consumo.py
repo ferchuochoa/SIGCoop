@@ -41,6 +41,15 @@ class Consumo(ModelSQL, ModelView):
     )
 
 
+    @classmethod
+    def __setup__(cls):
+        super(Consumo, cls).__setup__()
+        cls._sql_constraints += [
+            ('consumo_pk', 'UNIQUE(id_suministro, id_medidor, periodo, concepto)',
+                'No puede haber mas de un consumo para el mismo medidor en un periodo y para un concepto'),
+            ]
+
+
 #----------------------------Wizard de importacion----------------------------------#
 
 class ImportacionStart(ModelView): 
@@ -58,9 +67,8 @@ class ImportacionResumen(ModelView):
 
     resumen = fields.Text('Resumen de importacion', readonly = True)
 
-    dato = fields.Function(fields.Char('Un dato'), 'get_dato')
 
-    elDato = ''
+    elDato = 'algo'
 
     def get_dato(self):
         print self.elDato + ' get'
@@ -72,7 +80,7 @@ class ImportacionResumen(ModelView):
 
     @classmethod
     def default_resumen(cls):
-        return 'hola'
+        return 'hola' + cls.elDato
 
 
 class ImportacionConsumos(Wizard):
@@ -127,7 +135,7 @@ class ImportacionConsumos(Wizard):
                             'concepto':concept,
                             'fecha':fechaActual,
                             'lectura':estado,
-                            'consumo_neto':consumoNeto,
+                            'consumo_neto':int(consumoNeto)* existe_medidor.registrador,
                         }])[0]
                     consumo_nuevo.save()
                 except:
@@ -137,7 +145,7 @@ class ImportacionConsumos(Wizard):
 
 
         # if self.start.checkListado:
-        #     generarListadoConsistencia()
+        # #     generarListadoConsistencia()
         self.resumen.set_dato('el dato que paso')
         return 'resumen'
 

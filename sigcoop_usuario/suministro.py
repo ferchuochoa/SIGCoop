@@ -29,7 +29,9 @@ TARIFAS_POTENCIA_KEYS = ['T2BT', 'T2MT', 'T3BT', 'T3BT2', 'T3MT', 'T3MT2', 'T5BT
 class Suministro(ModelSQL, ModelView):
     "Suministro"
     __name__ = 'sigcoop_usuario.suministro'
-    usuario_id = fields.Many2One('party.party', 'Usuario')
+
+    name = fields.Function(fields.Char('Name'), 'get_name')
+    usuario_id = fields.Many2One('party.party', 'Usuario', domain = [('cliente_socio', '=', 'True')])
     codigo_suministro = fields.Char('Codigo suministro')
     servicio = fields.Selection(
         [
@@ -57,3 +59,10 @@ class Suministro(ModelSQL, ModelView):
             'invisible': (~In(Eval('lista_precios'), TARIFAS_POTENCIA_KEYS))
         }
     )
+
+    @classmethod
+    def get_name(cls, sigcoop_usuario_suministro, name):
+        res = {}
+        for pos in cls.browse(sigcoop_usuario_suministro):
+            res[pos.id] = str(pos.codigo_suministro)
+        return res

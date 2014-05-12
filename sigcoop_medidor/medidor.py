@@ -8,5 +8,10 @@ class Medidor(ModelSQL, ModelView):
     "Medidor"
     __name__='sigcoop_medidor.medidor'
 
-    id_medidor = fields.Char('Medidor', required = True)
+    name = fields.Char('Medidor', required = True)
     registrador = fields.Integer('Registrador', required = True)
+
+
+    @staticmethod
+    def default_registrador():
+        return 1

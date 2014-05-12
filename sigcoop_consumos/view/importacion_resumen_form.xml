@@ -3,6 +3,4 @@
 <form string="Resumen de Importacion">
     <label name="resumen" string="Resumen de la importacion"/>
     <field name="resumen"/>
-    <label name="dato"/>
-    <field name="dato"/>
 </form>
