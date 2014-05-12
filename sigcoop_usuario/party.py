@@ -57,6 +57,7 @@ class Party(ModelSQL, ModelView):
                 },
             depends=['active'],
             )
+    iva_por_servicio = fields.Many2Many('relation_name', 'origin', 'target', 'Iva por Servicio')
     #Este campo lo tomamos prestado de account_invoice_ar.
     iibb_type = fields.Selection(
             [
@@ -104,5 +105,8 @@ class Party(ModelSQL, ModelView):
             return {'numero':None}
         return {'numero':'-1'}
 
+class PartyIva(ModelSQL):
+    'Party Iva'
+    __name__ = ''
 
 
