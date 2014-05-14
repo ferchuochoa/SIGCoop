@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<tree string="Rango">
+<tree string="Suscripción">
   <field name="minimo"/>
   <field name="maximo"/>
 </tree>
