@@ -5,7 +5,7 @@
         position="after">
         <label name="cliente_socio" string="Cliente"/>
         <field name="cliente_socio" xexpand="0" width="25"/>
-        <label name="asociado" string="Socio"/>
+        <label name="asociado" string="Asociado"/>
         <field name="asociado" xexpand="0" width="25"/>
     </xpath>
    
@@ -45,11 +45,11 @@
             <group col="2" colspan="4" id="rangos_aportes">
                 <group col="1" colspan="1" id="rangos">
                 <field name="rangos" mode="tree,form" colspan="4"
-                    view_ids="sigcoop_usuario.rango_view_tree,sigcoop_usuario.rango_view_form" yexpand="1" height="200"/>
+                    view_ids="sigcoop_usuario.rango_view_tree,sigcoop_usuario.rango_view_form" yexpand="1" height="200" string="Suscripción"/>
                 </group>
                 <group col="1" colspan="1" id="aportes">
                 <field name="aportes" mode="tree,form" colspan="4"
-                    view_ids="sigcoop_usuario.aporte_view_tree,sigcoop_usuario.aporte_view_form" yexpand="1" height="200"/>
+                    view_ids="sigcoop_usuario.aporte_view_tree,sigcoop_usuario.aporte_view_form" yexpand="1" height="200" string="Integración"/>
                 </group>
             </group>
             <newline/>
