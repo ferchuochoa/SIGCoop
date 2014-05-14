@@ -4,6 +4,7 @@
   <field name="codigo_suministro"/>
   <field name="servicio"/>
   <field name="lista_precios"/>
+  <field name="iva"/>
   <field name="ruta"/>
   <field name="calle"/>
   <field name="calle_numero"/>

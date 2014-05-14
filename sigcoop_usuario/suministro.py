@@ -33,3 +33,4 @@ class Suministro(ModelSQL, ModelView):
             'invisible': (~In(Eval('lista_precios'), TARIFAS_POTENCIA_KEYS))
         }
     )
+    iva = fields.Many2One('account.tax', 'Iva', domain=[('group.name', '=', 'IVA')])

@@ -30,6 +30,9 @@
             <label name="iibb_number"/>
             <field name="iibb_number"/>
             <newline/>
+            <label name="iibb_porcentaje"/>
+            <field name="iibb_porcentaje"/>
+            <newline/>
             <field name="suministros" mode="tree,form" colspan="6"
                 view_ids="sigcoop_usuario.suministro_view_tree,sigcoop_usuario.suministro_view_form"/>
         </page>

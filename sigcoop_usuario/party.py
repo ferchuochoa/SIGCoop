@@ -79,7 +79,11 @@ class Party(ModelSQL, ModelView):
                 },
             depends=['active'],
             )
-
+    iibb_porcentaje = fields.Many2One('account.tax', 'Impuesto IIBB',
+            states={
+                'required': And(Not(Equal(Eval('iibb_type'), 'exento')), Bool(Eval('iibb_type')))
+                },
+            domain=[('group.name', '=', 'IIBB')])
 
     @staticmethod
     def default_tipo_identificacion():
