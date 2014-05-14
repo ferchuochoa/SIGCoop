@@ -25,9 +25,6 @@
             <label name="iva_condition"/>
             <field name="iva_condition"/>
             <newline/>
-            <label name="iva_por_servicio"/>
-            <field name="iva_por_servicio"/>
-            <newline/>
             <label name="iibb_type"/>
             <field name="iibb_type"/>
             <label name="iibb_number"/>

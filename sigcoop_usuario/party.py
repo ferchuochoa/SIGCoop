@@ -57,7 +57,6 @@ class Party(ModelSQL, ModelView):
                 },
             depends=['active'],
             )
-    iva_por_servicio = fields.Many2Many('party.party-iva.iva', 'party', 'iva', 'Iva por Servicio')
     #Este campo lo tomamos prestado de account_invoice_ar.
     iibb_type = fields.Selection(
             [
@@ -105,22 +104,5 @@ class Party(ModelSQL, ModelView):
             return {'numero':None}
         return {'numero':'-1'}
 
-class PartyIva(ModelSQL):
-    'Party Iva'
-    __name__ = 'party.party-iva.iva'
-    party = fields.Many2One('party.party', 'Usuario', select=True)
-    iva = fields.Many2One('sigcoop_usuario.iva', 'Impuesto Iva', select=True)
-
-SERVICIOS = [
-        ('luz', 'Luz'),
-        ('agua', 'Agua'),
-        ('gas', 'Gas'),
-]
-
-class Iva(ModelSQL, ModelView):
-    "Iva"
-    __name__ = 'sigcoop_usuario.iva'
-    servicio = fields.Selection(SERVICIOS, 'Servicio')
-    impuesto = fields.Many2One('account.tax', 'Impuesto')
 
 

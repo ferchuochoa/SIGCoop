@@ -19,6 +19,8 @@
   <field name="impuesto_alumbrado"/>
   <label name="lista_precios"/>
   <field name="lista_precios"/>
+  <label name="iva"/>
+  <field name="iva"/>
   <newline/>
   <label name="potencia_contratada"/>
   <field name="potencia_contratada"/>

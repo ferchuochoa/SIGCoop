@@ -45,7 +45,7 @@ class Suministro(ModelSQL, ModelView):
     #El tipo de alumbrado publico que se le cobra al cliente.
     impuesto_alumbrado = fields.Many2One('account.tax', 'Impuesto alumbrado publico', domain=[('group.name', '=', 'Alumbrado')])
     lista_precios = fields.Many2One('product.price_list', 'Tarifa')
-    #TODO quitar tarifa - la potencia tiene que calcularse desde lista de precios 
+    #TODO quitar tarifa - la potencia tiene que calcularse desde lista de precios
     #tarifa = fields.Selection(TARIFAS, 'Tarifa')
     #potencia_contratada = fields.Integer('Potencia Contratada',
     #    states={
@@ -56,3 +56,4 @@ class Suministro(ModelSQL, ModelView):
             'invisible': (~In(Eval('lista_precios'), TARIFAS_POTENCIA_KEYS))
         }
     )
+    iva = fields.Many2One('account.tax', 'Iva', domain=[('group.name', '=', 'IVA')])
