@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Consumos">
+  <field name="id_suministro"/>
+  <field name="id_medidor"/>
+  <field name="periodo"/>
+  <field name="fecha"/>
+  <field name="lectura"/>
+  <field name="consumo_neto"/>
+</tree>

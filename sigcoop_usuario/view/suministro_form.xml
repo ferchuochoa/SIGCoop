@@ -2,24 +2,24 @@
 <form string="Suministro" col="4">
   <label name="usuario_id"/>
   <field name="usuario_id"/>
-  <label name="numero_suministro"/>
-  <field name="numero_suministro"/>
+  <label name="codigo_suministro"/>
+  <field name="codigo_suministro"/>
   <newline/>
   <label name="servicio"/>
   <field name="servicio"/>
-  <label name="ruta"/>
-  <field name="ruta"/>
   <newline/>
   <label name="calle"/>
   <field name="calle"/>
   <label name="calle_numero"/>
   <field name="calle_numero"/>
   <newline/>
+  <label name="ruta"/>
+  <field name="ruta"/>
   <label name="impuesto_alumbrado"/>
   <field name="impuesto_alumbrado"/>
+  <newline/>
   <label name="lista_precios"/>
   <field name="lista_precios"/>
-  <newline/>
   <label name="potencia_contratada"/>
   <field name="potencia_contratada"/>
 </form>
