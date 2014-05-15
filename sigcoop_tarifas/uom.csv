@@ -1,0 +1,6 @@
+name;symbol;category;
+Pesos Kilowatt Hora;$/kWh;Unidades;
+Pesos Kilowatt Mes;$/kWm;Unidades;
+Pesos Kilovoltamper Reactivo Hora;$/Kvarh;Unidades;
+Pesos Mes;$/mes;Unidades;
+Kilowatt Hora Mes;kWh-mes;Unidades;

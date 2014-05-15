@@ -218,8 +218,17 @@ def translate_to_producto_consumo(_id, row, simulate):
     if check_existance([ret["producto_id"], ret["tarifa_id"]]) and concepto_to_int.has_key(row["Concepto"]):
         return ret
     else:
-        import pdb; pdb.set_trace()
         return None
+
+def translate_to_unidad(_id, row, simulate):
+    ret = {
+            "model" : "product.uom",
+            "id" : _id,
+            "name" : row["name"],
+            "symbol" : row["symbol"],
+            "category" : ("product.uom.category", [('name', '=', row["category"])])
+    }
+    return ret
 
 def create_entities(csv_reader, translator, simulate=False):
     for _id, row in enumerate(csv_reader):
@@ -274,6 +283,7 @@ def main():
     parser.add_argument('nombre-db', action="store", help="Nombre de la base de datos en la que insertar los registros.")
     parser.add_argument('password-admin-db', action="store", help="Password del usuario admin en la base de datos.")
     parser.add_argument('archivo-configuracion', action="store", help="Archivo trytond.conf que usas para correr el server. \n Si no sabes donde esta, escribi 'locate trytond.conf' en la consola, amigx.")
+    parser.add_argument('-u','--unidades', action="store", help="Crear unidades de medida")
     parser.add_argument('-p','--productos', action="store", help="Crear productos a partir del archivo indicado.")
     parser.add_argument('-i','--impuestos', action="store", help="Crear impuestos a partir del archivo indicado.")
     parser.add_argument('-t','--tarifas', action="store", help="Crear tarifas a partir del archivo indicado.")
@@ -295,6 +305,7 @@ def main():
     #Ojo que el orden importa
     keys = [
         ("impuestos", translate_to_tax),
+        ("unidades", translate_to_unidad),
         ("productos", translate_to_product),
         ("tarifas", translate_to_price_list_line),
         ("conceptos", translate_to_producto_consumo)
