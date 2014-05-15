@@ -115,19 +115,18 @@ class CrearVentas(Wizard):
         dinamicamente.
         """
         ret = []
+        #Cada suministro tiene un impuesto de alumbrado
         if product.aplica_ap and suministro.impuesto_alumbrado:
             ret.append(suministro.impuesto_alumbrado)
-        """
-        if product.aplica_iva:
-            pedimos el condition_iva a party y determinamos el tipo de impuesto a agregar
-            chequear que el impuesto este seteado
-            pass
-        if product.aplica_iibb:
-            preguntamos si el party esta exento
-            igual a alumbrado
-            chequear que el impuesto este seteado
-            pass
-        """
+
+        #El iva se obtiene del suministro
+        if product.aplica_iva and suministro.iva:
+            ret.append(suministro.iva)
+
+        #El impuesto de iibb se obtiene de el usuario
+        if product.aplica_iibb and party.iibb_porcentaje:
+            ret.append(party.iibb_porcentaje)
+
         return ret
 
     def crear_sale(self, lista_consumos):
