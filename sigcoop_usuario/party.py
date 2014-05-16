@@ -11,6 +11,8 @@ class Party(ModelSQL, ModelView):
     __name__ = 'party.party'
     #El field cliente_socio aparece al lado del nombre de la entidad para definir si va a ser de este tipo.
     cliente_socio = fields.Boolean('Cliente/Socio', on_change=['cliente_socio'], help="Marcar si es un cliente de la cooperativa")
+    # El cliente/socio puede estar exento de PUREE
+    exento_puree = fields.Boolean('Exento PUREE', help = "Marcar si el usuario esta exento frente al PUREE")
     #El field asociado nos da a elegir si es asociado o cliente.
     #Por defecto, es cliente ya que el campo es false.
     asociado = fields.Boolean('Es Asociado',
@@ -88,6 +90,11 @@ class Party(ModelSQL, ModelView):
     @staticmethod
     def default_tipo_identificacion():
         return 'DNI'
+
+
+    @staticmethod
+    def default_exento_puree():
+        return True
 
 
     @staticmethod

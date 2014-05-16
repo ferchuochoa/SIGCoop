@@ -7,6 +7,8 @@
         <field name="cliente_socio" xexpand="0" width="25"/>
         <label name="asociado" string="Socio"/>
         <field name="asociado" xexpand="0" width="25"/>
+        <label name="exento_puree" string="Exento al programa PUREE"/>
+        <field name="exento_puree" xexpand="0" width="25"/>
     </xpath>
    
     <xpath
